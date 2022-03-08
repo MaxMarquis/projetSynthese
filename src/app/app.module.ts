@@ -3,10 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { TableauDeBordComponent } from './views/tableau-de-bord/tableau-de-bord.component';
+import { DemandesStagesComponent } from './views/demandes-stages/demandes-stages.component';
+import { OffresStagesComponent } from './views/offres-stages/offres-stages.component';
+import { CandidatsComponent } from './views/candidats/candidats.component';
+import { EntreprisesComponent } from './views/entreprises/entreprises.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MenuComponent,
+    TableauDeBordComponent,
+    DemandesStagesComponent,
+    OffresStagesComponent,
+    CandidatsComponent,
+    EntreprisesComponent
   ],
   imports: [
     BrowserModule,

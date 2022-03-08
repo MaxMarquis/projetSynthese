@@ -9,6 +9,7 @@ import { DemandesStagesComponent } from './views/demandes-stages/demandes-stages
 import { OffresStagesComponent } from './views/offres-stages/offres-stages.component';
 import { CandidatsComponent } from './views/candidats/candidats.component';
 import { EntreprisesComponent } from './views/entreprises/entreprises.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EntreprisesComponent } from './views/entreprises/entreprises.component'
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

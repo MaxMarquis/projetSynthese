@@ -9,7 +9,8 @@ import { DemandesStagesComponent } from './views/demandes-stages/demandes-stages
 import { OffresStagesComponent } from './views/offres-stages/offres-stages.component';
 import { CandidatsComponent } from './views/candidats/candidats.component';
 import { EntreprisesComponent } from './views/entreprises/entreprises.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { IdentificationComponent } from './views/identification/identification.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http'
     DemandesStagesComponent,
     OffresStagesComponent,
     CandidatsComponent,
-    EntreprisesComponent
+    EntreprisesComponent,
+    IdentificationComponent
   ],
   imports: [
     BrowserModule,

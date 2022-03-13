@@ -1,2 +1,12 @@
-<app-menu></app-menu>
-<p>candidats works!</p>
+<div>
+    <app-menu></app-menu>
+</div>
+<div>
+    <h1>Candidats</h1>
+    <button type="button" class="btn btn-primary" (click)="addCandidat()">Ajouter un candidat</button>
+    <div class="card-group">
+        <ng-container *ngFor="let candidat of candidats">
+            <app-candidat [candidat]="candidat"></app-candidat>
+        </ng-container>
+    </div>
+</div>

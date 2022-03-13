@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,cAAc,EAAE,GAAG;EACnB,MAAM,EAAE,OAAO;CAAG;;AAEpB,AAAA,KAAK,CAAC,GAAG,CAAC;EACR,KAAK,EAAE,KAAK;CAAG",
+    "sources": [
+        "candidat.component.sass"
+    ],
+    "names": [],
+    "file": "candidat.component.css"
+}

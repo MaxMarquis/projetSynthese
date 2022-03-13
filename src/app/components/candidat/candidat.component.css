@@ -1,0 +1,12 @@
+.card {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100px;
+}
+/*# sourceMappingURL=candidat.component.css.map */

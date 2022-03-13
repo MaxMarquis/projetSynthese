@@ -3,7 +3,7 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolorum nesciunt voluptatum voluptates
         velit provident facere eum debitis delectus quibusdam, veritatis eius minima aperiam distinctio eos quae
         repellat amet exercitationem?</p>
-    <input type="text" placeholder="Votre nom et prénom">
-    <input type="text" placeholder="Votre courriel">
-    <button><a routerLink="/tableau-de-bord">Accéder maintenant</a></button>
+    <input type="text" placeholder="Nom et prénom" [(ngModel)]="profil.name">
+    <input type="text" placeholder="Adresse courriel" [(ngModel)]="profil.email">
+    <button (click)="login()">Accéder maintenant</button>
 </div>

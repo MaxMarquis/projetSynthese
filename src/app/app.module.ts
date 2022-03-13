@@ -10,7 +10,10 @@ import { OffresStagesComponent } from './views/offres-stages/offres-stages.compo
 import { CandidatsComponent } from './views/candidats/candidats.component';
 import { EntreprisesComponent } from './views/entreprises/entreprises.component';
 import { HttpClientModule } from '@angular/common/http';
-import { IdentificationComponent } from './views/identification/identification.component'
+import { IdentificationComponent } from './views/identification/identification.component';
+import { FormsModule } from '@angular/forms';
+import { BarreActionsComponent } from './components/barre-actions/barre-actions.component';
+import { CandidatComponent } from './components/candidat/candidat.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,12 @@ import { IdentificationComponent } from './views/identification/identification.c
     OffresStagesComponent,
     CandidatsComponent,
     EntreprisesComponent,
-    IdentificationComponent
+    IdentificationComponent,
+    BarreActionsComponent,
+    CandidatComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

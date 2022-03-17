@@ -17,6 +17,7 @@ import { CandidatComponent } from './components/candidat/candidat.component';
 import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.component';
+import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
 import { NavComponent } from './nav/nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SideNavComponent } from './side-nav/side-nav.component';
@@ -39,6 +40,7 @@ import { ModalComponent } from './modal/modal.component';
     CandidatsAddComponent,
     CandidatsInfosComponent,
     BtnAnnulerComponent,
+    DemandesStagesEditComponent,
     NavComponent,
     SideNavComponent,
     SaveComponent,

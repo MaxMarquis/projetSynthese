@@ -14,7 +14,7 @@ export class RequetesStagesService {
   requetesStagesUrl =
     'https://projet-synthese-api.herokuapp.com/api/2096428/internship-request/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Fonction qui va récupérer la liste DES requêtes de stage
   getRequetesStages(): Observable<Requetes_stages[]> {
@@ -22,8 +22,8 @@ export class RequetesStagesService {
   }
 
   // Fonction qui va révupérer UNE requête de stage en fonction de l'id
-  getRequeteStage(__id: String): Observable<Requetes_stages> {
-    return this.http.get<Requetes_stages>(this.requetesStagesUrl + __id);
+  getRequeteStage(_id: String): Observable<Requetes_stages> {
+    return this.http.get<Requetes_stages>(this.requetesStagesUrl + _id);
   }
 
   // Fonction qui ajoute une requête de stage
@@ -38,14 +38,14 @@ export class RequetesStagesService {
   // Fonction qui modifie une requête de stage en fonction de l'id
   editRequeteStage(requeteStage: Requetes_stages): Observable<Requetes_stages> {
     return this.http.put<Requetes_stages>(
-      this.requetesStagesUrl + requeteStage.__id,
+      this.requetesStagesUrl + requeteStage._id,
       requeteStage,
       httpOptions
     );
   }
 
   // Fonction qui supprime une requête de stage en fonction de l'id
-  deleteRequeteStage(__id: String): Observable<Requetes_stages> {
-    return this.http.delete<Requetes_stages>(this.requetesStagesUrl + __id);
+  deleteRequeteStage(_id: String): Observable<Requetes_stages> {
+    return this.http.delete<Requetes_stages>(this.requetesStagesUrl + _id);
   }
 }

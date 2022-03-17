@@ -22,8 +22,8 @@ export class EntrepriseService {
   }
 
   // Fonction qui va révupérer UNE entreprise en fonction de l'id
-  getEntreprise(__id: String): Observable<Entreprise> {
-    return this.http.get<Entreprise>(this.entrepriseUrl + __id,);
+  getEntreprise(_id: String): Observable<Entreprise> {
+    return this.http.get<Entreprise>(this.entrepriseUrl + _id,);
   }
 
   // Fonction qui ajoute une entreprise
@@ -33,12 +33,12 @@ export class EntrepriseService {
 
   // Fonction qui modifie une entreprise en fonction de l'id
   editEntreprise(enterprise: Entreprise): Observable<Entreprise> {
-    return this.http.put<Entreprise>(this.entrepriseUrl + enterprise.__id, enterprise, httpOptions);
+    return this.http.put<Entreprise>(this.entrepriseUrl + enterprise._id, enterprise, httpOptions);
   }
 
   // Fonction qui supprime une entreprise en fonction de l'id
-  deleteEntreprise(__id: String): Observable<Entreprise> {
-    return this.http.delete<Entreprise>(this.entrepriseUrl + __id);
+  deleteEntreprise(_id: String): Observable<Entreprise> {
+    return this.http.delete<Entreprise>(this.entrepriseUrl + _id);
   }
 
 }

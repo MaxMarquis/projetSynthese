@@ -14,7 +14,7 @@ export class CandidatsService {
   candidatsUrl =
     'https://projet-synthese-api.herokuapp.com/api/2096428/candidate/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Fonction qui va récupérer la liste DES candidats
   getCandidats(): Observable<Candidats[]> {
@@ -22,8 +22,8 @@ export class CandidatsService {
   }
 
   // Fonction qui va récupérer UN SEUL candidat
-  getCandidat(__id: String): Observable<Candidats> {
-    return this.http.get<Candidats>(this.candidatsUrl + __id);
+  getCandidat(_id: String): Observable<Candidats> {
+    return this.http.get<Candidats>(this.candidatsUrl + _id);
   }
 
   // Fonction qui ajoute un candidat
@@ -34,14 +34,14 @@ export class CandidatsService {
   // Fonction qui modifie un candidat
   editCandidat(candidat: Candidats): Observable<Candidats> {
     return this.http.put<Candidats>(
-      this.candidatsUrl + candidat.__id,
+      this.candidatsUrl + candidat._id,
       candidat,
       httpOptions
     );
   }
 
   // Fonction qui supprime un candidat
-  deleteCandidat(__id: String): Observable<Candidats> {
-    return this.http.delete<Candidats>(this.candidatsUrl + __id);
+  deleteCandidat(_id: String): Observable<Candidats> {
+    return this.http.delete<Candidats>(this.candidatsUrl + _id);
   }
 }

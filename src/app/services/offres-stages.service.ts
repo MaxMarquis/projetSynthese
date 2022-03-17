@@ -14,7 +14,7 @@ export class OffresStagesService {
   offresStagesUrl =
     'https://projet-synthese-api.herokuapp.com/api/2096428/internship-offer/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   // Fonction qui va récupérer la liste DES offres de stage
   getOffresStages(): Observable<Offres_stages[]> {
@@ -22,8 +22,8 @@ export class OffresStagesService {
   }
 
   // Fonction qui va récupérer UN SEUL offre de stage
-  getOffreStage(__id: String): Observable<Offres_stages> {
-    return this.http.get<Offres_stages>(this.offresStagesUrl + __id);
+  getOffreStage(_id: String): Observable<Offres_stages> {
+    return this.http.get<Offres_stages>(this.offresStagesUrl + _id);
   }
 
   // Fonction qui ajoute une offre de stage
@@ -38,14 +38,14 @@ export class OffresStagesService {
   // Fonction qui modifie une offre de stage
   editOffreStage(offreStage: Offres_stages): Observable<Offres_stages> {
     return this.http.put<Offres_stages>(
-      this.offresStagesUrl + offreStage.__id,
+      this.offresStagesUrl + offreStage._id,
       offreStage,
       httpOptions
     );
   }
 
   // Fonction qui supprime une offre de stage
-  deleteOffreStage(__id: String): Observable<Offres_stages> {
-    return this.http.delete<Offres_stages>(this.offresStagesUrl + __id);
+  deleteOffreStage(_id: String): Observable<Offres_stages> {
+    return this.http.delete<Offres_stages>(this.offresStagesUrl + _id);
   }
 }

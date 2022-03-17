@@ -1,5 +1,5 @@
 export interface Candidats {
-    __id: String
+    _id: String
     name: String
     description: String
     jobTitle: String

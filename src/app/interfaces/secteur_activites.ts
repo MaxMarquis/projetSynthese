@@ -1,5 +1,5 @@
 export interface Secteur_activites {
-    __id: String
+    _id: String
     name: String
     description: String
     jobTitle: String

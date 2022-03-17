@@ -1,5 +1,5 @@
 export interface Requetes_stages {
-    __id: String
+    _id: String
     title: String
     description: String
     enterprise: String
@@ -14,7 +14,7 @@ export interface Requetes_stages {
     skills: [String]
     published: Boolean
     updatedAt: Date
-    active: Boolean  
+    active: Boolean
 }
 
 // Chercher toutes les requêtes de stages > GET /internship-request

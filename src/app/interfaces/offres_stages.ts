@@ -1,5 +1,5 @@
 export interface Offres_stages {
-    __id: String
+    _id: String
     title: String
     description: String
     enterprise: String

@@ -18,6 +18,12 @@ import { CandidatsAddComponent } from './views/candidats-add/candidats-add.compo
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.component';
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
+import { NavComponent } from './nav/nav.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { SaveComponent } from './save/save.component';
+import { CrudComponent } from './crud/crud.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -35,8 +41,13 @@ import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demand
     CandidatsInfosComponent,
     BtnAnnulerComponent,
     DemandesStagesEditComponent,
+    NavComponent,
+    SideNavComponent,
+    SaveComponent,
+    CrudComponent,
+    ModalComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

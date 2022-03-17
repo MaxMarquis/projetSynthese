@@ -6,6 +6,8 @@ import { DemandesStagesComponent } from './views/demandes-stages/demandes-stages
 import { OffresStagesComponent } from './views/offres-stages/offres-stages.component';
 import { CandidatsComponent } from './views/candidats/candidats.component';
 import { EntreprisesComponent } from './views/entreprises/entreprises.component';
+import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
+import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 
 const routes: Routes = [
   { path: "", component: IdentificationComponent },
@@ -13,6 +15,8 @@ const routes: Routes = [
   { path: "demandes-de-stages", component: DemandesStagesComponent },
   { path: "offres-de-stages", component: OffresStagesComponent },
   { path: "candidats", component: CandidatsComponent },
+  { path: "candidats-add", component: CandidatsAddComponent },
+  { path: "candidats-infos/:id", component: CandidatsInfosComponent },
   { path: "entreprises", component: EntreprisesComponent },
 ];
 

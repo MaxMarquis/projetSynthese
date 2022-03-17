@@ -17,6 +17,7 @@ import { CandidatComponent } from './components/candidat/candidat.component';
 import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.component';
+import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.compon
     CandidatsAddComponent,
     CandidatsInfosComponent,
     BtnAnnulerComponent,
+    DemandesStagesEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

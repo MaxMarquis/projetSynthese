@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Candidats } from 'src/app/interfaces/candidats';
 import { CandidatsService } from 'src/app/services/candidats.service';
 
@@ -10,7 +11,9 @@ import { CandidatsService } from 'src/app/services/candidats.service';
 export class CandidatsComponent implements OnInit {
   candidats: Candidats[] = [];
 
-  constructor(private candidatService: CandidatsService) {}
+  constructor(
+    private candidatService: CandidatsService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.getCandidats();
@@ -23,8 +26,6 @@ export class CandidatsComponent implements OnInit {
   }
 
   addCandidat() {
-    alert(
-      'Doit afficher un modal ou ouvrir une page pour ajouter un candidat.'
-    );
+    this.router.navigateByUrl('/candidats-add')
   }
 }

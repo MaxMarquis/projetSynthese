@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Candidats } from 'src/app/interfaces/candidats';
 
 @Component({
@@ -8,7 +9,7 @@ import { Candidats } from 'src/app/interfaces/candidats';
 })
 export class CandidatComponent implements OnInit {
   @Input() candidat: Candidats = {
-    __id: '',
+    _id: '',
     name: '',
     description: '',
     jobTitle: '',
@@ -22,11 +23,12 @@ export class CandidatComponent implements OnInit {
     updatedAt: new Date(),
   };
 
-  constructor() {}
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  test() {
-    alert(`Nom: ${this.candidat.name}`);
+  getInfos(candidat: Candidats): void {
+    console.log("Id envoyé: " + candidat._id)
+    this.router.navigate(['/candidats-infos', candidat._id])
   }
 }

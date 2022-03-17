@@ -14,6 +14,9 @@ import { IdentificationComponent } from './views/identification/identification.c
 import { FormsModule } from '@angular/forms';
 import { BarreActionsComponent } from './components/barre-actions/barre-actions.component';
 import { CandidatComponent } from './components/candidat/candidat.component';
+import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
+import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
+import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { CandidatComponent } from './components/candidat/candidat.component';
     IdentificationComponent,
     BarreActionsComponent,
     CandidatComponent,
+    CandidatsAddComponent,
+    CandidatsInfosComponent,
+    BtnAnnulerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

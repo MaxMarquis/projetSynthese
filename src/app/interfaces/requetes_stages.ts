@@ -2,7 +2,7 @@ export interface Requetes_stages {
     _id: String
     title: String
     description: String
-    enterprise: String
+    entreprise: String
     startDate: Date
     endDate: Date
     program: String

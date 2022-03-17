@@ -1,2 +1,5 @@
 <app-menu></app-menu>
-<p>entreprises works!</p>
+
+<ng-container *ngFor="let requeteStage of requetesStage">
+    <p>{{requeteStage.title}}</p>
+</ng-container>

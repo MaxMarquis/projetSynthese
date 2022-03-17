@@ -17,6 +17,12 @@ import { CandidatComponent } from './components/candidat/candidat.component';
 import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.component';
+import { NavComponent } from './nav/nav.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { SaveComponent } from './save/save.component';
+import { CrudComponent } from './crud/crud.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +39,13 @@ import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.compon
     CandidatsAddComponent,
     CandidatsInfosComponent,
     BtnAnnulerComponent,
+    NavComponent,
+    SideNavComponent,
+    SaveComponent,
+    CrudComponent,
+    ModalComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -33,6 +33,8 @@ export class DemandesStagesComponent implements OnInit {
   onDelete(Requetestages: Requetes_stages): void {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
       .subscribe(_result => this.requetesStage = this.requetesStage.filter(p => p !== Requetestages));
+
+  
   }
   addDemandesstages() {
     this.router.navigateByUrl('/demandes-de-stages-add')

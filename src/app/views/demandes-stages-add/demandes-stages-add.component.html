@@ -1,1 +1,143 @@
-<h1>test</h1>
+
+<div class="container">
+  <h1>Ajouter une demande</h1>
+  <!--- Bouton annuler -->
+  <button class="alert alert-LIGHT">
+    Annuler </button>
+    <button class="alert alert-primary">
+      <i class="fa-solid fa-floppy-disk p-2"></i>Sauvegarder </button>
+  <form>
+    <!--- Nom-->
+    <label>Nom:</label>
+    <input class="form-control" type="text" placeholder="" required>
+
+    <!--- Présentation-->
+    <div class="form-group">
+      <label>Information supplémentaire</label>
+
+      <!--- Textbox info supp-->
+      <textarea class="form-control" id="formtext" rows="2"></textarea>
+    </div>
+
+    <div class="row">
+      <div class="col">
+
+        <!--- Programme -->
+        <label>Programme</label>
+        <input type="text" class="form-control" placeholder="" required>
+      </div>
+      <div class="col">
+
+        <!--- Établissement -->
+        <label>Établissement</label>
+        <input type="text" class="form-control" placeholder="" required >
+      </div>
+      <div class="row">
+        <div class="col">
+
+          <!--- Secteur d'activité -->
+          <label>Secteur d'activité</label>
+          <select class="form-control">
+            <option value="a-voir">Veuillez effectuer un choix</option>
+          </select>
+        </div>
+        <div class="col">
+
+          <!--- Ville -->
+          <label>Ville</label>
+          <input type="text" class="form-control" placeholder="" required>
+        </div>
+        <div class="row">
+          <div class="col">
+
+            <!--- Région -->
+            <label>Région</label>
+            <select class="form-control">
+              <option value="a-voir">Veuillez effectuer un choix</option>
+            </select>
+          </div>
+        </div>
+
+
+        <!--- Bloc 2 -->
+        <h2>Informations sur le stage recherché</h2>
+        <div class="row">
+
+          <div class="col">
+            <!--- Type de stage -->
+            <label>Type de stage</label>
+            <select class="form-control">
+              <option value="a-voir">Veuillez effectuer un choix</option>
+            </select>
+          </div>
+          <div class="col">
+
+            <!--- Date de début-->
+            <label>Date de début</label>
+            <!--- à voir date picker Angular-->
+            <input type="date" id="start" name="trip-start" value="2022-03-11" min="2022-01-01" max="2025-12-31">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+      
+            <!--- Nombre d'heures semaine-->
+            <label>Nombres d'heures par semaine</label>
+            <select class="form-control">
+              <option>Veuillez effectuer un choix</option>
+            </select>
+          </div>
+          <div class="col">
+
+            <!--- date de fin-->
+            <label>Date de fin</label>
+            <!--- à voir date picker Angular-->
+            <input type="date" id="end" name="trip-end" value="2022-03-31" min="2022-01-01" max="2025-12-31">
+          </div>
+        </div>
+
+        <!--- Rémunération-->
+
+        <label>Rémunération</label>
+        <div class="form-check">
+          <div class="row">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="discretion">À la discrétion de l'entreprise </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="remunere">Stage rémunéré </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="nonremunere">Stage non rémunéré </label>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <h2>Information supplémentaire</h2>
+
+          <!--- Textbox info supp-->
+          <textarea class="form-control" id="formtext" rows="4"></textarea>
+        </div>
+
+        <!--- Bouton parcourir -->
+        <button class="alert alert-light p-2"> Parcourir </button>
+
+        <div class="btn-group">
+          <!--- Annuler / sauvegarder -->
+          <button class="alert alert-light p-2"> Annuler </button>
+          <button class="alert alert-primary">
+            <i class="fa-solid fa-floppy-disk p-2"></i>Sauvegarder </button>       
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+  

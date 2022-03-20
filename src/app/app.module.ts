@@ -25,6 +25,7 @@ import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CandidatsAddComponent,
     CandidatsInfosComponent,
     DemandesStagesEditComponent,
+    DemandesStagesAddComponent,
 
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],

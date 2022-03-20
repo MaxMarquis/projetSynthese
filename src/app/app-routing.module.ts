@@ -9,11 +9,13 @@ import { EntreprisesComponent } from './views/entreprises/entreprises.component'
 import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
+import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
 
 const routes: Routes = [
   { path: "", component: IdentificationComponent },
   { path: "tableau-de-bord", component: TableauDeBordComponent },
   { path: "demandes-de-stages", component: DemandesStagesComponent },
+  { path: "demandes-de-stages-add", component: DemandesStagesAddComponent },
   { path: "demandes-de-stages/edit", component: DemandesStagesEditComponent },
   { path: "offres-de-stages", component: OffresStagesComponent },
   { path: "candidats", component: CandidatsComponent },

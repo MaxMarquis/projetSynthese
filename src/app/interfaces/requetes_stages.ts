@@ -14,6 +14,13 @@ export interface Requetes_stages {
     skills: [String]
     published: Boolean
     updatedAt: Date
+    region: String
+    activitySector: String
+    studentName: String
+    studentPresentation: String
+    school: String
+    linkToResume: String
+
     active: Boolean
 }
 

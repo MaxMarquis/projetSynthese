@@ -1,0 +1,41 @@
+.crud {
+  position: relative;
+  top: 175px;
+  left: 400px;
+}
+
+a {
+  margin: 0px 6px;
+  text-decoration: none;
+}
+
+a.check {
+  color: #07a04a;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.check:hover {
+  color: #006d2f;
+}
+
+a.pen {
+  color: #2e466e;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.pen:hover {
+  color: #1f2f4b;
+}
+
+a.trash {
+  color: #a00707;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a.trash:hover {
+  color: #460000;
+}
+/*# sourceMappingURL=crud.component.css.map */

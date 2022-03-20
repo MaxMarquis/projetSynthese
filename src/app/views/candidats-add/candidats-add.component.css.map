@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "styles.sass"
+        "candidats-add.component.sass"
     ],
     "names": [],
-    "file": "styles.css"
+    "file": "candidats-add.component.css"
 }

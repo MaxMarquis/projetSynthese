@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "styles.sass"
+        "btn-annuler.component.sass"
     ],
     "names": [],
-    "file": "styles.css"
+    "file": "btn-annuler.component.css"
 }

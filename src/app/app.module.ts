@@ -26,6 +26,7 @@ import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demand
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CandidatsAddComponent,
     CandidatsInfosComponent,
     DemandesStagesEditComponent,
+
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [],

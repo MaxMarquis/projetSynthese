@@ -38,6 +38,8 @@ export class DemandesStagesComponent implements OnInit {
   }
   addDemandesstages() {
     this.router.navigateByUrl('/demandes-de-stages-add')
+
+
   }
 }
 

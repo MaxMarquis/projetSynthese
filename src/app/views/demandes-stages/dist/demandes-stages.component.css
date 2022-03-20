@@ -3,14 +3,28 @@
   background: none;
 }
 
+.title {
+  color: #707070;
+}
+
 .fa-pen-to-square {
-  color: #F89747;
+  color: #f89747;
 }
 
 .fa-eye {
-  color: #22A6AC;
+  color: #22a6ac;
 }
 
 .fa-trash-can {
   color: #F26689ed;
+}
+
+.mortarbutton {
+  background-color: #e6c07f;
+  width: 32px;
+  height: 27px;
+  border-radius: 5px;
+  float: left;
+  margin-right: 5px;
+  color: #70582E;
 }

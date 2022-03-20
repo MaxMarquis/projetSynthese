@@ -1,39 +1,49 @@
 <div class="container">
-    <h2>Demande de stage</h2>
-    <div class="ajout">
-      <button class="btn btn-warning" role="alert" (click)="addDemandesstages()">Ajouter une demande</button>
-    </div>
-  
-    <!--- table borderless pour enlever le HR sous les entêtes -->
-    <table class="table table-borderless">
-      <thead>
-        <tr>
-          <th scope="col" class="d-none">ID</th>
-          <th scope="col">Poste</th>
-          <th scope="col">Secteur d'activité</th>
-          <th scope="col">Région</th>
-          <th scope="col">Date d'inscription</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let requeteStage of requetesStage">
-          <td class="d-none">{{requeteStage._id}}</td>
-          <td>
-            <i class="fa fa-graduation-cap"></i> {{requeteStage.title}}
-            <br />{{requeteStage.studentName}}
-          </td>
-          <td>{{requeteStage.activitySector}}</td>
-          <td>{{requeteStage.region}}</td>
-          <td>{{requeteStage.startDate}}</td>
-          <td>
-            
-            <button class = "crudbut"> <i class="fa-solid fa-eye p-2"></i></button>
-            <button class = "crudbut"> <i class="fa-solid fa-pen-to-square p-2"></i> </button>
-            <button class = "crudbut" (click)="onDelete(requeteStage)">
-              <i class="fa-solid fa-trash-can p-2"></i>
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <h2>Demande de stage</h2>
+  <div class="ajout">
+    <!--- Ouverture component demandes-stages-add -->
+    <button class="btn btn-warning" role="alert" (click)="addDemandesstages()">
+      Ajouter une demande
+    </button>
   </div>
+
+  <!--- table borderless pour enlever le HR sous les entêtes -->
+  <table class="table table-borderless">
+    <thead>
+      <tr class = "title">
+        <th scope="col" class="d-none">ID</th>
+        <th scope="col">Poste</th>
+        <th scope="col">Secteur d'activité</th>
+        <th scope="col">Région</th>
+        <th scope="col">Date d'inscription</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let requeteStage of requetesStage">
+        <td class="d-none">{{ requeteStage._id }}</td>
+        <td>
+          <div class="mortarbutton">
+          <i class="fa fa-graduation-cap d-inline-flex p-1"></i>
+        </div> 
+        <div class="etudiants">
+          {{ requeteStage.title }}<br />{{
+            requeteStage.studentName
+          }}
+        </div>
+        </td>
+        <td>{{ requeteStage.activitySector }}</td>
+        <td>{{ requeteStage.region }}</td>
+        <td>{{ requeteStage.startDate }}</td>
+        <td>
+          <button class="crudbut"><i class="fa-solid fa-eye p-2"></i></button>
+          <button class="crudbut">
+            <i class="fa-solid fa-pen-to-square"></i>
+          </button>
+          <button class="crudbut" (click)="onDelete(requeteStage)">
+            <i class="fa-solid fa-trash-can p-2"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

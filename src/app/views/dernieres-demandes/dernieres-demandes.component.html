@@ -1,0 +1,59 @@
+<div class="container">
+    <h2>Dernière demandes de stage</h2>
+    <p>En attente de validation</p>
+ 
+      <!--- valider les demandes -->
+           <!---<div class="d-flex justify-content-end">-->
+      <button type="button" class="btn btn-info">Valider toutes les demandes</button>
+
+    
+    
+  
+    <!--- table borderless pour enlever le HR sous les entêtes -->
+    <table class="table table-borderless">
+      <thead>
+        <tr class = "title">
+          <th scope="col" class="d-none">ID</th>
+          <th scope="col">Profil</th>
+          <th scope="col">Établissement</th>
+          <th scope="col">Date</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let requeteStage of requetesStage">
+          <td class="d-none">{{ requeteStage._id }}</td>
+          <td>
+            <div class="mortarbutton">
+            <i class="fa fa-graduation-cap d-inline-flex p-1"></i>
+          </div> 
+          <div class="etudiants">
+            {{ requeteStage.title }}<br />{{
+              requeteStage.studentName
+            }}
+          </div>
+        </td>
+
+        <td>
+        <button type="button" class="btn btn-danger">Refuser</button>
+        <button type="button" class="btn btn-success">Accepter</button>
+        </td>
+
+          <td>{{ requeteStage.activitySector }}</td>
+          <td>{{ requeteStage.region }}</td>
+          <td>{{ requeteStage.startDate }}</td>
+          <td>
+            <button class="crudbut"><i class="fa-solid fa-eye p-2"></i></button>
+            <button class="crudbut">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button class="crudbut" (click)="onDelete(requeteStage)">
+              <i class="fa-solid fa-trash-can p-2"></i>
+            </button>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

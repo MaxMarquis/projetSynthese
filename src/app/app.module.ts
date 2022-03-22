@@ -29,6 +29,9 @@ import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes
 import { BtnMajComponent } from './components/btn-maj/btn-maj.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
 
+import { DernieresDemandesComponent } from './dernieres-demandes/dernieres-demandes.component';
+import { DernieresOffresComponent } from './dernieres-offres/dernieres-offres.component';
+
 
 @NgModule({
   declarations: [
@@ -53,6 +56,8 @@ import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-sta
     DemandesStagesAddComponent,
     BtnMajComponent,
     OffresStagesEditComponent,
+    DernieresDemandesComponent,
+    DernieresOffresComponent,
 
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],

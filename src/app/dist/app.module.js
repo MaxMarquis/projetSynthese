@@ -34,6 +34,8 @@ var demandes_stages_add_component_1 = require("./views/demandes-stages-add/deman
 var dernieres_demandes_component_1 = require("./views/dernieres-demandes/dernieres-demandes.component");
 var dernieres_offres_component_1 = require("./views/dernieres-offres/dernieres-offres.component");
 var angular_fontawesome_1 = require("@fortawesome/angular-fontawesome");
+var btn_maj_component_1 = require("./components/btn-maj/btn-maj.component");
+var offres_stages_edit_component_1 = require("./views/offres-stages-edit/offres-stages-edit.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -59,6 +61,8 @@ var AppModule = /** @class */ (function () {
                 candidats_infos_component_1.CandidatsInfosComponent,
                 demandes_stages_edit_component_1.DemandesStagesEditComponent,
                 demandes_stages_add_component_1.DemandesStagesAddComponent,
+                btn_maj_component_1.BtnMajComponent,
+                offres_stages_edit_component_1.OffresStagesEditComponent,
                 dernieres_demandes_component_1.DernieresDemandesComponent,
                 dernieres_offres_component_1.DernieresOffresComponent,
             ],

@@ -32,9 +32,6 @@ import { DernieresOffresComponent } from './views/dernieres-offres/dernieres-off
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BtnMajComponent } from './components/btn-maj/btn-maj.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
-import { DernieresDemandesComponent } from './dernieres-demandes/dernieres-demandes.component';
-import { DernieresOffresComponent } from './dernieres-offres/dernieres-offres.component';
-
 
 
 

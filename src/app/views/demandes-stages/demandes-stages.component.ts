@@ -12,7 +12,7 @@ import { RequetesStagesService } from 'src/app/services/requetes-stages.service'
 })
 export class DemandesStagesComponent implements OnInit {
   requetesStage: Requetes_stages[] = [];
-  
+
 
 
   constructor(private requetesStagesService: RequetesStagesService,
@@ -22,7 +22,7 @@ export class DemandesStagesComponent implements OnInit {
     this.getRequetestages();
   }
 
-    /// Function get requetes_stages
+  /// Function get requetes_stages
   getRequetestages(): void {
     this.requetesStagesService
       .getRequetesStages()
@@ -34,10 +34,10 @@ export class DemandesStagesComponent implements OnInit {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
       .subscribe(_result => this.requetesStage = this.requetesStage.filter(p => p !== Requetestages));
 
-  
+
   }
   addDemandesstages() {
-    this.router.navigateByUrl('/demandes-de-stages-add')
+    this.router.navigateByUrl('/demandes-de-stages/add')
 
 
   }

@@ -26,8 +26,8 @@ import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demand
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
-import { DernieresDemandesComponent } from './dernieres-demandes/dernieres-demandes.component';
-import { DernieresOffresComponent } from './dernieres-offres/dernieres-offres.component';
+import { DernieresDemandesComponent } from './views/dernieres-demandes/dernieres-demandes.component';
+import { DernieresOffresComponent } from './views/dernieres-offres/dernieres-offres.component';
 
 
 @NgModule({

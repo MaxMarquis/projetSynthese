@@ -32,6 +32,8 @@ var candidats_infos_component_1 = require("./views/candidats-infos/candidats-inf
 var demandes_stages_edit_component_1 = require("./views/demandes-stages-edit/demandes-stages-edit.component");
 var angular_fontawesome_1 = require("@fortawesome/angular-fontawesome");
 var demandes_stages_add_component_1 = require("./views/demandes-stages-add/demandes-stages-add.component");
+var dernieres_demandes_component_1 = require("./views/dernieres-demandes/dernieres-demandes.component");
+var dernieres_offres_component_1 = require("./views/dernieres-offres/dernieres-offres.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -57,6 +59,8 @@ var AppModule = /** @class */ (function () {
                 candidats_infos_component_1.CandidatsInfosComponent,
                 demandes_stages_edit_component_1.DemandesStagesEditComponent,
                 demandes_stages_add_component_1.DemandesStagesAddComponent,
+                dernieres_demandes_component_1.DernieresDemandesComponent,
+                dernieres_offres_component_1.DernieresOffresComponent,
             ],
             imports: [platform_browser_1.BrowserModule, app_routing_module_1.AppRoutingModule, http_1.HttpClientModule, forms_1.FormsModule, angular_fontawesome_1.FontAwesomeModule],
             providers: [],

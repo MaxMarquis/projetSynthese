@@ -10,16 +10,18 @@ import { CandidatsAddComponent } from './views/candidats-add/candidats-add.compo
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
 import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
+import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
 
 const routes: Routes = [
   { path: "", component: IdentificationComponent },
   { path: "tableau-de-bord", component: TableauDeBordComponent },
   { path: "demandes-de-stages", component: DemandesStagesComponent },
-  { path: "demandes-de-stages-add", component: DemandesStagesAddComponent },
+  { path: "demandes-de-stages/add", component: DemandesStagesAddComponent },
   { path: "demandes-de-stages/edit", component: DemandesStagesEditComponent },
   { path: "offres-de-stages", component: OffresStagesComponent },
+  { path: "offres-de-stages/edit", component: OffresStagesEditComponent },
   { path: "candidats", component: CandidatsComponent },
-  { path: "candidats-add", component: CandidatsAddComponent },
+  { path: "candidats/add", component: CandidatsAddComponent },
   { path: "candidats-infos/:id", component: CandidatsInfosComponent },
   { path: "entreprises", component: EntreprisesComponent },
 ];

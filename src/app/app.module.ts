@@ -24,11 +24,19 @@ import { CandidatsAddComponent } from './views/candidats-add/candidats-add.compo
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
 import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
+
 import { DernieresDemandesComponent } from './views/dernieres-demandes/dernieres-demandes.component';
 import { DernieresOffresComponent } from './views/dernieres-offres/dernieres-offres.component';
 
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { BtnMajComponent } from './components/btn-maj/btn-maj.component';
+import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
+import { DernieresDemandesComponent } from './dernieres-demandes/dernieres-demandes.component';
+import { DernieresOffresComponent } from './dernieres-offres/dernieres-offres.component';
+
+
+
 
 
 @NgModule({
@@ -52,8 +60,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CandidatsInfosComponent,
     DemandesStagesEditComponent,
     DemandesStagesAddComponent,
+    BtnMajComponent,
+    OffresStagesEditComponent,
     DernieresDemandesComponent,
     DernieresOffresComponent,
+
+
 
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],

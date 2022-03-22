@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Candidats } from 'src/app/interfaces/candidats';
+import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 
 @Component({
   selector: 'app-demandes-stages-edit',
@@ -7,19 +8,29 @@ import { Candidats } from 'src/app/interfaces/candidats';
   styleUrls: ['./demandes-stages-edit.component.sass']
 })
 export class DemandesStagesEditComponent implements OnInit {
-  candidat: Candidats = {
-    _id: '136729',
-    name: 'Test Candidat',
-    description: 'Candidat pour test l\'édition',
-    jobTitle: 'asd',
-    email: 'asdasd',
-    phone: '1231231233',
-    address: '123 123',
-    city: 'asd ',
-    province: 'awe',
-    postalCode: 'asd',
+  demandeStage: Requetes_stages = {
+    _id: "123",
+    title: "Titre de la demande",
+    description: "Description",
+    entreprise: "Nom de l'entreprise",
+    startDate: new Date(),
+    endDate: new Date(),
+    program: "Program",
+    requirements: "Requirements",
+    stageType: "Stage Type",
+    hoursPerWeek: 40,
+    additionalInfo: "More info",
+    paid: ["paid"],
+    skills: ["Skills"],
     published: false,
     updatedAt: new Date(),
+    region: "Region",
+    activitySector: "Activity Sector",
+    studentName: "Nom élève",
+    studentPresentation: "Présentation",
+    school: "École",
+    linkToResume: "https://perdu.com/",
+    active: false
   };
 
   constructor() { }
@@ -27,4 +38,7 @@ export class DemandesStagesEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  test() {
+    console.log("test: " + this.demandeStage.title)
+  }
 }

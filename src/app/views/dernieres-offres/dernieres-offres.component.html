@@ -29,8 +29,8 @@
         <tr *ngFor="let offreStage of offresStages">
           <td class="d-none">{{ offreStage._id }}</td>
   
-          <td>{{ offreStage.title }}</td>
-          <td>{{ offreStage.title }}</td>
+          <td>{{ offreStage.title }}<p> {{ offreStage.enterprise }}</p></td>
+          <td>{{ offreStage.program }}</td>
           <td>{{ offreStage.startDate }}</td>
           <td>
             <button type="button" class="btn btn-danger m-1">Refuser</button>

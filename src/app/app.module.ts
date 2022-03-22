@@ -23,11 +23,12 @@ import { IdentificationComponent } from './views/identification/identification.c
 import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
-
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
 import { DernieresDemandesComponent } from './views/dernieres-demandes/dernieres-demandes.component';
 import { DernieresOffresComponent } from './views/dernieres-offres/dernieres-offres.component';
+
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({

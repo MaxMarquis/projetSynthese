@@ -30,10 +30,10 @@ var identification_component_1 = require("./views/identification/identification.
 var candidats_add_component_1 = require("./views/candidats-add/candidats-add.component");
 var candidats_infos_component_1 = require("./views/candidats-infos/candidats-infos.component");
 var demandes_stages_edit_component_1 = require("./views/demandes-stages-edit/demandes-stages-edit.component");
-var angular_fontawesome_1 = require("@fortawesome/angular-fontawesome");
 var demandes_stages_add_component_1 = require("./views/demandes-stages-add/demandes-stages-add.component");
 var dernieres_demandes_component_1 = require("./views/dernieres-demandes/dernieres-demandes.component");
 var dernieres_offres_component_1 = require("./views/dernieres-offres/dernieres-offres.component");
+var angular_fontawesome_1 = require("@fortawesome/angular-fontawesome");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }

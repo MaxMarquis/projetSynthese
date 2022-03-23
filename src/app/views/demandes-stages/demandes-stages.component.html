@@ -27,8 +27,7 @@
         </div> 
         <div class="etudiants">
           {{ requeteStage.title }}<br />{{
-            requeteStage.studentName
-          }}
+            requeteStage.studentName}}
         </div>
         </td>
         <td>{{ requeteStage.activitySector }}</td>
@@ -39,11 +38,15 @@
           <button class="crudbut">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
+
           <button class="crudbut" (click)="onDelete(requeteStage)">
             <i class="fa-solid fa-trash-can p-2"></i>
           </button>
+          
         </td>
       </tr>
     </tbody>
   </table>
 </div>
+
+

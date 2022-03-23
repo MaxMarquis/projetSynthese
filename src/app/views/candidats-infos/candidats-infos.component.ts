@@ -22,7 +22,6 @@ export class CandidatsInfosComponent implements OnInit {
     province: '',
     postalCode: '',
     published: false,
-    updatedAt: new Date(),
   };
 
   constructor(

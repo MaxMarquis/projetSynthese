@@ -22,7 +22,6 @@ export class OffresStagesEditComponent implements OnInit {
     paid: ["paid"],
     skills: ["skills"],
     published: true,
-    updatedAt: new Date(),
     active: true
   }
 

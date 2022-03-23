@@ -20,6 +20,7 @@ export class CandidatComponent implements OnInit {
     province: '',
     postalCode: '',
     published: false,
+    updatedAt: new Date(),
   };
 
   constructor(private router: Router) { }

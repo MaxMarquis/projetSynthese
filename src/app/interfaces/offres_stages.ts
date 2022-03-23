@@ -1,20 +1,19 @@
 export interface Offres_stages {
     _id: String
-    title: String
-    description: String
-    enterprise: String
-    startDate: Date
-    endDate: Date
-    program: String
-    requirements: String
-    stageType: String
-    hoursPerWeek: Number
-    additionalInfo: String
-    paid: [String]
-    skills: [String]
-    published: Boolean
-    updatedAt: Date
-    active: Boolean
+    title: String,
+    description: String,
+    enterprise: String,
+    startDate: Date,
+    endDate: Date,
+    program: String,
+    requirements: String,
+    stageType: String,
+    hoursPerWeek: Number,
+    additionalInfo: String,
+    paid: [String],
+    skills: [String],
+    published: Boolean,
+    active: Boolean,
 }
 
 // Chercher toutes les offres de stages > GET /internship-offer

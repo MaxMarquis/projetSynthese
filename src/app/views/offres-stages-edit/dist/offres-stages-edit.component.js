@@ -25,6 +25,7 @@ var OffresStagesEditComponent = /** @class */ (function () {
             paid: ["paid"],
             skills: ["skills"],
             published: true,
+            updatedAt: new Date(),
             active: true
         };
     }

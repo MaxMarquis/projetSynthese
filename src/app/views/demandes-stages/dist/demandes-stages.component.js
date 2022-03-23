@@ -31,7 +31,7 @@ var DemandesStagesComponent = /** @class */ (function () {
             .subscribe(function (_result) { return _this.requetesStage = _this.requetesStage.filter(function (p) { return p !== Requetestages; }); });
     };
     DemandesStagesComponent.prototype.addDemandesstages = function () {
-        this.router.navigateByUrl('/demandes-de-stages-add');
+        this.router.navigateByUrl('/demandes-de-stages/add');
     };
     DemandesStagesComponent = __decorate([
         core_1.Component({

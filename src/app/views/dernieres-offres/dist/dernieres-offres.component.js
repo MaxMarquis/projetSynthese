@@ -9,9 +9,10 @@ exports.__esModule = true;
 exports.DernieresOffresComponent = void 0;
 var core_1 = require("@angular/core");
 var DernieresOffresComponent = /** @class */ (function () {
-    function DernieresOffresComponent(OffresStagesService, router) {
+    function DernieresOffresComponent(OffresStagesService, router, modalService) {
         this.OffresStagesService = OffresStagesService;
         this.router = router;
+        this.modalService = modalService;
         this.offresStages = [];
     }
     DernieresOffresComponent.prototype.ngOnInit = function () {
@@ -29,6 +30,16 @@ var DernieresOffresComponent = /** @class */ (function () {
         var _this = this;
         this.OffresStagesService.deleteOffreStage(Offresstages._id)
             .subscribe(function (_result) { return _this.offresStages = _this.offresStages.filter(function (p) { return p !== Offresstages; }); });
+    };
+    /// Modal suppression
+    DernieresOffresComponent.prototype.open = function (content, offresStage) {
+        var _this = this;
+        this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then(function (result) {
+            if (result === 'Delete') {
+                _this.onDelete(offresStage);
+            }
+        }, function (reason) {
+        });
     };
     DernieresOffresComponent = __decorate([
         core_1.Component({

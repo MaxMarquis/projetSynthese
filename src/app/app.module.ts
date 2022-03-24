@@ -32,7 +32,6 @@ import { DernieresOffresComponent } from './views/dernieres-offres/dernieres-off
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BtnMajComponent } from './components/btn-maj/btn-maj.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -66,7 +65,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule, NgbModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

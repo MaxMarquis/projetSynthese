@@ -16,18 +16,23 @@ export class OffresStagesEditComponent implements OnInit {
     endDate: new Date(),
     program: "Program",
     requirements: "Requirements",
-    stageType: "Stage Type",
-    hoursPerWeek: 15,
+    stageType: "fulltime",
+    hoursPerWeek: 35,
     additionalInfo: "More",
     paid: ["paid"],
     skills: ["skills"],
     published: true,
     active: true
   }
+  value: String = ""
 
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+  test(value: String) {
+    return this.offreStage.paid.push(value)
   }
 
 }

@@ -29,7 +29,8 @@
       <tr *ngFor="let offreStage of offresStages">
         <td class="d-none">{{ offreStage._id }}</td>
 
-        <td>{{ offreStage.title }}<p> {{ offreStage.enterprise }}</p></td>
+        
+        <td><i class="fa-solid fa-suitcase "></i>{{ offreStage.title }} {{ offreStage.enterprise }}</td>
         <td>{{ offreStage.program }}</td>
         <td>{{ offreStage.startDate }}</td>
         <td>
@@ -37,7 +38,7 @@
           <button type="button" class="btn btn-success m-1">Accepter</button>
 
           <button class="crudbut"><i class="fa-solid fa-eye p-2"></i></button>
-          <button class="crudbut">
+          <button class="crudbut" (click)="editOffresstages()">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
           <button class="crudbut" (click)="open(deleteModal,offreStage)">

@@ -29,6 +29,10 @@ export class DernieresDemandesComponent implements OnInit {
       .subscribe((res: Requetes_stages[]) => (this.requetesStage = res));
   }
 
+    /// Function Delete requetes_stages
+    editDemandesstages() {
+    this.router.navigateByUrl('/demandes-de-stages/edit')
+  }
   /// Function Delete requetes_stages
   onDelete(Requetestages: Requetes_stages): void {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
@@ -36,4 +40,6 @@ export class DernieresDemandesComponent implements OnInit {
 
   
   }
+
+
 }

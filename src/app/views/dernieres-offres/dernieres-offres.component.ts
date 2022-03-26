@@ -37,6 +37,10 @@ export class DernieresOffresComponent implements OnInit {
 
   }
 
+  editOffresstages() {
+    this.router.navigateByUrl('/offres-de-stages/edit')
+  }
+
     /// Modal suppression
   open(content:any, offresStage:Offres_stages) {
     this.modalService.open(content, {ariaLabelledBy: 'titremodal'}).result.then((result) => {

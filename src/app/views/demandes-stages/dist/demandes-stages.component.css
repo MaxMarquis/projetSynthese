@@ -21,10 +21,9 @@
 
 .mortarbutton {
   background-color: #e6c07f;
-  width: 32px;
-  height: 27px;
-  border-radius: 5px;
-  float: left;
-  margin-right: 5px;
+  border: 2px black;
+  margin-right: 25px;
+  padding: 15px;
+  border-radius: 10px;
   color: #70582E;
 }

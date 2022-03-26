@@ -22,8 +22,7 @@ var CandidatComponent = /** @class */ (function () {
             city: '',
             province: '',
             postalCode: '',
-            published: false,
-            updatedAt: new Date()
+            published: false
         };
     }
     CandidatComponent.prototype.ngOnInit = function () { };

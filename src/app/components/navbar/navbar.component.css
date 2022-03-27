@@ -1,23 +1,23 @@
 .logo {
   width: 165px;
-  margin: 0 0 6rem 20px;
+  margin: 0 0 6rem 1.25rem;
 }
 
 i {
-  padding-right: 15px;
-  font-size: 24px;
+  padding-right: 1rem;
+  font-size: 1.5rem;
 }
 
 #side a {
   display: block;
-  line-height: 45px;
-  margin: 0 0 20px 20px;
+  line-height: 2.813rem;
+  margin: 0 0 1.25rem 1.25rem;
   border-right: 4px solid;
   text-decoration: none;
 }
 
 #side .faBox {
-  width: 50px;
+  width: 3.125;
 }
 
 #side a.snb--tableaubord {
@@ -81,14 +81,14 @@ ul#add {
 
 #add a {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 0.5rem 1rem;
   border: 1px solid;
   border-radius: 0.5rem;
 }
 
 #add i {
-  font-size: 14px;
+  font-size: 0.875rem;
   padding-right: 0.5rem;
 }
 
@@ -117,7 +117,7 @@ ul#add {
   border-color: #86A9E6;
 }
 
-#add a.btn--entreprises-hover {
+#add a.btn--entreprises:hover {
   color: #4B5F81;
   border-color: #4B5F81;
 }
@@ -127,7 +127,7 @@ ul#add {
   border-color: #7F2987;
 }
 
-#add a.btn--candidats {
+#add a.btn--candidats:hover {
   color: #501A55;
   border-color: #501A55;
 }
@@ -138,21 +138,21 @@ ul#add {
 }
 
 .avatar {
-  width: 50px;
-  margin-left: 1rem;
+  width: 40px;
+  margin: 0.5rem 0 0 1rem;
   float: right;
 }
 
 .user {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   font-weight: 700;
   float: left;
-  padding-top: 15px;
+  padding-top: 1rem;
 }
 
 .user a {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #A6ACBE;
   text-decoration: none;
 }

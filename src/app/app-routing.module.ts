@@ -12,6 +12,8 @@ import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demand
 import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
 import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
+import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
+import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 
 const routes: Routes = [
   { path: "", component: IdentificationComponent },
@@ -24,8 +26,10 @@ const routes: Routes = [
   { path: "offres-de-stages/add", component: OffresStagesAddComponent },
   { path: "candidats", component: CandidatsComponent },
   { path: "candidats/add", component: CandidatsAddComponent },
-  { path: "candidats-infos/:id", component: CandidatsInfosComponent },
+  { path: "candidats/infos/:id", component: CandidatsInfosComponent },
   { path: "entreprises", component: EntreprisesComponent },
+  { path: "entreprises/add", component: EntreprisesAddComponent },
+  { path: "entreprises/infos/:id", component: EntreprisesInfosComponent },
 ];
 
 @NgModule({

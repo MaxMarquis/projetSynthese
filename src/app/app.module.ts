@@ -33,11 +33,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BtnMajComponent } from './components/btn-maj/btn-maj.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-
-
-
-
+import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
+import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
+import { EntrepriseComponent } from './components/entreprise/entreprise.component';
+import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 
 @NgModule({
   declarations: [
@@ -65,11 +64,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     DernieresDemandesComponent,
     DernieresOffresComponent,
     NavbarComponent,
- 
-
-
-
-
+    OffresStagesAddComponent,
+    EntreprisesAddComponent,
+    EntrepriseComponent,
+    EntreprisesInfosComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [],

@@ -1,5 +1,5 @@
 import { Location } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-btn-annuler',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./btn-annuler.component.sass']
 })
 export class BtnAnnulerComponent implements OnInit {
+  @Input() titre: String = "Annuler"
 
   constructor(private location: Location) { }
 

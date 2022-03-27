@@ -25,17 +25,17 @@ export class CandidatsInfosComponent implements OnInit {
   };
 
   constructor(
-    private route: ActivatedRoute,
+    private activeRoute: ActivatedRoute,
     private candidatsService: CandidatsService
   ) { }
 
   ngOnInit(): void {
-    const candidatId = this.route.snapshot.paramMap.get("id") as string;
+    const candidatId = this.activeRoute.snapshot.paramMap.get("id") as string;
     console.log("Id Recu: " + candidatId)
     this.getCandidat(candidatId)
   }
 
-  getCandidat(test: string): void {
-    this.candidatsService.getCandidat(test).subscribe((res) => this.candidat = res)
+  getCandidat(id: string): void {
+    this.candidatsService.getCandidat(id).subscribe((res) => this.candidat = res)
   }
 }

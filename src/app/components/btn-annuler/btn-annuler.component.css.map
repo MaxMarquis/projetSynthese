@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "btn-annuler.component.sass"
-    ],
-    "names": [],
-    "file": "btn-annuler.component.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"btn-annuler.component.css"}

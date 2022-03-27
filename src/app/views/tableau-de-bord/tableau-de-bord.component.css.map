@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "tableau-de-bord.component.sass"
-    ],
-    "names": [],
-    "file": "tableau-de-bord.component.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"tableau-de-bord.component.css"}

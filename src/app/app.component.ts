@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'projetSynthese';
+  title = "eStage | Gestionnaire d'offre et demande de stages";
 
 }

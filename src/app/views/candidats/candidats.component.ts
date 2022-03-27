@@ -26,6 +26,6 @@ export class CandidatsComponent implements OnInit {
   }
 
   addCandidat() {
-    this.router.navigateByUrl('/candidats-add')
+    this.router.navigateByUrl('/candidats/add')
   }
 }

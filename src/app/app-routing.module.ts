@@ -11,6 +11,7 @@ import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
 import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
+import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
 
 const routes: Routes = [
   { path: "", component: IdentificationComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: "demandes-de-stages/edit", component: DemandesStagesEditComponent },
   { path: "offres-de-stages", component: OffresStagesComponent },
   { path: "offres-de-stages/edit", component: OffresStagesEditComponent },
+  { path: "offres-de-stages/add", component: OffresStagesAddComponent },
   { path: "candidats", component: CandidatsComponent },
   { path: "candidats/add", component: CandidatsAddComponent },
   { path: "candidats-infos/:id", component: CandidatsInfosComponent },

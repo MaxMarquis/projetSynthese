@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
-import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
+import { Router } from '@angular/router';
+import { Entreprise } from 'src/app/interfaces/entreprise';
+import { EntrepriseService } from 'src/app/services/entreprise.service';
 
 @Component({
   selector: 'app-entreprises',
@@ -8,17 +9,22 @@ import { RequetesStagesService } from 'src/app/services/requetes-stages.service'
   styleUrls: ['./entreprises.component.sass']
 })
 export class EntreprisesComponent implements OnInit {
-  requetesStage: Requetes_stages[] = []
+  entreprises: Entreprise[] = []
 
-  constructor(private requetesStagesService: RequetesStagesService) { }
+  constructor(private entrepriseService: EntrepriseService,
+    private route: Router) { }
 
   ngOnInit(): void {
-    this.getRequetesStage()
+    this.getEnterprise()
   }
 
-  getRequetesStage(): void {
-    this.requetesStagesService
-      .getRequetesStages()
-      .subscribe((res) => (this.requetesStage = res));
+  getEnterprise(): void {
+    this.entrepriseService
+      .getEntreprises()
+      .subscribe((res) => (this.entreprises = res));
+  }
+
+  addEntreprise(): void {
+    this.route.navigateByUrl("/entreprises/add")
   }
 }

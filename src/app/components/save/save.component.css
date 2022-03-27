@@ -14,7 +14,6 @@ button {
   border: none;
   border-radius: 5px;
   padding: 8px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -28,7 +27,6 @@ button {
   border: 1px solid #b3b3b3;
   border-radius: 5px;
   padding: 8px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -39,5 +37,4 @@ button {
   border: 1px solid #b3b3b3;
   border-radius: 5px;
   padding: 8px;
-}
-/*# sourceMappingURL=save.component.css.map */
+}/*# sourceMappingURL=save.component.css.map */

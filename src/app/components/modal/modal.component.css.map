@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,AAAA,MAAM,CAAe;EAAE,QAAQ,EAAE,QAAQ;EAAE,GAAG,EAAE,KAAK;EAAE,IAAI,EAAE,KAAK;EAAE,OAAO,EAAE,KAAK;EAAE,KAAK,EAAE,KAAK;EAAE,MAAM,EAAE,IAAI;CAAI",
-    "sources": [
-        "modal.component.scss"
-    ],
-    "names": [],
-    "file": "modal.component.css"
-}
+{"version":3,"sources":["modal.component.scss","modal.component.css"],"names":[],"mappings":"AAAA;EAA6B,kBAAA;EAAoB,UAAA;EAAY,WAAA;EAAa,cAAA;EAAgB,YAAA;EAAc,YAAA;ACOxG","file":"modal.component.css"}

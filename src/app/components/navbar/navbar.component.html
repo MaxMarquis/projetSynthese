@@ -1,0 +1,84 @@
+<nav class="navbar navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+
+<!-- TOGGLER................................... -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<!-- ADD BTN................................... -->
+
+  <ul id="add">
+    <li>
+      <a routerLink="/offres-de-stages" class="btn--offres">
+        <i class="fas fa-plus"></i>Ajouter une offre de stage
+      </a>
+    </li>
+    <li>
+      <a routerLink="/demandes-de-stages/add" class="btn--demandes">
+        <i class="fas fa-plus"></i>Ajouter une demande de stage
+      </a>
+    </li>
+    <li>
+      <a routerLink="/entreprises" class="btn--entreprises">
+        <i class="fas fa-plus"></i>Ajouter une entreprise
+      </a>
+    </li>
+    <li>
+      <a routerLink="/candidats/add" class="btn--candidats">
+        <i class="fas fa-plus"></i>Ajouter un candidat
+      </a>
+    </li>
+  </ul>
+
+<!-- ADMIN..................................... -->
+<div class="admin">
+    <img src="../../../assets/img/avatar.svg" class="avatar" alt="Image avatar user">
+    <p class="user">John Doe<br>
+      <a href="/tableau-de-bord">Admin</a> 
+    </p>
+</div>
+
+
+<!-- SIDENAV................................... -->
+    <div class="offcanvas offcanvas-start" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+<!-- BRAND..................................... -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../assets/img/logo-eStage.svg" alt="logo" class="logo"></h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+<!-- SIDEBAR NAV............................... -->
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-start flex-grow-1" id="side">
+          <li class="nav-item">
+            <a class="snb--tableaubord" aria-current="page" href="/tableau-de-bord">
+              <i class="fas fa-tachometer-alt faBox"></i>
+              Tableau de bord
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="snb--demandes" href="/demandes-de-stages">
+              <i class="fas fa-clipboard-list faBox">
+              </i>Demandes de stages
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="snb--offres" href="/offres-de-stages"><i class="fas fa-paper-plane faBox">
+              </i>Offres de stages
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="snb--candidats" href="/candidats">
+              <i class="fas fa-user faBox"></i>Candidats
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="snb--entreprises" href="/entreprises">
+              <i class="fas fa-building faBox"></i>Entreprises
+            </a>
+          </li>
+        </ul>
+       
+      </div>
+    </div>
+  </div>
+</nav>

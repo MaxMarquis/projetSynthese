@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 import { BarreActionsComponent } from './components/barre-actions/barre-actions.component';
 import { CandidatComponent } from './components/candidat/candidat.component';
@@ -70,7 +71,7 @@ import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises
     EntreprisesInfosComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

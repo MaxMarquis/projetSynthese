@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="shouldShowNavBar"></app-navbar>
 <!-- <app-side-nav></app-side-nav> -->
 <div class="page">
     <router-outlet></router-outlet>

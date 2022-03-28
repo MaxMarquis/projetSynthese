@@ -6,7 +6,7 @@ import { EntrepriseService } from 'src/app/services/entreprise.service';
 @Component({
   selector: 'app-entreprises',
   templateUrl: './entreprises.component.html',
-  styleUrls: ['./entreprises.component.sass']
+  styleUrls: ['./entreprises.component.sass'],
 })
 export class EntreprisesComponent implements OnInit {
   entreprises: Entreprise[] = []

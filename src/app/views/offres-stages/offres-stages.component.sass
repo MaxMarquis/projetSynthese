@@ -4,33 +4,44 @@ $color_edit: #22a6ac
 $color_delete: #F26689ed
 $color_title: #707070
 $color_suitcase: #FF9FA3
-$color_suitcase_bg: #BB2026
+$color_suitcase_inactive: #FFFFFF
+$color_suitcase_bg_active: #BB2026
+$color_suitcase_bg_inactive: #808080
 
 
-.crudbut 
+.crudbut
 	border: none
 	background: none
 
-.title 
+.title
 	color: $color_title
 
 
-.fa-pen-to-square 
+.fa-pen-to-square
 	color: $color_add
 
-.fa-eye 
+.fa-eye
 	color: $color_edit
 
-.fa-trash-can 
+.fa-trash-can
 	color: $color_delete
 
-.fa-suitcase 
+.fa-suitcase //active
 	color: $color_suitcase
 	border : 2px black
 	margin-right: 25px
 	padding: 15px
-	background-color: $color_suitcase_bg
+	background-color: $color_suitcase_bg_active
 	border-radius: 10px
+
+///// inactive
+.fa-suitcase-inactive
+	color: $color_suitcase_inactive
+	border : 2px black
+	margin-right: 25px
+	padding: 15px
+	border-radius: 10px
+	background-color: $color_suitcase_bg_inactive
 
 
 

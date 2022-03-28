@@ -1,15 +1,15 @@
 
 <div class="container">
     <h1>Offre de stages</h1>
-  
+
       <!--- <div class="d-flex justify-content-end">-->
     <button type="button" class="button btn btn-danger">
       Ajouter une offre de stage
     </button>
-  
-  
-  
-  
+
+
+
+
     <!--- table borderless pour enlever le HR sous les entêtes -->
     <table class="table table-borderless">
       <thead>
@@ -25,17 +25,14 @@
       <tbody>
         <tr *ngFor="let offreStage of offresStages">
           <td class="d-none">{{ offreStage._id }}</td>
-  
-          
-          <td><i class="fa-solid fa-suitcase "></i>{{ offreStage.title }} {{ offreStage.enterprise }}</td>
+
+          <td><i [ngClass]="offreStage.active ? 'fa-solid fa-suitcase' : 'fa-solid fa-suitcase fa-suitcase-inactive'"></i>{{ offreStage.title }} {{ offreStage.enterprise }}</td>
           <td>{{ offreStage.program }}</td>
-        
+
           <td>{{ offreStage.stageType }}</td>
           <td>{{ offreStage.startDate }}</td>
           <td>
-            <button type="button" class="btn btn-danger m-1">Refuser</button>
-            <button type="button" class="btn btn-success m-1">Accepter</button>
-  
+
             <button class="crudbut"><i class="fa-solid fa-eye p-2"></i></button>
             <button class="crudbut" (click)="editOffresstages()">
               <i class="fa-solid fa-pen-to-square"></i>
@@ -46,10 +43,10 @@
           </td>
         </tr>
       </tbody>
-  
+
     </table>
   </div>
-  
+
   <ng-template #deleteModal let-modal >
   <div class="modal-header">
     <h4 class="modal-title" id="titremodal">Suppression</h4>

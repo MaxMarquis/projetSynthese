@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserService } from '../../services/user.service';
+
 
 @Component({
   selector: 'app-identification',
@@ -8,12 +10,11 @@ import { Router } from '@angular/router';
 })
 export class IdentificationComponent implements OnInit {
   public profil = { name: '', email: '' };
-  constructor(private router: Router) {}
-
+  constructor(private router: Router,private userService: UserService) {}
   ngOnInit(): void {}
 
   login() {
-    this.router.navigateByUrl('/tableau-de-bord', { state: this.profil });
-    // alert(`Name: ${name} Courriel: ${email}`);
+    this.userService.logIn(JSON.stringify(this.profil));
+    this.router.navigateByUrl('/tableau-de-bord');
   }
 }

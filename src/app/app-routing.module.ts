@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardService } from './services/auth-guard.service';
 import { IdentificationComponent } from './views/identification/identification.component';
 import { TableauDeBordComponent } from './views/tableau-de-bord/tableau-de-bord.component';
 import { DemandesStagesComponent } from './views/demandes-stages/demandes-stages.component';
@@ -16,24 +17,76 @@ import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add
 import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 
 const routes: Routes = [
-  { path: "", component: IdentificationComponent },
-  { path: "tableau-de-bord", component: TableauDeBordComponent },
-  { path: "demandes-de-stages", component: DemandesStagesComponent },
-  { path: "demandes-de-stages/add", component: DemandesStagesAddComponent },
-  { path: "demandes-de-stages/edit", component: DemandesStagesEditComponent },
-  { path: "offres-de-stages", component: OffresStagesComponent },
-  { path: "offres-de-stages/edit", component: OffresStagesEditComponent },
-  { path: "offres-de-stages/add", component: OffresStagesAddComponent },
-  { path: "candidats", component: CandidatsComponent },
-  { path: "candidats/add", component: CandidatsAddComponent },
-  { path: "candidats/infos/:id", component: CandidatsInfosComponent },
-  { path: "entreprises", component: EntreprisesComponent },
-  { path: "entreprises/add", component: EntreprisesAddComponent },
-  { path: "entreprises/infos/:id", component: EntreprisesInfosComponent },
+  { path: '', component: IdentificationComponent },
+  {
+    path: 'tableau-de-bord',
+    component: TableauDeBordComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'demandes-de-stages',
+    component: DemandesStagesComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'demandes-de-stages/add',
+    component: DemandesStagesAddComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'demandes-de-stages/edit',
+    component: DemandesStagesEditComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'offres-de-stages',
+    component: OffresStagesComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'offres-de-stages/edit',
+    component: OffresStagesEditComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'offres-de-stages/add',
+    component: OffresStagesAddComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'candidats',
+    component: CandidatsComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'candidats/add',
+    component: CandidatsAddComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'candidats/infos/:id',
+    component: CandidatsInfosComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'entreprises',
+    component: EntreprisesComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'entreprises/add',
+    component: EntreprisesAddComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'entreprises/infos/:id',
+    component: EntreprisesInfosComponent,
+    canActivate: [AuthGuardService],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -17,7 +17,14 @@ import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add
 import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 
 const routes: Routes = [
-  { path: '', component: IdentificationComponent },
+
+  //ajout de AuthGuardService sur toutes les pages sauf IdentificationComponent 
+
+  { path: '', 
+  component: IdentificationComponent 
+  },
+  
+
   {
     path: 'tableau-de-bord',
     component: TableauDeBordComponent,

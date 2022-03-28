@@ -1,1 +1,29 @@
-/* No CSS *//*# sourceMappingURL=demandes-stages.component.css.map */
+.crudbut {
+  border: none;
+  background: none;
+}
+
+.title {
+  color: #707070;
+}
+
+.fa-pen-to-square {
+  color: #f89747;
+}
+
+.fa-eye {
+  color: #22a6ac;
+}
+
+.fa-trash-can {
+  color: #F26689ed;
+}
+
+.mortarbutton {
+  background-color: #e6c07f;
+  border: 2px black;
+  margin-right: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  color: #70582E;
+}/*# sourceMappingURL=demandes-stages.component.css.map */

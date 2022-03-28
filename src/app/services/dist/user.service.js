@@ -25,9 +25,15 @@ var UserService = /** @class */ (function () {
         this.loggedIn = true;
         this.logger.next(this.loggedIn);
     };
+    // Log info reutilise dans la navBar
     UserService.prototype.loginInfo = function () {
         var info = this.localStorageService.getItem('login') || '{}';
         return JSON.parse(info);
+    };
+    UserService.prototype.logOut = function () {
+        localStorage.removeItem('login');
+        this.loggedIn = false;
+        this.logger.next(this.loggedIn);
     };
     UserService = __decorate([
         core_1.Injectable({

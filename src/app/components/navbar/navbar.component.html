@@ -33,8 +33,9 @@
 <!-- ADMIN..................................... -->
 <div class="admin">
     <img src="../../../assets/img/avatar.svg" class="avatar" alt="Image avatar user">
-    <p class="user">John Doe<br>
-      <a href="/tableau-de-bord">Admin</a> 
+    <!-- Display du nom et courriel -->
+    <p class="user">{{profil.name}}<br>
+      <a href="/tableau-de-bord">{{profil.email}}</a>
     </p>
 </div>
 
@@ -51,7 +52,7 @@
         <ul class="navbar-nav justify-content-start flex-grow-1" id="side">
           <li class="nav-item">
             <a class="snb--tableaubord" aria-current="page" href="/tableau-de-bord">
-              <i class="fas fa-tachometer-alt faBox"></i>
+              <i class="fas fa-tachometer faBox"></i> 
               Tableau de bord
             </a>
           </li>
@@ -77,7 +78,7 @@
             </a>
           </li>
         </ul>
-       
+
       </div>
     </div>
   </div>

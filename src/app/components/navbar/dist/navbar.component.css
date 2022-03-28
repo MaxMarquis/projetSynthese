@@ -17,7 +17,7 @@ i {
 }
 
 #side .faBox {
-  width: 3.125rem;
+  width: 3.125;
 }
 
 #side a.snb--tableaubord {
@@ -163,4 +163,4 @@ ul#add {
 
 div.offcanvas-body {
   padding-right: 0;
-}/*# sourceMappingURL=navbar.component.css.map */
+}

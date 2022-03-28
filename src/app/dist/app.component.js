@@ -9,9 +9,18 @@ exports.__esModule = true;
 exports.AppComponent = void 0;
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'projetSynthese';
+    function AppComponent(userService) {
+        this.userService = userService;
+        this.title = "eStage | Gestionnaire d'offre et demande de stages";
+        // ne montre pas la navbar avant de se connecter sur l identification
+        this.shouldShowNavBar = false;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.userService.isLoggedIn().subscribe(function (isLoggedIn) {
+            _this.shouldShowNavBar = isLoggedIn;
+        });
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',

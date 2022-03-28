@@ -9,22 +9,22 @@ exports.__esModule = true;
 exports.EntreprisesComponent = void 0;
 var core_1 = require("@angular/core");
 var EntreprisesComponent = /** @class */ (function () {
-    function EntreprisesComponent(entrepriseService, router) {
+    function EntreprisesComponent(entrepriseService, route) {
         this.entrepriseService = entrepriseService;
-        this.router = router;
+        this.route = route;
         this.entreprises = [];
     }
     EntreprisesComponent.prototype.ngOnInit = function () {
-        this.getEntreprises();
+        this.getEnterprise();
     };
-    EntreprisesComponent.prototype.getEntreprises = function () {
+    EntreprisesComponent.prototype.getEnterprise = function () {
         var _this = this;
         this.entrepriseService
             .getEntreprises()
             .subscribe(function (res) { return (_this.entreprises = res); });
     };
     EntreprisesComponent.prototype.addEntreprise = function () {
-        this.router.navigateByUrl('/entreprises-add');
+        this.route.navigateByUrl("/entreprises/add");
     };
     EntreprisesComponent = __decorate([
         core_1.Component({

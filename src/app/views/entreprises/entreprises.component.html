@@ -1,10 +1,9 @@
 <div>
     <h1>Entreprises</h1>
-
-    <!--- ?? recois rien --->
     <button type="button" class="btn btn-primary" (click)="addEntreprise()">Ajouter une entreprise</button>
-    <div class="card-group" *ngFor="let entreprise of entreprises">
-     
- 
+    <div class="card-group">
+        <ng-container *ngFor="let entreprise of entreprises">
+            <app-entreprise [entreprise]="entreprise"></app-entreprise>
+        </ng-container>
     </div>
 </div>

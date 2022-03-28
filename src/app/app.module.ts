@@ -32,6 +32,10 @@ import { DernieresOffresComponent } from './views/dernieres-offres/dernieres-off
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BtnMajComponent } from './components/btn-maj/btn-maj.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
+import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
+import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
+import { EntrepriseComponent } from './components/entreprise/entreprise.component';
+import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 
 
 
@@ -61,6 +65,10 @@ import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-sta
     OffresStagesEditComponent,
     DernieresDemandesComponent,
     DernieresOffresComponent,
+    OffresStagesAddComponent,
+    EntreprisesAddComponent,
+    EntrepriseComponent,
+    EntreprisesInfosComponent,
 
 
 

@@ -2,7 +2,7 @@
 <h1>{{demandeStage.title}}</h1>
 <div class="btn--droite">
     <app-btn-annuler></app-btn-annuler>
-    <app-btn-maj></app-btn-maj>
+    <app-btn-maj [demandeStage]="demandeStage"></app-btn-maj>
 </div>
 
 <form>
@@ -42,7 +42,7 @@
         <div class="col">
             <!--- Ville -->
             <label>Ville</label>
-            <input type="text" class="form-control" [(ngModel)]="demandeStage.region" name="Ville" required>
+            <input type="text" class="form-control" [(ngModel)]="demandeStage.city" name="Ville" required>
         </div>
     </div>
     <div class="row">
@@ -69,54 +69,64 @@
     <div class="row">
         <div class="col">
             <!--- Type de stage -->
-            <!-- [(ngModel)]="demandeStage.stageType" name="Établissement" -->
             <label>Type de stage</label>
-            <select class="form-control">
-                <option value="a-voir">Veuillez effectuer un choix</option>
+            <select class="form-control" [(ngModel)]="demandeStage.stageType" name="stageType">
+                <option value="fulltime">Temps Plein</option>
+                <option value="parttime">Temps Partiel</option>
             </select>
         </div>
         <div class="col">
             <!--- Date de début-->
             <label>Date de début</label>
-            <!--- à voir date picker Angular-->
-            <!-- [(ngModel)]="demandeStage.startDate" name="Date de début" -->
-            <input type="date" id="start" name="trip-start" value="2022-03-11" min="2022-01-01" max="2025-12-31">
+            <input type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01" max="2025-12-31"
+                [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.startDate = $event"
+                name="Start Date">
         </div>
     </div>
 
     <div class="row">
         <div class="col">
             <!--- Nombre d'heures semaine-->
-            <!-- [(ngModel)]="demandeStage.hoursPerWeek" name="Heures" -->
             <label>Nombres d'heures par semaine</label>
-            <select class="form-control">
-                <option>Veuillez effectuer un choix</option>
+            <select class="form-control" [(ngModel)]="demandeStage.hoursPerWeek" name="Nombre D'heures">
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
             </select>
         </div>
         <div class="col">
             <!--- date de fin-->
             <label>Date de fin</label>
-            <!--- à voir date picker Angular-->
-            <!-- [(ngModel)]="demandeStage.endDate" name="Date de fin" -->
-            <input type="date" id="end" name="trip-end" value="2022-03-31" min="2022-01-01" max="2025-12-31">
+            <input type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01" max="2025-12-31"
+                [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.endDate = $event"
+                name="End Date">
         </div>
     </div>
 
     <!--- Rémunération-->
     <label>Rémunération</label>
+    <label>Rémunération</label>
     <div class="form-check">
         <div class="row">
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" value="discretion">À la discrétion de l'entreprise </label>
+                    <input type="checkbox" value="not-specified" [ngModel]="demandeStage.paid" name="not-specified">À la
+                    discrétion de
+                    l'entreprise </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" value="remunere">Stage rémunéré </label>
+                    <input type="checkbox" value="paid" [ngModel]="demandeStage.paid" name="paid">Stage rémunéré
+                </label>
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" value="nonremunere">Stage non rémunéré </label>
+                    <input type="checkbox" value="unpaid" [ngModel]="demandeStage.paid" name="unpaid">Stage non rémunéré
+                </label>
             </div>
         </div>
     </div>
@@ -134,6 +144,6 @@
     <div class="btn-group">
         <!--- Annuler / sauvegarder -->
         <app-btn-annuler></app-btn-annuler>
-        <app-btn-maj></app-btn-maj>
+        <app-btn-maj [demandeStage]="demandeStage"></app-btn-maj>
     </div>
 </form>

@@ -9,23 +9,22 @@ import { EntrepriseService } from 'src/app/services/entreprise.service';
   styleUrls: ['./entreprises.component.sass'],
 })
 export class EntreprisesComponent implements OnInit {
-  entreprises: Entreprise[] = [];
+  entreprises: Entreprise[] = []
 
-  constructor(
-    private entrepriseService: EntrepriseService,
-    private router: Router) { }
+  constructor(private entrepriseService: EntrepriseService,
+    private route: Router) { }
 
   ngOnInit(): void {
-    this.getEntreprises();
+    this.getEnterprise()
   }
 
-  getEntreprises(): void {
+  getEnterprise(): void {
     this.entrepriseService
       .getEntreprises()
       .subscribe((res) => (this.entreprises = res));
   }
 
-  addEntreprise() {
-    this.router.navigateByUrl('/entreprises-add')
+  addEntreprise(): void {
+    this.route.navigateByUrl("/entreprises/add")
   }
 }

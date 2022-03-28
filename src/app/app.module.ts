@@ -37,6 +37,7 @@ import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stage
 import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
 import { EntrepriseComponent } from './components/entreprise/entreprise.component';
 import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
+import { DemandesStagesViewsComponent } from './views/demandes-stages-views/demandes-stages-views.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises
     EntreprisesAddComponent,
     EntrepriseComponent,
     EntreprisesInfosComponent,
+    DemandesStagesViewsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [],

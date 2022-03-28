@@ -7,12 +7,69 @@
 @import '~bootstrap/scss/bootstrap'
 
 
-// VAR COLOR
-// $btn-tableaubord: #089DA4
-// $btn-offres: #821519
-// $btn-demandes: #CD9635
-// $btn-entreprises: #2E466E
-// $btn-candidats: #7F2987
-    
+// VAR COLOR GLOBAL
+$color-tableaubord: #089DA4
+$color-offres: #BB2026
+$color-demandes: #CD9635
+$color-entreprises: #86A9E6
+$color-candidats: #7F2987
+$color-h1-h2-p:#707070
+$placeholder: #8A8A8A
+
+// VAR COLOR ICONS/button CRUD
+$delete: #f26689
+$view: #22a6ac
+$edit: #f89747
+$accept: #07A04A
+$accept-bg: #CDECDB
+$refus: #A00707
+$refus-bg: #ECCDCD
+
+// MIXIN
+// @mixin title-border-div
+//     border-left: 10px solid
+//     padding-left: 1.25rem
+
 body
     font-family: 'Open Sans', sans-serif
+    background-color: #F6F6F6
+
+// basé sur demande stage view
+h1
+    color: $color-h1-h2-p
+    font-weight: 700
+    font-size: 2.875rem
+    line-height: 3.75rem
+h2
+    color: $color-h1-h2-p
+    font-weight: 700
+    font-size: 1.125rem
+    line-height: 1.125rem
+
+h3
+    color: $color-tableaubord
+    font-size: 2.875rem
+    margin-bottom: 5rem
+
+h4
+    color: $color-tableaubord
+    font-size: 1.5rem
+    line-height: 2.063rem
+
+h5
+    color: $color-h1-h2-p
+    font-size: 1.125rem
+    line-height: 1.688rem
+    font-weight: 700
+
+p
+    color: $color-h1-h2-p
+    font-size: 1.125rem
+    line-height: 1.688rem
+
+.mb-5rem
+    margin-bottom: 5rem
+
+
+
+

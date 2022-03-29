@@ -31,7 +31,7 @@ export class DernieresDemandesComponent implements OnInit {
       .subscribe((res: Requetes_stages[]) => (this.requetesStage = res));
   }
 
-  /// Function Delete requetes_stages
+  /// Function Edit requetes_stages
   editDemandesstages() {
     this.router.navigateByUrl('/demandes-de-stages/edit')
   }
@@ -39,7 +39,6 @@ export class DernieresDemandesComponent implements OnInit {
   onDelete(Requetestages: Requetes_stages): void {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
       .subscribe(_result => this.requetesStage = this.requetesStage.filter(p => p !== Requetestages));
-
 
   }
   requeteStatus(requetesstage: Requetes_stages, active: Boolean) {
@@ -51,6 +50,7 @@ export class DernieresDemandesComponent implements OnInit {
     });
   }
 
+  
   
 /// Modal suppression
 open(content: any, requetesStage: Requetes_stages) {

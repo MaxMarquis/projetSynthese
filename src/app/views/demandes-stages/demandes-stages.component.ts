@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
+import { DEMANDESSTAGES } from 'src/app/mock-demandes-stages';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
-
-
-
 
 @Component({
   selector: 'app-demandes-stages',
@@ -12,7 +10,7 @@ import { RequetesStagesService } from 'src/app/services/requetes-stages.service'
   styleUrls: ['./demandes-stages.component.sass']
 })
 export class DemandesStagesComponent implements OnInit {
-  requetesStage: Requetes_stages[] = [];
+  requetesStage: Requetes_stages[] = DEMANDESSTAGES;
 
 
 
@@ -20,7 +18,7 @@ export class DemandesStagesComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit(): void {
-    this.getRequetestages();
+    // this.getRequetestages();
   }
 
   /// Function get requetes_stages
@@ -39,8 +37,6 @@ export class DemandesStagesComponent implements OnInit {
   }
   addDemandesstages() {
     this.router.navigateByUrl('/demandes-de-stages/add')
-
-
   }
 }
 

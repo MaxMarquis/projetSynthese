@@ -23,10 +23,17 @@ export class UserService {
     this.logger.next(this.loggedIn);
   }
 
+  // Log info reutilise dans la navBar
   loginInfo() {
     const info = this.localStorageService.getItem('login') || '{}'
     return JSON.parse(info);
   }
 
-
+  logOut() {
+    localStorage.removeItem('login');
+    this.loggedIn = false;
+    this.logger.next(this.loggedIn);
+  }
 }
+
+

@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 import { DEMANDESSTAGES } from 'src/app/mock-demandes-stages';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-dernieres-demandes',
@@ -14,7 +15,10 @@ export class DernieresDemandesComponent implements OnInit {
   requetesStage: Requetes_stages[] = DEMANDESSTAGES;
 
   constructor(private requetesStagesService: RequetesStagesService,
-    private router: Router) { }
+    private RequetesStagesService: RequetesStagesService,
+    private router: Router,
+    public modalService: NgbModal
+  ) {}
 
   ngOnInit(): void {
     // this.getRequetestages();
@@ -38,6 +42,29 @@ export class DernieresDemandesComponent implements OnInit {
 
 
   }
+  requeteStatus(requetesstage: Requetes_stages, active: Boolean) {
+    this.RequetesStagesService.editRequeteStage({
+      ...requetesstage,
+      active,
+    }).subscribe((_result) => {
+      requetesstage.active = active;
+    });
+  }
 
-
+  
+/// Modal suppression
+open(content: any, requetesStage: Requetes_stages) {
+  this.modalService
+    .open(content, { ariaLabelledBy: 'titremodal' })
+    .result.then(
+      (result) => {
+        if (result === 'Delete') {
+          this.onDelete(requetesStage);
+        }
+      },
+      (reason) => {}
+    );
 }
+}
+
+

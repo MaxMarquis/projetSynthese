@@ -21,13 +21,15 @@
         <tr *ngFor="let requeteStage of requetesStage">
            <td class="d-none">{{ requeteStage._id }}</td>
            <td>
-              <i class="fas fa-graduation-cap"></i> {{ requeteStage.title }}{{ requeteStage.studentName }}
+              <i class="fas fa-graduation-cap"></i> {{ requeteStage.title }} {{ requeteStage.studentName }}
            </td>
            <td>{{ requeteStage.school }}</td>
            <td>{{ requeteStage.startDate }}</td>
+           <!--- ACCEPTER / REFUSER -->                                
            <td>
               <button *ngIf="requeteStage.active" type="button" class="btn btn-danger m-2" (click)="requeteStatus(requeteStage,false)">Refuser</button>
               <button *ngIf="!requeteStage.active" type="button" class="btn btn-success m-1" (click)="requeteStatus(requeteStage,true)">Accepter</button>
+              <!--- BOUTONS CRUD READ EDIT DELETE-->  
               <button class="crudbut" (click)="editDemandesstages()"><i class="fa-solid fa-eye p-2"></i></button>
               <button class="crudbut">
               <i class="fa-solid fa-pen-to-square"></i>
@@ -40,6 +42,9 @@
      </tbody>
   </table>
 </div>
+
+
+<!--- MODAL SUPPRESSION DEMANDE DE STAGE -->
 <ng-template #deleteModal let-modal >
   <div class="modal-header">
      <h4 class="modal-title" id="titremodal">Suppression</h4>

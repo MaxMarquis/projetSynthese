@@ -38,7 +38,7 @@ var DernieresDemandesComponent = /** @class */ (function () {
             .getRequetesStages()
             .subscribe(function (res) { return (_this.requetesStage = res); });
     };
-    /// Function Delete requetes_stages
+    /// Function Edit requetes_stages
     DernieresDemandesComponent.prototype.editDemandesstages = function () {
         this.router.navigateByUrl('/demandes-de-stages/edit');
     };

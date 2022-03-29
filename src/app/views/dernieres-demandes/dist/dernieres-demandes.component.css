@@ -24,19 +24,10 @@
 }
 
 .fa-graduation-cap {
-  color: #FF9FA3;
+  color: #70582E;
   border: 2px black;
   margin-right: 25px;
   padding: 15px;
-  background-color: #BB2026;
+  background-color: #F89747;
   border-radius: 10px;
-}
-
-.fa-graduation-cap-inactive {
-  color: #FFFFFF;
-  border: 2px black;
-  margin-right: 25px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #808080;
 }

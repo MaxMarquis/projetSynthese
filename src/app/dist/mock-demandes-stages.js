@@ -1,6 +1,7 @@
-import { Requetes_stages } from "./interfaces/requetes_stages";
-
-export const DEMANDESSTAGES: Requetes_stages[] = [
+"use strict";
+exports.__esModule = true;
+exports.DEMANDESSTAGES = void 0;
+exports.DEMANDESSTAGES = [
     {
         _id: "6233604e7ecfa34056f00ecf",
         title: "Dynamic Accounts Officer",
@@ -31,7 +32,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed0",
@@ -63,7 +64,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed1",
@@ -95,7 +96,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed2",
@@ -127,7 +128,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed3",
@@ -159,7 +160,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed4",
@@ -191,7 +192,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed5",
@@ -223,7 +224,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed6",
@@ -255,7 +256,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     },
     {
         _id: "6233604e7ecfa34056f00ed7",
@@ -287,6 +288,6 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
         description: "Angular est un framework côté client, open source, basé sur TypeScript, et co-dirigé par l'équipe du projet « Angular » à Google et par une communauté de particuliers et de sociétés",
         entreprise: "Google",
         user: "Misko Hevery",
-        linkToResume: "https://www.perdu.com/",
+        linkToResume: "https://www.perdu.com/"
     }
-]
+];

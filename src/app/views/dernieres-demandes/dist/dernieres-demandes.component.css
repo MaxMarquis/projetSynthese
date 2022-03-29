@@ -22,3 +22,21 @@
 .button {
   float: right;
 }
+
+.fa-graduation-cap {
+  color: #FF9FA3;
+  border: 2px black;
+  margin-right: 25px;
+  padding: 15px;
+  background-color: #BB2026;
+  border-radius: 10px;
+}
+
+.fa-graduation-cap-inactive {
+  color: #FFFFFF;
+  border: 2px black;
+  margin-right: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #808080;
+}

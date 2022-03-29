@@ -23,26 +23,23 @@
       <tr *ngFor="let requeteStage of requetesStage">
         <td class="d-none">{{ requeteStage._id }}</td>
         <td>
-          <div class="mortarbutton">
-            <i class="fa fa-graduation-cap d-inline-flex p-1"></i>
-          </div>
-          <div class="etudiants">
-            {{ requeteStage.title }}<br />{{ requeteStage.studentName }}
-          </div>
+       
+            {{ requeteStage.title }}{{ requeteStage.studentName }}
+       
         </td>
 
         <td>{{ requeteStage.activitySector }}</td>
-        <td>{{ requeteStage.region }}</td>
         <td>{{ requeteStage.startDate }}</td>
+    
         <td>
-          <button type="button" class="btn btn-danger m-1">Refuser</button>
-          <button type="button" class="btn btn-success m-1">Accepter</button>
+          <button *ngIf="requeteStage.active" type="button" class="btn btn-danger m-2" (click)="requeteStatus(requeteStage,false)">Refuser</button>
+          <button *ngIf="!requeteStage.active" type="button" class="btn btn-success m-1" (click)="requeteStatus(requeteStage,true)">Accepter</button>
 
           <button class="crudbut" (click)="editDemandesstages()"><i class="fa-solid fa-eye p-2"></i></button>
           <button class="crudbut">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="crudbut" (click)="onDelete(requeteStage)">
+          <button class="crudbut" (click)="open(deleteModal,requeteStage)">
             <i class="fa-solid fa-trash-can p-2"></i>
           </button>
         </td>
@@ -50,3 +47,20 @@
     </tbody>
   </table>
 </div>
+
+
+<ng-template #deleteModal let-modal >
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+   Voulez vous supprimer l'offre de stage ?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+  </div>
+  </ng-template>

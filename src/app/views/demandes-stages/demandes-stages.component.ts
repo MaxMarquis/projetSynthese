@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 import { DEMANDESSTAGES } from 'src/app/mock-demandes-stages';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-demandes-stages',
@@ -12,10 +13,11 @@ import { RequetesStagesService } from 'src/app/services/requetes-stages.service'
 export class DemandesStagesComponent implements OnInit {
   requetesStage: Requetes_stages[] = DEMANDESSTAGES;
 
-
-
   constructor(private requetesStagesService: RequetesStagesService,
-    private router: Router) { }
+    private RequetesStagesService: RequetesStagesService,
+    private router: Router,
+    public modalService: NgbModal
+  ) {}
 
   ngOnInit(): void {
     // this.getRequetestages();
@@ -29,16 +31,36 @@ export class DemandesStagesComponent implements OnInit {
   }
 
   /// Function Delete requetes_stages
+  addDemandesstages() {
+    this.router.navigateByUrl('/demandes-de-stages/edit')
+  }
+  /// Function Delete requetes_stages
   onDelete(Requetestages: Requetes_stages): void {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
       .subscribe(_result => this.requetesStage = this.requetesStage.filter(p => p !== Requetestages));
 
 
   }
-  addDemandesstages() {
-    this.router.navigateByUrl('/demandes-de-stages/add')
+  requeteStatus(requetesstage: Requetes_stages, active: Boolean) {
+    this.RequetesStagesService.editRequeteStage({
+      ...requetesstage,
+      active,
+    }).subscribe((_result) => {
+      requetesstage.active = active;
+    });
   }
+  
+/// Modal suppression
+open(content: any, requetesStage: Requetes_stages) {
+  this.modalService
+    .open(content, { ariaLabelledBy: 'titremodal' })
+    .result.then(
+      (result) => {
+        if (result === 'Delete') {
+          this.onDelete(requetesStage);
+        }
+      },
+      (reason) => {}
+    );
 }
-
-
-
+}

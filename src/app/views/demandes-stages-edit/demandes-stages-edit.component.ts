@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Candidats } from 'src/app/interfaces/candidats';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
+import { ActivatedRoute } from '@angular/router';
+import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
+
 
 @Component({
   selector: 'app-demandes-stages-edit',
@@ -9,36 +11,42 @@ import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 })
 export class DemandesStagesEditComponent implements OnInit {
   demandeStage: Requetes_stages = {
-    _id: "123",
-    description: "Description",
-    entreprise: "Nom de l'entreprise",
-    title: "Titre de la demande",
-    studentName: "Nom élève",
-    studentPresentation: "Présentation",
-    school: "École",
+    _id: "",
+    description: "",
+    entreprise: "",
+    title: "",
+    studentName: "",
+    studentPresentation: "",
+    school: "",
     startDate: new Date(),
     endDate: new Date(),
-    program: "Program",
-    stageType: "fulltime",
-    hoursPerWeek: 35,
-    additionalInfo: "More info",
-    skills: ["Skills"],
+    program: "",
+    stageType: "",
+    hoursPerWeek: 0,
+    additionalInfo: "",
+    skills: [""],
     published: false,
-    paid: ["paid"],
-    user: "user",
+    paid: [""],
+    user: "",
     active: false,
-    region: "Region",
-    activitySector: "Activity Sector",
-    city: "City",
-    linkToResume: "https://perdu.com/",
+    region: "",
+    activitySector: "",
+    city: "",
+    linkToResume: "",
   };
 
-  constructor() { }
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private requetesStagesService: RequetesStagesService
+  ) { }
 
   ngOnInit(): void {
+    const stageId = this.activeRoute.snapshot.paramMap.get("id") as string;
+    console.log("Id Recu: " + stageId)
+    this.getRequeteStage(stageId)
   }
 
-  test() {
-    console.log("test: " + this.demandeStage.title)
+  getRequeteStage(id: string): void {
+    this.requetesStagesService.getRequeteStage(id).subscribe((res) => this.demandeStage = res)
   }
 }

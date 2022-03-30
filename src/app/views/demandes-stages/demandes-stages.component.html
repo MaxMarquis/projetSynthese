@@ -2,7 +2,7 @@
   <h1>Demande de stage</h1>
   <div class="ajout">
      <!--- Ouverture component demandes-stages-add -->
-     <button class="btn btn-warning" role="alert" (click)="addDemandesstages()">
+     <button class="btn btn-warning" role="alert" routerLink='/demandes-de-stages/add'>
      Ajouter une demande
      </button>
   </div>
@@ -21,7 +21,7 @@
         <tr *ngFor="let requeteStage of requetesStage">
            <td class="d-none">{{ requeteStage._id }}</td>
            <td>
-              <i [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : ' fa-graduation-cap-inactive'"></i>
+              <i [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
               {{ requeteStage.title }}
               {{ requeteStage.studentName}}
            </td>
@@ -29,8 +29,8 @@
            <td>{{ requeteStage.region }}</td>
            <td>{{ requeteStage.startDate }}</td>
            <td>
-              <button class="crudbut"><i class="fa-solid fa-eye p-2"></i></button>
-              <button class="crudbut">
+              <button class="crudbut" routerLink='/demandes-de-stages/view/{{ requeteStage._id }}'><i class="fa-solid fa-eye p-2"></i></button>
+              <button class="crudbut" routerLink='/demandes-de-stages/edit/{{ requeteStage._id }}'>
               <i class="fa-solid fa-pen-to-square"></i>
               </button>
               <button class="crudbut" (click)="open(deleteModal,requeteStage)">

@@ -11,6 +11,7 @@ import { CandidatsAddComponent } from './views/candidats-add/candidats-add.compo
 import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
 import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes-stages-add.component';
+import { DemandesStagesViewsComponent } from './views/demandes-stages-views/demandes-stages-views.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
 import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
 import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
@@ -18,12 +19,12 @@ import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises
 
 const routes: Routes = [
 
-  //ajout de AuthGuardService sur toutes les pages sauf IdentificationComponent 
+  //ajout de AuthGuardService sur toutes les pages sauf IdentificationComponent
 
-  { path: '', 
-  component: IdentificationComponent 
+  { path: '',
+  component: IdentificationComponent
   },
-  
+
 
   {
     path: 'tableau-de-bord',
@@ -41,8 +42,13 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'demandes-de-stages/edit',
+    path: 'demandes-de-stages/edit/:id',
     component: DemandesStagesEditComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'demandes-de-stages/view/:id',
+    component: DemandesStagesViewsComponent,
     canActivate: [AuthGuardService],
   },
   {

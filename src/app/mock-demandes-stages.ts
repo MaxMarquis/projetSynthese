@@ -24,7 +24,7 @@ export const DEMANDESSTAGES: Requetes_stages[] = [
             "not-specified",
             "paid"
         ],
-        active: true,
+        active: false,
         region: "Kansas",
         activitySector: "International Communications Executive",
         city: "New Lewtown",

@@ -11,7 +11,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./demandes-stages.component.sass']
 })
 export class DemandesStagesComponent implements OnInit {
-  requetesStage: Requetes_stages[] = DEMANDESSTAGES;
+  requetesStage: Requetes_stages[]=DEMANDESSTAGES;
 
   constructor(private requetesStagesService: RequetesStagesService,
     private RequetesStagesService: RequetesStagesService,
@@ -31,10 +31,6 @@ export class DemandesStagesComponent implements OnInit {
   }
 
   /// Function Delete requetes_stages
-  addDemandesstages() {
-    this.router.navigateByUrl('/demandes-de-stages/edit')
-  }
-  /// Function Delete requetes_stages
   onDelete(Requetestages: Requetes_stages): void {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
       .subscribe(_result => this.requetesStage = this.requetesStage.filter(p => p !== Requetestages));
@@ -49,7 +45,7 @@ export class DemandesStagesComponent implements OnInit {
       requetesstage.active = active;
     });
   }
-  
+
 /// Modal suppression
 open(content: any, requetesStage: Requetes_stages) {
   this.modalService

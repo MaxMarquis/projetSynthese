@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
+import { ActivatedRoute } from '@angular/router';
+import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
 
 @Component({
   selector: 'app-demandes-stages-views',
@@ -9,34 +10,43 @@ import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 })
 export class DemandesStagesViewsComponent implements OnInit {
  requete_stage: Requetes_stages = {
-    _id: "123",
-    description: "Description",
-    entreprise: "Nom de l'entreprise",
-    title: "Titre de la demande",
-    studentName: "Nom élève",
-    studentPresentation: "Présentation",
-    school: "École",
+    _id: "",
+    description: "",
+    entreprise: "",
+    title: "",
+    studentName: "",
+    studentPresentation: "",
+    school: "",
     startDate: new Date(),
     endDate: new Date(),
-    program: "Program",
-    stageType: "Stage Type",
-    hoursPerWeek: 40,
-    additionalInfo: "More info",
-    skills: ["Skills"],
+    program: "",
+    stageType: "",
+    hoursPerWeek: 0,
+    additionalInfo: "",
+    skills: [""],
     published: false,
-    paid: ["paid"],
-    user: "user",
+    paid: [""],
+    user: "",
     active: false,
-    region: "Region",
-    activitySector: "Activity Sector",
-    city: "City",
+    region: "",
+    activitySector: "",
+    city: "",
     linkToResume: "",
   };
 
-  constructor() { }
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private requetesStagesService: RequetesStagesService
+  ) { }
 
   ngOnInit(): void {
+    const stageId = this.activeRoute.snapshot.paramMap.get("id") as string;
+    console.log("Id Recu: " + stageId)
+    this.getRequeteStage(stageId)
+  }
 
+  getRequeteStage(id: string): void {
+    this.requetesStagesService.getRequeteStage(id).subscribe((res) => this.requete_stage = res)
   }
 
 

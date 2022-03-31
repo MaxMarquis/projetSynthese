@@ -43,6 +43,7 @@ import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises
 
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-edit.component';
 registerLocaleData(localeFr, 'fr');
 
 @NgModule({
@@ -75,6 +76,7 @@ registerLocaleData(localeFr, 'fr');
     EntreprisesInfosComponent,
     DemandesStagesViewsComponent,
     CandidatsEditComponent,
+    EntreprisesEditComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [AuthGuardService],

@@ -17,6 +17,7 @@ import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stage
 import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
 import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 import { CandidatsEditComponent } from './views/candidats-edit/candidats-edit.component';
+import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-edit.component';
 
 const routes: Routes = [
 
@@ -93,6 +94,11 @@ const routes: Routes = [
   {
     path: 'entreprises/add',
     component: EntreprisesAddComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'entreprises/edit',
+    component: EntreprisesEditComponent,
     canActivate: [AuthGuardService],
   },
   {

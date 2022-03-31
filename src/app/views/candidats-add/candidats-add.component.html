@@ -6,45 +6,46 @@
         <i class="fa-solid fa-floppy-disk"></i>Sauvegarder </button>
     <form>
         <!--- Nom-->
-        <label>Nom:</label>
-        <input class="form-control" type="text">
+        <label>Nom et prénom:</label>
+        <input class="form-control" type="text" [(ngModel)]="candidat.name" name="nom">
         <div class="row">
             <div class="col">
                 <!--- poste -->
                 <label>Poste</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" [(ngModel)]="candidat.jobTitle" name="jobTitle">
             </div>
             <h2>Courte présentation</h2>
             <div class="col">
-                <textarea class="form-control" id="formtext" rows="2"></textarea>
+                <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="candidat.description"
+                    name="description"></textarea>
                 <h3>Information personnelles</h3>
                 <div class="row">
                     <div class="col">
                         <label>Adresse</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" [(ngModel)]="candidat.address" name="adress">
                     </div>
                     <div class="col">
                         <label>téléphone</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" [(ngModel)]="candidat.phone" name="phone">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label>Ville</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" [(ngModel)]="candidat.city" name="city">
                     </div>
                     <div class="col">
                         <label>Courriel</label>
-                        <input type="email" class="form-control">
+                        <input type="email" class="form-control" [(ngModel)]="candidat.email" name="email">
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label>Province</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" [(ngModel)]="candidat.province" name="province">
                     </div>
                     <label>Code postal</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" [(ngModel)]="candidat.postalCode" name="postalCode">
                 </div>
                 <div class="btn-group">
                     <!--- Annuler / sauvegarder -->

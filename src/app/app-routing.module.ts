@@ -16,16 +16,16 @@ import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-sta
 import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
 import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
 import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
+import { CandidatsEditComponent } from './views/candidats-edit/candidats-edit.component';
+import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-edit.component';
 
 const routes: Routes = [
 
   //ajout de AuthGuardService sur toutes les pages sauf IdentificationComponent
-
-  { path: '',
-  component: IdentificationComponent
+  {
+    path: '',
+    component: IdentificationComponent
   },
-
-
   {
     path: 'tableau-de-bord',
     component: TableauDeBordComponent,
@@ -77,6 +77,11 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
+    path: 'candidats/edit',
+    component: CandidatsEditComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
     path: 'candidats/infos/:id',
     component: CandidatsInfosComponent,
     canActivate: [AuthGuardService],
@@ -92,6 +97,11 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
+    path: 'entreprises/edit',
+    component: EntreprisesEditComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
     path: 'entreprises/infos/:id',
     component: EntreprisesInfosComponent,
     canActivate: [AuthGuardService],
@@ -102,4 +112,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

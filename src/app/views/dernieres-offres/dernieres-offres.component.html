@@ -1,16 +1,13 @@
-
-
-
 <div class="container">
   <h2>Dernière offres de stage</h2>
   <p>En attente de validation</p>
 
   <!--- valider les demandes -->
-    <!--- <div class="d-flex justify-content-end">-->
+  <!--- <div class="d-flex justify-content-end">-->
   <button type="button" class="button btn btn-info">
     Valider toutes les offres
   </button>
-  
+
 
 
 
@@ -18,7 +15,7 @@
   <!--- table borderless pour enlever le HR sous les entêtes -->
   <table class="table table-borderless">
     <thead>
-      
+
       <tr class="title">
         <th scope="col" class="d-none">ID</th>
         <th scope="col">Poste</th>
@@ -34,10 +31,12 @@
 
         <td><i class="fa-solid fa-suitcase "></i>{{ offreStage.title }} {{ offreStage.enterprise }}</td>
         <td>{{ offreStage.program }}</td>
-        <td>{{ offreStage.startDate }}</td>
+        <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>
         <td>
-          <button *ngIf="offreStage.active" type="button" class="btn btn-danger m-2" (click)="offerStatus(offreStage,false)">Refuser</button>
-          <button *ngIf="!offreStage.active" type="button" class="btn btn-success m-1" (click)="offerStatus(offreStage,true)">Accepter</button>
+          <button *ngIf="offreStage.active" type="button" class="btn btn-danger m-2"
+            (click)="offerStatus(offreStage,false)">Refuser</button>
+          <button *ngIf="!offreStage.active" type="button" class="btn btn-success m-1"
+            (click)="offerStatus(offreStage,true)">Accepter</button>
 
           <button class="crudbut"><i class="fa-solid fa-eye p-2"></i></button>
           <button class="crudbut" (click)="editOffresstages()">
@@ -53,18 +52,18 @@
   </table>
 </div>
 
-<ng-template #deleteModal let-modal >
-<div class="modal-header">
-  <h4 class="modal-title" id="titremodal">Suppression</h4>
-  <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-    <span aria-hidden="true">×</span>
-  </button>
-</div>
-<div class="modal-body text-center">
- Voulez vous supprimer l'offre de stage ?
-</div>
-<div class="modal-footer">
-  <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
-  <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
-</div>
+<ng-template #deleteModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Voulez vous supprimer l'offre de stage ?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+  </div>
 </ng-template>

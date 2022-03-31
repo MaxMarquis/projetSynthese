@@ -41,6 +41,9 @@ import { EntrepriseComponent } from './components/entreprise/entreprise.componen
 import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
 import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+registerLocaleData(localeFr, 'fr');
 
 @NgModule({
   declarations: [

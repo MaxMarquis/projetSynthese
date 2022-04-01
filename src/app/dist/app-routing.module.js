@@ -20,13 +20,12 @@ var candidats_add_component_1 = require("./views/candidats-add/candidats-add.com
 var candidats_infos_component_1 = require("./views/candidats-infos/candidats-infos.component");
 var demandes_stages_edit_component_1 = require("./views/demandes-stages-edit/demandes-stages-edit.component");
 var demandes_stages_add_component_1 = require("./views/demandes-stages-add/demandes-stages-add.component");
-var demandes_stages_views_component_1 = require("./views/demandes-stages-views/demandes-stages-views.component");
 var offres_stages_edit_component_1 = require("./views/offres-stages-edit/offres-stages-edit.component");
 var offres_stages_add_component_1 = require("./views/offres-stages-add/offres-stages-add.component");
 var entreprises_add_component_1 = require("./views/entreprises-add/entreprises-add.component");
 var entreprises_infos_component_1 = require("./views/entreprises-infos/entreprises-infos.component");
 var routes = [
-    //ajout de AuthGuardService sur toutes les pages sauf IdentificationComponent
+    //ajout de AuthGuardService sur toutes les pages sauf IdentificationComponent 
     { path: '',
         component: identification_component_1.IdentificationComponent
     },
@@ -46,13 +45,8 @@ var routes = [
         canActivate: [auth_guard_service_1.AuthGuardService]
     },
     {
-        path: 'demandes-de-stages/edit/:id',
+        path: 'demandes-de-stages/edit',
         component: demandes_stages_edit_component_1.DemandesStagesEditComponent,
-        canActivate: [auth_guard_service_1.AuthGuardService]
-    },
-    {
-        path: 'demandes-de-stages/view/:id',
-        component: demandes_stages_views_component_1.DemandesStagesViewsComponent,
         canActivate: [auth_guard_service_1.AuthGuardService]
     },
     {

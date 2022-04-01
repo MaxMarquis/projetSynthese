@@ -39,10 +39,6 @@ var DemandesStagesComponent = /** @class */ (function () {
             .subscribe(function (res) { return (_this.requetesStage = res); });
     };
     /// Function Delete requetes_stages
-    DemandesStagesComponent.prototype.addDemandesstages = function () {
-        this.router.navigateByUrl('/demandes-de-stages/edit');
-    };
-    /// Function Delete requetes_stages
     DemandesStagesComponent.prototype.onDelete = function (Requetestages) {
         var _this = this;
         this.requetesStagesService.deleteRequeteStage(Requetestages._id)

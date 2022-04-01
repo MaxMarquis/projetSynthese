@@ -37,9 +37,11 @@ export class RequetesStagesService {
 
   // Fonction qui modifie une requête de stage en fonction de l'id
   editRequeteStage(requeteStage: Requetes_stages): Observable<Requetes_stages> {
+    let req:any = {...requeteStage};
+    delete req._id;
     return this.http.put<Requetes_stages>(
       this.requetesStagesUrl + requeteStage._id,
-      requeteStage,
+      req,
       httpOptions
     );
   }

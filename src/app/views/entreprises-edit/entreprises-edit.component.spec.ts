@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideNavComponent } from './side-nav.component';
+import { EntreprisesEditComponent } from './entreprises-edit.component';
 
-describe('SideNavComponent', () => {
-  let component: SideNavComponent;
-  let fixture: ComponentFixture<SideNavComponent>;
+describe('EntreprisesEditComponent', () => {
+  let component: EntreprisesEditComponent;
+  let fixture: ComponentFixture<EntreprisesEditComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SideNavComponent ]
+      declarations: [ EntreprisesEditComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SideNavComponent);
+    fixture = TestBed.createComponent(EntreprisesEditComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

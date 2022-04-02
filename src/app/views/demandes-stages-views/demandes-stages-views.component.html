@@ -63,11 +63,11 @@ FICHE CANDIDAT
     <div>
       <div class="border-form">
         <h5>Date de début</h5>
-        <p>{{requete_stage.startDate}}</p>
+        <p>{{requete_stage.startDate | date:'longDate':'undefined':'fr'}}</p>
       </div>
       <div class="border-form">
         <h5>Date de fin</h5>
-        <p>{{requete_stage.endDate}}</p>
+        <p>{{requete_stage.endDate | date:'longDate':'undefined':'fr'}}</p>
       </div>
     </div>
 

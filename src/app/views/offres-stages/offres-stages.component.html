@@ -34,19 +34,18 @@
         <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>
         <td>
 
-          <button class="crudbut"><i class="fa-solid fa-eye"></i></button>
-          <button class="crudbut" (click)="editOffresstages()">
-            <i class="fa-solid fa-pen-to-square"></i>
-          </button>
-          <button class="crudbut" (click)="open(deleteModal,offreStage)">
-            <i class="fa-solid fa-trash-can p-2"></i>
-          </button>
+          <button class="crudbut" routerLink='/offres-de-stages/view/{{ offreStage._id }}'>
+            <i class="fa-solid fa-eye p-2"></i></button>
+           <button class="crudbut" routerLink='/offres-de-stages/edit{{ offreStage._id }}'>
+           <i class="fa-solid fa-pen-to-square"></i>
+           </button>
+           <button class="crudbut" (click)="open(deleteModal,offreStage)">
+           <i class="fa-solid fa-trash-can p-2"></i>
+           </button>
         </td>
       </tr>
     </tbody>
 
-  </table>
-</div>
 
 <ng-template #deleteModal let-modal>
   <div class="modal-header">

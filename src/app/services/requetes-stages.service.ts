@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Requetes_stages } from '../interfaces/requetes_stages';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  headers: new HttpHeaders({  'Content-Type': 'application/json charset=utf-8' }),
 };
 
 @Injectable({

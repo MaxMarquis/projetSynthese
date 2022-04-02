@@ -25,7 +25,7 @@ exports.DEMANDESSTAGES = [
             "not-specified",
             "paid"
         ],
-        active: true,
+        active: false,
         region: "Kansas",
         activitySector: "International Communications Executive",
         city: "New Lewtown",

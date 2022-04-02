@@ -9,9 +9,11 @@ exports.__esModule = true;
 exports.OffresStagesEditComponent = void 0;
 var core_1 = require("@angular/core");
 var OffresStagesEditComponent = /** @class */ (function () {
-    function OffresStagesEditComponent() {
+    function OffresStagesEditComponent(activeRoute, offreStagesService) {
+        this.activeRoute = activeRoute;
+        this.offreStagesService = offreStagesService;
         this.offreStage = {
-            _id: "123",
+            _id: "",
             title: "Titre du stage",
             description: "Description",
             enterprise: "Nom de l'entreprise",
@@ -19,17 +21,24 @@ var OffresStagesEditComponent = /** @class */ (function () {
             endDate: new Date(),
             program: "Program",
             requirements: "Requirements",
-            stageType: "Stage Type",
-            hoursPerWeek: 15,
+            stageType: "fulltime",
+            hoursPerWeek: 35,
             additionalInfo: "More",
             paid: ["paid"],
             skills: ["skills"],
             published: true,
-            updatedAt: new Date(),
             active: true
         };
+        this.value = "";
     }
     OffresStagesEditComponent.prototype.ngOnInit = function () {
+        var stageId = this.activeRoute.snapshot.paramMap.get("id");
+        console.log("Id Recu: " + stageId);
+        this.getOffreStage(stageId);
+    };
+    OffresStagesEditComponent.prototype.getOffreStage = function (id) {
+        var _this = this;
+        this.offreStagesService.getOffreStage(id).subscribe(function (res) { return _this.offreStage = res; });
     };
     OffresStagesEditComponent = __decorate([
         core_1.Component({
@@ -41,3 +50,6 @@ var OffresStagesEditComponent = /** @class */ (function () {
     return OffresStagesEditComponent;
 }());
 exports.OffresStagesEditComponent = OffresStagesEditComponent;
+///**test(value: String) ; {
+///**return this.offreStage.paid.push(value)
+///** }

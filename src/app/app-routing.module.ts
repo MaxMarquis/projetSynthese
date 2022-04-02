@@ -57,10 +57,11 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'offres-de-stages/edit',
+    path: 'offres-de-stages/edit/:id',
     component: OffresStagesEditComponent,
     canActivate: [AuthGuardService],
   },
+
   {
     path: 'offres-de-stages/add',
     component: OffresStagesAddComponent,

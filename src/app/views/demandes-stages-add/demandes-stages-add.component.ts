@@ -33,6 +33,7 @@ export class DemandesStagesAddComponent implements OnInit {
     activitySector: '',
     city: '',
     linkToResume: '',
+
   };
   constructor(
     private requetesStagesService: RequetesStagesService,

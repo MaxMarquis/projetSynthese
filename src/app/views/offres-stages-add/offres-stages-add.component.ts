@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Offres_stages } from 'src/app/interfaces/offres_stages';
+import { OffresStagesService } from 'src/app/services/offres-stages.service';
+import { Location } from '@angular/common';
+import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-offres-stages-add',
@@ -8,7 +11,7 @@ import { Offres_stages } from 'src/app/interfaces/offres_stages';
 })
 export class OffresStagesAddComponent implements OnInit {
   offreStage: Offres_stages = {
-    _id: "555",
+    _id: "",
     title: "",
     description: "",
     enterprise: "",
@@ -25,9 +28,23 @@ export class OffresStagesAddComponent implements OnInit {
     active: false
   }
 
-  constructor() { }
+  constructor(
+    private OffresStagesService: OffresStagesService,
+    private _location: Location,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  save(): void {
+    this.OffresStagesService
+      .addOffreStage(this.offreStage)
+      .subscribe((_result) => {
+        this.router.navigate(['/offres-de-stages'])
+      });
   }
 
+  backClicked() {
+    this._location.back();
+  }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Offres_stages } from 'src/app/interfaces/offres_stages';
+import { ActivatedRoute } from '@angular/router';
+import { OffresStagesService } from 'src/app/services/offres-stages.service';
 
 @Component({
   selector: 'app-offres-stages-edit',
@@ -8,7 +10,7 @@ import { Offres_stages } from 'src/app/interfaces/offres_stages';
 })
 export class OffresStagesEditComponent implements OnInit {
   offreStage: Offres_stages = {
-    _id: "123",
+    _id: "",
     title: "Titre du stage",
     description: "Description",
     enterprise: "Nom de l'entreprise",
@@ -25,14 +27,27 @@ export class OffresStagesEditComponent implements OnInit {
     active: true
   }
   value: String = ""
+  requetesOffresService: any;
 
-  constructor() { }
 
+  constructor(
+    private activeRoute: ActivatedRoute,
+    private offreStagesService: OffresStagesService
+  ) { }
+  
   ngOnInit(): void {
-
+    const stageId = this.activeRoute.snapshot.paramMap.get("id") as string;
+    console.log("Id Recu: " + stageId)
+    this.getOffreStage(stageId)
   }
-  test(value: String) {
-    return this.offreStage.paid.push(value)
+  
+  getOffreStage(id: string): void {
+    this.offreStagesService.getOffreStage(id).subscribe((res) => this.offreStage = res)
   }
-
 }
+
+
+    ///**test(value: String) ; {
+      ///**return this.offreStage.paid.push(value)
+   ///** }
+

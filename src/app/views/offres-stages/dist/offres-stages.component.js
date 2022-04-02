@@ -31,9 +31,6 @@ var OffresStagesComponent = /** @class */ (function () {
         this.OffresStagesService.deleteOffreStage(Offresstages._id)
             .subscribe(function (_result) { return _this.offresStages = _this.offresStages.filter(function (p) { return p !== Offresstages; }); });
     };
-    OffresStagesComponent.prototype.editOffresstages = function () {
-        this.router.navigateByUrl('/offres-de-stages/edit');
-    };
     /// Modal suppression
     OffresStagesComponent.prototype.open = function (content, offresStage) {
         var _this = this;

@@ -15,7 +15,6 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
     offresStages: Offres_stages[] = [];
   
   
-  
     constructor(private OffresStagesService: OffresStagesService,
       private router: Router,public modalService: NgbModal) { }
   
@@ -38,9 +37,6 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
   
     }
   
-    editOffresstages() {
-      this.router.navigateByUrl('/offres-de-stages/edit')
-    }
   
       /// Modal suppression
     open(content:any, offresStage:Offres_stages) {

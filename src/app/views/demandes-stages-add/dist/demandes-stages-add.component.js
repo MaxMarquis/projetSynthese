@@ -9,9 +9,46 @@ exports.__esModule = true;
 exports.DemandesStagesAddComponent = void 0;
 var core_1 = require("@angular/core");
 var DemandesStagesAddComponent = /** @class */ (function () {
-    function DemandesStagesAddComponent() {
+    function DemandesStagesAddComponent(requetesStagesService, _location, router) {
+        this.requetesStagesService = requetesStagesService;
+        this._location = _location;
+        this.router = router;
+        this.demandeStage = {
+            _id: '',
+            description: '',
+            entreprise: '',
+            title: '',
+            studentName: '',
+            studentPresentation: '',
+            school: '',
+            startDate: new Date(),
+            endDate: new Date(),
+            program: '',
+            stageType: '',
+            hoursPerWeek: 0,
+            additionalInfo: '',
+            skills: [''],
+            published: false,
+            paid: [''],
+            user: '',
+            active: false,
+            region: '',
+            activitySector: '',
+            city: '',
+            linkToResume: ''
+        };
     }
-    DemandesStagesAddComponent.prototype.ngOnInit = function () {
+    DemandesStagesAddComponent.prototype.ngOnInit = function () { };
+    DemandesStagesAddComponent.prototype.save = function () {
+        var _this = this;
+        this.requetesStagesService
+            .addRequeteStage(this.demandeStage)
+            .subscribe(function (_result) {
+            _this.router.navigate(['/demandes-de-stages']);
+        });
+    };
+    DemandesStagesAddComponent.prototype.backClicked = function () {
+        this._location.back();
     };
     DemandesStagesAddComponent = __decorate([
         core_1.Component({

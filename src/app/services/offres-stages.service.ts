@@ -37,15 +37,18 @@ export class OffresStagesService {
 
   // Fonction qui modifie une offre de stage
   editOffreStage(offreStage: Offres_stages): Observable<Offres_stages> {
+    let req:any = {...offreStage};
+    delete req._id;
     return this.http.put<Offres_stages>(
       this.offresStagesUrl + offreStage._id,
-      offreStage,
+      req,
       httpOptions
     );
   }
-
   // Fonction qui supprime une offre de stage
   deleteOffreStage(_id: String): Observable<Offres_stages> {
     return this.http.delete<Offres_stages>(this.offresStagesUrl + _id);
   }
 }
+
+ 

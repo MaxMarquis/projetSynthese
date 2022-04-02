@@ -21,7 +21,7 @@ exports.RequetesStagesService = void 0;
 var http_1 = require("@angular/common/http");
 var core_1 = require("@angular/core");
 var httpOptions = {
-    headers: new http_1.HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new http_1.HttpHeaders({ 'Content-Type': 'application/json charset=utf-8' })
 };
 var RequetesStagesService = /** @class */ (function () {
     function RequetesStagesService(http) {

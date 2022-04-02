@@ -1,4 +1,15 @@
 "use strict";
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -31,7 +42,9 @@ var OffresStagesService = /** @class */ (function () {
     };
     // Fonction qui modifie une offre de stage
     OffresStagesService.prototype.editOffreStage = function (offreStage) {
-        return this.http.put(this.offresStagesUrl + offreStage._id, offreStage, httpOptions);
+        var req = __assign({}, offreStage);
+        delete req._id;
+        return this.http.put(this.offresStagesUrl + offreStage._id, req, httpOptions);
     };
     // Fonction qui supprime une offre de stage
     OffresStagesService.prototype.deleteOffreStage = function (_id) {

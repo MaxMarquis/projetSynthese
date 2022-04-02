@@ -3,7 +3,7 @@
     <h1>Offre de stages</h1>
 
       <!--- <div class="d-flex justify-content-end">-->
-    <button type="button" class="button btn btn-danger">
+    <button type="button" class="button btn btn-danger" routerLink='/offres-de-stages/add'>
       Ajouter une offre de stage
     </button>
 
@@ -27,19 +27,20 @@
           <td class="d-none">{{ offreStage._id }}</td>
 
           <td><i [ngClass]="offreStage.active ? 'fa-solid fa-suitcase' : 'fa-solid fa-suitcase fa-suitcase-inactive'"></i>{{ offreStage.title }} {{ offreStage.enterprise }}</td>
-          <td>{{ offreStage.program }}</td>
+          <td>{{ offreStage.stageType }}</td>
 
           <td>{{ offreStage.stageType }}</td>
           <td>{{ offreStage.startDate }}</td>
           <td>
 
-            <button class="crudbut"><i class="fa-solid fa-eye"></i></button>
-            <button class="crudbut" (click)="editOffresstages()">
-              <i class="fa-solid fa-pen-to-square"></i>
-            </button>
-            <button class="crudbut" (click)="open(deleteModal,offreStage)">
-              <i class="fa-solid fa-trash-can p-2"></i>
-            </button>
+            <button class="crudbut" routerLink='/offres-de-stages/view/{{ offreStage._id }}'>
+              <i class="fa-solid fa-eye p-2"></i></button>
+             <button class="crudbut" routerLink='/offres-de-stages/edit{{ offreStage._id }}'>
+             <i class="fa-solid fa-pen-to-square"></i>
+             </button>
+             <button class="crudbut" (click)="open(deleteModal,offreStage)">
+             <i class="fa-solid fa-trash-can p-2"></i>
+             </button>
           </td>
         </tr>
       </tbody>

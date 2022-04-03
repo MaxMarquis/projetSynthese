@@ -1,3 +1,5 @@
+
+
 export interface Requetes_stages {
     _id: String
     description: String
@@ -22,6 +24,7 @@ export interface Requetes_stages {
     city: String,
     linkToResume: String,
 }
+
 
 // Chercher toutes les requêtes de stages > GET /internship-request
 

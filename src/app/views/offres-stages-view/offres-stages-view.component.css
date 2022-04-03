@@ -1,57 +1,3 @@
-@media screen and (min-width: 768px) {
-  .main {
-    max-width: 1320px;
-    margin: 0 auto;
-  }
-
-  .fiche {
-    padding: 8rem;
-  }
-
-  .title {
-    margin-bottom: 8.75rem;
-  }
-}
-#crud {
-  list-style-type: none;
-  text-align: right;
-  margin: 0 0 1rem 0;
-}
-#crud button {
-  border: none;
-  background-color: transparent;
-}
-#crud button i {
-  color: #A00707;
-  font-size: 2.25rem;
-  padding: 0 0.5rem;
-}
-#crud button i:hover {
-  color: #670404;
-}
-
-#crud i.editicon {
-  color: #2E466E;
-}
-#crud i.editicon:hover {
-  color: #1D2C45;
-}
-
-#crud i.accepticon {
-  color: #07A04A;
-}
-#crud i.accepticon:hover {
-  color: #035828;
-}
-
-button.color {
-  background-color: #089DA4;
-  border: none;
-}
-button.color:hover {
-  background-color: #033A3C;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #F6F6F6;
@@ -127,4 +73,19 @@ input[type=text], textarea {
 
 .title p {
   margin-top: 2rem;
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.entreprise {
+  padding: 0.25rem 1rem;
+  background-color: #fff;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.title {
+  border-color: #821519;
+}
+
+h3, h4 {
+  color: #821519;
+}/*# sourceMappingURL=offres-stages-view.component.css.map */

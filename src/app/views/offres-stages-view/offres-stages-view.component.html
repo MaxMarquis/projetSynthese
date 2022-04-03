@@ -1,0 +1,77 @@
+<!--
+*** OFFRE STAGE VIEW ***
+FICHE ENTREPRISE
+-->
+
+
+<main class="main">
+  <!-- TITLE - STAGE...................................... -->
+  <div class="title">
+    <h2>Offre de stage</h2>
+    <h1>{{offreStage.title}}</h1>
+    <p><span class="entreprise">{{offreStage.enterprise}}</span></p>
+  </div>
+
+  <!-- ACTIONS CRUD BTN -->
+  <div id="crud">
+    <button><i class="fa-solid fa-check accepticon"></i></button>
+    <button><i class="fa-solid fa-pen-to-square editicon"></i></button>
+    <button><i class="fa-solid fa-square-plus"></i></button>
+  </div>
+
+  <div class="fiche">
+    <!-- INFO ENTREPRISE...................................... -->
+
+    <h3>Description de la tâche</h3>
+    <p>{{offreStage.description}}</p>
+
+    <!-- 1ERE ROW...................................... -->
+    <div class="row">
+      <!-- 1ERE ROW - COL 12 -->
+      <div class="border-form">
+        <h5>Formations demandées</h5>
+        <p>{{offreStage.program}}</p>
+      </div>
+      <div class="border-form">
+        <h5>Exigences</h5>
+        <p>{{offreStage.requirements}}</p>
+
+      </div>
+    </div>
+
+    <!-- 2E ROW...................................... -->
+    <div class="row">
+      <h4>Informations sur le stage</h4>
+      <!-- 2E ROW - COL 6 -->
+      <div class="col-md-6">
+        <div class="border-form">
+          <h5>Type de stage</h5>
+          <p>{{offreStage.additionalInfo}}</p>
+        </div>
+        <div class="border-form">
+          <h5>Nombre d'heure par semaine</h5>
+          <p>{{offreStage.hoursPerWeek}}</p>
+        </div>
+        <div class="border-form">
+          <h5>Rémunération</h5>
+          <p>{{offreStage.paid}}</p>
+        </div>
+      </div>
+      <!-- 2E ROW - COL 6 -->
+      <div class="col-md-6">
+        <div class="border-form">
+          <h5>Date de début</h5>
+          <p>{{offreStage.startDate | date:'longDate':'undefined':'fr'}}</p>
+        </div>
+        <div class="border-form">
+          <h5>Date de fin</h5>
+          <p>{{offreStage.endDate | date:'longDate':'undefined':'fr'}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- INFORMATION SUPP...................................... -->
+    <h4>Informations supplémentaires</h4>
+    <p>{{offreStage.additionalInfo}}</p>
+
+  </div>
+</main>

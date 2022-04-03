@@ -32,7 +32,7 @@ button {
 }
 
 .button-cancel:hover {
-  background: #ff6868;
+  background: rgb(255, 104, 104);
   color: #b3b3b3;
   border: 1px solid #b3b3b3;
   border-radius: 5px;

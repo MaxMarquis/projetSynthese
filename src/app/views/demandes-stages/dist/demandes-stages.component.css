@@ -36,3 +36,15 @@
   border-radius: 10px;
   background-color: #808080;
 }
+
+.bordure {
+  border-left: 5px solid #F89747;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.bordure-inactive {
+  border-left: 5px solid #808080;
+  height: 50px;
+  padding-left: 20px;
+}

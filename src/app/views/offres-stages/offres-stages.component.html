@@ -1,71 +1,73 @@
 <div class="container">
-  <h1>Offre de stages</h1>
+  <h1 class="mb-5">Offre de stages</h1>
 
   <!--- <div class="d-flex justify-content-end">-->
-  <button type="button" class="button btn btn-danger">
+  <button type="button" class="button btn btn-danger mb-2">
     Ajouter une offre de stage
   </button>
 
 
 
+  <div class="fiche">
+    <!--- table borderless pour enlever le HR sous les entêtes -->
+    <table class="table table-borderless">
+      <thead>
+        <tr class="title">
+          <th scope="col" class="d-none">ID</th>
+          <th scope="col">Poste</th>
+          <th scope="col">Secteur d'activité</th>
+          <th scope="col">Établissement</th>
+          <th scope="col">Date de publication</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let offreStage of offresStages">
+          <td class="d-none">{{ offreStage._id }}</td>
 
-  <!--- table borderless pour enlever le HR sous les entêtes -->
-  <table class="table table-borderless">
-    <thead>
-      <tr class="title">
-        <th scope="col" class="d-none">ID</th>
-        <th scope="col">Poste</th>
-        <th scope="col">Secteur d'activité</th>
-        <th scope="col">Établissement</th>
-        <th scope="col">Date de publication</th>
-        <th scope="col">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let offreStage of offresStages">
-        <td class="d-none">{{ offreStage._id }}</td>
-
-        <td><i
-            [ngClass]="offreStage.active ? 'fa-solid fa-suitcase' : 'fa-solid fa-suitcase fa-suitcase-inactive'"></i>{{
+          <td><i
+              [ngClass]="offreStage.active ? 'fa-solid fa-suitcase' : 'fa-solid fa-suitcase fa-suitcase-inactive'"></i>{{
           offreStage.title }} {{ offreStage.enterprise }}</td>
-        <td>{{ offreStage.program }}</td>
+          <td>{{ offreStage.program }}</td>
 
-        <td>{{ offreStage.stageType }}</td>
-        <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>
-        <td>
+          <td>{{ offreStage.stageType }}</td>
+          <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>
+          <td>
 
-          <button class="crudbut" routerLink='/offres-de-stages/view/{{ offreStage._id }}'>
-            <i class="fa-solid fa-eye p-2"></i></button>
-           <button class="crudbut" routerLink='/offres-de-stages/edit{{ offreStage._id }}'>
-           <i class="fa-solid fa-pen-to-square"></i>
-           </button>
-           <button class="crudbut" (click)="open(deleteModal,offreStage)">
-           <i class="fa-solid fa-trash-can p-2"></i>
-           </button>
-        </td>
-      </tr>
-    </tbody>
+            <button class="crudbut" routerLink='/offres-de-stages/view/{{ offreStage._id }}'>
+              <i class="fa-solid fa-eye p-2"></i></button>
+            <button class="crudbut" routerLink='/offres-de-stages/edit{{ offreStage._id }}'>
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+            <button class="crudbut" (click)="open(deleteModal,offreStage)">
+              <i class="fa-solid fa-trash-can p-2"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
 
 
-<ng-template #deleteModal let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="titremodal">Suppression</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-      <span aria-hidden="true">×</span>
-    </button>
-  </div>
-  <div class="modal-body text-center">
-    Voulez vous supprimer l'offre de stage ?
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
-  </div>
-</ng-template>
+      <ng-template #deleteModal let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="titremodal">Suppression</h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          Voulez vous supprimer l'offre de stage ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+        </div>
+      </ng-template>
 
-  </table>
-</div>
+    </table>
+  </div><!-- end fiche -->
+</div><!-- end container -->
 
+<!-- MODAL DELETE ....................................... -->
 <ng-template #deleteModal let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="titremodal">Suppression</h4>

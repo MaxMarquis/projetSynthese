@@ -1,6 +1,11 @@
 body
-    font-family: 'Open Sans', sans-serif
-// basé sur demande stage view
+    font-family: $body-font
+    background-color: #F6F6F6
+    // background-image: url('assets/img/bg-body.png')
+    // background-repeat: no-repeat
+    // background-size: auto 100%
+
+
 h1
     color: $color-h1-h2-p
     font-weight: 700
@@ -10,19 +15,23 @@ h2
     color: $color-h1-h2-p
     font-weight: 700
     font-size: 1.125rem
-    line-height: 1.5rem
+    line-height: 1.125rem
 
 h3
     color: $color-tableaubord
     font-size: 2.875rem
-    margin-bottom: 1.563rem
+    margin-bottom: 5rem
+    font-weight: 700
 
 h4
     color: $color-tableaubord
     font-size: 1.5rem
     line-height: 2.063rem
+    margin: 4rem 0 2rem 0
+    font-weight: 700
 
-h5
+
+h5, label
     color: $color-h1-h2-p
     font-size: 1.125rem
     line-height: 1.688rem
@@ -33,12 +42,11 @@ p
     font-size: 1.125rem
     line-height: 1.688rem
 
-// Pour les données récoltées dans les views.........
-// div.fiedset
-//     border-left: 10px solid $color-h1-h2-p
-//     margin-bottom: 2.188rem
+// FORM
+input[type=text], textarea
+    margin-top: .5rem
+    margin-bottom: 2rem
+    padding: 1rem
+    color: $placeholder !important
 
-// div.fieldset p
-//     color: $color-h1-h2-p
-//     font-size: 1.125rem
-//     line-height: 1.5rem
+    

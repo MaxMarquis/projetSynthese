@@ -27,3 +27,7 @@
   background-color: #BB2026;
   border-radius: 10px;
 }
+
+.btn-info {
+  float: right;
+}

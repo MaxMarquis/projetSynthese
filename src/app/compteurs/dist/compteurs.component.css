@@ -8,19 +8,26 @@
   height: 145px;
   border-radius: 10px;
   margin: 15px;
-  border-right: 10px;
+  border-right: 60px solid;
+  border-color: #986d22;
+  display: flex;
+  align-items: center;
 }
 
 .fa-wpforms {
   color: white;
   width: 65px;
   height: 65px;
+  float: left;
+  margin-right: 35px;
 }
 
 .fa-paper-plane {
   color: white;
   width: 65px;
   height: 65px;
+  float: left;
+  margin-right: 35px;
 }
 
 .offres {
@@ -29,4 +36,13 @@
   height: 145px;
   border-radius: 10px;
   margin: 15px;
+  border-right: 60px solid;
+  border-color: #821519;
+  display: flex;
+  align-items: center;
+}
+
+.titre {
+  color: white;
+  font-size: 25px;
 }

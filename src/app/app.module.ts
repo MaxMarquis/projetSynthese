@@ -21,8 +21,8 @@ import { IdentificationComponent } from './views/identification/identification.c
 
 import { CandidatsComponent } from './views/candidats/candidats.component';
 import { CandidatsAddComponent } from './views/candidats-add/candidats-add.component';
-import { CandidatsInfosComponent } from './views/candidats-infos/candidats-infos.component';
 import { CandidatsEditComponent } from './views/candidats-edit/candidats-edit.component';
+import { CandidatsViewComponent } from './views/candidats-view/candidats-view.component';
 
 import { DemandesStagesComponent } from './views/demandes-stages/demandes-stages.component';
 import { DemandesStagesEditComponent } from './views/demandes-stages-edit/demandes-stages-edit.component';
@@ -35,18 +35,16 @@ import { DernieresOffresComponent } from './views/dernieres-offres/dernieres-off
 import { OffresStagesComponent } from './views/offres-stages/offres-stages.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
 import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
+import { OffresStagesViewComponent } from './views/offres-stages-view/offres-stages-view.component';
 
-import { EntreprisesComponent } from './views/entreprises/entreprises.component';
 import { EntrepriseComponent } from './components/entreprise/entreprise.component';
+import { EntreprisesComponent } from './views/entreprises/entreprises.component';
 import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
-import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
+import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-edit.component';
+import { EntreprisesViewComponent } from './views/entreprises-view/entreprises-view.component';
 
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-edit.component';
-import { OffresStagesViewComponent } from './views/offres-stages-view/offres-stages-view.component';
-import { EntreprisesViewComponent } from './views/entreprises-view/entreprises-view.component';
-import { CandidatsViewComponent } from './views/candidats-view/candidats-view.component';
 import { CompteursComponent } from './compteurs/compteurs.component';
 registerLocaleData(localeFr, 'fr');
 
@@ -66,7 +64,6 @@ registerLocaleData(localeFr, 'fr');
     EntreprisesComponent,
     IdentificationComponent,
     CandidatsAddComponent,
-    CandidatsInfosComponent,
     DemandesStagesEditComponent,
     DemandesStagesAddComponent,
     BtnMajComponent,
@@ -77,7 +74,6 @@ registerLocaleData(localeFr, 'fr');
     OffresStagesAddComponent,
     EntreprisesAddComponent,
     EntrepriseComponent,
-    EntreprisesInfosComponent,
     DemandesStagesViewsComponent,
     CandidatsEditComponent,
     EntreprisesEditComponent,
@@ -86,8 +82,14 @@ registerLocaleData(localeFr, 'fr');
     CandidatsViewComponent,
     CompteursComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    FontAwesomeModule,
+  ],
   providers: [AuthGuardService],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

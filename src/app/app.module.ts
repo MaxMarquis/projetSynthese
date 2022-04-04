@@ -45,6 +45,8 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-edit.component';
 import { OffresStagesViewComponent } from './views/offres-stages-view/offres-stages-view.component';
+import { EntreprisesViewComponent } from './views/entreprises-view/entreprises-view.component';
+import { CandidatsViewComponent } from './views/candidats-view/candidats-view.component';
 registerLocaleData(localeFr, 'fr');
 
 @NgModule({
@@ -79,6 +81,8 @@ registerLocaleData(localeFr, 'fr');
     CandidatsEditComponent,
     EntreprisesEditComponent,
     OffresStagesViewComponent,
+    EntreprisesViewComponent,
+    CandidatsViewComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [AuthGuardService],

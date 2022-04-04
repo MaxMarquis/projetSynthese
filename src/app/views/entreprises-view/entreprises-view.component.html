@@ -1,0 +1,83 @@
+<!--
+*** ENTREPRISE VIEW ***
+-->
+
+
+<main class="main">
+  <!-- TITLE - ENTREPRISE...................................... -->
+  <div class="row">
+    <div class="col-md-2">
+      <img class="entreprise img-fluid mt-5 pt-3" src="../../../assets/img/logo-mediavox.svg"
+        alt="Logo de l'entreprise Mediavox" title="Logo de l'entreprise Mediavox">
+    </div>
+    <div class="col-md-10">
+      <div class="title">
+        <h2>Entreprise</h2>
+        <h1>{{entreprise.name}}</h1>
+      </div>
+    </div>
+  </div>
+  <!-- ACTIONS CRUD BTN -->
+  <div id="crud">
+    <button><i class="fa-solid fa-check accepticon"></i></button>
+    <button><i class="fa-solid fa-pen-to-square editicon"></i></button>
+    <button><i class="fa-solid fa-square-plus"></i></button>
+  </div>
+
+  <div class="fiche">
+    <!-- INFO ENTREPRISE...................................... -->
+
+    <h3>Courte présentation</h3>
+    <p>{{entreprise.description}}</p>
+
+    <!-- 1ERE ROW...................................... -->
+    <div class="row">
+      <!-- 1ERE ROW - COL 12 -->
+      <div class="col-12">
+
+        <h4>Personne contact</h4>
+        <p>{{entreprise.contactName}}</p>
+      </div>
+    </div>
+    <h4>Information de contact</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- adresse -->
+        <div class="border-form">
+          <h5>Adresse</h5>
+          <p>{{entreprise.address}}</p>
+        </div>
+        <!-- ville -->
+        <div class="border-form">
+          <h5>Ville</h5>
+          <p>{{entreprise.city}}</p>
+        </div>
+        <!-- province -->
+        <div class="border-form">
+          <h5>Province</h5>
+          <p>{{entreprise.province}}</p>
+        </div>
+        <!-- code postal -->
+        <div class="border-form">
+          <h5>Code postal</h5>
+          <p>{{entreprise.postalCode}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <!-- téléphone -->
+        <div class="border-form">
+          <h5>Téléphone</h5>
+          <p>{{entreprise.contactPhone}}</p>
+        </div>
+        <!-- courriel -->
+        <div class="border-form">
+          <h5>Courriel</h5>
+          <p>{{entreprise.contactEmail}}</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</main>

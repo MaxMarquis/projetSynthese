@@ -14,6 +14,7 @@ import { DemandesStagesAddComponent } from './views/demandes-stages-add/demandes
 import { DemandesStagesViewsComponent } from './views/demandes-stages-views/demandes-stages-views.component';
 import { OffresStagesEditComponent } from './views/offres-stages-edit/offres-stages-edit.component';
 import { OffresStagesAddComponent } from './views/offres-stages-add/offres-stages-add.component';
+import { OffresStagesViewComponent  }  from './views/offres-stages-view/offres-stages-view.component';
 import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add.component';
 import { EntreprisesInfosComponent } from './views/entreprises-infos/entreprises-infos.component';
 import { CandidatsEditComponent } from './views/candidats-edit/candidats-edit.component';
@@ -67,6 +68,12 @@ const routes: Routes = [
     component: OffresStagesAddComponent,
     canActivate: [AuthGuardService],
   },
+  {
+    path: 'offres-de-stages/view/:id',
+    component: OffresStagesViewComponent,
+    canActivate: [AuthGuardService],
+  },
+
   {
     path: 'candidats',
     component: CandidatsComponent,

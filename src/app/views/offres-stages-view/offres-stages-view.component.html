@@ -14,10 +14,12 @@ FICHE ENTREPRISE
 
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
-    <button><i class="fa-solid fa-check accepticon"></i></button>
-    <button><i class="fa-solid fa-pen-to-square editicon"></i></button>
-    <button><i class="fa-solid fa-square-plus"></i></button>
+    <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)" ></i></button>
+    <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
+    <button><i class="fa-solid fa-square-plus"routerLink='/offres-de-stages/add/'></i></button>
   </div>
+
+
 
   <div class="fiche">
     <!-- INFO ENTREPRISE...................................... -->

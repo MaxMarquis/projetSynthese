@@ -1,0 +1,7 @@
+.bgId {
+  display: flex;
+  align-items: stretch;
+  background-image: url("../../../assets/img/bg-body.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}

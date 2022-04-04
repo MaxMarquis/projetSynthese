@@ -1,0 +1,32 @@
+.compteurs {
+  padding-bottom: 50px;
+}
+
+.stages {
+  background-color: #cd9635;
+  width: 428px;
+  height: 145px;
+  border-radius: 10px;
+  margin: 15px;
+  border-right: 10px;
+}
+
+.fa-wpforms {
+  color: white;
+  width: 65px;
+  height: 65px;
+}
+
+.fa-paper-plane {
+  color: white;
+  width: 65px;
+  height: 65px;
+}
+
+.offres {
+  background-color: #bb2026;
+  width: 428px;
+  height: 145px;
+  border-radius: 10px;
+  margin: 15px;
+}

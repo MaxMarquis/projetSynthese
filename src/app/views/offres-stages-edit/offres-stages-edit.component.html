@@ -128,3 +128,18 @@
     <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
   </div>
 </main>
+
+<ng-template #AccepterModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Acceptation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Vous avez accepté l'offre
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Revenir</button>
+  </div>
+</ng-template>

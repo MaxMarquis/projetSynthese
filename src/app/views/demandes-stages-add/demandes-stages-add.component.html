@@ -1,166 +1,203 @@
-<div class="container">
-  <h1>Ajouter une demande</h1>
-  <!--- Bouton annuler -->
-  <button class="alert alert-LIGHT" (click)="backClicked()">
-    Annuler </button>
-  <button class="alert alert-primary">
-    <i class="fa-solid fa-floppy-disk p-2"></i>Sauvegarder </button>
-  <form>
-    <!--- Nom-->
-    <label>Poste:</label>
-    <input class="form-control" type="text" [(ngModel)]="demandeStage.title" name="Dynamic Accounts Officer" required>
-    <label>Candidat:</label>
-    <input class="form-control" type="text" [(ngModel)]="demandeStage.studentName" name="John Doe" required>
+<main class="main">
+  <!-- TITLE - ADD STAGE...................................... -->
+  <div class="title">
+    <h1>Ajouter une demande</h1>
+  </div>
+  <!-- ACTIONS BTN -->
+  <div class="d-flex justify-content-end my-5">
+    <app-btn-annuler></app-btn-annuler>
+    <button class="btn btnSave">
+      <i class="fa-solid fa-floppy-disk pe-2"></i>Sauvegarder</button>
+  </div>
+  <!-- CHAMPS TITRE -->
+  <div class="row mb-5">
+    <div class="col-md-1">
+      <label class="center">Titre : </label>
+    </div>
+    <div class="col-md-11">
+      <input class="form-control" type="text" [(ngModel)]="demandeStage.title" name="Dynamic Accounts Officer" required>
+    </div>
+  </div>
+  <!-- INFO DEMANDE...................................... -->
+  <div class="fiche">
+    <form>
+      <!--- Nom-->
+      <label>Nom et prénom</label>
+      <input class="form-control  mb-4" type="text" [(ngModel)]="demandeStage.studentName" name="John Doe" required>
 
-    <!--- Présentation-->
-    <div class="form-group">
-      <label>Présentation</label>
-      <!--- Textbox info supp-->
-      <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="demandeStage.studentPresentation"
-        name="Présentation"></textarea>
-    </div>
+      <!--- Présentation-->
+      <div class="form-group">
+        <label>Présentation</label>
+        <!--- Textbox info supp-->
+        <textarea class="form-control mb-4" id="formtext" rows="2" [(ngModel)]="demandeStage.studentPresentation"
+          name="Présentation"></textarea>
+      </div>
 
-    <div class="row">
-      <div class="col">
-        <!--- Programme -->
-        <label>Programme de formation</label>
-        <input type="text" class="form-control" [(ngModel)]="demandeStage.program" name="Formation" required>
+      <div class="row">
+        <div class="col-md-6">
+          <!--- Programme -->
+          <div class="border-form">
+            <label>Programme de formation</label>
+            <input type="text" class="form-control" [(ngModel)]="demandeStage.program" name="Formation" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!--- Établissement -->
+          <div class="border-form">
+            <label>Établissement scolaire</label>
+            <input type="text" class="form-control" [(ngModel)]="demandeStage.school" name="Établissement" required>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <!--- Établissement -->
-        <label>Établissement scolaire</label>
-        <input type="text" class="form-control" [(ngModel)]="demandeStage.school" name="Établissement" required>
+      <div class="row">
+        <div class="col-md-6">
+          <!--- Secteur d'activité -->
+          <!-- [(ngModel)]="demandeStage.activitySector" name="Établissement" -->
+          <div class="border-form">
+            <label>Secteur d'activité</label>
+            <select class="form-control padding" [(ngModel)]="demandeStage.activitySector" name="Établissement">
+              <option value="International Communications Executive">International Communications Executive</option>
+              <option value="Global Implementation Engineer">Global Implementation Engineer</option>
+              <option value="National Applications Director">National Applications Director</option>
+              <option value="Corporate Security Coordinator">Corporate Security Coordinator</option>
+              <option value="National Usability Agent">National Usability Agent</option>
+              <option value="Human Factors Supervisor">Human Factors Supervisor</option>
+              <option value="Human Response Engineer">Human Response Engineer</option>
+              <option value="Lead Accountability Agent">Lead Accountability Agent</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!--- Ville -->
+          <div class="border-form">
+            <label>Ville</label>
+            <input type="text" class="form-control" [(ngModel)]="demandeStage.city" name="Ville" required>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <!--- Secteur d'activité -->
-        <!-- [(ngModel)]="demandeStage.activitySector" name="Établissement" -->
-        <label>Secteur d'activité</label>
-        <select class="form-control" [(ngModel)]="demandeStage.activitySector" name="Établissement">
-          <option value="International Communications Executive">International Communications Executive</option>
-          <option value="Global Implementation Engineer">Global Implementation Engineer</option>
-          <option value="National Applications Director">National Applications Director</option>
-          <option value="Corporate Security Coordinator">Corporate Security Coordinator</option>
-          <option value="National Usability Agent">National Usability Agent</option>
-          <option value="Human Factors Supervisor">Human Factors Supervisor</option>
-          <option value="Human Response Engineer">Human Response Engineer</option>
-          <option value="Lead Accountability Agent">Lead Accountability Agent</option>
-        </select>
+      <div class="row">
+        <div class="col-md-6">
+          <!--- Région -->
+          <!-- [(ngModel)]="demandeStage.region" name="Région" -->
+          <div class="border-form">
+            <label>Région</label>
+            <select class="form-control padding" [(ngModel)]="demandeStage.region" name="Région">
+              <option value="a-voir">Veuillez effectuer un choix</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Washington">Washington</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Nevada">Nevada</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Vermont">Vermont</option>
+            </select>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <!--- Ville -->
-        <label>Ville</label>
-        <input type="text" class="form-control" [(ngModel)]="demandeStage.city" name="Ville" required>
+      <div class="row">
+        <div class="col-12">
+          <!--- Compétences -->
+          <div class="border-form">
+            <label>Compétences</label>
+            <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="demandeStage.skills"
+              name="Compétences"></textarea>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <!--- Région -->
-        <!-- [(ngModel)]="demandeStage.region" name="Région" -->
-        <label>Région</label>
-        <select class="form-control" [(ngModel)]="demandeStage.region" name="Région">
-          <option value="a-voir">Veuillez effectuer un choix</option>
-          <option value="Kansas">Kansas</option>
-          <option value="Connecticut">Connecticut</option>
-          <option value="Washington">Washington</option>
-          <option value="Illinois">Illinois</option>
-          <option value="Nevada">Nevada</option>
-          <option value="Nebraska">Nebraska</option>
-          <option value="Vermont">Vermont</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <!--- Compétences -->
-        <label>Compétences</label>
-        <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="demandeStage.skills"
-          name="Compétences"></textarea>
-      </div>
-    </div>
 
-    <!--- Bloc 2 -->
-    <h2>Informations sur le stage recherché</h2>
-    <div class="row">
-      <div class="col">
-        <!--- Type de stage -->
-        <label>Type de stage</label>
-        <select class="form-control" [(ngModel)]="demandeStage.stageType" name="stageType">
-          <option value="fulltime">Temps Plein</option>
-          <option value="parttime">Temps Partiel</option>
-        </select>
-      </div>
-      <div class="col">
-        <!--- Date de début-->
-        <label>Date de début</label>
-        <input type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01" max="2025-12-31"
-          [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.startDate = $event"
-          name="Start Date">
-      </div>
-    </div>
+      <!--- Bloc 2 -->
+      <h4>Informations sur le stage recherché</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <!--- Type de stage -->
+          <div class="border-form">
+            <label>Type de stage</label>
+            <select class="form-control padding" [(ngModel)]="demandeStage.stageType" name="stageType">
+              <option value="fulltime">Temps Plein</option>
+              <option value="parttime">Temps Partiel</option>
+            </select>
+          </div>
 
-    <div class="row">
-      <div class="col">
-        <!--- Nombre d'heures semaine-->
-        <label>Nombres d'heures par semaine</label>
-        <select class="form-control" [(ngModel)]="demandeStage.hoursPerWeek" name="Nombre D'heures">
-          <option value="10">10</option>
-          <option value="15">15</option>
-          <option value="20">20</option>
-          <option value="25">25</option>
-          <option value="30">30</option>
-          <option value="35">35</option>
-          <option value="40">40</option>
-        </select>
-      </div>
-      <div class="col">
+
+          <!--- Nombre d'heures semaine-->
+          <div class="border-form">
+          <label>Nombres d'heures par semaine</label>
+          <select class="form-control padding" [(ngModel)]="demandeStage.hoursPerWeek" name="Nombre D'heures">
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+          </select>
+        </div>
+        </div>
+
+        <div class="col-md-6">
+          <!--- Date de début-->
+          <div class="border-form">
+          <label>Date de début</label>
+          <input class="form-control" type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01" max="2025-12-31"
+            [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.startDate = $event"
+            name="Start Date">
+          </div>
+
+
+
         <!--- date de fin-->
         <label>Date de fin</label>
-        <input type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01" max="2025-12-31"
+        <input class="form-control"  type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01" max="2025-12-31"
           [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.endDate = $event"
           name="End Date">
+        </div>
+  </div>
+
+  <!--- Rémunération-->
+<div class="border-form">
+  <label>Rémunération</label>
+  <div class="form-check">
+    <div class="row">
+      <div class="checkbox">
+        <label class="enumeration">
+          <input type="checkbox" value="not-specified" [ngModel]="demandeStage.paid" name="not-specified">&nbsp;&nbsp;À la
+          discrétion de
+          l'entreprise </label>
+      </div>
+      <div class="checkbox">
+        <label class="enumeration">
+          <input type="checkbox" value="paid" [ngModel]="demandeStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
+        </label>
+      </div>
+      <div class="checkbox">
+        <label class="enumeration">
+          <input type="checkbox" value="unpaid" [ngModel]="demandeStage.paid" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
+        </label>
       </div>
     </div>
-
-    <!--- Rémunération-->
-    <label>Rémunération</label>
-    <label>Rémunération</label>
-    <div class="form-check">
-      <div class="row">
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="not-specified" [ngModel]="demandeStage.paid" name="not-specified">À la
-            discrétion de
-            l'entreprise </label>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="paid" [ngModel]="demandeStage.paid" name="paid">Stage rémunéré
-          </label>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="unpaid" [ngModel]="demandeStage.paid" name="unpaid">Stage non rémunéré
-          </label>
-        </div>
-      </div>
+  </div>
+</div>
+  <div class="form-group">
+    <h4>Information supplémentaire</h4>
+    <!--- Textbox info supp-->
+    <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
+      name="More Info"></textarea>
+  </div>
+    
+  <!--- Bouton parcourir -->
+  <div class="row mt-5">
+    <div class="col-md-8">
+      <input type="text" class="parcourir">
+      <button class="btnparcourir"> Parcourir </button>
     </div>
-
-    <div class="form-group">
-      <h2>Information supplémentaire</h2>
-      <!--- Textbox info supp-->
-      <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
-        name="More Info"></textarea>
-    </div>
-
-    <!--- Bouton parcourir -->
-    <button class="alert alert-light p-2"> Parcourir </button>
-
-    <div class="btn-group">
-      <!--- Annuler / sauvegarder -->
-      <button class="alert alert-light p-2" (click)="backClicked()"> Annuler </button>
-      <button class="alert alert-primary" (click)="save()">
-        <i class="fa-solid fa-floppy-disk p-2"></i>Sauvegarder </button>
-    </div>
+  </div>
+  
   </form>
+  </div>
+  <!-- ACTIONS BTN -->
+  <div class="d-flex justify-content-end my-5">
+    <app-btn-annuler></app-btn-annuler>
+    <button class="btn btnSave">
+      <i class="fa-solid fa-floppy-disk pe-2"></i>Sauvegarder</button>
+  </div>
+</main>

@@ -123,16 +123,16 @@
         <div class="col-md-6">
           <!--- Date de début-->
           <div class="border-form">
-            <label>Date de début</label><br>
-            <input type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01" max="2025-12-31"
+            <label>Date de début</label>
+            <input  class="form-control" type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01" max="2025-12-31"
               [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.startDate = $event"
               name="Start Date">
           </div>
 
           <!--- date de fin-->
           <div class="border-form">
-            <label>Date de fin</label><br>
-            <input type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01" max="2025-12-31"
+            <label>Date de fin</label>
+            <input  class="form-control" type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01" max="2025-12-31"
               [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.endDate = $event"
               name="End Date">
           </div>
@@ -144,7 +144,7 @@
         <label>Rémunération</label>
         <div class="form-check">
           <div class="row">
-            <div>
+            <div class="checkbox">
               <label class="enumeration">
                 <input type="checkbox" value="not-specified" [ngModel]="demandeStage.paid"
                   name="not-specified">&nbsp;&nbsp;À la

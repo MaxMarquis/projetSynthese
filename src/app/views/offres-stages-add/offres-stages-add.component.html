@@ -1,127 +1,157 @@
-<h1>Offre de stage</h1>
-<app-btn-annuler></app-btn-annuler>
-<app-btn-maj [offreStage]="offreStage"></app-btn-maj>
-
-<form>
-    <div class="row">
-        <div class="col">
-            <!--- Titre -->
-            <label>Titre</label>
-            <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required>
+<main class="main">
+  <div class="title">
+    <h1>Offre de stage</h1>
+</div>
+<!-- ACTIONS BTN -->
+<div class="d-flex justify-content-end my-5">
+  <app-btn-annuler></app-btn-annuler>
+  <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
+</div>
+<!-- CHAMPS TITRE -->
+    <div class="row mb-5">
+        <div class="col-md-2">
+        <!--- Titre -->
+        <label class="center">Titre :</label>
         </div>
+        <div class="col-md-10">
+        <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required>
+      </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <!--- Entreprise -->
-            <label>Entreprise</label>
-            <input type="text" class="form-control" [(ngModel)]="offreStage.enterprise" name="Titre" required>
-        </div>
+    <div class="row mb-5">
+      <div class="col-md-2">
+        <!--- Entreprise -->
+        <label class="center">Entreprise :</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="form-control" [(ngModel)]="offreStage.enterprise" name="Titre" required>
+      </div>
     </div>
 
+<div class="fiche">
+    <form>
     <!--- Description-->
     <div class="form-group">
-        <label>Description de la tâche</label>
-        <!--- Textbox info supp-->
-        <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="offreStage.description"
-            name="Description"></textarea>
+      <label class="h3">Description de la tâche</label>
+      <!--- Textbox info supp-->
+      <textarea class="form-control mb-4" id="formtext" rows="2" [(ngModel)]="offreStage.description"
+        name="Description"></textarea>
     </div>
 
     <div class="row">
-        <div class="col">
-            <!--- Programme de formation -->
-            <label>Programme de formation</label>
-            <input type="text" class="form-control" [(ngModel)]="offreStage.program" name="Formation" required>
-        </div>
+      <div class="col-md-6">
+        <!--- Programme de formation -->
+        <div class="border-form">
+        <label>Programme de formation</label>
+        <input type="text" class="form-control" [(ngModel)]="offreStage.program" name="Formation" required>
+      </div>
+    </div>
     </div>
     <div class="row">
-        <div class="col">
-            <!--- Exigences -->
-            <label>Exigences</label>
-            <textarea class="form-control" id="requirements" rows="2" [(ngModel)]="offreStage.requirements"
-                name="Exigences"></textarea>
-        </div>
+      <div class="col">
+        <!--- Exigences -->
+        <div class="border-form">
+        <label>Exigences</label>
+        <textarea class="form-control" id="requirements" rows="2" [(ngModel)]="offreStage.requirements"
+          name="Exigences"></textarea>
+      </div>
+    </div>
     </div>
 
     <!--- Bloc 2 -->
-    <h2>Informations sur le stage recherché</h2>
+    <h4>Informations sur le stage recherché</h4>
     <div class="row">
-        <div class="col">
-            <!--- Type de stage -->
-            <label>Type de stage</label>
-            <select class="form-control" [(ngModel)]="offreStage.stageType" name="stageType">
-                <option value="fulltime">Temps Plein</option>
-                <option value="parttime">Temps Partiel</option>
-            </select>
-        </div>
-        <div class="col">
-            <!--- Date de début-->
-            <label>Date de début</label>
-            <input type="date" id="start" value="{{offreStage.startDate}}" min="2022-01-01" max="2025-12-31"
-                [ngModel]="offreStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.startDate = $event"
-                name="Start Date">
-        </div>
+      <div class="col-md-6">
+        <!--- Type de stage -->
+        <div class="border-form">
+        <label>Type de stage</label>
+        <select class="form-control padding" [(ngModel)]="offreStage.stageType" name="stageType">
+          <option value="fulltime">Temps Plein</option>
+          <option value="parttime">Temps Partiel</option>
+        </select>
+    </div>
+      <!--- Nombre d'heures semaine-->
+      <div class="border-form">
+      <label>Nombres d'heures par semaine</label>
+      <!-- J'ai pas réussi à afficher la valeur par défaut si elle a une décimal. Le pipe number:'1.0-0' converti mon number en string et l'interface n'aime pas ça xD  -->
+      <select class="form-control padding" [(ngModel)]="offreStage.hoursPerWeek" name="Nombre D'heures">
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="30">30</option>
+        <option value="35">35</option>
+        <option value="40">40</option>
+      </select>
+      </div>
     </div>
 
-    <div class="row">
-        <div class="col">
-            <!--- Nombre d'heures semaine-->
-            <label>Nombres d'heures par semaine</label>
-            <!-- J'ai pas réussi à afficher la valeur par défaut si elle a une décimal. Le pipe number:'1.0-0' converti mon number en string et l'interface n'aime pas ça xD  -->
-            <select class="form-control" [(ngModel)]="offreStage.hoursPerWeek" name="Nombre D'heures">
-                <option value="10">10</option>
-                <option value="15">15</option>
-                <option value="20">20</option>
-                <option value="25">25</option>
-                <option value="30">30</option>
-                <option value="35">35</option>
-                <option value="40">40</option>
-            </select>
+
+      <div class="col-md-6">
+          <!--- Date de début-->
+          <div class="border-form">
+        <label>Date de début</label>
+        <input class="form-control" type="date" id="start" value="{{offreStage.startDate}}" min="2022-01-01" max="2025-12-31"
+          [ngModel]="offreStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.startDate = $event"
+          name="Start Date">
         </div>
-        <div class="col">
-            <!--- date de fin-->
-            <label>Date de fin</label>
-            <!--- à voir date picker Angular-->
-            <input type="date" id="end" value="{{offreStage.endDate}}" min="2022-01-01" max="2025-12-31"
-                [ngModel]="offreStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.endDate = $event"
-                name="End Date">
-        </div>
+        <!--- date de fin-->
+        <div class="border-form">
+        <label>Date de fin</label>
+        <!--- à voir date picker Angular-->
+        <input class="form-control" type="date" id="end" value="{{offreStage.endDate}}" min="2022-01-01" max="2025-12-31"
+          [ngModel]="offreStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.endDate = $event"
+          name="End Date">
+      </div>
+    </div>
     </div>
 
     <!--- Rémunération-->
     <!-- À retravailler - mm -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="border-form">
     <label>Rémunération</label>
     <div class="form-check">
-        <div class="row">
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="not-specified" [ngModel]="offreStage.paid" name="not-specified">À la
-                    discrétion de
-                    l'entreprise </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="paid" [ngModel]="offreStage.paid" name="paid">Stage rémunéré
-                </label>
-            </div>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="unpaid" [ngModel]="offreStage.paid" name="unpaid">Stage non rémunéré
-                </label>
-            </div>
+      <div class="row">
+        <div class="checkbox">
+          <label class="enumeration">
+            <input type="checkbox" value="not-specified" [ngModel]="offreStage.paid" name="not-specified">&nbsp;&nbsp;À la
+            discrétion de
+            l'entreprise </label>
         </div>
+        <div class="checkbox">
+          <label class="enumeration">
+            <input type="checkbox" value="paid" [ngModel]="offreStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
+          </label>
+        </div>
+        <div class="checkbox">
+          <label class="enumeration">
+            <input type="checkbox" value="unpaid" [ngModel]="offreStage.paid" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
+          </label>
+        </div>
+    </div>
+    </div>
+</div>
+      </div>
     </div>
 
     <div class="form-group">
-        <h2>Information supplémentaire</h2>
-        <!--- Textbox info supp-->
-        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo"
-            name="More Info"></textarea>
+      <h4>Information supplémentaire</h4>
+      <!--- Textbox info supp-->
+      <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo"
+        name="More Info"></textarea>
     </div>
 
-    <div class="btn-group">
-        <!--- Annuler / sauvegarder -->
-        <button class="alert alert-light p-2" (click)="backClicked()"> Annuler </button>
-        <button class="alert alert-primary" (click)="save()">
-          <i class="fa-solid fa-floppy-disk p-2"></i>Sauvegarder </button>
-      </div>
-    </form>
+    <!-- <div class="btn-group"> -->
+      <!--- Annuler / sauvegarder -->
+      <!-- <button class="alert alert-light p-2" (click)="backClicked()"> Annuler </button>
+      <button class="alert alert-primary" (click)="save()">
+        <i class="fa-solid fa-floppy-disk p-2"></i>Sauvegarder </button>
+    </div> -->
+  </form>
+</div>
+  <div class="d-flex justify-content-end my-5">
+    <app-btn-annuler></app-btn-annuler>
+    <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
+  </div>
+</main>

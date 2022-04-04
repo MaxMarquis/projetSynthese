@@ -32,7 +32,7 @@ export class DernieresDemandesComponent implements OnInit {
   }
 
   /// Function Edit requetes_stages
-  editDemandesstages() {
+  editRequetestages() {
     this.router.navigateByUrl('/demandes-de-stages/edit')
   }
   /// Function Delete requetes_stages

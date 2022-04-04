@@ -18,7 +18,11 @@
          </tr>
       </thead>
       <tbody>
-         <tr *ngFor="let requeteStage of requetesStage">
+
+         <tbody *ngFor="let requeteStage of requetesStage">
+
+            <tr *ngIf="requeteStage.active">
+
             <td class="d-none">{{ requeteStage._id }}</td>
             <td>
                <i class="fas fa-graduation-cap"></i> {{ requeteStage.title }} {{ requeteStage.studentName }}
@@ -27,17 +31,17 @@
             <td>{{ requeteStage.startDate | date:'longDate':'undefined':'fr' }}</td>
             <!--- ACCEPTER / REFUSER -->
             <td>
-               <button *ngIf="requeteStage.active" type="button" class="btn btn-danger m-2"
-                  (click)="requeteStatus(requeteStage,false)">Refuser</button>
-               <button *ngIf="!requeteStage.active" type="button" class="btn btn-success m-1"
-                  (click)="requeteStatus(requeteStage,true)">Accepter</button>
-               <!--- BOUTONS CRUD READ EDIT DELETE-->
-               <button class="crudbut" (click)="editDemandesstages()"><i class="fa-solid fa-eye p-2"></i></button>
-               <button class="crudbut">
-                  <i class="fa-solid fa-pen-to-square"></i>
+               <button type="button" class="btn btn-danger m-2"
+                 (click)="requeteStatus(requeteStage,false)">Refuser</button>
+               <button type="button" class="btn btn-success m-1"
+                 (click)="requeteStatus(requeteStage,true)" (click)="open(AccepterModal,requeteStage)">Accepter</button>
+     
+               <button class="crudbut"><i class="fa-solid fa-eye p-2" routerLink='/demandes-de-stages/view/{{ requeteStage._id }}'></i></button>
+               <button class="crudbut" (click)="editRequetestages()">
+                 <i class="fa-solid fa-pen-to-square" routerLink='/demandes-de-stages/edit/{{ requeteStage._id }}'></i>
                </button>
                <button class="crudbut" (click)="open(deleteModal,requeteStage)">
-                  <i class="fa-solid fa-trash-can p-2"></i>
+                 <i class="fa-solid fa-trash-can p-2"></i>
                </button>
             </td>
          </tr>
@@ -62,3 +66,21 @@
       <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
    </div>
 </ng-template>
+
+
+<!--- MODAL ACCEPTATION DEMANDE DE STAGE -->
+
+<ng-template #AccepterModal let-modal>
+   <div class="modal-header">
+     <h4 class="modal-title" id="titremodal">Acceptation</h4>
+     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+       <span aria-hidden="true">×</span>
+     </button>
+   </div>
+   <div class="modal-body text-center">
+     Vous avez accepté l'offre
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Revenir</button>
+   </div>
+ </ng-template>

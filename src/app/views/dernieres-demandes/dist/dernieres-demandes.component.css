@@ -31,3 +31,7 @@
   background-color: #F89747;
   border-radius: 10px;
 }
+
+.btn-info {
+  float: right;
+}

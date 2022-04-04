@@ -31,7 +31,7 @@ export class DemandesStagesViewsComponent implements OnInit {
     published: false,
     paid: [""],
     user: "",
-    active: false,
+    active: true,
     region: "",
     activitySector: "",
     city: "",
@@ -40,7 +40,6 @@ export class DemandesStagesViewsComponent implements OnInit {
 
   constructor(
     private activeRoute: ActivatedRoute,
-    
     private requetesStagesService: RequetesStagesService
   ) { }
 
@@ -52,6 +51,15 @@ export class DemandesStagesViewsComponent implements OnInit {
 
   getRequeteStage(id: string): void {
     this.requetesStagesService.getRequeteStage(id).subscribe((res) => this.requete_stage = res)
+  }
+
+  requeteStatus(requete_stage: Requetes_stages, active: Boolean) {
+    this.requetesStagesService.editRequeteStage({
+      ...requete_stage,
+      active,
+    }).subscribe((_result) => {
+      requete_stage.active = active;
+    });
   }
 
 

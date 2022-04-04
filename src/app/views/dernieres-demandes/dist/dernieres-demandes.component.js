@@ -39,7 +39,7 @@ var DernieresDemandesComponent = /** @class */ (function () {
             .subscribe(function (res) { return (_this.requetesStage = res); });
     };
     /// Function Edit requetes_stages
-    DernieresDemandesComponent.prototype.editDemandesstages = function () {
+    DernieresDemandesComponent.prototype.editRequetestages = function () {
         this.router.navigateByUrl('/demandes-de-stages/edit');
     };
     /// Function Delete requetes_stages

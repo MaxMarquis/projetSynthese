@@ -13,9 +13,9 @@ FICHE CANDIDAT
 
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
-    <button><i class="fa-solid fa-check accepticon"></i></button>
-    <button><i class="fa-solid fa-pen-to-square editicon"></i></button>
-    <button><i class="fa-solid fa-square-plus"></i></button>
+    <button><i class="fa-solid fa-check accepticon" (click)="requeteStatus(requete_stage,true)"></i></button>
+    <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/demandes-de-stages/edit/{{ requete_stage._id }}'></i></button>
+    <button><i class="fa-solid fa-square-plus"routerLink='/demandes-de-stages/add/'></i></button>
   </div>
 
   <div class="fiche">

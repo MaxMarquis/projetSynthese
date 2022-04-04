@@ -47,6 +47,7 @@ import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-e
 import { OffresStagesViewComponent } from './views/offres-stages-view/offres-stages-view.component';
 import { EntreprisesViewComponent } from './views/entreprises-view/entreprises-view.component';
 import { CandidatsViewComponent } from './views/candidats-view/candidats-view.component';
+import { CompteursComponent } from './compteurs/compteurs.component';
 registerLocaleData(localeFr, 'fr');
 
 @NgModule({
@@ -83,6 +84,7 @@ registerLocaleData(localeFr, 'fr');
     OffresStagesViewComponent,
     EntreprisesViewComponent,
     CandidatsViewComponent,
+    CompteursComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, FontAwesomeModule],
   providers: [AuthGuardService],

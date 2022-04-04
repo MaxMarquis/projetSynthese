@@ -3,12 +3,16 @@ import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 import { ActivatedRoute } from '@angular/router';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
 
+
+
 @Component({
   selector: 'app-demandes-stages-views',
   templateUrl: './demandes-stages-views.component.html',
   styleUrls: ['./demandes-stages-views.component.sass']
+  
 })
 export class DemandesStagesViewsComponent implements OnInit {
+  
  requete_stage: Requetes_stages = {
     _id: "",
     description: "",
@@ -36,6 +40,7 @@ export class DemandesStagesViewsComponent implements OnInit {
 
   constructor(
     private activeRoute: ActivatedRoute,
+    
     private requetesStagesService: RequetesStagesService
   ) { }
 

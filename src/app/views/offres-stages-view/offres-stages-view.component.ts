@@ -3,6 +3,8 @@ import { Offres_stages } from 'src/app/interfaces/offres_stages';
 import { ActivatedRoute } from '@angular/router';
 import { OffresStagesService } from 'src/app/services/offres-stages.service';
 
+
+
 @Component({
   selector: 'app-offres-stages-view',
   templateUrl: './offres-stages-view.component.html',
@@ -32,17 +34,33 @@ export class OffresStagesViewComponent implements OnInit {
 
   constructor(
     private activeRoute: ActivatedRoute,
-    private offreStagesService: OffresStagesService
+    private offreStagesService: OffresStagesService 
+
   ) { }
 
+
+  
   ngOnInit(): void {
     const stageId = this.activeRoute.snapshot.paramMap.get("id") as string;
     console.log("Id Recu: " + stageId)
     this.getOffreStage(stageId)
   }
   
+
+  offerStatus(offresstage: Offres_stages, active: Boolean) {
+    this.offreStagesService.editOffreStage({
+      ...offresstage,
+      active,
+    }).subscribe((_result) => {
+      offresstage.active = active;
+    });
+  }
+
+  
   getOffreStage(id: string): void {
     this.offreStagesService.getOffreStage(id).subscribe((res) => this.offreStage = res)
   }
 
 }
+
+

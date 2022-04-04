@@ -23,11 +23,15 @@ var demandes_stages_add_component_1 = require("./views/demandes-stages-add/deman
 var demandes_stages_views_component_1 = require("./views/demandes-stages-views/demandes-stages-views.component");
 var offres_stages_edit_component_1 = require("./views/offres-stages-edit/offres-stages-edit.component");
 var offres_stages_add_component_1 = require("./views/offres-stages-add/offres-stages-add.component");
+var offres_stages_view_component_1 = require("./views/offres-stages-view/offres-stages-view.component");
 var entreprises_add_component_1 = require("./views/entreprises-add/entreprises-add.component");
 var entreprises_infos_component_1 = require("./views/entreprises-infos/entreprises-infos.component");
+var candidats_edit_component_1 = require("./views/candidats-edit/candidats-edit.component");
+var entreprises_edit_component_1 = require("./views/entreprises-edit/entreprises-edit.component");
 var routes = [
     //ajout de AuthGuardService sur toutes les pages sauf IdentificationComponent
-    { path: '',
+    {
+        path: '',
         component: identification_component_1.IdentificationComponent
     },
     {
@@ -71,6 +75,11 @@ var routes = [
         canActivate: [auth_guard_service_1.AuthGuardService]
     },
     {
+        path: 'offres-de-stages/view/:id',
+        component: offres_stages_view_component_1.OffresStagesViewComponent,
+        canActivate: [auth_guard_service_1.AuthGuardService]
+    },
+    {
         path: 'candidats',
         component: candidats_component_1.CandidatsComponent,
         canActivate: [auth_guard_service_1.AuthGuardService]
@@ -78,6 +87,11 @@ var routes = [
     {
         path: 'candidats/add',
         component: candidats_add_component_1.CandidatsAddComponent,
+        canActivate: [auth_guard_service_1.AuthGuardService]
+    },
+    {
+        path: 'candidats/edit',
+        component: candidats_edit_component_1.CandidatsEditComponent,
         canActivate: [auth_guard_service_1.AuthGuardService]
     },
     {
@@ -93,6 +107,11 @@ var routes = [
     {
         path: 'entreprises/add',
         component: entreprises_add_component_1.EntreprisesAddComponent,
+        canActivate: [auth_guard_service_1.AuthGuardService]
+    },
+    {
+        path: 'entreprises/edit',
+        component: entreprises_edit_component_1.EntreprisesEditComponent,
         canActivate: [auth_guard_service_1.AuthGuardService]
     },
     {

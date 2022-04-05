@@ -1,5 +1,5 @@
 <div class="card" style="width: 24rem;" (click)="getInfos(entreprise)">
-    <img src="https://via.placeholder.com/100" class="card-img-top" alt="Place Holder">
+    <img src="{{entreprise.imageUrl}}" class="card-img-top" alt="{{entreprise.imageUrl}}">
     <div class="card-body">
         <h5 class="card-title">{{entreprise.name}}</h5>
         <p class="card-text">{{entreprise.address}}</p>

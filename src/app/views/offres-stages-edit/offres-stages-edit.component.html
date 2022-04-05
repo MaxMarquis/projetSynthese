@@ -7,7 +7,7 @@
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
+    <app-maj-offre nomBtn="Mettre à jour" [offreStage]="offreStage"></app-maj-offre>
   </div>
   <div class="fiche">
     <!-- INFO OFFRES STAGES EDIT...................................... -->
@@ -75,17 +75,17 @@
           <!--- Date de début-->
           <div class="border-form">
             <label>Date de début</label>
-            <input class="form-control" type="date" id="start" value="{{offreStage.startDate}}" min="2022-01-01" max="2025-12-31"
-              [ngModel]="offreStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.startDate = $event"
-              name="Start Date">
+            <input class="form-control" type="date" id="start" value="{{offreStage.startDate}}" min="2022-01-01"
+              max="2025-12-31" [ngModel]="offreStage.startDate | date:'yyyy-MM-dd'"
+              (ngModelChange)="offreStage.startDate = $event" name="Start Date">
           </div>
           <!--- date de fin-->
           <div class="border-form">
             <label>Date de fin</label>
             <!--- à voir date picker Angular-->
-            <input class="form-control" type="date" id="end" value="{{offreStage.endDate}}" min="2022-01-01" max="2025-12-31"
-              [ngModel]="offreStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.endDate = $event"
-              name="End Date">
+            <input class="form-control" type="date" id="end" value="{{offreStage.endDate}}" min="2022-01-01"
+              max="2025-12-31" [ngModel]="offreStage.endDate | date:'yyyy-MM-dd'"
+              (ngModelChange)="offreStage.endDate = $event" name="End Date">
           </div>
         </div>
       </div>
@@ -96,7 +96,8 @@
           <div class="row">
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="not-specified" [ngModel]="offreStage.paid" name="not-specified">&nbsp;&nbsp;À la
+                <input type="checkbox" value="not-specified" [ngModel]="offreStage.paid"
+                  name="not-specified">&nbsp;&nbsp;À la
                 discrétion de
                 l'entreprise </label>
             </div>
@@ -107,7 +108,8 @@
             </div>
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="unpaid" [ngModel]="offreStage.paid" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
+                <input type="checkbox" value="unpaid" [ngModel]="offreStage.paid" name="unpaid">&nbsp;&nbsp;Stage non
+                rémunéré
               </label>
             </div>
           </div>
@@ -120,12 +122,12 @@
           name="More Info"></textarea>
       </div>
 
-      
+
     </form>
   </div>
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
+    <app-maj-offre nomBtn="Mettre à jour" [offreStage]="offreStage"></app-maj-offre>
   </div>
 </main>
 

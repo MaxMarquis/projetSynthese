@@ -43,6 +43,10 @@ import { EntreprisesAddComponent } from './views/entreprises-add/entreprises-add
 import { EntreprisesEditComponent } from './views/entreprises-edit/entreprises-edit.component';
 import { EntreprisesViewComponent } from './views/entreprises-view/entreprises-view.component';
 
+import { MajDemandeComponent } from './components/btn/maj-demande/maj-demande.component';
+import { MajOffreComponent } from './components/btn/maj-offre/maj-offre.component';
+import { MajCandidatComponent } from './components/btn/maj-candidat/maj-candidat.component';
+import { MajEntrepriseComponent } from './components/btn/maj-entreprise/maj-entreprise.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { CompteursComponent } from './compteurs/compteurs.component';
@@ -81,6 +85,10 @@ registerLocaleData(localeFr, 'fr');
     EntreprisesViewComponent,
     CandidatsViewComponent,
     CompteursComponent,
+    MajDemandeComponent,
+    MajOffreComponent,
+    MajCandidatComponent,
+    MajEntrepriseComponent,
   ],
   imports: [
     BrowserModule,
@@ -92,4 +100,4 @@ registerLocaleData(localeFr, 'fr');
   providers: [AuthGuardService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

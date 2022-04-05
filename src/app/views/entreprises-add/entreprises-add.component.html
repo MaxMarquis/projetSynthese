@@ -2,8 +2,7 @@
     <h1>Ajouter une entreprise</h1>
     <app-btn-annuler></app-btn-annuler>
     <!--- Bouton Sauvegarder -->
-    <button class="alert alert-primary ">
-        <i class="fa-solid fa-floppy-disk"></i>Sauvegarder </button>
+    <app-maj-entreprise nomBtn="Sauvegarder" [entreprise]="entreprise"></app-maj-entreprise>
     <form>
         <!--- Nom-->
         <label>Entreprise:</label>
@@ -64,7 +63,7 @@
                 <div class="btn-group">
                     <!--- Annuler / sauvegarder -->
                     <app-btn-annuler></app-btn-annuler>
-                    <button class="alert alert-primary p-2"><i class="fa-solid fa-floppy-disk"></i>Sauvegarder</button>
+                    <app-maj-entreprise nomBtn="Sauvegarder" [entreprise]="entreprise"></app-maj-entreprise>
                 </div>
             </div>
         </div>

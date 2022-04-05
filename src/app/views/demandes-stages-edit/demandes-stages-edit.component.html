@@ -8,7 +8,7 @@
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-btn-maj [demandeStage]="demandeStage"></app-btn-maj>
+    <app-maj-demande nomBtn="Mettre à jour" [demandeStage]="demandeStage"></app-maj-demande>
   </div>
 
   <div class="fiche">
@@ -125,17 +125,17 @@
           <!--- Date de début-->
           <div class="border-form">
             <label>Date de début</label>
-            <input  class="form-control" type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01" max="2025-12-31"
-              [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.startDate = $event"
-              name="Start Date">
+            <input class="form-control" type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01"
+              max="2025-12-31" [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'"
+              (ngModelChange)="demandeStage.startDate = $event" name="Start Date">
           </div>
 
           <!--- date de fin-->
           <div class="border-form">
             <label>Date de fin</label>
-            <input  class="form-control" type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01" max="2025-12-31"
-              [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.endDate = $event"
-              name="End Date">
+            <input class="form-control" type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01"
+              max="2025-12-31" [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'"
+              (ngModelChange)="demandeStage.endDate = $event" name="End Date">
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@
 
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-btn-maj [demandeStage]="demandeStage"></app-btn-maj>
+    <app-maj-demande nomBtn="Mettre à jour" [demandeStage]="demandeStage"></app-maj-demande>
   </div>
 
 </main>

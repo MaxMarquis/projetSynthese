@@ -17,7 +17,7 @@
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-btn-maj></app-btn-maj>
+    <app-maj-entreprise nomBtn="Mettre à jour" [entreprise]="entreprise"></app-maj-entreprise>
   </div>
   <!-- <h3>Entreprise</h3>
     <h1>{{entreprise.name}}</h1>
@@ -103,8 +103,8 @@
           </div>
           <div class="border-form">
             <label>Courriel</label>
-            <input type="email" class="form-control padding" id="courriel" required [(ngModel)]="entreprise.contactEmail"
-              name="contactEmail">
+            <input type="email" class="form-control padding" id="courriel" required
+              [(ngModel)]="entreprise.contactEmail" name="contactEmail">
           </div>
         </div>
       </div>
@@ -120,6 +120,6 @@
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-btn-maj></app-btn-maj>
+    <app-maj-entreprise nomBtn="Mettre à jour" [entreprise]="entreprise"></app-maj-entreprise>
   </div>
 </main>

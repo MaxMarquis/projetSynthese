@@ -86,7 +86,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'candidats/edit',
+    path: 'candidats/edit/:id',
     component: CandidatsEditComponent,
     canActivate: [AuthGuardService],
   },
@@ -106,7 +106,7 @@ const routes: Routes = [
     canActivate: [AuthGuardService],
   },
   {
-    path: 'entreprises/edit',
+    path: 'entreprises/edit/:id',
     component: EntreprisesEditComponent,
     canActivate: [AuthGuardService],
   },
@@ -121,4 +121,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

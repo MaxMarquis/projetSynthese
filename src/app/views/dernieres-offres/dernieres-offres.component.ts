@@ -9,6 +9,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   templateUrl: './dernieres-offres.component.html',
   styleUrls: ['./dernieres-offres.component.sass'],
 })
+
 export class DernieresOffresComponent implements OnInit {
   offresStages: Offres_stages[] = [];
 
@@ -16,7 +17,7 @@ export class DernieresOffresComponent implements OnInit {
     private OffresStagesService: OffresStagesService,
     private router: Router,
     public modalService: NgbModal
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getOffresstages();
@@ -33,12 +34,12 @@ export class DernieresOffresComponent implements OnInit {
   onDelete(Offresstages: Offres_stages): void {
     this.OffresStagesService.deleteOffreStage(Offresstages._id).subscribe(
       (_result) =>
-        (this.offresStages = this.offresStages.filter(
-          (p) => p !== Offresstages
-        ))
+      (this.offresStages = this.offresStages.filter(
+        (p) => p !== Offresstages
+      ))
     );
   }
-  
+
   offerStatus(offresstage: Offres_stages, active: Boolean) {
     this.OffresStagesService.editOffreStage({
       ...offresstage,
@@ -62,7 +63,7 @@ export class DernieresOffresComponent implements OnInit {
             this.onDelete(offresStage);
           }
         },
-        (reason) => {}
+        (reason) => { }
       );
   }
 }

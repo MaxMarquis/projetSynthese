@@ -8,7 +8,7 @@
     Valider toutes les offres
   </button>
 
- <!--- table borderless pour enlever le HR sous les entêtes -->
+  <!--- table borderless pour enlever le HR sous les entêtes -->
   <table class="table table-borderless">
     <thead>
 
@@ -31,12 +31,11 @@
         <td>{{ offreStage.program }}</td>
         <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>
         <td>
-          <button type="button" class="btn btn-danger m-2"
-            (click)="offerStatus(offreStage,false)">Refuser</button>
-          <button type="button" class="btn btn-success m-1"
-            (click)="offerStatus(offreStage,true)" (click)="open(AccepterModal,offreStage)">Accepter</button>
-
-          <button class="crudbut"><i class="fa-solid fa-eye p-2" routerLink='/offres-de-stages/view/{{ offreStage._id }}'></i></button>
+          <button type="button" class="btn btn-danger m-2" (click)="offerStatus(offreStage,false)">Refuser</button>
+          <button type="button" class="btn btn-success m-1" (click)="offerStatus(offreStage,true)"
+            (click)="open(AccepterModal,offreStage)">Accepter</button>
+          <button class="crudbut"><i class="fa-solid fa-eye p-2"
+              routerLink='/offres-de-stages/view/{{ offreStage._id }}'></i></button>
           <button class="crudbut" (click)="editOffresstages()">
             <i class="fa-solid fa-pen-to-square" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i>
           </button>
@@ -46,9 +45,7 @@
         </td>
       </tr>
     </tbody>
-
   </table>
-  
 </div>
 
 <ng-template #deleteModal let-modal>
@@ -71,7 +68,7 @@
   <div class="modal-header">
     <h4 class="modal-title" id="titremodal">Acceptation</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-      <span aria-hidden="true">×</span>
+      <span aria-hidden="true">x</span>
     </button>
   </div>
   <div class="modal-body text-center">

@@ -9,31 +9,34 @@
     <app-maj-demande nomBtn="Sauvegarder" [demandeStage]="demandeStage"></app-maj-demande>
   </div>
   <!-- CHAMPS TITRE -->
-  <div class="row mb-5">
-    <div class="col-md-1">
-      <label class="center">Titre : </label>
+  <form>
+    <div class="row mb-5">
+      <div class="col-md-1">
+        <label class="center">Titre : </label>
+      </div>
+      <div class="col-md-11">
+        <input class="form-control" type="text" [(ngModel)]="demandeStage.title" name="Dynamic Accounts Officer"
+          required>
+      </div>
     </div>
-    <div class="col-md-11">
-      <input class="form-control" type="text" [(ngModel)]="demandeStage.title" name="Dynamic Accounts Officer" required>
-    </div>
-  </div>
-  <!-- INFO DEMANDE...................................... -->
-  <div class="fiche">
-    <form>
+    <!-- INFO DEMANDE...................................... -->
+    <div class="fiche">
+
       <!--- Nom-->
       <label>Nom et prénom</label>
       <input class="form-control  mb-4" type="text" [(ngModel)]="demandeStage.studentName" name="John Doe" required>
-
       <!--- Présentation-->
+
       <div class="form-group">
         <label>Présentation</label>
+
         <!--- Textbox info supp-->
         <textarea class="form-control mb-4" id="formtext" rows="2" [(ngModel)]="demandeStage.studentPresentation"
           name="Présentation"></textarea>
       </div>
-
       <div class="row">
         <div class="col-md-6">
+
           <!--- Programme -->
           <div class="border-form">
             <label>Programme de formation</label>
@@ -41,6 +44,7 @@
           </div>
         </div>
         <div class="col-md-6">
+
           <!--- Établissement -->
           <div class="border-form">
             <label>Établissement scolaire</label>
@@ -50,6 +54,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
+
           <!--- Secteur d'activité -->
           <!-- [(ngModel)]="demandeStage.activitySector" name="Établissement" -->
           <div class="border-form">
@@ -67,6 +72,7 @@
           </div>
         </div>
         <div class="col-md-6">
+
           <!--- Ville -->
           <div class="border-form">
             <label>Ville</label>
@@ -76,6 +82,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
+
           <!--- Région -->
           <!-- [(ngModel)]="demandeStage.region" name="Région" -->
           <div class="border-form">
@@ -95,6 +102,7 @@
       </div>
       <div class="row">
         <div class="col-12">
+
           <!--- Compétences -->
           <div class="border-form">
             <label>Compétences</label>
@@ -117,7 +125,6 @@
             </select>
           </div>
 
-
           <!--- Nombre d'heures semaine-->
           <div class="border-form">
             <label>Nombres d'heures par semaine</label>
@@ -132,8 +139,8 @@
             </select>
           </div>
         </div>
-
         <div class="col-md-6">
+
           <!--- Date de début-->
           <div class="border-form">
             <label>Date de début</label>
@@ -141,8 +148,6 @@
               max="2025-12-31" [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'"
               (ngModelChange)="demandeStage.startDate = $event" name="Start Date">
           </div>
-
-
 
           <!--- date de fin-->
           <label>Date de fin</label>
@@ -192,9 +197,23 @@
           <button class="btnparcourir"> Parcourir </button>
         </div>
       </div>
+    </div>
+    <div class="form-group">
+      <h4>Information supplémentaire</h4>
+      <!--- Textbox info supp-->
+      <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
+        name="More Info"></textarea>
+    </div>
 
-    </form>
-  </div>
+    <!--- Bouton parcourir -->
+    <div class="row mt-5">
+      <div class="col-md-8">
+        <input type="text" class="parcourir">
+        <button class="btnparcourir"> Parcourir </button>
+      </div>
+    </div>
+  </form>
+
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>

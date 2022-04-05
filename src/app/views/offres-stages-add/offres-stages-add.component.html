@@ -5,30 +5,33 @@
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-maj-offre nomBtn="Sauvegarder" [offreStage]="offreStage"></app-maj-offre>
+    <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
   </div>
   <!-- CHAMPS TITRE -->
-  <div class="row mb-5">
-    <div class="col-md-2">
-      <!--- Titre -->
-      <label class="center">Titre :</label>
+  <form>
+    <div class="row mb-5">
+      <div class="col-md-2">
+        <!--- Titre -->
+        <label class="center">Titre :</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required>
+      </div>
     </div>
     <div class="col-md-10">
       <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required>
     </div>
-  </div>
-  <div class="row mb-5">
-    <div class="col-md-2">
-      <!--- Entreprise -->
-      <label class="center">Entreprise :</label>
+    <div class="row mb-5">
+      <div class="col-md-2">
+        <!--- Entreprise -->
+        <label class="center">Entreprise :</label>
+      </div>
+      <div class="col-md-10">
+        <input type="text" class="form-control" [(ngModel)]="offreStage.enterprise" name="Titre" required>
+      </div>
     </div>
-    <div class="col-md-10">
-      <input type="text" class="form-control" [(ngModel)]="offreStage.enterprise" name="Titre" required>
-    </div>
-  </div>
 
-  <div class="fiche">
-    <form>
+    <div class="fiche">
       <!--- Description-->
       <div class="form-group">
         <label class="h3">Description de la tâche</label>
@@ -36,7 +39,6 @@
         <textarea class="form-control mb-4" id="formtext" rows="2" [(ngModel)]="offreStage.description"
           name="Description"></textarea>
       </div>
-
       <div class="row">
         <div class="col-md-6">
           <!--- Programme de formation -->
@@ -84,7 +86,6 @@
             </select>
           </div>
         </div>
-
 
         <div class="col-md-6">
           <!--- Date de début-->
@@ -144,15 +145,8 @@
         <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo"
           name="More Info"></textarea>
       </div>
-
-      <!-- <div class="btn-group"> -->
-      <!--- Annuler / sauvegarder -->
-      <!-- <button class="alert alert-light p-2" (click)="backClicked()"> Annuler </button>
-      <button class="alert alert-primary" (click)="save()">
-        <i class="fa-solid fa-floppy-disk p-2"></i>Sauvegarder </button>
-    </div> -->
-    </form>
-  </div>
+    </div>
+  </form>
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-offre nomBtn="Sauvegarder" [offreStage]="offreStage"></app-maj-offre>

@@ -31,10 +31,11 @@ export class MajEntrepriseComponent implements OnInit {
   }
   maj() {
     if (this.entreprise._id !== '') {
+      console.log(this.entreprise)
       this.entrepriseService
         .editEntreprise(this.entreprise)
         .subscribe((_result) => {
-          this.router.navigate(['/demandes-de-stages']);
+          this.router.navigate(['/entreprises']);
         });
     }
   }

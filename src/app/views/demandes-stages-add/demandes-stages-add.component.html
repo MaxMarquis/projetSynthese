@@ -6,36 +6,37 @@
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <button class="btn btnSave">
-      <i class="fa-solid fa-floppy-disk pe-2"></i>Sauvegarder</button>
+    <app-maj-demande nomBtn="Sauvegarder" [demandeStage]="demandeStage"></app-maj-demande>
   </div>
   <!-- CHAMPS TITRE -->
   <form>
-  <div class="row mb-5">
-    <div class="col-md-1">
-      <label class="center">Titre : </label>
+    <div class="row mb-5">
+      <div class="col-md-1">
+        <label class="center">Titre : </label>
+      </div>
+      <div class="col-md-11">
+        <input class="form-control" type="text" [(ngModel)]="demandeStage.title" name="Dynamic Accounts Officer"
+          required>
+      </div>
     </div>
-    <div class="col-md-11">
-      <input class="form-control" type="text" [(ngModel)]="demandeStage.title" name="Dynamic Accounts Officer" required>
-    </div>
-  </div>
-  <!-- INFO DEMANDE...................................... -->
-  <div class="fiche">
+    <!-- INFO DEMANDE...................................... -->
+    <div class="fiche">
 
       <!--- Nom-->
       <label>Nom et prénom</label>
       <input class="form-control  mb-4" type="text" [(ngModel)]="demandeStage.studentName" name="John Doe" required>
-
       <!--- Présentation-->
+
       <div class="form-group">
         <label>Présentation</label>
+
         <!--- Textbox info supp-->
         <textarea class="form-control mb-4" id="formtext" rows="2" [(ngModel)]="demandeStage.studentPresentation"
           name="Présentation"></textarea>
       </div>
-
       <div class="row">
         <div class="col-md-6">
+
           <!--- Programme -->
           <div class="border-form">
             <label>Programme de formation</label>
@@ -43,6 +44,7 @@
           </div>
         </div>
         <div class="col-md-6">
+
           <!--- Établissement -->
           <div class="border-form">
             <label>Établissement scolaire</label>
@@ -52,6 +54,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
+
           <!--- Secteur d'activité -->
           <!-- [(ngModel)]="demandeStage.activitySector" name="Établissement" -->
           <div class="border-form">
@@ -69,6 +72,7 @@
           </div>
         </div>
         <div class="col-md-6">
+
           <!--- Ville -->
           <div class="border-form">
             <label>Ville</label>
@@ -78,6 +82,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
+
           <!--- Région -->
           <!-- [(ngModel)]="demandeStage.region" name="Région" -->
           <div class="border-form">
@@ -97,6 +102,7 @@
       </div>
       <div class="row">
         <div class="col-12">
+
           <!--- Compétences -->
           <div class="border-form">
             <label>Compétences</label>
@@ -119,87 +125,98 @@
             </select>
           </div>
 
-
           <!--- Nombre d'heures semaine-->
           <div class="border-form">
-          <label>Nombres d'heures par semaine</label>
-          <select class="form-control padding" [(ngModel)]="demandeStage.hoursPerWeek" name="Nombre D'heures">
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
-          </select>
+            <label>Nombres d'heures par semaine</label>
+            <select class="form-control padding" [(ngModel)]="demandeStage.hoursPerWeek" name="Nombre D'heures">
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+            </select>
+          </div>
         </div>
-        </div>
-
         <div class="col-md-6">
+
           <!--- Date de début-->
           <div class="border-form">
-          <label>Date de début</label>
-          <input class="form-control" type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01" max="2025-12-31"
-            [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.startDate = $event"
-            name="Start Date">
+            <label>Date de début</label>
+            <input class="form-control" type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01"
+              max="2025-12-31" [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'"
+              (ngModelChange)="demandeStage.startDate = $event" name="Start Date">
           </div>
 
-
-
-        <!--- date de fin-->
-        <label>Date de fin</label>
-        <input class="form-control"  type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01" max="2025-12-31"
-          [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="demandeStage.endDate = $event"
-          name="End Date">
+          <!--- date de fin-->
+          <label>Date de fin</label>
+          <input class="form-control" type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01"
+            max="2025-12-31" [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'"
+            (ngModelChange)="demandeStage.endDate = $event" name="End Date">
         </div>
-  </div>
+      </div>
 
-  <!--- Rémunération-->
-<div class="border-form">
-  <label>Rémunération</label>
-  <div class="form-check">
-    <div class="row">
-      <div class="checkbox">
-        <label class="enumeration">
-          <input type="checkbox" value="not-specified" [ngModel]="demandeStage.paid" name="not-specified">&nbsp;&nbsp;À la
-          discrétion de
-          l'entreprise </label>
+      <!--- Rémunération-->
+      <div class="border-form">
+        <label>Rémunération</label>
+        <div class="form-check">
+          <div class="row">
+            <div class="checkbox">
+              <label class="enumeration">
+                <input type="checkbox" value="not-specified" [ngModel]="demandeStage.paid"
+                  name="not-specified">&nbsp;&nbsp;À la
+                discrétion de
+                l'entreprise </label>
+            </div>
+            <div class="checkbox">
+              <label class="enumeration">
+                <input type="checkbox" value="paid" [ngModel]="demandeStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="enumeration">
+                <input type="checkbox" value="unpaid" [ngModel]="demandeStage.paid" name="unpaid">&nbsp;&nbsp;Stage non
+                rémunéré
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="checkbox">
-        <label class="enumeration">
-          <input type="checkbox" value="paid" [ngModel]="demandeStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
-        </label>
+      <div class="form-group">
+        <h4>Information supplémentaire</h4>
+        <!--- Textbox info supp-->
+        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
+          name="More Info"></textarea>
       </div>
-      <div class="checkbox">
-        <label class="enumeration">
-          <input type="checkbox" value="unpaid" [ngModel]="demandeStage.paid" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
-        </label>
+
+      <!--- Bouton parcourir -->
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <input type="text" class="parcourir">
+          <button class="btnparcourir"> Parcourir </button>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-  <div class="form-group">
-    <h4>Information supplémentaire</h4>
-    <!--- Textbox info supp-->
-    <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
-      name="More Info"></textarea>
-  </div>
-    
-  <!--- Bouton parcourir -->
-  <div class="row mt-5">
-    <div class="col-md-8">
-      <input type="text" class="parcourir">
-      <button class="btnparcourir"> Parcourir </button>
+    <div class="form-group">
+      <h4>Information supplémentaire</h4>
+      <!--- Textbox info supp-->
+      <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
+        name="More Info"></textarea>
     </div>
-  </div>
-  
- 
-  </div>
-</form>
+
+    <!--- Bouton parcourir -->
+    <div class="row mt-5">
+      <div class="col-md-8">
+        <input type="text" class="parcourir">
+        <button class="btnparcourir"> Parcourir </button>
+      </div>
+    </div>
+  </form>
+
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <button class="btn btnSave">
-      <i class="fa-solid fa-floppy-disk pe-2"></i>Sauvegarder</button>
+    <app-maj-demande nomBtn="Sauvegarder" [demandeStage]="demandeStage"></app-maj-demande>
   </div>
 </main>

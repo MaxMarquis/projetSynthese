@@ -2,8 +2,7 @@
     <h1>Ajouter un candidat</h1>
     <app-btn-annuler></app-btn-annuler>
     <!--- Bouton Sauvegarder -->
-    <button class="alert alert-primary ">
-        <i class="fa-solid fa-floppy-disk"></i>Sauvegarder </button>
+    <app-maj-candidat nomBtn="Sauvegarder" [candidat]="candidat"></app-maj-candidat>
     <form>
         <!--- Nom-->
         <label>Nom et prénom:</label>
@@ -50,8 +49,7 @@
                 <div class="btn-group">
                     <!--- Annuler / sauvegarder -->
                     <app-btn-annuler></app-btn-annuler>
-                    <button class="alert alert-primary p-2" (click)="sauvegarder()"><i
-                            class="fa-solid fa-floppy-disk"></i>Sauvegarder</button>
+                    <app-maj-candidat nomBtn="Sauvegarder" [candidat]="candidat"></app-maj-candidat>
                 </div>
             </div>
         </div>

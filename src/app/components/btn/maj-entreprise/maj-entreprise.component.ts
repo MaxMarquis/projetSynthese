@@ -30,12 +30,19 @@ export class MajEntrepriseComponent implements OnInit {
   ngOnInit(): void {
   }
   maj() {
-    if (this.entreprise._id !== '') {
+    // Si l'id est vide / donc nouvelle entreprise => ADD
+    if (this.entreprise._id == '') {
+      this.entrepriseService.addEntreprise(this.entreprise).subscribe((_) => {
+        this.router.navigateByUrl("/entreprises")
+      });
+    }
+    // Sinon l'entreprise existe => EDIT
+    else {
       console.log(this.entreprise)
       this.entrepriseService
         .editEntreprise(this.entreprise)
         .subscribe((_result) => {
-          this.router.navigate(['/entreprises']);
+          this.router.navigateByUrl('/entreprises');
         });
     }
   }

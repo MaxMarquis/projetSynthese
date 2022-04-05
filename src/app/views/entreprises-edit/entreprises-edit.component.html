@@ -1,10 +1,7 @@
 <main class="main">
-  <!-- <img src="{{entreprise.imageUrl}}" alt="{{entreprise.name}} logo"> -->
-  <!-- TITLE - ENTREPRISE...................................... -->
   <div class="row">
     <div class="col-md-2">
-      <img class="entreprise img-fluid mt-5 pt-3" src="../../../assets/img/logo-mediavox.svg"
-        alt="Logo de l'entreprise Mediavox" title="Logo de l'entreprise Mediavox">
+      <img class="entreprise img-fluid pt-3" src="{{entreprise.imageUrl}}" alt="{{entreprise.name}} logo" title="{{entreprise.name}} logo">
     </div>
     <div class="col-md-10">
       <div class="title">
@@ -26,6 +23,7 @@
   <!-- <button class="alert alert-primary ">
         <i class="fa-solid fa-floppy-disk"></i>Sauvegarder </button> -->
   <!-- CHAMPS TITRE -->
+  <form>
   <div class="row mb-5">
     <div class="col-md-1">
       <label class="center">Titre : </label>
@@ -46,7 +44,7 @@
 
   <!-- FICHE d'INFO -->
   <div class="fiche">
-    <form>
+    
       <!--- Nom-->
       <!-- <label>Entreprise:</label> -->
       <!-- <input class="form-control" type="text" required [(ngModel)]="entreprise.name" name="nom"> -->
@@ -115,8 +113,8 @@
                 </div> -->
 
 
-    </form>
-  </div>
+    
+  </div></form>
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>

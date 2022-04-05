@@ -1,57 +1,57 @@
 //colors
 $bg_demandes: #cd9635
 $border_demandes: #986D22
-$white: white
 $bg_offres: #bb2026
-$border_demandes: #986d22
 $border_offres: #821519
+$bg_candidats: #7F2987
+$border_candidats: #4A1150
+$bg_entreprises:#86A9E6
+$border_entreprises: #5E7EB5
+$texte_entreprises: #2E466E
 $texte: white
 
-
-.compteurs 
-	padding-bottom: 50px
-
-
-.stages 
+.stages, .offres, .candidats, .entreprises
+	padding: 1rem
 	background-color: $bg_demandes
-	width: 428px
-	height: 145px
 	border-radius: 10px
-	margin: 15px
-	border-right: 60px solid
-	border-color: $border_demandes
-	display: flex
-	align-items: center
-	
-
-    
-.fa-wpforms 
-	color: $white
-	width: 65px
-	height: 65px
-	float: left
-	margin-right: 35px
-    
-
-.fa-paper-plane 
-	color: $white
-	width: 65px
-	height: 65px
-	float: left
-	margin-right: 35px
-
-.offres 
-	background-color: $bg_offres
-	width: 428px
-	height: 145px
-	border-radius: 10px
-	margin: 15px
-	border-right: 60px solid
-	border-color: $border_offres
-	display: flex
-	align-items: center
-
-.titre
 	color: $texte
-	font-size: 25px
-	
+	align-items: center
+	p
+		font-size:1.275rem
+		line-height: 2.125rem
+		color: $texte
+		margin-bottom: 0
+	i
+		font-size: 4rem
+		padding: 0 1rem
+		display: inline
+		color: $texte
+		display: block
+		float: left
+		&.min
+			font-size:1.675rem
+			padding-top: 1.5rem
+			
+.numCompteur
+	font-size: 3.125rem
+	font-weight: 700
+
+.stages
+	border-right: 60px solid $border_demandes
+
+.offres
+	background-color: $bg_offres
+	border-right: 60px solid $border_offres
+
+.candidats
+	background-color: $bg_candidats
+	border-radius: 10px 0 0 10px
+	border-right: 25px solid $border_candidats
+
+.entreprises
+	background-color: $bg_entreprises
+	border-radius: 0 10px 10px 0
+	border-left: 25px solid $border_entreprises
+
+.entreprises p, .entreprises i
+		color: $texte_entreprises

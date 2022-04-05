@@ -10,6 +10,7 @@
       <i class="fa-solid fa-floppy-disk pe-2"></i>Sauvegarder</button>
   </div>
   <!-- CHAMPS TITRE -->
+  <form>
   <div class="row mb-5">
     <div class="col-md-1">
       <label class="center">Titre : </label>
@@ -20,7 +21,7 @@
   </div>
   <!-- INFO DEMANDE...................................... -->
   <div class="fiche">
-    <form>
+
       <!--- Nom-->
       <label>Nom et prénom</label>
       <input class="form-control  mb-4" type="text" [(ngModel)]="demandeStage.studentName" name="John Doe" required>
@@ -192,8 +193,9 @@
     </div>
   </div>
   
-  </form>
+ 
   </div>
+</form>
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>

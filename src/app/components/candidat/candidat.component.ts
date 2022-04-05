@@ -28,6 +28,6 @@ export class CandidatComponent implements OnInit {
 
   getInfos(candidat: Candidats): void {
     console.log("Id envoyé: " + candidat._id)
-    this.router.navigate(['/candidats/infos', candidat._id])
+    this.router.navigate(['/candidats/view', candidat._id])
   }
 }

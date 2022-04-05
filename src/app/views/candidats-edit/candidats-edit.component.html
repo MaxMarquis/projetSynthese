@@ -6,8 +6,7 @@
     </div>
     <app-btn-annuler></app-btn-annuler>
     <!--- Bouton Sauvegarder -->
-    <button class="alert alert-primary ">
-        <i class="fa-solid fa-floppy-disk"></i>Sauvegarder </button>
+    <app-maj-candidat nomBtn="Mettre à jour" [candidat]="candidat"></app-maj-candidat>
     <form>
         <h2>Courte présentation</h2>
         <div class="col">
@@ -45,7 +44,7 @@
             <div class="btn-group">
                 <!--- Annuler / sauvegarder -->
                 <app-btn-annuler></app-btn-annuler>
-                <button class="alert alert-primary p-2"><i class="fa-solid fa-floppy-disk"></i>Sauvegarder</button>
+                <app-maj-candidat nomBtn="Mettre à jour" [candidat]="candidat"></app-maj-candidat>
             </div>
         </div>
     </form>

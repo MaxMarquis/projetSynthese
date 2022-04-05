@@ -7,7 +7,7 @@
       aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="../assets/img/logo-eStage.svg" alt="logo" class="logoMobile">
+    <img (click)="logout()" src="../assets/img/logo-eStage.svg" alt="logo" class="logoMobile">
     <!-- ADD BTN................................... -->
 
     <ul id="add">
@@ -47,8 +47,8 @@
     <div class="offcanvas offcanvas-start" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <!-- BRAND..................................... -->
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../assets/img/logo-eStage.svg" alt="logo"
-            class="logo"></h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img (click)="logout()"
+            src="../assets/img/logo-eStage.svg" alt="logo" class="logo"></h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <!-- SIDEBAR NAV............................... -->

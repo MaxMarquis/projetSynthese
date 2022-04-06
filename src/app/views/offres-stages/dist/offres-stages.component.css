@@ -27,7 +27,6 @@
   background-color: #BB2026;
   border-radius: 10px;
 }
-
 .fa-suitcase-inactive {
   color: #FFFFFF;
   border: 2px black;
@@ -47,4 +46,14 @@
   border-left: 5px solid #808080;
   height: 50px;
   padding-left: 20px;
+}
+
+.poste {
+  color: red;
+  font-weight: bold;
+}
+
+.poste-inactive {
+  color: black;
+  font-weight: bold;
 }

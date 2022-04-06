@@ -43,7 +43,7 @@ var OffresStagesViewComponent = /** @class */ (function () {
         this.value = "";
     }
     OffresStagesViewComponent.prototype.ngOnInit = function () {
-        var stageId = this.activeRoute.snapshot.paramMap.get("id");
+        var stageId = String(this.activeRoute.snapshot.paramMap.get("id"));
         console.log("Id Recu: " + stageId);
         this.getOffreStage(stageId);
     };

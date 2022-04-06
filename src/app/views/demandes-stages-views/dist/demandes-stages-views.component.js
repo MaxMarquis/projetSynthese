@@ -24,41 +24,45 @@ var DemandesStagesViewsComponent = /** @class */ (function () {
         this.activeRoute = activeRoute;
         this.requetesStagesService = requetesStagesService;
         this.requete_stage = {
-            _id: "",
-            description: "",
-            entreprise: "",
-            title: "",
-            studentName: "",
-            studentPresentation: "",
-            school: "",
+            _id: '',
+            description: '',
+            entreprise: '',
+            title: '',
+            studentName: '',
+            studentPresentation: '',
+            school: '',
             startDate: new Date(),
             endDate: new Date(),
-            program: "",
-            stageType: "",
+            program: '',
+            stageType: '',
             hoursPerWeek: 0,
-            additionalInfo: "",
-            skills: [""],
+            additionalInfo: '',
+            skills: [],
             published: false,
-            paid: [""],
-            user: "",
+            paid: [],
+            user: '',
             active: true,
-            region: "",
-            activitySector: "",
-            city: "",
-            linkToResume: ""
+            region: '',
+            activitySector: '',
+            city: '',
+            linkToResume: ''
         };
     }
     DemandesStagesViewsComponent.prototype.ngOnInit = function () {
-        var stageId = this.activeRoute.snapshot.paramMap.get("id");
-        console.log("Id Recu: " + stageId);
+        var stageId = String(this.activeRoute.snapshot.paramMap.get('id'));
+        console.log('Id Recu: ' + stageId);
         this.getRequeteStage(stageId);
     };
     DemandesStagesViewsComponent.prototype.getRequeteStage = function (id) {
         var _this = this;
-        this.requetesStagesService.getRequeteStage(id).subscribe(function (res) { return _this.requete_stage = res; });
+        this.requetesStagesService
+            .getRequeteStage(id)
+            .subscribe(function (res) { return (_this.requete_stage = res); });
     };
     DemandesStagesViewsComponent.prototype.requeteStatus = function (requete_stage, active) {
-        this.requetesStagesService.editRequeteStage(__assign(__assign({}, requete_stage), { active: active })).subscribe(function (_result) {
+        this.requetesStagesService
+            .editRequeteStage(__assign(__assign({}, requete_stage), { active: active }))
+            .subscribe(function (_result) {
             requete_stage.active = active;
         });
     };

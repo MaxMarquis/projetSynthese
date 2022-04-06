@@ -24,14 +24,14 @@
             <i
             [ngClass]="requeteStage.active ? 'bordure' : 'bordure bordure-inactive'"></i>
               <i [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
-              {{ requeteStage.title }}
+              {{ requeteStage.title }} 
               {{ requeteStage.studentName}}
            </td>
            <td>{{ requeteStage.activitySector }}</td>
            <td>{{ requeteStage.region }}</td>
-           <td>{{ requeteStage.startDate | date:'longDate':'undefined':'fr'}}
+           <td>{{ requeteStage.startDate | date:'longDate':'undefined':'fr'}}</td>
            <td>
-              <button class="crudbut" routerLink='/demandes-de-stages/views/{{ requeteStage._id }}'>
+              <button class="crudbut" routerLink='/demandes-de-stages/view/{{ requeteStage._id }}'>
                <i class="fa-solid fa-eye p-2"></i></button>
               <button class="crudbut" routerLink='/demandes-de-stages/edit/{{ requeteStage._id }}'>
               <i class="fa-solid fa-pen-to-square"></i>

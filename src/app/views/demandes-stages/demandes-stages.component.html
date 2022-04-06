@@ -1,62 +1,62 @@
 <div class="container">
-  <h1>Demande de stage</h1>
-  <div class="ajout">
-     <!--- Ouverture component demandes-stages-add -->
-     <button class="btn btn-warning" role="alert" routerLink='/demandes-de-stages/add'>
-     Ajouter une demande
-     </button>
-  </div>
-  <!--- table borderless pour enlever le HR sous les entêtes -->
-  <table class="table table-borderless">
-     <thead>
-        <tr class = "title">
-           <th scope="col" class="d-none">ID</th>
-           <th scope="col">Poste</th>
-           <th scope="col">Secteur d'activité</th>
-           <th scope="col">Région</th>
-           <th scope="col">Date d'inscription</th>
-        </tr>
-     </thead>
-     <tbody>
-        <tr *ngFor="let requeteStage of requetesStage">
-           <td class="d-none">{{ requeteStage._id }}</td>
-           <td>
-            <i
-            [ngClass]="requeteStage.active ? 'bordure' : 'bordure bordure-inactive'"></i>
-              <i [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
-              {{ requeteStage.title }}
-              {{ requeteStage.studentName}}
-           </td>
-           <td>{{ requeteStage.activitySector }}</td>
-           <td>{{ requeteStage.region }}</td>
-           <td>{{ requeteStage.startDate | date:'longDate':'undefined':'fr'}}
-           <td>
-              <button class="crudbut" routerLink='/demandes-de-stages/views/{{ requeteStage._id }}'>
-               <i class="fa-solid fa-eye p-2"></i></button>
-              <button class="crudbut" routerLink='/demandes-de-stages/edit/{{ requeteStage._id }}'>
-              <i class="fa-solid fa-pen-to-square"></i>
-              </button>
-              <button class="crudbut" (click)="open(deleteModal,requeteStage)">
-              <i class="fa-solid fa-trash-can p-2"></i>
-              </button>
-           </td>
-        </tr>
-     </tbody>
-  </table>
+   <h1>Demande de stage</h1>
+   <div class="ajout">
+      <!--- Ouverture component demandes-stages-add -->
+      <button class="btn btn-warning" role="alert" routerLink='/demandes-de-stages/add'>
+         Ajouter une demande
+      </button>
+   </div>
+   <!--- table borderless pour enlever le HR sous les entêtes -->
+   <table class="table table-borderless">
+      <thead>
+         <tr class="title">
+            <th scope="col" class="d-none">ID</th>
+            <th scope="col">Poste</th>
+            <th scope="col">Secteur d'activité</th>
+            <th scope="col">Région</th>
+            <th scope="col">Date d'inscription</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr *ngFor="let requeteStage of requetesStage">
+            <td class="d-none">{{ requeteStage._id }}</td>
+            <td>
+               <i [ngClass]="requeteStage.active ? 'bordure' : 'bordure bordure-inactive'"></i>
+               <i
+                  [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
+               {{ requeteStage.title }}
+               {{ requeteStage.studentName}}
+            </td>
+            <td>{{ requeteStage.activitySector }}</td>
+            <td>{{ requeteStage.region }}</td>
+            <td>{{ requeteStage.startDate | date:'longDate':'undefined':'fr'}}
+            <td>
+               <button class="crudbut" routerLink='/demandes-de-stages/view/{{ requeteStage._id }}'>
+                  <i class="fa-solid fa-eye p-2"></i></button>
+               <button class="crudbut" routerLink='/demandes-de-stages/edit/{{ requeteStage._id }}'>
+                  <i class="fa-solid fa-pen-to-square"></i>
+               </button>
+               <button class="crudbut" (click)="open(deleteModal,requeteStage)">
+                  <i class="fa-solid fa-trash-can p-2"></i>
+               </button>
+            </td>
+         </tr>
+      </tbody>
+   </table>
 </div>
 <!--- MODAL DEMANDE STAGES-->
-<ng-template #deleteModal let-modal >
-  <div class="modal-header">
-     <h4 class="modal-title" id="titremodal">Suppression</h4>
-     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-     <span aria-hidden="true">×</span>
-     </button>
-  </div>
-  <div class="modal-body text-center">
-     Voulez vous supprimer la demande de stage ?
-  </div>
-  <div class="modal-footer">
-     <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
-     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
-  </div>
+<ng-template #deleteModal let-modal>
+   <div class="modal-header">
+      <h4 class="modal-title" id="titremodal">Suppression</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+         <span aria-hidden="true">x</span>
+      </button>
+   </div>
+   <div class="modal-body text-center">
+      Voulez vous supprimer la demande de stage ?
+   </div>
+   <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+   </div>
 </ng-template>

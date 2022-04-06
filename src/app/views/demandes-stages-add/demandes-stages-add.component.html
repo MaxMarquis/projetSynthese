@@ -56,18 +56,20 @@
         <div class="col-md-6">
 
           <!--- Secteur d'activité -->
-          <!-- [(ngModel)]="demandeStage.activitySector" name="Établissement" -->
           <div class="border-form">
             <label>Secteur d'activité</label>
             <select class="form-control padding" [(ngModel)]="demandeStage.activitySector" name="Établissement">
-              <option value="International Communications Executive">International Communications Executive</option>
+              <option *ngFor="let activitySector of activitySectors" value={{activitySector.title}}>
+                {{activitySector.title}}</option>
+
+              <!-- <option value="International Communications Executive">International Communications Executive</option>
               <option value="Global Implementation Engineer">Global Implementation Engineer</option>
               <option value="National Applications Director">National Applications Director</option>
               <option value="Corporate Security Coordinator">Corporate Security Coordinator</option>
               <option value="National Usability Agent">National Usability Agent</option>
               <option value="Human Factors Supervisor">Human Factors Supervisor</option>
               <option value="Human Response Engineer">Human Response Engineer</option>
-              <option value="Lead Accountability Agent">Lead Accountability Agent</option>
+              <option value="Lead Accountability Agent">Lead Accountability Agent</option> -->
             </select>
           </div>
         </div>
@@ -84,7 +86,6 @@
         <div class="col-md-6">
 
           <!--- Région -->
-          <!-- [(ngModel)]="demandeStage.region" name="Région" -->
           <div class="border-form">
             <label>Région</label>
             <select class="form-control padding" [(ngModel)]="demandeStage.region" name="Région">
@@ -196,20 +197,6 @@
           <input type="text" class="parcourir">
           <button class="btnparcourir"> Parcourir </button>
         </div>
-      </div>
-    </div>
-    <div class="form-group">
-      <h4>Information supplémentaire</h4>
-      <!--- Textbox info supp-->
-      <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
-        name="More Info"></textarea>
-    </div>
-
-    <!--- Bouton parcourir -->
-    <div class="row mt-5">
-      <div class="col-md-8">
-        <input type="text" class="parcourir">
-        <button class="btnparcourir"> Parcourir </button>
       </div>
     </div>
   </form>

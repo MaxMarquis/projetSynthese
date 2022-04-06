@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
-import { DEMANDESSTAGES } from 'src/app/mock-demandes-stages';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -39,13 +38,14 @@ export class DernieresDemandesComponent implements OnInit {
   editRequetestages() {
     this.router.navigateByUrl('/demandes-de-stages/edit')
   }
+
   /// Function Delete requetes_stages
   onDelete(Requetestages: Requetes_stages): void {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
       .subscribe(_result => this.requetesStage = this.requetesStage.filter(p => p !== Requetestages));
-
   }
-  requeteStatus(requetesstage: Requetes_stages, active: Boolean) {
+
+  requeteStatus(requetesstage: Requetes_stages, active: boolean) {
     this.RequetesStagesService.editRequeteStage({
       ...requetesstage,
       active,
@@ -53,8 +53,6 @@ export class DernieresDemandesComponent implements OnInit {
       requetesstage.active = active;
     });
   }
-
-
 
   /// Modal suppression
   open(content: any, requetesStage: Requetes_stages) {
@@ -70,5 +68,3 @@ export class DernieresDemandesComponent implements OnInit {
       );
   }
 }
-
-

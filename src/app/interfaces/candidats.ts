@@ -1,15 +1,15 @@
 export interface Candidats {
-    _id: String,
-    name: String,
-    description: String,
-    jobTitle: String,
-    email: String,
-    phone: String,
-    address: String,
-    city: String,
-    province: String,
-    postalCode: String,
-    published: Boolean,
+    _id: string,
+    name: string,
+    description: string,
+    jobTitle: string,
+    email: string,
+    phone: string,
+    address: string,
+    city: string,
+    province: string,
+    postalCode: string,
+    published: boolean,
 }
 
 // Chercher tous les candidats > GET /candidate

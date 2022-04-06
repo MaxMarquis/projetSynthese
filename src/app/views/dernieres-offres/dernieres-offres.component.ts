@@ -40,7 +40,7 @@ export class DernieresOffresComponent implements OnInit {
     );
   }
 
-  offerStatus(offresstage: Offres_stages, active: Boolean) {
+  offerStatus(offresstage: Offres_stages, active: boolean) {
     this.OffresStagesService.editOffreStage({
       ...offresstage,
       active,

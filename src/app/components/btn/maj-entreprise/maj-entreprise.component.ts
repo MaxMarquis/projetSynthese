@@ -6,39 +6,40 @@ import { EntrepriseService } from 'src/app/services/entreprise.service';
 @Component({
   selector: 'app-maj-entreprise',
   templateUrl: './maj-entreprise.component.html',
-  styleUrls: ['./maj-entreprise.component.sass']
+  styleUrls: ['./maj-entreprise.component.sass'],
 })
 export class MajEntrepriseComponent implements OnInit {
-  @Input() nomBtn: String = "";
+  @Input() nomBtn: String = '';
   @Input() entreprise: Entreprise = {
-    _id: "",
-    name: "",
-    description: "",
-    imageUrl: "",
-    contactName: "",
-    contactEmail: "",
-    contactPhone: "",
-    address: "",
-    city: "",
-    province: "",
-    postalCode: "",
+    _id: '',
+    name: '',
+    description: '',
+    imageUrl: '',
+    contactName: '',
+    contactEmail: '',
+    contactPhone: '',
+    address: '',
+    city: '',
+    province: '',
+    postalCode: '',
     published: false,
-  }
+  };
 
-  constructor(private entrepriseService: EntrepriseService, private router: Router) { }
+  constructor(
+    private entrepriseService: EntrepriseService,
+    private router: Router
+  ) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   maj() {
     // Si l'id est vide / donc nouvelle entreprise => ADD
     if (this.entreprise._id == '') {
       this.entrepriseService.addEntreprise(this.entreprise).subscribe((_) => {
-        this.router.navigateByUrl("/entreprises")
+        this.router.navigateByUrl('/entreprises');
       });
     }
     // Sinon l'entreprise existe => EDIT
     else {
-      console.log(this.entreprise)
       this.entrepriseService
         .editEntreprise(this.entreprise)
         .subscribe((_result) => {

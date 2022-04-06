@@ -1,0 +1,64 @@
+.stages, .offres, .candidats, .entreprises {
+  padding: 1rem;
+  background-color: #cd9635;
+  border-radius: 10px;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stages p, .offres p, .candidats p, .entreprises p {
+  font-size: 1.275rem;
+  line-height: 2.125rem;
+  color: white;
+  margin-bottom: 0;
+}
+
+.stages i, .offres i, .candidats i, .entreprises i {
+  font-size: 4rem;
+  padding: 0 1rem;
+  display: inline;
+  color: white;
+  display: block;
+  float: left;
+}
+
+.stages i.min, .offres i.min, .candidats i.min, .entreprises i.min {
+  font-size: 1.675rem;
+  padding-top: 1.5rem;
+}
+
+.numCompteur {
+  font-size: 3.125rem;
+  font-weight: 700;
+}
+
+.stages {
+  border-right: 60px solid #986D22;
+  cursor: pointer;
+}
+
+.offres {
+  background-color: #bb2026;
+  border-right: 60px solid #821519;
+  cursor: pointer;
+}
+
+.candidats {
+  background-color: #7F2987;
+  border-radius: 10px 0 0 10px;
+  border-right: 25px solid #4A1150;
+  cursor: pointer;
+}
+
+.entreprises {
+  background-color: #86A9E6;
+  border-radius: 0 10px 10px 0;
+  border-left: 25px solid #5E7EB5;
+  cursor: pointer;
+}
+
+.entreprises p, .entreprises i {
+  color: #2E466E;
+}

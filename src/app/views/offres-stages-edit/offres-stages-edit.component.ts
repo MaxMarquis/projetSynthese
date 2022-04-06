@@ -6,48 +6,43 @@ import { OffresStagesService } from 'src/app/services/offres-stages.service';
 @Component({
   selector: 'app-offres-stages-edit',
   templateUrl: './offres-stages-edit.component.html',
-  styleUrls: ['./offres-stages-edit.component.sass']
+  styleUrls: ['./offres-stages-edit.component.sass'],
 })
 export class OffresStagesEditComponent implements OnInit {
   offreStage: Offres_stages = {
-    _id: "",
-    title: "Titre du stage",
-    description: "Description",
+    _id: '',
+    title: 'Titre du stage',
+    description: 'Description',
     enterprise: "Nom de l'entreprise",
     startDate: new Date(),
     endDate: new Date(),
-    program: "Program",
-    requirements: "Requirements",
-    stageType: "fulltime",
+    program: 'Program',
+    requirements: 'Requirements',
+    stageType: 'fulltime',
     hoursPerWeek: 35,
-    additionalInfo: "More",
-    paid: ["paid"],
-    skills: ["skills"],
+    additionalInfo: 'More',
+    paid: ['paid'],
+    skills: ['skills'],
     published: true,
-    active: true
-  }
-  value: String = ""
+    active: true,
+  };
+  value: String = '';
   requetesOffresService: any;
-
 
   constructor(
     private activeRoute: ActivatedRoute,
     private offreStagesService: OffresStagesService
-  ) { }
-  
+  ) {}
+
   ngOnInit(): void {
-    const stageId = this.activeRoute.snapshot.paramMap.get("id") as string;
-    console.log("Id Recu: " + stageId)
-    this.getOffreStage(stageId)
+    const stageId = String(this.activeRoute.snapshot.paramMap.get('id'));
+    console.log('Id Recu: ' + stageId);
+    this.getOffreStage(stageId);
   }
-  
+
   getOffreStage(id: string): void {
-    this.offreStagesService.getOffreStage(id).subscribe((res) => this.offreStage = res)
+    this.offreStagesService
+      .getOffreStage(id)
+      .subscribe((res) => (this.offreStage = res));
   }
 }
-
-
-    ///**test(value: String) ; {
-      ///**return this.offreStage.paid.push(value)
-   ///** }
-

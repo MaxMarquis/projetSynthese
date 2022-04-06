@@ -15,7 +15,7 @@ export class DemandesStagesComponent implements OnInit {
   constructor(
     private requetesStagesService: RequetesStagesService,
     public modalService: NgbModal
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getRequetestages();
@@ -34,12 +34,12 @@ export class DemandesStagesComponent implements OnInit {
       .deleteRequeteStage(Requetestages._id)
       .subscribe(
         (_result) =>
-        (this.requetesStage = this.requetesStage.filter(
-          (p) => p !== Requetestages
-        ))
+          (this.requetesStage = this.requetesStage.filter(
+            (p) => p !== Requetestages
+          ))
       );
   }
-  requeteStatus(requetesstage: Requetes_stages, active: Boolean) {
+  requeteStatus(requetesstage: Requetes_stages, active: boolean) {
     this.requetesStagesService
       .editRequeteStage({
         ...requetesstage,
@@ -60,7 +60,7 @@ export class DemandesStagesComponent implements OnInit {
             this.onDelete(requetesStage);
           }
         },
-        (reason) => { }
+        (reason) => {}
       );
   }
 }

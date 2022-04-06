@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { BarreActionsComponent } from './components/barre-actions/barre-actions.component';
 import { CandidatComponent } from './components/candidat/candidat.component';
 import { BtnAnnulerComponent } from './components/btn-annuler/btn-annuler.component';
 import { SaveComponent } from './components/save/save.component';
@@ -55,7 +54,6 @@ registerLocaleData(localeFr, 'fr');
 @NgModule({
   declarations: [
     AppComponent,
-    BarreActionsComponent,
     BtnAnnulerComponent,
     CandidatComponent,
     CrudComponent,
@@ -100,4 +98,4 @@ registerLocaleData(localeFr, 'fr');
   providers: [AuthGuardService],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

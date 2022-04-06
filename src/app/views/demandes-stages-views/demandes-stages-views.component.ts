@@ -23,9 +23,9 @@ export class DemandesStagesViewsComponent implements OnInit {
     stageType: '',
     hoursPerWeek: 0,
     additionalInfo: '',
-    skills: [''],
+    skills: [],
     published: false,
-    paid: [''],
+    paid: [],
     user: '',
     active: true,
     region: '',
@@ -37,10 +37,10 @@ export class DemandesStagesViewsComponent implements OnInit {
   constructor(
     private activeRoute: ActivatedRoute,
     private requetesStagesService: RequetesStagesService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    const stageId = this.activeRoute.snapshot.paramMap.get('id') as string;
+    const stageId = String(this.activeRoute.snapshot.paramMap.get('id'));
     console.log('Id Recu: ' + stageId);
     this.getRequeteStage(stageId);
   }
@@ -51,7 +51,7 @@ export class DemandesStagesViewsComponent implements OnInit {
       .subscribe((res) => (this.requete_stage = res));
   }
 
-  requeteStatus(requete_stage: Requetes_stages, active: Boolean) {
+  requeteStatus(requete_stage: Requetes_stages, active: boolean) {
     this.requetesStagesService
       .editRequeteStage({
         ...requete_stage,

@@ -1,6 +1,6 @@
 export interface Regions {
-    _id: String
-    title: String
+    _id: string
+    title: string
 }
 
 // Chercher toutes les régions > GET /region

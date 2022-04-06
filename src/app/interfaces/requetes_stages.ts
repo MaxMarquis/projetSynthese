@@ -1,30 +1,27 @@
-
-
 export interface Requetes_stages {
-    _id: String
-    description: String
-    entreprise: String
-    title: String,
-    studentName: String,
-    studentPresentation: String,
-    school: String,
+    _id: string
+    description: string
+    entreprise: string
+    title: string,
+    studentName: string,
+    studentPresentation: string,
+    school: string,
     startDate: Date,
     endDate: Date,
-    program: String,
-    stageType: String,
-    hoursPerWeek: Number,
-    additionalInfo: String,
-    skills: String[],
-    published: Boolean,
-    paid: String[],
-    user: String,
-    active: Boolean,
-    region: String,
-    activitySector: String,
-    city: String,
-    linkToResume: String,
+    program: string,
+    stageType: string,
+    hoursPerWeek: number | string,
+    additionalInfo: string,
+    skills: string[],
+    published: boolean,
+    paid: string[],
+    user: string,
+    active: boolean,
+    region: string,
+    activitySector: string,
+    city: string,
+    linkToResume: string,
 }
-
 
 // Chercher toutes les requêtes de stages > GET /internship-request
 

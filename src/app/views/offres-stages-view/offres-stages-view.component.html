@@ -1,3 +1,9 @@
+<!--
+*** OFFRE STAGE VIEW ***
+FICHE ENTREPRISE
+-->
+
+
 <main class="main">
   <!-- TITLE - STAGE...................................... -->
   <div class="title">
@@ -8,11 +14,9 @@
 
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
-
     <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)" onclick="alert('Offre activée')" ></i></button>
     <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
     <button><i class="fas fa-window-close"routerLink='/offres-de-stages/add/'></i></button>
-
   </div>
 
 
@@ -70,5 +74,6 @@
     <!-- INFORMATION SUPP...................................... -->
     <h4>Informations supplémentaires</h4>
     <p>{{offreStage.additionalInfo}}</p>
+
   </div>
 </main>

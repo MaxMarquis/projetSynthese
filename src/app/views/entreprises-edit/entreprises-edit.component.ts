@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Entreprise } from 'src/app/interfaces/entreprise';
+import { EntrepriseService } from 'src/app/services/entreprise.service';
 
 @Component({
   selector: 'app-entreprises-edit',
   templateUrl: './entreprises-edit.component.html',
   styleUrls: ['./entreprises-edit.component.sass']
 })
+
 export class EntreprisesEditComponent implements OnInit {
   entreprise: Entreprise = {
     _id: "123",
@@ -21,9 +24,16 @@ export class EntreprisesEditComponent implements OnInit {
     postalCode: "Code postal",
     published: false,
   }
-  constructor() { }
+  constructor(private activeRoute: ActivatedRoute, private entrepriseService: EntrepriseService) { }
 
   ngOnInit(): void {
+    const entrepriseID = this.activeRoute.snapshot.paramMap.get("id") as string;
+    console.log(entrepriseID)
+    this.getEntreprise(entrepriseID)
+  }
+
+  getEntreprise(id: String): void {
+    this.entrepriseService.getEntreprise(id).subscribe((res) => this.entreprise = res);
   }
 
 }

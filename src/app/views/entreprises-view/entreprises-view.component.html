@@ -1,14 +1,9 @@
-<!--
-*** ENTREPRISE VIEW ***
--->
-
-
 <main class="main">
   <!-- TITLE - ENTREPRISE...................................... -->
   <div class="row">
     <div class="col-md-2">
-      <img class="entreprise img-fluid mt-5 pt-3" src="../../../assets/img/logo-mediavox.svg"
-        alt="Logo de l'entreprise Mediavox" title="Logo de l'entreprise Mediavox">
+      <img class="entreprise img-fluid pt-3" src="{{entreprise.imageUrl}}" alt="{{entreprise.name}} logo"
+        title="{{entreprise.name}} logo">
     </div>
     <div class="col-md-10">
       <div class="title">
@@ -20,21 +15,18 @@
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
     <button><i class="fa-solid fa-check accepticon"></i></button>
-    <button><i class="fa-solid fa-pen-to-square editicon"></i></button>
-    <button><i class="fa-solid fa-square-plus"></i></button>
+    <button (click)="edit(entreprise)"><i class="fa-solid fa-pen-to-square editicon"></i></button>
+    <button (click)="open(deleteModal,entreprise)"><i class="fas fa-window-close"></i></button>
   </div>
 
   <div class="fiche">
     <!-- INFO ENTREPRISE...................................... -->
-
     <h3>Courte présentation</h3>
     <p>{{entreprise.description}}</p>
-
     <!-- 1ERE ROW...................................... -->
     <div class="row">
       <!-- 1ERE ROW - COL 12 -->
       <div class="col-12">
-
         <h4>Personne contact</h4>
         <p>{{entreprise.contactName}}</p>
       </div>
@@ -63,7 +55,6 @@
           <p>{{entreprise.postalCode}}</p>
         </div>
       </div>
-
       <div class="col-md-6">
         <!-- téléphone -->
         <div class="border-form">
@@ -77,7 +68,21 @@
         </div>
       </div>
     </div>
-
-
   </div>
 </main>
+
+<ng-template #deleteModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Voulez vous supprimer l'entreprise: {{entreprise.name}} ?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+  </div>
+</ng-template>

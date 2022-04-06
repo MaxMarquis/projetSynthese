@@ -1,20 +1,42 @@
-<div class="container compteurs text-center">
-
-    <div class="row">
-        <div class="col-sm stages ">
-            <i class="fab fa-wpforms fa-4x media"></i>
-            <p class = "titre">demandes de stage</p>
-        </div>
-        <div class="col-sm offres">
-            <i class="fa-solid fa-paper-plane fa-4x "></i>
-            <p class = "titre">Offres de stage</p>
-       
-        </div>
-        <div class="col-sm">
-         Candidats
+<div class="row my-5">
+  <!-- DEMANDES DE STAGE COMPTEUR -->
+  <div class="col-12 col-md-4">
+    <div class="stages p-4">
+      <i class="fab fa-wpforms"></i>
+      <p>Demande de stage<br>
+        <span class="numCompteur">{{demandes.length}}</span>
+      </p>
+    </div>
+  </div>
+  <!-- OFFRES DE STAGE COMPTEUR -->
+  <div class="col-12 col-md-4">
+    <div class="offres p-4">
+      <i class="fa-solid fa-paper-plane"></i>
+      <p>Offre de stage<br>
+        <span class="numCompteur">{{offres.length}}</span>
+      </p>
+    </div>
+  </div>
+  <div class="col-12 col-md-4">
+    <div class="row p-0 m-0">
+      <!-- CANDIDATS -->
+      <div class="col-6 m-0 p-0">
+        <div class="candidats m-0 py-4 px-0">
+          <i class="fas fa-user min"></i>
+          <p>Candidats<br>
+            <span class="numCompteur">{{candidats.length}}</span>
+          </p>
         </div>
       </div>
-
-
-
+      <!-- ENTREPRISES -->
+      <div class="col-6 m-0 p-0">
+        <div class="entreprises m-0 py-4 px-0">
+          <i class="fas fa-building min"></i>
+          <p>Entreprises<br>
+            <span class="numCompteur">{{entreprises.length}}</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

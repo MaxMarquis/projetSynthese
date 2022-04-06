@@ -1,0 +1,9 @@
+.btnMAJ {
+  background-color: #BB2026;
+  color: #fff;
+  line-height: 2rem;
+}
+
+.btnMAJ:hover {
+  background-color: #6F1316;
+}

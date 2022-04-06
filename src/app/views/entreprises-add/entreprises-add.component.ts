@@ -8,17 +8,17 @@ import { Entreprise } from 'src/app/interfaces/entreprise';
 })
 export class EntreprisesAddComponent implements OnInit {
   entreprise: Entreprise = {
-    _id: "123",
-    name: "Nom",
-    description: "Description",
+    _id: "",
+    name: "",
+    description: "",
     imageUrl: "",
-    contactName: "Nom du contact",
-    contactEmail: "Email du contact",
-    contactPhone: "Telephone du contact",
-    address: "Adresse",
-    city: "Ville",
-    province: "Province",
-    postalCode: "Code postal",
+    contactName: "",
+    contactEmail: "",
+    contactPhone: "",
+    address: "",
+    city: "",
+    province: "",
+    postalCode: "",
     published: false,
   }
 

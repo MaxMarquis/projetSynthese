@@ -30,7 +30,7 @@ export class EntrepriseComponent implements OnInit {
 
   getInfos(entreprise: Entreprise): void {
     console.log("Id envoyé: " + entreprise._id)
-    this.route.navigate(['/entreprises/infos', entreprise._id])
+    this.route.navigate(['/entreprises/view', entreprise._id])
   }
 
 }

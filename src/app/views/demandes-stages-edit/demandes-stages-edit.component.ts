@@ -3,12 +3,12 @@ import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 import { ActivatedRoute } from '@angular/router';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
 
-
 @Component({
   selector: 'app-demandes-stages-edit',
   templateUrl: './demandes-stages-edit.component.html',
   styleUrls: ['./demandes-stages-edit.component.sass']
 })
+
 export class DemandesStagesEditComponent implements OnInit {
   demandeStage: Requetes_stages = {
     _id: "",

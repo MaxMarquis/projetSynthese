@@ -12,16 +12,16 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class DernieresDemandesComponent implements OnInit {
-  requetesStage: Requetes_stages[] = DEMANDESSTAGES;
+  requetesStage: Requetes_stages[] = [];
 
   constructor(private requetesStagesService: RequetesStagesService,
     private RequetesStagesService: RequetesStagesService,
     private router: Router,
     public modalService: NgbModal
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-    // this.getRequetestages();
+    this.getRequetestages();
   }
 
   /// Function get requetes_stages
@@ -50,21 +50,21 @@ export class DernieresDemandesComponent implements OnInit {
     });
   }
 
-  
-  
-/// Modal suppression
-open(content: any, requetesStage: Requetes_stages) {
-  this.modalService
-    .open(content, { ariaLabelledBy: 'titremodal' })
-    .result.then(
-      (result) => {
-        if (result === 'Delete') {
-          this.onDelete(requetesStage);
-        }
-      },
-      (reason) => {}
-    );
-}
+
+
+  /// Modal suppression
+  open(content: any, requetesStage: Requetes_stages) {
+    this.modalService
+      .open(content, { ariaLabelledBy: 'titremodal' })
+      .result.then(
+        (result) => {
+          if (result === 'Delete') {
+            this.onDelete(requetesStage);
+          }
+        },
+        (reason) => { }
+      );
+  }
 }
 
 

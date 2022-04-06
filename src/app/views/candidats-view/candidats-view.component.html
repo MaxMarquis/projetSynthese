@@ -1,70 +1,76 @@
-<!--
-*** CANDIDAT VIEW ***
--->
-
-
 <main class="main">
-    <!-- TITLE - STAGE...................................... -->
-        <div class="title">
-          <h2>Candidat</h2>
-          <h1>{{candidat.name}}</h1>
-          <p><span class="entreprise">{{candidat.jobTitle}}</span></p>
-      </div>
+  <!-- TITLE - STAGE...................................... -->
+  <div class="title">
+    <h2>Candidat</h2>
+    <h1>{{candidat.name}}</h1>
+    <p><span class="entreprise">{{candidat.jobTitle}}</span></p>
+  </div>
 
-    <!-- ACTIONS CRUD BTN -->
-    <div id="crud">
-      <button><i class="fa-solid fa-check accepticon"></i></button>
-      <button><i class="fa-solid fa-pen-to-square editicon"></i></button>
-      <button><i class="fa-solid fa-square-plus"></i></button>
-    </div>
-  
-    <div class="fiche">
-      <!-- INFO ENTREPRISE...................................... -->
-  
-      <h3>Courte présentation</h3>
-      <p>{{candidat.description}}</p>
-  
+  <!-- ACTIONS CRUD BTN -->
+  <div id="crud">
+    <button><i class="fa-solid fa-check accepticon"></i></button>
+    <button (click)="edit(candidat)"><i class="fa-solid fa-pen-to-square editicon"></i></button>
+    <button (click)="open(deleteModal,candidat)"><i class="fas fa-window-close"></i></button>
+  </div>
 
-      <h4>Information de contact</h4>
-      <div class="row">
-        <div class="col-md-6">
-          <!-- adresse -->
-          <div class="border-form">
-            <h5>Adresse</h5>
-            <p>{{candidat.address}}</p>
-          </div>
-          <!-- ville -->
-          <div class="border-form">
-            <h5>Ville</h5>
-            <p>{{candidat.city}}</p>
-          </div>
-          <!-- province -->
-          <div class="border-form">
-            <h5>Province</h5>
-            <p>{{candidat.province}}</p>
-          </div>
-          <!-- code postal -->
-          <div class="border-form">
-            <h5>Code postal</h5>
-            <p>{{candidat.postalCode}}</p>
-          </div>
+  <div class="fiche">
+    <!-- INFO ENTREPRISE...................................... -->
+    <h3>Courte présentation</h3>
+    <p>{{candidat.description}}</p>
+    <h4>Information de contact</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <!-- adresse -->
+        <div class="border-form">
+          <h5>Adresse</h5>
+          <p>{{candidat.address}}</p>
         </div>
-  
-        <div class="col-md-6">
-          <!-- téléphone -->
-          <div class="border-form">
-            <h5>Téléphone</h5>
-            <p>{{candidat.phone}}</p>
-          </div>
-          <!-- courriel -->
-          <div class="border-form">
-            <h5>Courriel</h5>
-            <p>{{candidat.email}}</p>
-          </div>
+        <!-- ville -->
+        <div class="border-form">
+          <h5>Ville</h5>
+          <p>{{candidat.city}}</p>
+        </div>
+        <!-- province -->
+        <div class="border-form">
+          <h5>Province</h5>
+          <p>{{candidat.province}}</p>
+        </div>
+        <!-- code postal -->
+        <div class="border-form">
+          <h5>Code postal</h5>
+          <p>{{candidat.postalCode}}</p>
         </div>
       </div>
-  
-  
+      <div class="col-md-6">
+        <!-- téléphone -->
+        <div class="border-form">
+          <h5>Téléphone</h5>
+          <p>{{candidat.phone}}</p>
+        </div>
+        <!-- courriel -->
+        <div class="border-form">
+          <h5>Courriel</h5>
+          <p>{{candidat.email}}</p>
+        </div>
+      </div>
     </div>
-  </main>
-  
+
+
+  </div>
+</main>
+
+<ng-template #deleteModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Voulez vous supprimer le candidat: {{candidat.name}} ?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+  </div>
+</ng-template>

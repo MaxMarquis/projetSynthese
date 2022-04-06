@@ -1,59 +1,62 @@
-<nav class="navbar navbar-light bg-light p-4"><!-- fixed-top -->
+<nav class="navbar navbar-light bg-light p-4">
+  <!-- fixed-top -->
   <div class="container-fluid">
 
-<!-- TOGGLER................................... -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+    <!-- TOGGLER................................... -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="../assets/img/logo-eStage.svg" alt="logo" class="logoMobile">
-<!-- ADD BTN................................... -->
+    <img (click)="logout()" src="../assets/img/logo-eStage.svg" alt="logo" class="logoMobile">
+    <!-- ADD BTN................................... -->
 
-  <ul id="add">
-    <li>
-      <a routerLink="/offres-de-stages" class="btn--offres">
-        <i class="fas fa-plus"></i>Ajouter une offre de stage
-      </a>
-    </li>
-    <li>
-      <a routerLink="/demandes-de-stages/add" class="btn--demandes">
-        <i class="fas fa-plus"></i>Ajouter une demande de stage
-      </a>
-    </li>
-    <li>
-      <a routerLink="/entreprises" class="btn--entreprises">
-        <i class="fas fa-plus"></i>Ajouter une entreprise
-      </a>
-    </li>
-    <li>
-      <a routerLink="/candidats/add" class="btn--candidats">
-        <i class="fas fa-plus"></i>Ajouter un candidat
-      </a>
-    </li>
-  </ul>
+    <ul id="add">
+      <li>
+        <a routerLink="/offres-de-stages/add" class="btn--offres">
+          <i class="fas fa-plus"></i>Ajouter une offre de stage
+        </a>
+      </li>
+      <li>
+        <a routerLink="/demandes-de-stages/add" class="btn--demandes">
+          <i class="fas fa-plus"></i>Ajouter une demande de stage
+        </a>
+      </li>
+      <li>
+        <a routerLink="/entreprises/add" class="btn--entreprises">
+          <i class="fas fa-plus"></i>Ajouter une entreprise
+        </a>
+      </li>
+      <li>
+        <a routerLink="/candidats/add" class="btn--candidats">
+          <i class="fas fa-plus"></i>Ajouter un candidat
+        </a>
+      </li>
+    </ul>
 
-<!-- ADMIN..................................... -->
-<div class="admin">
-    <img src="../../../assets/img/avatar.svg" class="avatar" alt="Image avatar user">
-    <!-- Display du nom et courriel -->
-    <p class="user">{{profil.name}}<br>
-      <a href="/tableau-de-bord">{{profil.email}}</a>
-    </p>
-</div>
+    <!-- ADMIN..................................... -->
+    <div class="admin">
+      <img src="../../../assets/img/avatar.svg" class="avatar" alt="Image avatar user">
+      <!-- Display du nom et courriel -->
+      <p class="user">{{profil.name}}<br>
+        <a href="/tableau-de-bord">{{profil.email}}</a>
+      </p>
+    </div>
 
 
-<!-- SIDENAV................................... -->
+    <!-- SIDENAV................................... -->
     <div class="offcanvas offcanvas-start" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-<!-- BRAND..................................... -->
+      <!-- BRAND..................................... -->
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="../assets/img/logo-eStage.svg" alt="logo" class="logo"></h5>
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img (click)="logout()"
+            src="../assets/img/logo-eStage.svg" alt="logo" class="logo"></h5>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
-<!-- SIDEBAR NAV............................... -->
+      <!-- SIDEBAR NAV............................... -->
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-start flex-grow-1" id="side">
           <li class="nav-item">
             <a class="snb--tableaubord" aria-current="page" href="/tableau-de-bord">
-              <i class="fas fa-tachometer faBox"></i> 
+              <i class="fas fa-tachometer faBox"></i>
               Tableau de bord
             </a>
           </li>

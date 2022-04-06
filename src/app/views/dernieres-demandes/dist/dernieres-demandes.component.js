@@ -19,24 +19,26 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.DernieresDemandesComponent = void 0;
 var core_1 = require("@angular/core");
-var mock_demandes_stages_1 = require("src/app/mock-demandes-stages");
 var DernieresDemandesComponent = /** @class */ (function () {
     function DernieresDemandesComponent(requetesStagesService, RequetesStagesService, router, modalService) {
         this.requetesStagesService = requetesStagesService;
         this.RequetesStagesService = RequetesStagesService;
         this.router = router;
         this.modalService = modalService;
-        this.requetesStage = mock_demandes_stages_1.DEMANDESSTAGES;
+        this.requetesStage = [];
     }
     DernieresDemandesComponent.prototype.ngOnInit = function () {
-        // this.getRequetestages();
+        this.getRequetestages();
     };
     /// Function get requetes_stages
     DernieresDemandesComponent.prototype.getRequetestages = function () {
         var _this = this;
         this.requetesStagesService
             .getRequetesStages()
-            .subscribe(function (res) { return (_this.requetesStage = res); });
+            .subscribe(function (res) {
+            console.log(res);
+            _this.requetesStage = res;
+        });
     };
     /// Function Edit requetes_stages
     DernieresDemandesComponent.prototype.editRequetestages = function () {

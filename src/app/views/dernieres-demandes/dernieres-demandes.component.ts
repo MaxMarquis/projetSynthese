@@ -28,7 +28,11 @@ export class DernieresDemandesComponent implements OnInit {
   getRequetestages(): void {
     this.requetesStagesService
       .getRequetesStages()
-      .subscribe((res: Requetes_stages[]) => (this.requetesStage = res));
+      .subscribe((res: Requetes_stages[]) => {
+        console.log(res);
+
+        this.requetesStage = res
+      });
   }
 
   /// Function Edit requetes_stages

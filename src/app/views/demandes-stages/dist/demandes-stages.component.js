@@ -21,13 +21,15 @@ exports.DemandesStagesComponent = void 0;
 var core_1 = require("@angular/core");
 var mock_demandes_stages_1 = require("src/app/mock-demandes-stages");
 var DemandesStagesComponent = /** @class */ (function () {
-    function DemandesStagesComponent(requetesStagesService, modalService) {
+    function DemandesStagesComponent(requetesStagesService, RequetesStagesService, router, modalService) {
         this.requetesStagesService = requetesStagesService;
+        this.RequetesStagesService = RequetesStagesService;
+        this.router = router;
         this.modalService = modalService;
         this.requetesStage = mock_demandes_stages_1.DEMANDESSTAGES;
     }
     DemandesStagesComponent.prototype.ngOnInit = function () {
-        this.getRequetestages();
+        // this.getRequetestages();
     };
     /// Function get requetes_stages
     DemandesStagesComponent.prototype.getRequetestages = function () {
@@ -39,16 +41,11 @@ var DemandesStagesComponent = /** @class */ (function () {
     /// Function Delete requetes_stages
     DemandesStagesComponent.prototype.onDelete = function (Requetestages) {
         var _this = this;
-        this.requetesStagesService
-            .deleteRequeteStage(Requetestages._id)
-            .subscribe(function (_result) {
-            return (_this.requetesStage = _this.requetesStage.filter(function (p) { return p !== Requetestages; }));
-        });
+        this.requetesStagesService.deleteRequeteStage(Requetestages._id)
+            .subscribe(function (_result) { return _this.requetesStage = _this.requetesStage.filter(function (p) { return p !== Requetestages; }); });
     };
     DemandesStagesComponent.prototype.requeteStatus = function (requetesstage, active) {
-        this.requetesStagesService
-            .editRequeteStage(__assign(__assign({}, requetesstage), { active: active }))
-            .subscribe(function (_result) {
+        this.RequetesStagesService.editRequeteStage(__assign(__assign({}, requetesstage), { active: active })).subscribe(function (_result) {
             requetesstage.active = active;
         });
     };

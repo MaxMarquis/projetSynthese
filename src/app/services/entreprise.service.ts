@@ -28,12 +28,16 @@ export class EntrepriseService {
 
   // Fonction qui ajoute une entreprise
   addEntreprise(entreprise: Entreprise): Observable<Entreprise> {
-    return this.http.post<Entreprise>(this.entrepriseUrl, entreprise, httpOptions);
+    let newEntreprise: any = { ...entreprise };
+    delete newEntreprise._id;
+    return this.http.post<Entreprise>(this.entrepriseUrl, newEntreprise, httpOptions);
   }
 
   // Fonction qui modifie une entreprise en fonction de l'id
   editEntreprise(enterprise: Entreprise): Observable<Entreprise> {
-    return this.http.put<Entreprise>(this.entrepriseUrl + enterprise._id, enterprise, httpOptions);
+    let newEntreprise: any = { ...enterprise };
+    delete newEntreprise._id
+    return this.http.put<Entreprise>(this.entrepriseUrl + enterprise._id, newEntreprise, httpOptions);
   }
 
   // Fonction qui supprime une entreprise en fonction de l'id

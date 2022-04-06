@@ -29,11 +29,19 @@ export class MajCandidatComponent implements OnInit {
   ngOnInit(): void {
   }
   maj() {
-    if (this.candidat._id !== '') {
+    // Si l'id est vide / donc nouvelle entreprise => ADD
+    if (this.candidat._id == '') {
+      this.candidatsService.addCandidat(this.candidat).subscribe((_) => {
+        this.router.navigateByUrl("/candidats")
+      });
+    }
+    // Sinon l'entreprise existe => EDIT
+    else {
+      console.log(this.candidat)
       this.candidatsService
         .editCandidat(this.candidat)
         .subscribe((_result) => {
-          this.router.navigate(['/demandes-de-stages']);
+          this.router.navigateByUrl('/candidats');
         });
     }
   }

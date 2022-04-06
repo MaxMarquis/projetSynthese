@@ -28,14 +28,18 @@ export class CandidatsService {
 
   // Fonction qui ajoute un candidat
   addCandidat(candidat: Candidats): Observable<Candidats> {
-    return this.http.post<Candidats>(this.candidatsUrl, candidat, httpOptions);
+    let newCandidat: any = { ...candidat };
+    delete newCandidat._id;
+    return this.http.post<Candidats>(this.candidatsUrl, newCandidat, httpOptions);
   }
 
   // Fonction qui modifie un candidat
   editCandidat(candidat: Candidats): Observable<Candidats> {
+    let newCandidat: any = { ...candidat };
+    delete newCandidat._id;
     return this.http.put<Candidats>(
       this.candidatsUrl + candidat._id,
-      candidat,
+      newCandidat,
       httpOptions
     );
   }

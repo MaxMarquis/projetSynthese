@@ -1,8 +1,3 @@
-<!--
-*** CANDIDAT VIEW ***
--->
-
-
 <main class="main">
   <!-- TITLE - STAGE...................................... -->
   <div class="title">
@@ -14,17 +9,14 @@
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
     <button><i class="fa-solid fa-check accepticon"></i></button>
-    <button><i class="fa-solid fa-pen-to-square editicon"></i></button>
+    <button (click)="edit(candidat)"><i class="fa-solid fa-pen-to-square editicon"></i></button>
     <button (click)="open(deleteModal,candidat)"><i class="fas fa-window-close"></i></button>
   </div>
 
   <div class="fiche">
     <!-- INFO ENTREPRISE...................................... -->
-
     <h3>Courte présentation</h3>
     <p>{{candidat.description}}</p>
-
-
     <h4>Information de contact</h4>
     <div class="row">
       <div class="col-md-6">
@@ -49,7 +41,6 @@
           <p>{{candidat.postalCode}}</p>
         </div>
       </div>
-
       <div class="col-md-6">
         <!-- téléphone -->
         <div class="border-form">

@@ -40,11 +40,19 @@ export class MajDemandeComponent implements OnInit {
   ngOnInit(): void {
   }
   maj() {
-    if (this.demandeStage._id !== '') {
+    // Si l'id est vide / donc nouvelle demande de stage => ADD
+    if (this.demandeStage._id == '') {
+      this.requetesStagesService.addRequeteStage(this.demandeStage).subscribe((_) => {
+        this.router.navigateByUrl("/demandes-de-stages")
+      });
+    }
+    // Sinon la demande de stage existe => EDIT
+    else {
+      console.log(this.demandeStage)
       this.requetesStagesService
         .editRequeteStage(this.demandeStage)
         .subscribe((_result) => {
-          this.router.navigate(['/demandes-de-stages']);
+          this.router.navigateByUrl('/demandes-de-stages');
         });
     }
   }

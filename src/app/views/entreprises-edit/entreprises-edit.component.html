@@ -1,7 +1,8 @@
 <main class="main">
   <div class="row">
     <div class="col-md-2">
-      <img class="entreprise img-fluid pt-3" src="{{entreprise.imageUrl}}" alt="{{entreprise.name}} logo" title="{{entreprise.name}} logo">
+      <img class="entreprise img-fluid pt-3" src="{{entreprise.imageUrl}}" alt="{{entreprise.name}} logo"
+        title="{{entreprise.name}} logo">
     </div>
     <div class="col-md-10">
       <div class="title">
@@ -16,44 +17,28 @@
     <app-btn-annuler></app-btn-annuler>
     <app-maj-entreprise nomBtn="Mettre à jour" [entreprise]="entreprise"></app-maj-entreprise>
   </div>
-  <!-- <h3>Entreprise</h3>
-    <h1>{{entreprise.name}}</h1>
-    <app-btn-annuler></app-btn-annuler> -->
-  <!--- Bouton Sauvegarder -->
-  <!-- <button class="alert alert-primary ">
-        <i class="fa-solid fa-floppy-disk"></i>Sauvegarder </button> -->
   <!-- CHAMPS TITRE -->
   <form>
-  <div class="row mb-5">
-    <div class="col-md-1">
-      <label class="center">Titre : </label>
+    <div class="row mb-5">
+      <div class="col-md-1">
+        <label class="center">Titre : </label>
+      </div>
+      <div class="col-md-11">
+        <input class="form-control" type="text" [(ngModel)]="entreprise.name" name="nom" required>
+      </div>
     </div>
-    <div class="col-md-11">
-      <input class="form-control" type="text" [(ngModel)]="entreprise.name" name="nom" required>
+    <div class="row mb-5">
+      <div class="col-md-1">
+        <label class="center">Logo : </label>
+      </div>
+      <div class="col-md-11">
+        <input type="text" class="parcourir" [(ngModel)]="entreprise.imageUrl" name="logo" required>
+        <button class="btnparcourir"> Parcourir </button>
+      </div>
     </div>
-  </div>
-  <div class="row mb-5">
-    <div class="col-md-1">
-      <label class="center">Logo : </label>
-    </div>
-    <div class="col-md-11">
-      <input type="text" class="parcourir">
-      <button class="btnparcourir"> Parcourir </button>
-    </div>
-  </div>
 
-  <!-- FICHE d'INFO -->
-  <div class="fiche">
-    
-      <!--- Nom-->
-      <!-- <label>Entreprise:</label> -->
-      <!-- <input class="form-control" type="text" required [(ngModel)]="entreprise.name" name="nom"> -->
-      <!-- <div class="row"> -->
-      <!-- <div class="col"> -->
-      <!--- poste -->
-      <!-- <label>Logo</label>
-                <button class="alert alert-light ">parcourir</button> -->
-      <!-- </div> -->
+    <!-- FICHE d'INFO -->
+    <div class="fiche">
       <h3>Courte présentation</h3>
       <div class="row">
         <div class="col-12">
@@ -106,15 +91,8 @@
           </div>
         </div>
       </div>
-      <!-- <div class="btn-group"> -->
-      <!--- Annuler / sauvegarder -->
-      <!-- <app-btn-annuler></app-btn-annuler>
-                    <button class="alert alert-primary p-2"><i class="fa-solid fa-floppy-disk"></i>Sauvegarder</button>
-                </div> -->
-
-
-    
-  </div></form>
+    </div>
+  </form>
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>

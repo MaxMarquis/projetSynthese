@@ -33,11 +33,19 @@ export class MajOffreComponent implements OnInit {
   ngOnInit(): void {
   }
   maj() {
-    if (this.offreStage._id !== '') {
+    // Si l'id est vide / donc nouvelle entreprise => ADD
+    if (this.offreStage._id == '') {
+      this.offresStagesService.addOffreStage(this.offreStage).subscribe((_) => {
+        this.router.navigateByUrl("/offres-de-stages")
+      });
+    }
+    // Sinon l'entreprise existe => EDIT
+    else {
+      console.log(this.offreStage)
       this.offresStagesService
         .editOffreStage(this.offreStage)
         .subscribe((_result) => {
-          this.router.navigate(['/offres-de-stages']);
+          this.router.navigateByUrl('/offres-de-stages');
         });
     }
   }

@@ -10,12 +10,12 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./demandes-stages.component.sass'],
 })
 export class DemandesStagesComponent implements OnInit {
-  requetesStage: Requetes_stages[] = DEMANDESSTAGES;
+  requetesStage: Requetes_stages[] = [];
 
   constructor(
     private requetesStagesService: RequetesStagesService,
     public modalService: NgbModal
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getRequetestages();
@@ -34,9 +34,9 @@ export class DemandesStagesComponent implements OnInit {
       .deleteRequeteStage(Requetestages._id)
       .subscribe(
         (_result) =>
-          (this.requetesStage = this.requetesStage.filter(
-            (p) => p !== Requetestages
-          ))
+        (this.requetesStage = this.requetesStage.filter(
+          (p) => p !== Requetestages
+        ))
       );
   }
   requeteStatus(requetesstage: Requetes_stages, active: Boolean) {
@@ -60,7 +60,7 @@ export class DemandesStagesComponent implements OnInit {
             this.onDelete(requetesStage);
           }
         },
-        (reason) => {}
+        (reason) => { }
       );
   }
 }

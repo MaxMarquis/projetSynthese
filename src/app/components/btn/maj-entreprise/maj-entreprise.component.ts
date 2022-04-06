@@ -11,7 +11,7 @@ import { EntrepriseService } from 'src/app/services/entreprise.service';
 export class MajEntrepriseComponent implements OnInit {
   @Input() nomBtn: String = "";
   @Input() entreprise: Entreprise = {
-    _id: "123",
+    _id: "",
     name: "",
     description: "",
     imageUrl: "",

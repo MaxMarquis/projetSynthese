@@ -53,6 +53,10 @@ export class CandidatsViewComponent implements OnInit {
       .subscribe((res) => (this.candidats = res));
   }
 
+  edit(candidat: Candidats): void {
+    this.router.navigateByUrl("/candidats/edit/" + candidat._id)
+  }
+
   /// Function Delete candidat
   onDelete(candidat: Candidats) {
     this.candidatsService.deleteCandidat(candidat._id).subscribe(

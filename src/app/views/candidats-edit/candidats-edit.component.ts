@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Candidats } from 'src/app/interfaces/candidats';
+import { CandidatsService } from 'src/app/services/candidats.service';
 
 @Component({
   selector: 'app-candidats-edit',
@@ -9,9 +11,9 @@ import { Candidats } from 'src/app/interfaces/candidats';
 export class CandidatsEditComponent implements OnInit {
   candidat: Candidats = {
     _id: '',
-    name: 'Nom et prenom',
-    description: 'Description',
-    jobTitle: 'Titre du poste',
+    name: '',
+    description: '',
+    jobTitle: '',
     email: '',
     phone: '',
     address: '',
@@ -21,9 +23,14 @@ export class CandidatsEditComponent implements OnInit {
     published: false,
   };
 
-  constructor() { }
+  constructor(private activeRoute: ActivatedRoute, private candidatService: CandidatsService) { }
 
   ngOnInit(): void {
+    const candidatID = this.activeRoute.snapshot.paramMap.get("id") as String;
+    this.getCandidat(candidatID);
   }
 
+  getCandidat(id: String): void {
+    this.candidatService.getCandidat(id).subscribe((res) => this.candidat = res);
+  }
 }

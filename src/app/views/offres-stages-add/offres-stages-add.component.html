@@ -18,16 +18,13 @@
         <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required>
       </div>
     </div>
-    <div class="col-md-10">
-      <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required>
-    </div>
     <div class="row mb-5">
       <div class="col-md-2">
         <!--- Entreprise -->
         <label class="center">Entreprise :</label>
       </div>
       <div class="col-md-10">
-        <input type="text" class="form-control" [(ngModel)]="offreStage.enterprise" name="Titre" required>
+        <input type="text" class="form-control" [(ngModel)]="offreStage.enterprise" name="entreprise" required>
       </div>
     </div>
 
@@ -36,7 +33,7 @@
       <div class="form-group">
         <label class="h3">Description de la tâche</label>
         <!--- Textbox info supp-->
-        <textarea class="form-control mb-4" id="formtext" rows="2" [(ngModel)]="offreStage.description"
+        <textarea class="form-control mb-4" id="formtext" rows="4" [(ngModel)]="offreStage.description"
           name="Description"></textarea>
       </div>
       <div class="row">
@@ -53,7 +50,7 @@
           <!--- Exigences -->
           <div class="border-form">
             <label>Exigences</label>
-            <textarea class="form-control" id="requirements" rows="2" [(ngModel)]="offreStage.requirements"
+            <textarea class="form-control" id="requirements" rows="4" [(ngModel)]="offreStage.requirements"
               name="Exigences"></textarea>
           </div>
         </div>

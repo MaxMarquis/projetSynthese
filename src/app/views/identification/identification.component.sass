@@ -1,47 +1,80 @@
-.bgId
-    display: flex
-    align-items: stretch
-    background-image: url('../../../assets/img/bg-body.png')
-    background-repeat: no-repeat
-    background-size: auto 100%
-.login-container
+@import '../../../sass/utils/_variables'
+@import '../../../sass/utils//mixins' 
+body
     background-color: #EEEEEE
-    max-height: 1080px
+
+.header
+    background-color: #fff
+    padding: 2rem 5rem
+
+
+.logoMobile
+    width: 165px
+    margin: 0 0 0rem 1.25rem
+.login-container
+    height: 100vh
+    margin-bottom: 0
+    padding-bottom: 0
+
+.left
+    display: none
+
+.right
+    padding: 4rem
+p
+    padding-bottom: 4rem
+
+.left, .right
+    height: 100vh
 
 h1
-    font-family: Lora-Regular
-    font-size: 72px
+    font-size: 3rem
+    font-weight: 400
+    margin-bottom: 1rem
 
-.login-img
-    float: left
-    margin-right: 20px
-    display: flex
-    max-width: 75%
-
-.login-content
-    display: flex
-    flex-direction: column
-    padding-top: 110px
-    max-width: 500px
-
-form.login
-    display: flex
-    flex-direction: column
-    padding: 40px 0px 20px 0px
-
-    input
-        margin-bottom: 30px
 
 button.login
-    background-color: #0C9DA4
+    background-color: $color-tableaubord
     border: none
-    padding: 14px
+    padding: 0.875rem
     border-radius: 5px
-    color: white
-    max-width: 200px
+    color: #fff
+    width: 100%
+    &:hover
+        background-color: $color-tableaubord-hover
 
 input
-    border: 2px solid #0C9DA4
+    border: 2px solid $color-tableaubord
     color: black
-    margin: 10px 0px 10px 0px
-    padding: 10px
+    margin: 10px 0px 40px 0px
+    padding: 20px
+    width: 100%
+
+// ****************************************************************************************
+// ***************************************** RESPONSIVE MD AND UP *************************
+// ****************************************************************************************
+@include media-breakpoint-up('md')
+
+
+    .left
+        display: block
+        background-image: url('../../../assets/img/bg-body.png')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center bottom
+
+
+
+    // ****************************************************************************************
+// ***************************************** RESPONSIVE MD AND UP *************************
+// ****************************************************************************************
+@include media-breakpoint-up('lg')
+    h1
+        font-size: 4.5rem
+        margin-bottom: 2rem
+
+    .right
+        padding: 10rem 10rem 0 4rem
+
+    button.login
+        max-width: 200px

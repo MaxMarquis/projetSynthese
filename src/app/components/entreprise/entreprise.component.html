@@ -1,9 +1,9 @@
-<div class="card" style="width: 24rem;" (click)="getInfos(entreprise)">
+<div class="card container" style="width: 24rem;" (click)="getInfos(entreprise)">
     <img src="{{entreprise.imageUrl}}" class="card-img-top" alt="{{entreprise.imageUrl}}">
     <div class="card-body">
-        <h5 class="card-title">{{entreprise.name}}</h5>
-        <p class="card-text">{{entreprise.address}}</p>
-        <p class="card-text">{{entreprise.city}} {{entreprise.postalCode}}</p>
-        <p class="card-text">{{entreprise.contactPhone}}</p>
+        <h5 class="card-text name">{{entreprise.name}}</h5>
+        <p class="card-text address">{{entreprise.address}}</p>
+        <p class="card-text city">{{entreprise.city}} {{entreprise.postalCode}}</p>
+        <p class="card-text phone">{{entreprise.contactPhone}}</p>
     </div>
 </div>

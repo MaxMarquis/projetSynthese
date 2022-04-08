@@ -16,7 +16,7 @@ FICHE ENTREPRISE
   <div id="crud">
     <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)" onclick="alert('Offre activée')" ></i></button>
     <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
-    <button><i class="fas fa-window-close"routerLink='/offres-de-stages/add/'></i></button>
+    <button (click)="open(deleteModal,offreStage)"><i class="fas fa-window-close"></i></button>
   </div>
 
 
@@ -77,3 +77,20 @@ FICHE ENTREPRISE
 
   </div>
 </main>
+
+<!-- MODAL DELETE ....................................... -->
+<ng-template #deleteModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Voulez vous supprimer l'offre de stage ?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+  </div>
+</ng-template>

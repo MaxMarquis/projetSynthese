@@ -13,7 +13,7 @@
             <th scope="col" class="d-none">ID</th>
             <th scope="col">Poste</th>
             <th scope="col">Secteur d'activité</th>
-            <th scope="col">Région</th>
+            <th scope="col">Établissement</th>
             <th scope="col">Date d'inscription</th>
          </tr>
       </thead>
@@ -22,8 +22,7 @@
             <td class="d-none">{{ requeteStage._id }}</td>
             <td>
                <i [ngClass]="requeteStage.active ? 'bordure' : 'bordure bordure-inactive'"></i>
-               <i
-                  [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
+               <i [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
                {{ requeteStage.title }}
                {{ requeteStage.studentName}}
             </td>

@@ -3,7 +3,7 @@
    <p>En attente de validation</p>
    <!--- valider les demandes -->
    <!---<div class="d-flex justify-content-end">-->
-   <button type="button" class="btn btn-info  ">
+   <button type="button" class="btn btn-info  " (click)="acceptAll()">
       Valider toutes les demandes
    </button>
    <!--- table borderless pour enlever le HR sous les entêtes -->
@@ -30,11 +30,11 @@
             <td>{{ requeteStage.startDate | date:'longDate':'undefined':'fr' }}</td>
             <!--- ACCEPTER / REFUSER -->
             <td>
-               <button type="button" class="btn btn-danger m-2"
+               <button  type="button" class="btn btn-danger m-2"
                  (click)="requeteStatus(requeteStage,false)">Refuser</button>
-               <button type="button" class="btn btn-success m-1"
+               <button  type="button" class="btn btn-success m-1"
                  (click)="requeteStatus(requeteStage,true)" (click)="open(AccepterModal,requeteStage)">Accepter</button>
-     
+
                <button class="crudbut"><i class="fa-solid fa-eye p-2" routerLink='/demandes-de-stages/view/{{ requeteStage._id }}'></i></button>
                <button class="crudbut" (click)="editRequetestages()">
                  <i class="fa-solid fa-pen-to-square" routerLink='/demandes-de-stages/edit/{{ requeteStage._id }}'></i>

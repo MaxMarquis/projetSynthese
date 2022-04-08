@@ -35,3 +35,19 @@
 .btn-info {
   float: right;
 }
+
+.attente {
+  color: #BB2026;
+}
+
+.demandes {
+  color: #f89747;
+}
+
+.table {
+  margin-bottom: 200px;
+}
+
+.test {
+  border-bottom: 1px solid black;
+}

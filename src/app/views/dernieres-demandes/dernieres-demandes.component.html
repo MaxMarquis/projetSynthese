@@ -1,6 +1,6 @@
 <div class="container">
-   <h2>Dernière demandes de stage</h2>
-   <p>En attente de validation</p>
+   <h2>Dernières <span class = "demandes">demandes</span> de stage</h2>
+   <p class = "attente">En attente de validation</p>
    <!--- valider les demandes -->
    <!---<div class="d-flex justify-content-end">-->
    <button type="button" class="btn btn-info  " (click)="acceptAll()" onclick="alert('Toutes les demandes sont maintenant activées')">
@@ -20,7 +20,7 @@
       <tbody>
 
          <tbody *ngFor="let requeteStage of requetesStage">
- <!---     <tr *ngIf="requeteStage.active">  -->
+            <tr *ngIf="requeteStage.active">    
             <tr >
 
             <td class="d-none">{{ requeteStage._id }}</td>

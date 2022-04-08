@@ -45,6 +45,12 @@ export class DernieresDemandesComponent implements OnInit {
       .subscribe(_result => this.requetesStage = this.requetesStage.filter(p => p !== Requetestages));
   }
 
+  acceptAll(){
+    for(let i in this.requetesStage){
+      this.requeteStatus(this.requetesStage[i],true);
+    }
+  }
+
   requeteStatus(requetesstage: Requetes_stages, active: boolean) {
     this.RequetesStagesService.editRequeteStage({
       ...requetesstage,

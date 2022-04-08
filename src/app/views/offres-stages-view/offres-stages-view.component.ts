@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Offres_stages } from 'src/app/interfaces/offres_stages';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute,Router } from '@angular/router';
 import { OffresStagesService } from 'src/app/services/offres-stages.service';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-offres-stages-view',
@@ -31,7 +32,9 @@ export class OffresStagesViewComponent implements OnInit {
 
   constructor(
     private activeRoute: ActivatedRoute,
-    private offreStagesService: OffresStagesService
+    private offreStagesService: OffresStagesService,
+    public modalService: NgbModal,
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -51,5 +54,21 @@ export class OffresStagesViewComponent implements OnInit {
 
   getOffreStage(id: string): void {
     this.offreStagesService.getOffreStage(id).subscribe((res) => this.offreStage = res)
+  }
+
+  onDelete(Offresstages: Offres_stages): void {
+    this.offreStagesService.deleteOffreStage(Offresstages._id)
+      .subscribe(_result =>   this.router.navigateByUrl('/offres-de-stages'));
+
+
+  }
+
+  open(content:any, offresStage:Offres_stages) {
+    this.modalService.open(content, {ariaLabelledBy: 'titremodal'}).result.then((result) => {
+      if(result === 'Delete') {
+        this.onDelete(offresStage)
+      }
+    }, (reason) => {
+    });
   }
 }

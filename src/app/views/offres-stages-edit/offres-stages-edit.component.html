@@ -96,20 +96,21 @@
           <div class="row">
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="not-specified" [ngModel]="offreStage.paid"
-                  name="not-specified">&nbsp;&nbsp;À la
-                discrétion de
-                l'entreprise </label>
-            </div>
-            <div class="checkbox">
-              <label class="enumeration">
-                <input type="checkbox" value="paid" [ngModel]="offreStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
+                <input type="checkbox" value="not-specified" [checked]="checkPaid('not-specified')"
+                  (change)="onCheckboxChange($event)" name="not-specified">&nbsp;&nbsp;À la discrétion de
+                l'entreprise
               </label>
             </div>
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="unpaid" [ngModel]="offreStage.paid" name="unpaid">&nbsp;&nbsp;Stage non
-                rémunéré
+                <input type="checkbox" value="paid" [checked]="checkPaid('paid')" (change)="onCheckboxChange($event)"
+                  name="paid">&nbsp;&nbsp;Stage rémunéré
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="enumeration">
+                <input type="checkbox" value="unpaid" [checked]="checkPaid('unpaid')"
+                  (change)="onCheckboxChange($event)" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
               </label>
             </div>
           </div>

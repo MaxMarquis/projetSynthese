@@ -15,7 +15,6 @@ export interface Requetes_stages {
     skills: string[],
     published: boolean,
     paid: string[],
-    user: string,
     active: boolean,
     region: string,
     activitySector: string,

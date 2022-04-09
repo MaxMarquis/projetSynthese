@@ -10,7 +10,7 @@ import { RequetesStagesService } from 'src/app/services/requetes-stages.service'
 })
 export class MajDemandeComponent implements OnInit {
   @Input() nomBtn: string = '';
-  @Input() demandeStage: Requetes_stages = {
+  @Input() requeteStage: Requetes_stages = {
     _id: '',
     description: '',
     entreprise: '',
@@ -27,7 +27,6 @@ export class MajDemandeComponent implements OnInit {
     skills: [],
     published: false,
     paid: [],
-    user: '',
     active: false,
     region: '',
     activitySector: '',
@@ -38,25 +37,24 @@ export class MajDemandeComponent implements OnInit {
   constructor(
     private requetesStagesService: RequetesStagesService,
     private router: Router
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
   maj() {
     // Si l'id est vide / donc nouvelle demande de stage => ADD
-    if (this.demandeStage._id == '') {
-      console.log(this.demandeStage);
+    if (this.requeteStage._id == '') {
+      console.log(this.requeteStage);
       this.requetesStagesService
-  
-        .addRequeteStage(this.demandeStage)
+        .addRequeteStage(this.requeteStage)
         .subscribe((_) => {
           this.router.navigateByUrl('/demandes-de-stages');
         });
     }
     // Sinon la demande de stage existe => EDIT
     else {
-      console.log(this.demandeStage);
+      console.log(this.requeteStage);
       this.requetesStagesService
-        .editRequeteStage(this.demandeStage)
+        .editRequeteStage(this.requeteStage)
         .subscribe((_result) => {
           this.router.navigateByUrl('/demandes-de-stages');
         });

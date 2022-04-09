@@ -20,18 +20,27 @@ body
     display: none
 
 .right
-    padding: 4rem
+    padding: 4rem 3rem 0
+    background-image: url('../../../assets/img/bg-body.png')
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center bottom
+
 p
-    padding-bottom: 4rem
+    padding-bottom: 2rem
+    color: #333
 
 .left, .right
     height: 100vh
-
+.bgid
+    background-color: rgba(255,255,255,.75)
+    padding: 2rem 2rem 3rem
+    border-radius: 1rem
 h1
-    font-size: 3rem
+    font-size: 3.1rem
     font-weight: 400
     margin-bottom: 1rem
-
+    color: #333
 
 button.login
     background-color: $color-tableaubord
@@ -63,15 +72,20 @@ input
         background-repeat: no-repeat
         background-position: center bottom
 
+    .right
+        background-image: none
 
+    .bgid
+        background-color: transparent
 
-    // ****************************************************************************************
+// ****************************************************************************************
 // ***************************************** RESPONSIVE MD AND UP *************************
 // ****************************************************************************************
 @include media-breakpoint-up('lg')
     h1
         font-size: 4.5rem
         margin-bottom: 2rem
+
 
     .right
         padding: 10rem 10rem 0 4rem

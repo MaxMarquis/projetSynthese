@@ -71,7 +71,6 @@
           <!--- Nombre d'heures semaine-->
           <div class="border-form">
             <label>Nombres d'heures par semaine</label>
-            <!-- J'ai pas réussi à afficher la valeur par défaut si elle a une décimal. Le pipe number:'1.0-0' converti mon number en string et l'interface n'aime pas ça xD  -->
             <select class="form-control padding" [(ngModel)]="offreStage.hoursPerWeek" name="Nombre D'heures">
               <option value="10">10</option>
               <option value="15">15</option>
@@ -104,7 +103,6 @@
       </div>
 
       <!--- Rémunération-->
-      <!-- À retravailler - mm -->
       <div class="row">
         <div class="col-md-6">
           <div class="border-form">
@@ -113,21 +111,21 @@
               <div class="row">
                 <div class="checkbox">
                   <label class="enumeration">
-                    <input type="checkbox" value="not-specified" [ngModel]="offreStage.paid"
-                      name="not-specified">&nbsp;&nbsp;À la
-                    discrétion de
-                    l'entreprise </label>
-                </div>
-                <div class="checkbox">
-                  <label class="enumeration">
-                    <input type="checkbox" value="paid" [ngModel]="offreStage.paid" name="paid">&nbsp;&nbsp;Stage
-                    rémunéré
+                    <input type="checkbox" value="not-specified" [checked]="checkPaid('not-specified')"
+                      (change)="onCheckboxChange($event)" name="not-specified">&nbsp;&nbsp;À la discrétion de
+                    l'entreprise
                   </label>
                 </div>
                 <div class="checkbox">
                   <label class="enumeration">
-                    <input type="checkbox" value="unpaid" [ngModel]="offreStage.paid" name="unpaid">&nbsp;&nbsp;Stage
-                    non rémunéré
+                    <input type="checkbox" value="paid" [checked]="checkPaid('paid')"
+                      (change)="onCheckboxChange($event)" name="paid">&nbsp;&nbsp;Stage rémunéré
+                  </label>
+                </div>
+                <div class="checkbox">
+                  <label class="enumeration">
+                    <input type="checkbox" value="unpaid" [checked]="checkPaid('unpaid')"
+                      (change)="onCheckboxChange($event)" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
                   </label>
                 </div>
               </div>

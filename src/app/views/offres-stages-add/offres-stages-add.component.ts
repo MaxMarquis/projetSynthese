@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Offres_stages } from 'src/app/interfaces/offres_stages';
-import { OffresStagesService } from 'src/app/services/offres-stages.service';
-import { Location } from '@angular/common';
-import {Router} from "@angular/router"
 
 @Component({
   selector: 'app-offres-stages-add',
@@ -22,29 +19,38 @@ export class OffresStagesAddComponent implements OnInit {
     stageType: "",
     hoursPerWeek: 0,
     additionalInfo: "",
-    paid: [""],
-    skills: [""],
+    paid: [],
+    skills: [],
     published: false,
     active: false
   }
 
   constructor(
-    private OffresStagesService: OffresStagesService,
-    private _location: Location,
-    private router: Router
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
-  save(): void {
-    this.OffresStagesService
-      .addOffreStage(this.offreStage)
-      .subscribe((_result) => {
-        this.router.navigate(['/offres-de-stages'])
-      });
+  checkPaid(data: string) {
+    let ref = this.offreStage.paid.find(x => x == data);
+    if (ref == data) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
-  backClicked() {
-    this._location.back();
+  onCheckboxChange(event?: any): void {
+    if (event) {
+      const value = (event.currentTarget as HTMLElement)?.getAttribute("name");
+      if (event.currentTarget.checked) {
+        this.offreStage.paid.push(value as string)
+        console.log(this.offreStage.paid)
+      } else {
+        this.offreStage.paid.forEach((element, index) => {
+          if (element == value) this.offreStage.paid.splice(index, 1);
+          console.log(this.offreStage.paid)
+        });
+      }
+    }
   }
 }

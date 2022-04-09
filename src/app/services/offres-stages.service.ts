@@ -28,20 +28,22 @@ export class OffresStagesService {
 
   // Fonction qui ajoute une offre de stage
   addOffreStage(offreStage: Offres_stages): Observable<Offres_stages> {
+    let newOffre: any = { ...offreStage };
+    delete newOffre._id;
     return this.http.post<Offres_stages>(
       this.offresStagesUrl,
-      offreStage,
+      newOffre,
       httpOptions
     );
   }
 
   // Fonction qui modifie une offre de stage
   editOffreStage(offreStage: Offres_stages): Observable<Offres_stages> {
-    let req:any = {...offreStage};
-    delete req._id;
+    let newOffre: any = { ...offreStage };
+    delete newOffre._id;
     return this.http.put<Offres_stages>(
       this.offresStagesUrl + offreStage._id,
-      req,
+      newOffre,
       httpOptions
     );
   }
@@ -50,5 +52,3 @@ export class OffresStagesService {
     return this.http.delete<Offres_stages>(this.offresStagesUrl + _id);
   }
 }
-
- 

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Requetes_stages } from '../interfaces/requetes_stages';
 
 const httpOptions = {
-  headers: new HttpHeaders({  'Content-Type': 'application/json charset=utf-8' }),
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 };
 
 @Injectable({
@@ -28,22 +28,22 @@ export class RequetesStagesService {
 
   // Fonction qui ajoute une requête de stage
   addRequeteStage(requeteStage: Requetes_stages): Observable<Requetes_stages> {
-    let req:any = {...requeteStage};
-    delete req._id;
+    let newRequete: any = { ...requeteStage };
+    delete newRequete._id;
     return this.http.post<Requetes_stages>(
       this.requetesStagesUrl,
-      req,
+      newRequete,
       httpOptions
     );
   }
 
   // Fonction qui modifie une requête de stage en fonction de l'id
   editRequeteStage(requeteStage: Requetes_stages): Observable<Requetes_stages> {
-    let req:any = {...requeteStage};
-    delete req._id;
+    let newRequete: any = { ...requeteStage };
+    delete newRequete._id;
     return this.http.put<Requetes_stages>(
       this.requetesStagesUrl + requeteStage._id,
-      req,
+      newRequete,
       httpOptions
     );
   }
@@ -53,5 +53,3 @@ export class RequetesStagesService {
     return this.http.delete<Requetes_stages>(this.requetesStagesUrl + _id);
   }
 }
-
-

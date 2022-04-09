@@ -8,10 +8,8 @@
 
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
-    <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)"
-        onclick="alert('Offre activée')"></i></button>
-    <button><i class="fa-solid fa-pen-to-square editicon"
-        routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
+    <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)" onclick="alert('Offre activée')" ></i></button>
+    <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
     <button (click)="open(deleteModal,offreStage)"><i class="fas fa-window-close"></i></button>
   </div>
 
@@ -74,7 +72,7 @@
   <div class="modal-header">
     <h4 class="modal-title" id="titremodal">Suppression</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-      <span aria-hidden="true">x</span>
+      <span aria-hidden="true">×</span>
     </button>
   </div>
   <div class="modal-body text-center">

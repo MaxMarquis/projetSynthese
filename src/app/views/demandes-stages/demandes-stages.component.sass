@@ -1,3 +1,7 @@
+// IMPORT UTILS
+@import '../../../sass/utils/variables'
+@import '../../../sass/utils//mixins'
+
 //colors
 $color_add: #f89747
 $color_edit: #22a6ac
@@ -9,14 +13,17 @@ $color_graduation_inactive: #161616
 $color_graduation_bg_active: #F89747
 $color_graduation_bg_inactive: #808080
 
-
-.crudbut 
+// *********************************
+// STYLE FONT AWESOME / ACTIVE / INACTIVE
+// *********************************
+.minwidht
+	width: 250px
+.fiche button 
 	border: none
 	background: none
-
-.title 
-	color: $color_title
-
+	padding: 0 .5rem
+	font-size: 1rem
+	line-height: 1rem
 
 .fa-pen-to-square 
 	color: $color_add
@@ -29,29 +36,76 @@ $color_graduation_bg_inactive: #808080
 
 .fa-graduation-cap //active
 	color: $color_graduation
-	border : 2px black
 	margin-right: 25px
 	padding: 15px
 	background-color: $color_graduation_bg_active
 	border-radius: 10px
-	
-///// inactive
-.fa-graduation-cap-inactive
+
+.fa-graduation-cap-inactive /// inactive
 	color: $color_graduation_inactive
-	border : 2px black
-	margin-right: 25px
-	padding: 15px
-	border-radius: 10px
 	background-color: $color_graduation_bg_inactive
 
 .bordure
 	border-left: 5px solid $color_graduation_bg_active
-	height: 50px
 	padding-left: 20px	
 	
-
 .bordure-inactive
-	border-left: 5px solid $color_graduation_bg_inactive
-	height: 50px
-	padding-left: 20px
+	border-color: $color_graduation_bg_inactive
+
+// *********************************
+// STYLE LISTE
+// *********************************
+
+.titreXS
+	color: $color_title
+	font-weight: 700
+	border: 0
+
+#titreMD
+	display: none
+
+i
+	display: block
+	float: left
+
+.bold
+	font-weight: 700
+
+li p
+	margin-bottom: 0
+	color: $color_graduation_inactive
+	font-size: .75rem
+	line-height: 1rem
+
+ul
+	list-style-type: none
+	margin: 0
+	padding: 0
+
+li
+	padding: 0
+
+// ****************************************************************************************
+// ***************************************** RESPONSIVE MD AND UP *************************
+// ****************************************************************************************
+@include media-breakpoint-up('xl')
+
+	#titreMD
+		display: block
+
+	#titreMD li
+		padding-right: 3rem
+
+	.borderTitle
+		border-bottom: 5px solid $color_title
+
+	.titreXS
+		display: none
+
+	li p
+		font-size: 0.875rem
+		line-height: 1rem
+
+
+
 

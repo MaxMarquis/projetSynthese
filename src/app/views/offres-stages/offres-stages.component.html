@@ -27,7 +27,7 @@
             
             <i
               [ngClass]="offreStage.active ? 'fa-solid fa-suitcase ' : 'fa-solid fa-suitcase fa-suitcase-inactive'"></i>
-              <div [ngClass]="offreStage.active ? 'poste ' : 'poste poste-inactive'">{{ offreStage.title }} </div>{{ offreStage.enterprise }}</td>
+              <span [ngClass]="offreStage.active ? 'poste ' : 'poste poste-inactive'">{{ offreStage.title }} </span>{{ offreStage.enterprise }}</td>
           <td>{{ offreStage.program }}</td>
           <td>{{ offreStage.stageType }}</td>
           <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>

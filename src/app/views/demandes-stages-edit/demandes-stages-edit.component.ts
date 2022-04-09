@@ -10,7 +10,7 @@ import { RequetesStagesService } from 'src/app/services/requetes-stages.service'
 })
 
 export class DemandesStagesEditComponent implements OnInit {
-  demandeStage: Requetes_stages = {
+  requeteStage: Requetes_stages = {
     _id: "",
     description: "",
     entreprise: "",
@@ -27,7 +27,6 @@ export class DemandesStagesEditComponent implements OnInit {
     skills: [""],
     published: false,
     paid: [""],
-    user: "",
     active: false,
     region: "",
     activitySector: "",
@@ -47,6 +46,6 @@ export class DemandesStagesEditComponent implements OnInit {
   }
 
   getRequeteStage(id: string): void {
-    this.requetesStagesService.getRequeteStage(id).subscribe((res) => this.demandeStage = res)
+    this.requetesStagesService.getRequeteStage(id).subscribe((res) => this.requeteStage = res)
   }
 }

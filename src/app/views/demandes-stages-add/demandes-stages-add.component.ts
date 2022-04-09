@@ -13,7 +13,7 @@ import { Secteur_activites } from 'src/app/interfaces/secteur_activites';
 })
 export class DemandesStagesAddComponent implements OnInit {
   activitySectors: Secteur_activites[] = [];
-  demandeStage: Requetes_stages = {
+  requeteStage: Requetes_stages = {
     _id: '',
     description: '',
     entreprise: '',
@@ -30,7 +30,6 @@ export class DemandesStagesAddComponent implements OnInit {
     skills: [],
     published: false,
     paid: [],
-    user: '',
     active: false,
     region: '',
     activitySector: '',
@@ -42,7 +41,7 @@ export class DemandesStagesAddComponent implements OnInit {
     private activityService: SecteursActivitesService,
     private _location: Location,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getActivities();
@@ -56,7 +55,7 @@ export class DemandesStagesAddComponent implements OnInit {
 
   save(): void {
     this.requetesStagesService
-      .addRequeteStage(this.demandeStage)
+      .addRequeteStage(this.requeteStage)
       .subscribe((_result) => {
         this.router.navigate(['/demandes-de-stages']);
       });

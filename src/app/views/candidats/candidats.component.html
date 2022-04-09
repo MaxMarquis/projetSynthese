@@ -1,6 +1,6 @@
-<div class = "container">
+<div class="container">
     <h1>Candidats</h1>
-    <button type="button" class="btn btn-primary" (click)="addCandidat()">Ajouter un candidat</button>
+    <button type="button" class="btn btn-primary btn-candidats" (click)="addCandidat()">Ajouter un candidat</button>
     <div class="card-group">
         <ng-container *ngFor="let candidat of candidats">
             <app-candidat [candidat]="candidat"></app-candidat>

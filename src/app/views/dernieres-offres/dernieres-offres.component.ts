@@ -53,6 +53,12 @@ export class DernieresOffresComponent implements OnInit {
     this.router.navigateByUrl('/offres-de-stages/edit');
   }
 
+  acceptAll(){
+    for(let i in this.offresStages){
+      this.offerStatus(this.offresStages[i],true);
+    }
+  }
+
   /// Modal suppression
   open(content: any, offresStage: Offres_stages) {
     this.modalService

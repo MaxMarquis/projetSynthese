@@ -20,8 +20,10 @@ exports.__esModule = true;
 exports.DemandesStagesViewsComponent = void 0;
 var core_1 = require("@angular/core");
 var DemandesStagesViewsComponent = /** @class */ (function () {
-    function DemandesStagesViewsComponent(activeRoute, requetesStagesService) {
+    function DemandesStagesViewsComponent(activeRoute, router, modalService, requetesStagesService) {
         this.activeRoute = activeRoute;
+        this.router = router;
+        this.modalService = modalService;
         this.requetesStagesService = requetesStagesService;
         this.requete_stage = {
             _id: '',
@@ -59,6 +61,7 @@ var DemandesStagesViewsComponent = /** @class */ (function () {
             .getRequeteStage(id)
             .subscribe(function (res) { return (_this.requete_stage = res); });
     };
+    // Transfert vers actif // 
     DemandesStagesViewsComponent.prototype.requeteStatus = function (requete_stage, active) {
         this.requetesStagesService
             .editRequeteStage(__assign(__assign({}, requete_stage), { active: active }))

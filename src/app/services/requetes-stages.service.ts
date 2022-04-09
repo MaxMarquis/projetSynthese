@@ -28,9 +28,11 @@ export class RequetesStagesService {
 
   // Fonction qui ajoute une requête de stage
   addRequeteStage(requeteStage: Requetes_stages): Observable<Requetes_stages> {
+    let req:any = {...requeteStage};
+    delete req._id;
     return this.http.post<Requetes_stages>(
       this.requetesStagesUrl,
-      requeteStage,
+      req,
       httpOptions
     );
   }
@@ -51,3 +53,5 @@ export class RequetesStagesService {
     return this.http.delete<Requetes_stages>(this.requetesStagesUrl + _id);
   }
 }
+
+

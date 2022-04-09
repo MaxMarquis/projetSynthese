@@ -38,7 +38,9 @@ var RequetesStagesService = /** @class */ (function () {
     };
     // Fonction qui ajoute une requête de stage
     RequetesStagesService.prototype.addRequeteStage = function (requeteStage) {
-        return this.http.post(this.requetesStagesUrl, requeteStage, httpOptions);
+        var req = __assign({}, requeteStage);
+        delete req._id;
+        return this.http.post(this.requetesStagesUrl, req, httpOptions);
     };
     // Fonction qui modifie une requête de stage en fonction de l'id
     RequetesStagesService.prototype.editRequeteStage = function (requeteStage) {

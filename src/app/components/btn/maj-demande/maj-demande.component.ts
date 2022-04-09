@@ -44,7 +44,9 @@ export class MajDemandeComponent implements OnInit {
   maj() {
     // Si l'id est vide / donc nouvelle demande de stage => ADD
     if (this.demandeStage._id == '') {
+      console.log(this.demandeStage);
       this.requetesStagesService
+  
         .addRequeteStage(this.demandeStage)
         .subscribe((_) => {
           this.router.navigateByUrl('/demandes-de-stages');

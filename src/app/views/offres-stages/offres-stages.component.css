@@ -26,6 +26,7 @@
   padding: 15px;
   background-color: #BB2026;
   border-radius: 10px;
+  float: left;
 }
 
 .fa-suitcase-inactive {
@@ -35,4 +36,26 @@
   padding: 15px;
   border-radius: 10px;
   background-color: #808080;
-}/*# sourceMappingURL=offres-stages.component.css.map */
+}
+
+.bordure {
+  border-left: 5px solid #BB2026;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.bordure-inactive {
+  border-left: 5px solid #808080;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.poste {
+  color: red;
+  font-weight: bold;
+}
+
+.poste-inactive {
+  color: black;
+  font-weight: bold;
+}

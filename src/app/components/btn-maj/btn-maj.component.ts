@@ -27,7 +27,7 @@ export class BtnMajComponent implements OnInit {
     published: false,
     active: false,
   };
-  @Input() demandeStage: Requetes_stages = {
+  @Input() requeteStage: Requetes_stages = {
     _id: '',
     description: '',
     entreprise: '',
@@ -44,7 +44,6 @@ export class BtnMajComponent implements OnInit {
     skills: [''],
     published: false,
     paid: [''],
-    user: '',
     active: false,
     region: '',
     activitySector: '',
@@ -55,17 +54,17 @@ export class BtnMajComponent implements OnInit {
   constructor(
     private requetesStagesService: RequetesStagesService,
     private router: Router
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   maj() {
     if (this.offreStage._id !== '') {
       console.log(this.offreStage);
     }
-    if (this.demandeStage._id !== '') {
+    if (this.requeteStage._id !== '') {
       this.requetesStagesService
-        .editRequeteStage(this.demandeStage)
+        .editRequeteStage(this.requeteStage)
         .subscribe((_result) => {
           this.router.navigate(['/demandes-de-stages']);
         });

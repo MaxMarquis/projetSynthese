@@ -2,13 +2,13 @@
   <!-- TITLE - DEMANDE STAGE...................................... -->
   <div class="title">
     <h2>Demande de stage</h2>
-    <h1>{{demandeStage.title}}</h1>
-    <p><span class="entreprise">{{demandeStage.entreprise}}</span></p>
+    <h1>{{requeteStage.title}}</h1>
+    <p><span class="entreprise">{{requeteStage.entreprise}}</span></p>
   </div>
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-maj-demande nomBtn="Mettre à jour" [demandeStage]="demandeStage"></app-maj-demande>
+    <app-maj-demande nomBtn="Mettre à jour" [requeteStage]="requeteStage"></app-maj-demande>
   </div>
 
   <div class="fiche">
@@ -16,13 +16,13 @@
     <form>
       <!--- Nom-->
       <label>Candidat</label>
-      <input class="form-control mb-4" type="text" [(ngModel)]="demandeStage.studentName" name="John Doe" required>
+      <input class="form-control mb-4" type="text" [(ngModel)]="requeteStage.studentName" name="John Doe" required>
 
       <!--- Présentation-->
       <div class="form-group">
         <label>Présentation</label>
         <!--- Textbox info supp-->
-        <textarea class="form-control mb-5" id="formtext" rows="2" [(ngModel)]="demandeStage.studentPresentation"
+        <textarea class="form-control mb-5" id="formtext" rows="2" [(ngModel)]="requeteStage.studentPresentation"
           name="Présentation"></textarea>
       </div>
       <!-- .................................1ERE ROW -->
@@ -32,7 +32,7 @@
           <!--- Programme -->
           <div class="border-form">
             <label>Programme de formation</label>
-            <input type="text" class="form-control" [(ngModel)]="demandeStage.program" name="Formation" required>
+            <input type="text" class="form-control" [(ngModel)]="requeteStage.program" name="Formation" required>
           </div>
         </div>
         <!-- 1ERE ROW - COL-MD-6 -->
@@ -40,7 +40,7 @@
           <!--- Établissement -->
           <div class="border-form">
             <label>Établissement scolaire</label>
-            <input type="text" class="form-control" [(ngModel)]="demandeStage.school" name="Établissement" required>
+            <input type="text" class="form-control" [(ngModel)]="requeteStage.school" name="Établissement" required>
           </div>
         </div>
       </div>
@@ -49,11 +49,11 @@
         <!-- 2E ROW - COL-MD-6 -->
         <div class="col-md-6">
           <!--- Secteur d'activité -->
-          <!-- [(ngModel)]="demandeStage.activitySector" name="Établissement" -->
           <div class="border-form">
             <label>Secteur d'activité</label>
-            <select class="form-control">
-              <option value="a-voir">Veuillez effectuer un choix</option>
+            <select class="form-control padding" [(ngModel)]="requeteStage.activitySector" name="activitySector">
+              <option *ngFor="let activitySector of activitySectors" value={{activitySector.title}}>
+                {{activitySector.title}}</option>
             </select>
           </div>
         </div>
@@ -62,7 +62,7 @@
           <!--- Ville -->
           <div class="border-form">
             <label>Ville</label>
-            <input type="text" class="form-control" [(ngModel)]="demandeStage.city" name="Ville" required>
+            <input type="text" class="form-control" [(ngModel)]="requeteStage.city" name="Ville" required>
           </div>
         </div>
       </div>
@@ -70,11 +70,17 @@
       <div class="row">
         <div class="col-md-6">
           <!--- Région -->
-          <!-- [(ngModel)]="demandeStage.region" name="Région" -->
           <div class="border-form">
             <label>Région</label>
-            <select class="form-control">
+            <select class="form-control padding" [(ngModel)]="requeteStage.region" name="Région">
               <option value="a-voir">Veuillez effectuer un choix</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Washington">Washington</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Nevada">Nevada</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Vermont">Vermont</option>
             </select>
           </div>
         </div>
@@ -85,7 +91,7 @@
           <!--- Compétences -->
           <div class="border-form">
             <label>Compétences</label>
-            <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="demandeStage.skills"
+            <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="requeteStage.skills"
               name="Compétences"></textarea>
           </div>
         </div>
@@ -101,7 +107,7 @@
           <!--- Type de stage -->
           <div class="border-form">
             <label>Type de stage</label>
-            <select class="form-control" [(ngModel)]="demandeStage.stageType" name="stageType">
+            <select class="form-control" [(ngModel)]="requeteStage.stageType" name="stageType">
               <option value="fulltime">Temps Plein</option>
               <option value="parttime">Temps Partiel</option>
             </select>
@@ -109,7 +115,7 @@
           <!--- Nombre d'heures semaine-->
           <div class="border-form">
             <label>Nombres d'heures par semaine</label>
-            <select class="form-control" [(ngModel)]="demandeStage.hoursPerWeek" name="Nombre D'heures">
+            <select class="form-control" [(ngModel)]="requeteStage.hoursPerWeek" name="Nombre D'heures">
               <option value="10">10</option>
               <option value="15">15</option>
               <option value="20">20</option>
@@ -125,17 +131,17 @@
           <!--- Date de début-->
           <div class="border-form">
             <label>Date de début</label>
-            <input class="form-control" type="date" id="start" value="{{demandeStage.startDate}}" min="2022-01-01"
-              max="2025-12-31" [ngModel]="demandeStage.startDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="demandeStage.startDate = $event" name="Start Date">
+            <input class="form-control" type="date" id="start" value="{{requeteStage.startDate}}" min="2022-01-01"
+              max="2025-12-31" [ngModel]="requeteStage.startDate | date:'yyyy-MM-dd'"
+              (ngModelChange)="requeteStage.startDate = $event" name="Start Date">
           </div>
 
           <!--- date de fin-->
           <div class="border-form">
             <label>Date de fin</label>
-            <input class="form-control" type="date" id="end" value="{{demandeStage.endDate}}" min="2022-01-01"
-              max="2025-12-31" [ngModel]="demandeStage.endDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="demandeStage.endDate = $event" name="End Date">
+            <input class="form-control" type="date" id="end" value="{{requeteStage.endDate}}" min="2022-01-01"
+              max="2025-12-31" [ngModel]="requeteStage.endDate | date:'yyyy-MM-dd'"
+              (ngModelChange)="requeteStage.endDate = $event" name="End Date">
           </div>
         </div>
       </div>
@@ -147,20 +153,20 @@
           <div class="row">
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="not-specified" [ngModel]="demandeStage.paid"
-                  name="not-specified">&nbsp;&nbsp;À la
-                discrétion de
-                l'entreprise </label>
-            </div>
-            <div class="checkbox">
-              <label class="enumeration">
-                <input type="checkbox" value="paid" [ngModel]="demandeStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
+                <input type="checkbox" value="not-specified" [checked]="checkPaid('not-specified')"
+                  (change)="onCheckboxChange($event)" name="not-specified">&nbsp;&nbsp;À la discrétion de l'entreprise
               </label>
             </div>
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="unpaid" [ngModel]="demandeStage.paid" name="unpaid">&nbsp;&nbsp;Stage non
-                rémunéré
+                <input type="checkbox" value="paid" [checked]="checkPaid('paid')" (change)="onCheckboxChange($event)"
+                  name="paid">&nbsp;&nbsp;Stage rémunéré
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="enumeration">
+                <input type="checkbox" value="unpaid" [checked]="checkPaid('unpaid')"
+                  (change)="onCheckboxChange($event)" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
               </label>
             </div>
           </div>
@@ -170,7 +176,7 @@
       <div class="form-group">
         <h4>Information supplémentaire</h4>
         <!--- Textbox info supp-->
-        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="demandeStage.additionalInfo"
+        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="requeteStage.additionalInfo"
           name="More Info"></textarea>
       </div>
       <!-- ..................................................4E ROW -->
@@ -194,7 +200,7 @@
 
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-maj-demande nomBtn="Mettre à jour" [demandeStage]="demandeStage"></app-maj-demande>
+    <app-maj-demande nomBtn="Mettre à jour" [requeteStage]="requeteStage"></app-maj-demande>
   </div>
 
 </main>

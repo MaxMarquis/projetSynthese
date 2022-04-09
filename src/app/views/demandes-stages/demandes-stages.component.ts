@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-
-
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-demandes-stages',
@@ -14,8 +11,6 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class DemandesStagesComponent implements OnInit {
   requetesStage: Requetes_stages[] = [];
-
-
 
   constructor(private requetesStagesService: RequetesStagesService,
     private router: Router, public modalService: NgbModal) { }
@@ -38,23 +33,15 @@ export class DemandesStagesComponent implements OnInit {
   }
   addDemandesstages() {
     this.router.navigateByUrl('/demandes-de-stages/add')
-
-
   }
 
-    
-      /// Modal suppression
-      open(content:any, offresStage:Requetes_stages) {
-        this.modalService.open(content, {ariaLabelledBy: 'titremodal'}).result.then((result) => {
-          if(result === 'Delete') {
-            this.onDelete(offresStage)
-          }
-        }, (reason) => {
-        });
+  /// Modal suppression
+  open(content: any, offresStage: Requetes_stages) {
+    this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then((result) => {
+      if (result === 'Delete') {
+        this.onDelete(offresStage)
       }
-    }
-
-
-
-
-
+    }, (reason) => {
+    });
+  }
+}

@@ -4,9 +4,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-
-
-
 @Component({
   selector: 'app-demandes-stages-views',
   templateUrl: './demandes-stages-views.component.html',
@@ -30,7 +27,6 @@ export class DemandesStagesViewsComponent implements OnInit {
     skills: [],
     published: false,
     paid: [],
-    user: '',
     active: true,
     region: '',
     activitySector: '',
@@ -75,22 +71,14 @@ export class DemandesStagesViewsComponent implements OnInit {
         this.router.navigateByUrl('/demandes-de-stages')
       });
   }
-    /// Modal suppression
-    open(content:any, offresStage:Requetes_stages) {
-      this.modalService.open(content, {ariaLabelledBy: 'titremodal'}).result.then((result) => {
-        if(result === 'Delete') {
-          this.onDelete(offresStage)
-        }
-      }, (reason) => {
-      });
-    }
-
+  
+  /// Modal suppression
+  open(content: any, offresStage: Requetes_stages) {
+    this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then((result) => {
+      if (result === 'Delete') {
+        this.onDelete(offresStage)
+      }
+    }, (reason) => {
+    });
+  }
 }
-
-
-
-
-
-
-
-

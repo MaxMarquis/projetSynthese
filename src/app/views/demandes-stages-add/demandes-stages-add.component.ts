@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Requetes_stages } from 'src/app/interfaces/requetes_stages';
-import { RequetesStagesService } from 'src/app/services/requetes-stages.service';
-import { Location } from '@angular/common';
-import { Router } from '@angular/router';
 import { SecteursActivitesService } from 'src/app/services/secteurs-activites.service';
 import { Secteur_activites } from 'src/app/interfaces/secteur_activites';
 
@@ -37,10 +34,7 @@ export class DemandesStagesAddComponent implements OnInit {
     linkToResume: '',
   };
   constructor(
-    private requetesStagesService: RequetesStagesService,
     private activityService: SecteursActivitesService,
-    private _location: Location,
-    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -53,15 +47,27 @@ export class DemandesStagesAddComponent implements OnInit {
       .subscribe((res) => (this.activitySectors = res));
   }
 
-  save(): void {
-    this.requetesStagesService
-      .addRequeteStage(this.requeteStage)
-      .subscribe((_result) => {
-        this.router.navigate(['/demandes-de-stages']);
-      });
+  checkPaid(data: string) {
+    let ref = this.requeteStage.paid.find(x => x == data);
+    if (ref == data) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
-  backClicked() {
-    this._location.back();
+  onCheckboxChange(event?: any): void {
+    if (event) {
+      const value = (event.currentTarget as HTMLElement)?.getAttribute("name");
+      if (event.currentTarget.checked) {
+        this.requeteStage.paid.push(value as string)
+        console.log(this.requeteStage.paid)
+      } else {
+        this.requeteStage.paid.forEach((element, index) => {
+          if (element == value) this.requeteStage.paid.splice(index, 1);
+          console.log(this.requeteStage.paid)
+        });
+      }
+    }
   }
 }

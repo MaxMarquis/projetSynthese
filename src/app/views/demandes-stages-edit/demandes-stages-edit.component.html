@@ -49,11 +49,11 @@
         <!-- 2E ROW - COL-MD-6 -->
         <div class="col-md-6">
           <!--- Secteur d'activité -->
-          <!-- [(ngModel)]="requeteStage.activitySector" name="Établissement" -->
           <div class="border-form">
             <label>Secteur d'activité</label>
-            <select class="form-control">
-              <option value="a-voir">Veuillez effectuer un choix</option>
+            <select class="form-control padding" [(ngModel)]="requeteStage.activitySector" name="activitySector">
+              <option *ngFor="let activitySector of activitySectors" value={{activitySector.title}}>
+                {{activitySector.title}}</option>
             </select>
           </div>
         </div>
@@ -70,11 +70,17 @@
       <div class="row">
         <div class="col-md-6">
           <!--- Région -->
-          <!-- [(ngModel)]="requeteStage.region" name="Région" -->
           <div class="border-form">
             <label>Région</label>
-            <select class="form-control">
+            <select class="form-control padding" [(ngModel)]="requeteStage.region" name="Région">
               <option value="a-voir">Veuillez effectuer un choix</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Connecticut">Connecticut</option>
+              <option value="Washington">Washington</option>
+              <option value="Illinois">Illinois</option>
+              <option value="Nevada">Nevada</option>
+              <option value="Nebraska">Nebraska</option>
+              <option value="Vermont">Vermont</option>
             </select>
           </div>
         </div>
@@ -147,20 +153,20 @@
           <div class="row">
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="not-specified" [ngModel]="requeteStage.paid"
-                  name="not-specified">&nbsp;&nbsp;À la
-                discrétion de
-                l'entreprise </label>
-            </div>
-            <div class="checkbox">
-              <label class="enumeration">
-                <input type="checkbox" value="paid" [ngModel]="requeteStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
+                <input type="checkbox" value="not-specified" [checked]="checkPaid('not-specified')"
+                  (change)="onCheckboxChange($event)" name="not-specified">&nbsp;&nbsp;À la discrétion de l'entreprise
               </label>
             </div>
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="unpaid" [ngModel]="requeteStage.paid" name="unpaid">&nbsp;&nbsp;Stage non
-                rémunéré
+                <input type="checkbox" value="paid" [checked]="checkPaid('paid')" (change)="onCheckboxChange($event)"
+                  name="paid">&nbsp;&nbsp;Stage rémunéré
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="enumeration">
+                <input type="checkbox" value="unpaid" [checked]="checkPaid('unpaid')"
+                  (change)="onCheckboxChange($event)" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
               </label>
             </div>
           </div>

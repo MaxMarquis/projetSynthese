@@ -1,3 +1,7 @@
+@import '../../sass/utils/_mixins'
+@import '../../sass/utils/_variables'
+
+
 //colors
 $bg_demandes: #cd9635
 $border_demandes: #986D22
@@ -16,8 +20,9 @@ $texte: white
 	border-radius: 10px
 	color: $texte
 	align-items: center
+	margin-bottom: 2rem
 	p
-		font-size: 1.275rem
+		font-size: 1rem
 		line-height: 2.125rem
 		color: $texte
 		margin-bottom: 0
@@ -59,3 +64,54 @@ $texte: white
 
 .entreprises p, .entreprises i
 	color: $texte_entreprises
+
+// ****************************************************************************************
+// ***************************************** RESPONSIVE MD AND UP *************************
+// ****************************************************************************************
+// @include media-breakpoint-up('md')
+// 	.stages, .offres, .candidats, .entreprises
+// 		// padding: 1rem
+// 		// background-color: $bg_demandes
+// 		// color: $texte
+// 		// align-items: center
+// 		p
+// 			font-size: 1rem
+// 			line-height: 2.125rem
+// 			color: $texte
+// 			margin-bottom: 0
+// 		i
+// 			font-size: 4rem
+// 			padding: 0 1rem
+// 			display: inline
+// 			color: $texte
+// 			display: block
+// 			float: left
+// 			&.min
+// 				font-size: 1.675rem
+// 				padding-top: 1.5rem
+
+// ****************************************************************************************
+// ***************************************** RESPONSIVE LG AND UP *************************
+// ****************************************************************************************
+// @include media-breakpoint-up('lg')
+	// .stages, .offres, .candidats, .entreprises
+	// 	padding: 1rem
+	// 	// background-color: $bg_demandes
+	// 	border-radius: 10px
+	// 	color: $texte
+	// 	align-items: center
+	// 	p
+	// 		font-size: 1.275rem
+	// 		line-height: 2.125rem
+	// 		color: $texte
+	// 		margin-bottom: 0
+	// 	i
+	// 		font-size: 4rem
+	// 		padding: 0 1rem
+	// 		display: inline
+	// 		color: $texte
+	// 		display: block
+	// 		float: left
+	// 		&.min
+	// 			font-size: 1.675rem
+	// 			padding-top: 1.5rem

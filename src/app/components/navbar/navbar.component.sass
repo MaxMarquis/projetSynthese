@@ -1,6 +1,9 @@
 // IMPORT UTILS
 @import '../../../sass/utils/variables'
 @import '../../../sass/utils//mixins'
+nav
+    margin-bottom: 100px
+    box-shadow: 1px 1px 5px $placeholder
 
 // DISPLAY NONE MOBILE
 .admin, #add, .logo
@@ -74,9 +77,9 @@ div.offcanvas-body
     background-color: none
 
 // ****************************************************************************************
-// ***************************************** RESPONSIVE MD AND UP *************************
+// ***************************************** RESPONSIVE LG AND UP *************************
 // ****************************************************************************************
-@include media-breakpoint-up('md')
+@include media-breakpoint-up('lg')
     .logoMobile
         display: none
     .logo
@@ -88,6 +91,7 @@ div.offcanvas-body
         display: block
         text-align: right
         margin-right: 2rem
+        min-width: 100px
     .avatar
         width: 40px
         margin: .5rem 0 0 1rem
@@ -108,10 +112,12 @@ div.offcanvas-body
     ul#add
         display: block
         list-style-type: none
-
+        min-width: 950px
+        padding-left: 0
+        margin-bottom: 0
     #add li
-        display: inline-block //md et plus
-        margin: 1rem
+        display: inline-block //LG et plus
+        margin: 1rem 1rem 1rem 0rem
 
     #add a
         text-decoration: none

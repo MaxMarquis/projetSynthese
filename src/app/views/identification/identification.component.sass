@@ -1,5 +1,6 @@
 @import '../../../sass/utils/_variables'
-@import '../../../sass/utils//mixins' 
+@import '../../../sass/utils//mixins'
+@import '../../../sass/utils//mixin-btn' 
 body
     background-color: #EEEEEE
 
@@ -42,15 +43,8 @@ h1
     margin-bottom: 1rem
     color: #333
 
-button.login
-    background-color: $color-tableaubord
-    border: none
-    padding: 0.875rem
-    border-radius: 5px
-    color: #fff
-    width: 100%
-    &:hover
-        background-color: $color-tableaubord-hover
+button
+    @include bouton($color-tableaubord, $color-tableaubord-hover)
 
 input
     border: 2px solid $color-tableaubord

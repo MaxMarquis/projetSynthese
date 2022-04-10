@@ -17,9 +17,9 @@
         <p>Lorem ipsum magna aliqua. ut enim ad minim veniam, quis nostrud exercietation ullamco laboris nisi consequat.
         </p>
         <form class="login">
-          <input type="text" placeholder="Nom et prénom" [(ngModel)]="profil.name" name="name"><br>
-          <input type="text" placeholder="Adresse courriel" [(ngModel)]="profil.email" name="email"><br>
-          <button type="submit" (click)="login()" class="login">Accéder maintenant</button>
+          <input type="text" placeholder="Votre nom et prénom" [(ngModel)]="profil.name" name="name" required><br>
+          <input type="email" placeholder="Votre courriel" [(ngModel)]="profil.email" name="email" required><br>
+          <button type="submit" (click)="login()">Accéder maintenant</button>
         </form>
       </div>
       </div>

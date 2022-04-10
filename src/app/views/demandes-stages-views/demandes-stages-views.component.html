@@ -12,8 +12,8 @@ FICHE CANDIDAT
   </div>
 
   <!-- ACTIONS CRUD BTN -->
-  <div id="crud">
-    <button><i class="fa-solid fa-check accepticon" (click)="requeteStatus(requete_stage,true)"></i></button>
+  <div id="crud"> 
+    <button ><i class="fa-solid fa-check accepticon" (click)="requeteStatus(requete_stage,true)" (click)= "open(activeModal,requete_stage)"></i></button>
     <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/demandes-de-stages/edit/{{ requete_stage._id }}'></i></button>
     <button  (click)="open(deleteModal,requete_stage)" ><i class="fas fa-window-close"></i></button>
   </div>
@@ -100,6 +100,7 @@ FICHE CANDIDAT
   </div>
 </main>
 
+      <!-- DELETE MODAL ...................................... -->
 <ng-template #deleteModal let-modal>
   <div class="modal-header">
      <h4 class="modal-title" id="titremodal">Suppression</h4>
@@ -113,5 +114,23 @@ FICHE CANDIDAT
   <div class="modal-footer">
      <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
      <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+  </div>
+</ng-template>
+
+
+      <!-- ACTIVÉE ...................................... -->
+<ng-template #activeModal let-modal>
+  <div class="modal-header">
+     <h4 class="modal-title" id="titremodal">Demande activée</h4>
+     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+        <span aria-hidden="true">x</span>
+     </button>
+  </div>
+  <div class="modal-body text-center">
+     Vous avez activée la demande 
+  </div>
+  <div class="modal-footer">
+   
+     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">OK</button>
   </div>
 </ng-template>

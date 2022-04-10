@@ -48,6 +48,7 @@ export class OffresStagesViewComponent implements OnInit {
       ...offresstage,
       active,
     }).subscribe((_result) => {
+      this.router.navigateByUrl('/offres-de-stages')
       offresstage.active = active;
     });
   }

@@ -20,8 +20,10 @@
       <tbody>
 
          <tbody *ngFor="let requeteStage of requetesStage">
+
+               <!--- Affiche seulement les requêtes actives  -->
             <tr *ngIf="requeteStage.active">    
-            <tr >
+           
 
             <td class="d-none">{{ requeteStage._id }}</td>
             <td>
@@ -80,6 +82,6 @@
      Vous avez accepté l'offre
    </div>
    <div class="modal-footer">
-     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Revenir</button>
+     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">OK</button>
    </div>
  </ng-template>

@@ -1,0 +1,9 @@
+.btnAnnuler {
+  background-color: #A00707;
+  color: #fff;
+  margin: 0 1rem 0 0;
+  line-height: 2rem;
+}
+.btnAnnuler:hover {
+  background-color: #670404;
+}

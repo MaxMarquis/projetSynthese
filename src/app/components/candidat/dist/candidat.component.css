@@ -6,18 +6,17 @@
   border: none;
   margin: 20px;
 }
-
-p {
-  position: relative;
-  margin: 0;
-  font-family: Poppins, sans-serif;
-}
-
 .card img {
   width: 80px;
   height: 100%;
   align-self: center;
   margin-left: 20px;
+}
+
+p {
+  position: relative;
+  margin: 0;
+  font-family: Poppins, sans-serif;
 }
 
 .card-text {
@@ -42,8 +41,4 @@ p {
 
 .phone {
   top: -20px;
-}
-
-.btn-primary {
-  background-color: #7F2987 !important;
 }

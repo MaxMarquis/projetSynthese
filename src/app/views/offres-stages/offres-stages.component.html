@@ -47,7 +47,7 @@
         <div class="modal-header">
           <h4 class="modal-title" id="titremodal">Suppression</h4>
           <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-            <span aria-hidden="true">×</span>
+            <span aria-hidden="true">x</span>
           </button>
         </div>
         <div class="modal-body text-center">
@@ -63,7 +63,7 @@
 </div><!-- end container -->
 
 <!-- MODAL DELETE ....................................... -->
-<ng-template #deleteModal let-modal>
+<ng-template #deleteModal let-modal class = "supression">
   <div class="modal-header">
     <h4 class="modal-title" id="titremodal">Suppression</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">

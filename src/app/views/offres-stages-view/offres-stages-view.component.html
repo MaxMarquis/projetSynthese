@@ -8,7 +8,7 @@
 
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
-    <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)" onclick="alert('Offre activée')" ></i></button>
+    <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)" (click)= "open(activeModal,offreStage)" ></i></button>
     <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
     <button (click)="open(deleteModal,offreStage)"><i class="fas fa-window-close"></i></button>
   </div>
@@ -83,3 +83,20 @@
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
   </div>
 </ng-template>
+
+  <!-- MODAL ACTIVÉE ...................................... -->
+  <ng-template #activeModal let-modal>
+    <div class="modal-header">
+       <h4 class="modal-title" id="titremodal">Offre activée</h4>
+       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+          <span aria-hidden="true">x</span>
+       </button>
+    </div>
+    <div class="modal-body text-center">
+       Vous avez activée l'offre
+    </div>
+    <div class="modal-footer">
+     
+       <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">OK</button>
+    </div>
+  </ng-template>

@@ -62,6 +62,7 @@ export class DemandesStagesViewsComponent implements OnInit {
       })
       .subscribe((_result) => {
         requete_stage.active = active;
+        this.router.navigateByUrl('/demandes-de-stages')
       });
   }
 
@@ -73,12 +74,16 @@ export class DemandesStagesViewsComponent implements OnInit {
   }
   
   /// Modal suppression
-  open(content: any, offresStage: Requetes_stages) {
+  open(content: any, requeteStage: Requetes_stages) {
     this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then((result) => {
       if (result === 'Delete') {
-        this.onDelete(offresStage)
+        this.onDelete(requeteStage)
       }
     }, (reason) => {
     });
   }
+
+  
 }
+
+

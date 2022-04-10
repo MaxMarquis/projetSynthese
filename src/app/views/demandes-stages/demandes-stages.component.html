@@ -43,7 +43,7 @@
                   <span class="titreXS">Poste<br>
                   </span>
                   <i [ngClass]="requeteStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
-                  <span class="bold">{{ requeteStage.title }}<br></span>
+                  <span class="bold" [ngClass]="requeteStage.active ? 'poste ' : 'poste poste-inactive'">{{ requeteStage.title }}<br></span>                 
                   {{ requeteStage.studentName}}
                </p>
                </li>
@@ -138,7 +138,7 @@
     </button>
   </div>
   <div class="modal-body text-center">
-    Voulez vous supprimer la demande de stage ?
+    Voulez vous supprimer la demande de stage 
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>

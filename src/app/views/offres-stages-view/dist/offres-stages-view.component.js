@@ -20,9 +20,11 @@ exports.__esModule = true;
 exports.OffresStagesViewComponent = void 0;
 var core_1 = require("@angular/core");
 var OffresStagesViewComponent = /** @class */ (function () {
-    function OffresStagesViewComponent(activeRoute, offreStagesService) {
+    function OffresStagesViewComponent(activeRoute, offreStagesService, modalService, router) {
         this.activeRoute = activeRoute;
         this.offreStagesService = offreStagesService;
+        this.modalService = modalService;
+        this.router = router;
         this.offreStage = {
             _id: "",
             title: "Titre du stage",
@@ -48,13 +50,29 @@ var OffresStagesViewComponent = /** @class */ (function () {
         this.getOffreStage(stageId);
     };
     OffresStagesViewComponent.prototype.offerStatus = function (offresstage, active) {
+        var _this = this;
         this.offreStagesService.editOffreStage(__assign(__assign({}, offresstage), { active: active })).subscribe(function (_result) {
+            _this.router.navigateByUrl('/offres-de-stages');
             offresstage.active = active;
         });
     };
     OffresStagesViewComponent.prototype.getOffreStage = function (id) {
         var _this = this;
         this.offreStagesService.getOffreStage(id).subscribe(function (res) { return _this.offreStage = res; });
+    };
+    OffresStagesViewComponent.prototype.onDelete = function (Offresstages) {
+        var _this = this;
+        this.offreStagesService.deleteOffreStage(Offresstages._id)
+            .subscribe(function (_result) { return _this.router.navigateByUrl('/offres-de-stages'); });
+    };
+    OffresStagesViewComponent.prototype.open = function (content, offresStage) {
+        var _this = this;
+        this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then(function (result) {
+            if (result === 'Delete') {
+                _this.onDelete(offresStage);
+            }
+        }, function (reason) {
+        });
     };
     OffresStagesViewComponent = __decorate([
         core_1.Component({

@@ -42,7 +42,6 @@ var DemandesStagesViewsComponent = /** @class */ (function () {
             skills: [],
             published: false,
             paid: [],
-            user: '',
             active: true,
             region: '',
             activitySector: '',
@@ -61,12 +60,31 @@ var DemandesStagesViewsComponent = /** @class */ (function () {
             .getRequeteStage(id)
             .subscribe(function (res) { return (_this.requete_stage = res); });
     };
-    // Transfert vers actif // 
+    // Transfert vers actif //
     DemandesStagesViewsComponent.prototype.requeteStatus = function (requete_stage, active) {
+        var _this = this;
         this.requetesStagesService
             .editRequeteStage(__assign(__assign({}, requete_stage), { active: active }))
             .subscribe(function (_result) {
             requete_stage.active = active;
+            _this.router.navigateByUrl('/demandes-de-stages');
+        });
+    };
+    DemandesStagesViewsComponent.prototype.onDelete = function (Requetestages) {
+        var _this = this;
+        this.requetesStagesService.deleteRequeteStage(Requetestages._id)
+            .subscribe(function (_result) {
+            _this.router.navigateByUrl('/demandes-de-stages');
+        });
+    };
+    /// Modal suppression
+    DemandesStagesViewsComponent.prototype.open = function (content, requeteStage) {
+        var _this = this;
+        this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then(function (result) {
+            if (result === 'Delete') {
+                _this.onDelete(requeteStage);
+            }
+        }, function (reason) {
         });
     };
     DemandesStagesViewsComponent = __decorate([

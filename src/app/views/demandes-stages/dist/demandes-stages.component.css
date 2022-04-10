@@ -1,10 +1,13 @@
-.crudbut {
-  border: none;
-  background: none;
+.minwidht {
+  width: 250px;
 }
 
-.title {
-  color: #707070;
+.fiche button {
+  border: none;
+  background: none;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 
 .fa-pen-to-square {
@@ -21,7 +24,6 @@
 
 .fa-graduation-cap {
   color: #70582E;
-  border: 2px black;
   margin-right: 25px;
   padding: 15px;
   background-color: #F89747;
@@ -30,21 +32,83 @@
 
 .fa-graduation-cap-inactive {
   color: #161616;
-  border: 2px black;
-  margin-right: 25px;
-  padding: 15px;
-  border-radius: 10px;
   background-color: #808080;
 }
 
 .bordure {
   border-left: 5px solid #F89747;
-  height: 50px;
   padding-left: 20px;
 }
 
 .bordure-inactive {
-  border-left: 5px solid #808080;
-  height: 50px;
-  padding-left: 20px;
+  border-color: #808080;
+}
+
+.poste {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.poste-inactive {
+  color: #161616;
+  font-weight: bold;
+}
+
+.titreXS {
+  color: #707070;
+  font-weight: 700;
+  border: 0;
+}
+
+#titreMD {
+  display: none;
+}
+
+i {
+  display: block;
+  float: left;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+li p {
+  margin-bottom: 0;
+  color: #161616;
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  #titreMD {
+    display: block;
+  }
+
+  #titreMD li {
+    padding-right: 3rem;
+  }
+
+  .borderTitle {
+    border-bottom: 5px solid #707070;
+  }
+
+  .titreXS {
+    display: none;
+  }
+
+  li p {
+    font-size: 0.875rem;
+    line-height: 1rem;
+  }
 }

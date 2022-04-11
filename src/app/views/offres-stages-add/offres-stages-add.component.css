@@ -1,1 +1,14 @@
-/*# sourceMappingURL=offres-stages-add.component.css.map */
+.title {
+  border-color: #BB2026;
+}
+
+h3, h4 {
+  color: #BB2026;
+}
+
+.h3 {
+  font-size: 2.875rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #BB2026;
+}

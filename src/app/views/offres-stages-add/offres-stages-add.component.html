@@ -34,7 +34,7 @@
         <label class="h3">Description de la tâche</label>
         <!--- Textbox info supp-->
         <textarea class="form-control mb-4" id="formtext" rows="4" [(ngModel)]="offreStage.description"
-          name="Description"></textarea>
+          name="Description" required></textarea>
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -51,7 +51,7 @@
           <div class="border-form">
             <label>Exigences</label>
             <textarea class="form-control" id="requirements" rows="4" [(ngModel)]="offreStage.requirements"
-              name="Exigences"></textarea>
+              name="Exigences" required></textarea>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
           <!--- Type de stage -->
           <div class="border-form">
             <label>Type de stage</label>
-            <select class="form-control padding" [(ngModel)]="offreStage.stageType" name="stageType">
+            <select class="form-control padding" [(ngModel)]="offreStage.stageType" name="stageType" required>
               <option value="fulltime">Temps Plein</option>
               <option value="parttime">Temps Partiel</option>
             </select>
@@ -71,7 +71,7 @@
           <!--- Nombre d'heures semaine-->
           <div class="border-form">
             <label>Nombres d'heures par semaine</label>
-            <select class="form-control padding" [(ngModel)]="offreStage.hoursPerWeek" name="Nombre D'heures">
+            <select class="form-control padding" [(ngModel)]="offreStage.hoursPerWeek" name="Nombre D'heures" required>
               <option value="10">10</option>
               <option value="15">15</option>
               <option value="20">20</option>
@@ -89,7 +89,7 @@
             <label>Date de début</label>
             <input class="form-control" type="date" id="start" value="{{offreStage.startDate}}" min="2022-01-01"
               max="2025-12-31" [ngModel]="offreStage.startDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="offreStage.startDate = $event" name="Start Date">
+              (ngModelChange)="offreStage.startDate = $event" name="Start Date" required>
           </div>
           <!--- date de fin-->
           <div class="border-form">
@@ -97,7 +97,7 @@
             <!--- à voir date picker Angular-->
             <input class="form-control" type="date" id="end" value="{{offreStage.endDate}}" min="2022-01-01"
               max="2025-12-31" [ngModel]="offreStage.endDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="offreStage.endDate = $event" name="End Date">
+              (ngModelChange)="offreStage.endDate = $event" name="End Date" required>
           </div>
         </div>
       </div>
@@ -137,8 +137,8 @@
       <div class="form-group">
         <h4>Information supplémentaire</h4>
         <!--- Textbox info supp-->
-        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo"
-          name="More Info"></textarea>
+        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo" name="More Info"
+          required></textarea>
       </div>
     </div>
   </form>

@@ -68,6 +68,7 @@ export class CandidatsViewComponent implements OnInit {
     );
   }
 
+  // Ouvre un modal pour valider la suppression
   open(content: any, candidat: Candidats) {
     this.modalService
       .open(content, { ariaLabelledBy: 'titremodal' })
@@ -77,7 +78,7 @@ export class CandidatsViewComponent implements OnInit {
             this.onDelete(candidat);
           }
         },
-        (reason) => { }
+        (_) => { }
       );
   }
 }

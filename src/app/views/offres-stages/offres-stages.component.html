@@ -2,10 +2,10 @@
   <h1 class="mb-5">Offre de stages</h1>
 
   <!--- <div class="d-flex justify-content-end">-->
-    <button class="mb-2" role="alert" routerLink='/offres-de-stages/add'>
-      <!-- <button class="btn btn-danger mb-2" role="alert" routerLink='/offres-de-stages/add'> -->
-      Ajouter une demande
-      </button>
+  <button class="mb-2" role="alert" routerLink='/offres-de-stages/add'>
+    <!-- <button class="btn btn-danger mb-2" role="alert" routerLink='/offres-de-stages/add'> -->
+    Ajouter une demande
+  </button>
 
   <div class="fiche">
     <!--- table borderless pour enlever le HR sous les entêtes -->
@@ -23,12 +23,12 @@
       <tbody>
         <tr *ngFor="let offreStage of offresStages">
           <td class="d-none">{{ offreStage._id }}</td>
-          <td> <i
-            [ngClass]="offreStage.active ? 'bordure' : 'bordure bordure-inactive'"></i>
-            
+          <td> <i [ngClass]="offreStage.active ? 'bordure' : 'bordure bordure-inactive'"></i>
             <i
               [ngClass]="offreStage.active ? 'fa-solid fa-suitcase ' : 'fa-solid fa-suitcase fa-suitcase-inactive'"></i>
-              <span [ngClass]="offreStage.active ? 'poste ' : 'poste poste-inactive'">{{ offreStage.title }} </span>{{ offreStage.enterprise }}</td>
+            <span [ngClass]="offreStage.active ? 'poste ' : 'poste poste-inactive'">{{ offreStage.title }} </span>{{
+            offreStage.enterprise }}
+          </td>
           <td>{{ offreStage.program }}</td>
           <td>{{ offreStage.stageType }}</td>
           <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>
@@ -64,7 +64,7 @@
 </div><!-- end container -->
 
 <!-- MODAL DELETE ....................................... -->
-<ng-template #deleteModal let-modal class = "supression">
+<ng-template #deleteModal let-modal class="supression">
   <div class="modal-header">
     <h4 class="modal-title" id="titremodal">Suppression</h4>
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">

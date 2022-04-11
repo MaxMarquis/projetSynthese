@@ -1,1 +1,104 @@
-/*# sourceMappingURL=identification.component.css.map */
+body {
+  background-color: #EEEEEE;
+}
+
+.header {
+  background-color: #fff;
+  padding: 2rem 5rem;
+}
+
+.logoMobile {
+  width: 165px;
+  margin: 0 0 0rem 1.25rem;
+}
+
+.login-container {
+  height: 100vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.left {
+  display: none;
+}
+
+.right {
+  padding: 4rem 3rem 0;
+  background-image: url("../../../assets/img/bg-body.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+p {
+  padding-bottom: 2rem;
+  color: #333;
+}
+
+.left, .right {
+  height: 100vh;
+}
+
+.bgid {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 2rem 2rem 3rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: 3.1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 0;
+  background-color: #089DA4;
+  color: #fff;
+}
+button:hover {
+  background-color: #033A3C;
+}
+
+input {
+  border: 2px solid #089DA4;
+  color: black;
+  margin: 10px 0px 40px 0px;
+  padding: 20px;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .left {
+    display: block;
+    background-image: url("../../../assets/img/bg-body.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+  }
+
+  .right {
+    background-image: none;
+  }
+
+  .bgid {
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .right {
+    padding: 10rem 10rem 0 4rem;
+  }
+
+  button.login {
+    max-width: 200px;
+  }
+}

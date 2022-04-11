@@ -1,9 +1,3 @@
-<!--
-*** DEMANDE STAGE VIEW ***
-FICHE CANDIDAT
--->
-
-
 <main class="main">
   <!-- TITLE - STAGE...................................... -->
   <div class="title">
@@ -12,15 +6,15 @@ FICHE CANDIDAT
   </div>
 
   <!-- ACTIONS CRUD BTN -->
-  <div id="crud"> 
-    <button ><i class="fa-solid fa-check accepticon" (click)="requeteStatus(requete_stage,true)" (click)= "open(activeModal,requete_stage)"></i></button>
-    <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/demandes-de-stages/edit/{{ requete_stage._id }}'></i></button>
-    <button  (click)="open(deleteModal,requete_stage)" ><i class="fas fa-window-close"></i></button>
+  <div id="crud">
+    <button><i class="fa-solid fa-check accepticon" (click)="requeteStatus(requete_stage,true)"
+        (click)="open(activeModal,requete_stage)"></i></button>
+    <button><i class="fa-solid fa-pen-to-square editicon"
+        routerLink='/demandes-de-stages/edit/{{ requete_stage._id }}'></i></button>
+    <button (click)="open(deleteModal,requete_stage)"><i class="fas fa-window-close"></i></button>
   </div>
-
   <div class="fiche">
     <!-- INFO CANDIDAT...................................... -->
-
     <h3>{{requete_stage.studentName}}</h3>
     <p>{{requete_stage.studentPresentation}}studentName</p>
 
@@ -92,7 +86,8 @@ FICHE CANDIDAT
       <h4>Informations supplémentaires</h4>
       <p>{{requete_stage.additionalInfo}}</p>
       <!-- BUTTON CV -->
-      <button type="submit" class="btn btn-primary mt-4 color" onclick="window.open('../../../assets/files/cvCandidat.pdf');">
+      <button type="submit" class="btn btn-primary mt-4 color"
+        onclick="window.open('../../../assets/files/cvCandidat.pdf');">
         <i class="fas fa-cloud-download-alt"></i> Télécharger le C.V.
       </button>
 
@@ -100,37 +95,37 @@ FICHE CANDIDAT
   </div>
 </main>
 
-      <!-- DELETE MODAL ...................................... -->
+<!-- DELETE MODAL ...................................... -->
 <ng-template #deleteModal let-modal>
   <div class="modal-header">
-     <h4 class="modal-title" id="titremodal">Suppression</h4>
-     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-        <span aria-hidden="true">x</span>
-     </button>
+    <h4 class="modal-title" id="titremodal">Suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">x</span>
+    </button>
   </div>
   <div class="modal-body text-center">
-     Voulez vous supprimer la demande de stage ?
+    Voulez vous supprimer la demande de stage ?
   </div>
   <div class="modal-footer">
-     <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
-     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
   </div>
 </ng-template>
 
 
-      <!-- ACTIVÉE ...................................... -->
+<!-- ACTIVÉE ...................................... -->
 <ng-template #activeModal let-modal>
   <div class="modal-header">
-     <h4 class="modal-title" id="titremodal">Demande activée</h4>
-     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-        <span aria-hidden="true">x</span>
-     </button>
+    <h4 class="modal-title" id="titremodal">Demande activée</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">x</span>
+    </button>
   </div>
   <div class="modal-body text-center">
-     Vous avez activée la demande 
+    Vous avez activée la demande
   </div>
   <div class="modal-footer">
-   
-     <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">OK</button>
+
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">OK</button>
   </div>
 </ng-template>

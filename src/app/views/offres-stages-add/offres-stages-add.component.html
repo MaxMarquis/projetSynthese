@@ -8,14 +8,16 @@
     <app-maj-offre nomBtn="Sauvegarder" [offreStage]="offreStage"></app-maj-offre>
   </div>
   <!-- CHAMPS TITRE -->
-  <form>
+  <form ngNativeValidate >
     <div class="row mb-5">
       <div class="col-md-2">
         <!--- Titre -->
         <label class="center">Titre :</label>
       </div>
       <div class="col-md-10">
-        <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required>
+        <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required #Titre="ngModel">
+        
+        
       </div>
     </div>
     <div class="row mb-5">

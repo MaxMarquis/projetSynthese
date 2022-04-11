@@ -1,4 +1,7 @@
-.stages, .offres, .candidats, .entreprises {
+.stages,
+.offres,
+.candidats,
+.entreprises {
   padding: 1rem;
   background-color: #cd9635;
   border-radius: 10px;
@@ -6,13 +9,21 @@
   align-items: center;
   margin-bottom: 2rem;
 }
-.stages p, .offres p, .candidats p, .entreprises p {
+
+.stages p,
+.offres p,
+.candidats p,
+.entreprises p {
   font-size: 1rem;
   line-height: 2.125rem;
   color: white;
   margin-bottom: 0;
 }
-.stages i, .offres i, .candidats i, .entreprises i {
+
+.stages i,
+.offres i,
+.candidats i,
+.entreprises i {
   font-size: 4rem;
   padding: 0 1rem;
   display: inline;
@@ -20,7 +31,11 @@
   display: block;
   float: left;
 }
-.stages i.min, .offres i.min, .candidats i.min, .entreprises i.min {
+
+.stages i.min,
+.offres i.min,
+.candidats i.min,
+.entreprises i.min {
   font-size: 1.675rem;
   padding-top: 1.5rem;
 }
@@ -55,6 +70,9 @@
   cursor: pointer;
 }
 
-.entreprises p, .entreprises i {
+.entreprises p,
+.entreprises i {
   color: #2E466E;
 }
+
+/*# sourceMappingURL=compteurs.component.css.map */

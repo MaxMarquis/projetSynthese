@@ -3,10 +3,13 @@ img.entreprise {
   background-color: transparent;
 }
 
-h3, h4 {
+h3,
+h4 {
   color: #86A9E6;
 }
 
 .title {
   border-color: #86A9E6;
 }
+
+/*# sourceMappingURL=entreprises-view.component.css.map */

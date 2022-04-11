@@ -1,28 +1,32 @@
 <!-- Responsive -->
-<div class="header">
-  <img src="../assets/img/logo-eStage.svg" alt="logo" class="logoMobile">
-</div>
+<header>
+  <div class="header">
+    <img src="../assets/img/logo-eStage.svg" alt="logo" class="logoMobile">
+  </div>
 
-<div class="id">
-  <div (keyup.enter)="login()" class="login-container container-fluid g-0">
-    <div class="row g-0">
+  <div class="id">
+    <div (keyup.enter)="login()" class="login-container container-fluid g-0">
+      <div class="row g-0">
         <!-- IMG -->
-      <div class="col-md-6 left">
-        <!-- <img src="../assets/img/bg-body.png" alt="" class="login-img img-fluid"> -->
-      </div>
-      <!-- IDENTIFICATION -->
-      <div class="col-md-6 login-content right">
-        <div class="bgid">
-        <h1>Identification</h1>
-        <p>Lorem ipsum magna aliqua. ut enim ad minim veniam, quis nostrud exercietation ullamco laboris nisi consequat.
-        </p>
-        <form class="login">
-          <input type="text" placeholder="Votre nom et prénom" [(ngModel)]="profil.name" name="name" required><br>
-          <input type="email" placeholder="Votre courriel" [(ngModel)]="profil.email" name="email" required><br>
-          <button type="submit" (click)="login()">Accéder maintenant</button>
-        </form>
-      </div>
+        <div class="col-md-6 left">
+          <!-- bg img dans le css et display none en mobile -->
+        </div>
+        <!-- IDENTIFICATION -->
+        <div class="col-md-6 login-content right">
+          <!-- bg img dans le css en mobile -->
+          <div class="bgid">
+            <h1>Identification</h1>
+            <p>Lorem ipsum magna aliqua. ut enim ad minim veniam, quis nostrud exercietation ullamco laboris nisi
+              consequat.
+            </p>
+            <form class="login">
+              <input type="text" placeholder="Votre nom et prénom" [(ngModel)]="profil.name" name="name" required><br>
+              <input type="email" placeholder="Votre courriel" [(ngModel)]="profil.email" name="email" required><br>
+              <button type="submit" (click)="login()">Accéder maintenant</button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</header>

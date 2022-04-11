@@ -6,6 +6,7 @@
   border: none;
   margin: 20px;
 }
+
 .card img {
   width: 80px;
   height: 100%;
@@ -42,3 +43,5 @@ p {
 .phone {
   top: -20px;
 }
+
+/*# sourceMappingURL=candidat.component.css.map */

@@ -1,9 +1,14 @@
 <div class="container">
-    <h1>Ajouter une entreprise</h1>
+    <div class="title">
+        <h1>Ajouter une entreprise</h1>
+    </div>
+    <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <!--- Bouton Sauvegarder -->
     <app-maj-entreprise nomBtn="Sauvegarder" [entreprise]="entreprise"></app-maj-entreprise>
+    </div>
     <form>
+        <div class="fiche">
         <!--- Nom-->
         <label>Entreprise:</label>
         <input class="form-control" type="text" required [(ngModel)]="entreprise.name" name="nom">
@@ -68,5 +73,6 @@
                 </div>
             </div>
         </div>
+    </div>
     </form>
 </div>

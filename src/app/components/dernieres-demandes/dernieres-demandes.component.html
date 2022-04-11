@@ -20,7 +20,7 @@
     <!-- *************************************
     TABLEAU EN LISTE
     ****************************************** -->
-    <div class="container-fluid">
+    <div class="container-fluid" >
       <ul>
         <!-- 2 <li> avec enfants <ul> -->
         <!-- <LI> TITRE POUR XL et + -->
@@ -44,9 +44,12 @@
         </li>
         <!-- <LI> TITRE POUR MOBILE & données-->
         <!-- ID -->
+        
+      
+      <ng-container *ngFor="let requeteStage of requetesStage"> 
         <li>
-          <ul class="row my-4 border-bottom" *ngFor="let requeteStage of requetesStage">
-            <li class="col-12 d-none mx-auto">
+          <ul class="row my-4 border-bottom" *ngIf="requeteStage.active" >
+            <li class="col-12 d-none mx-auto" >
               <p class="me-xl-3 mb-xl-4 pb-xl-2 ">
                 <span class="titreXS">ID<br></span>
                 {{ requeteStage._id }}
@@ -95,6 +98,7 @@
             </li>
           </ul>
         </li>
+        </ng-container> 
       </ul>
     </div>
   </div>

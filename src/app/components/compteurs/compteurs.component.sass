@@ -1,0 +1,116 @@
+@import '../../../sass/utils/_mixins'
+@import '../../../sass/utils/_variables'
+
+//colors
+$bg_demandes: #cd9635
+$border_demandes: #986D22
+$bg_offres: #bb2026
+$border_offres: #821519
+$bg_candidats: #7F2987
+$border_candidats: #4A1150
+$bg_entreprises: #86A9E6
+$border_entreprises: #5E7EB5
+$texte_entreprises: #2E466E
+$texte: white
+
+.stages, .offres, .candidats, .entreprises
+	padding: 1rem
+	background-color: $bg_demandes
+	border-radius: 10px
+	color: $texte
+	align-items: center
+	margin-bottom: 2rem
+	p
+		font-size: 1rem
+		line-height: 2.125rem
+		color: $texte
+		margin-bottom: 0
+	i
+		font-size: 4rem
+		padding: 0 1rem
+		display: inline
+		color: $texte
+		display: block
+		float: left
+		&.min
+			font-size: 1.675rem
+			padding-top: 1.5rem
+
+.numCompteur
+	font-size: 3.125rem
+	font-weight: 700
+
+.stages
+	border-right: 60px solid $border_demandes
+	cursor: pointer
+
+.offres
+	background-color: $bg_offres
+	border-right: 60px solid $border_offres
+	cursor: pointer
+
+.candidats
+	background-color: $bg_candidats
+	border-radius: 10px 0 0 10px
+	border-right: 25px solid $border_candidats
+	cursor: pointer
+
+.entreprises
+	background-color: $bg_entreprises
+	border-radius: 0 10px 10px 0
+	border-left: 25px solid $border_entreprises
+	cursor: pointer
+
+.entreprises p, .entreprises i
+	color: $texte_entreprises
+
+// ****************************************************************************************
+// ***************************************** RESPONSIVE MD AND UP *************************
+// ****************************************************************************************
+// @include media-breakpoint-up('md')
+// 	.stages, .offres, .candidats, .entreprises
+// 		// padding: 1rem
+// 		// background-color: $bg_demandes
+// 		// color: $texte
+// 		// align-items: center
+// 		p
+// 			font-size: 1rem
+// 			line-height: 2.125rem
+// 			color: $texte
+// 			margin-bottom: 0
+// 		i
+// 			font-size: 4rem
+// 			padding: 0 1rem
+// 			display: inline
+// 			color: $texte
+// 			display: block
+// 			float: left
+// 			&.min
+// 				font-size: 1.675rem
+// 				padding-top: 1.5rem
+
+// ****************************************************************************************
+// ***************************************** RESPONSIVE LG AND UP *************************
+// ****************************************************************************************
+// @include media-breakpoint-up('lg')
+	// .stages, .offres, .candidats, .entreprises
+	// 	padding: 1rem
+	// 	// background-color: $bg_demandes
+	// 	border-radius: 10px
+	// 	color: $texte
+	// 	align-items: center
+	// 	p
+	// 		font-size: 1.275rem
+	// 		line-height: 2.125rem
+	// 		color: $texte
+	// 		margin-bottom: 0
+	// 	i
+	// 		font-size: 4rem
+	// 		padding: 0 1rem
+	// 		display: inline
+	// 		color: $texte
+	// 		display: block
+	// 		float: left
+	// 		&.min
+	// 			font-size: 1.675rem
+	// 			padding-top: 1.5rem

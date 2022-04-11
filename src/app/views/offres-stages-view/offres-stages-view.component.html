@@ -8,8 +8,10 @@
 
   <!-- ACTIONS CRUD BTN -->
   <div id="crud">
-    <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)" (click)= "open(activeModal,offreStage)" ></i></button>
-    <button><i class="fa-solid fa-pen-to-square editicon" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
+    <button><i class="fa-solid fa-check accepticon" (click)="offerStatus(offreStage,true)"
+        (click)="open(activeModal,offreStage)"></i></button>
+    <button><i class="fa-solid fa-pen-to-square editicon"
+        routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i></button>
     <button (click)="open(deleteModal,offreStage)"><i class="fas fa-window-close"></i></button>
   </div>
 
@@ -17,7 +19,6 @@
     <!-- INFO ENTREPRISE...................................... -->
     <h3>Description de la tâche</h3>
     <p>{{offreStage.description}}</p>
-
     <!-- 1ERE ROW...................................... -->
     <div class="row">
       <!-- 1ERE ROW - COL 12 -->
@@ -84,19 +85,18 @@
   </div>
 </ng-template>
 
-  <!-- MODAL ACTIVÉE ...................................... -->
-  <ng-template #activeModal let-modal>
-    <div class="modal-header">
-       <h4 class="modal-title" id="titremodal">Offre activée</h4>
-       <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-          <span aria-hidden="true">x</span>
-       </button>
-    </div>
-    <div class="modal-body text-center">
-       Vous avez activée l'offre
-    </div>
-    <div class="modal-footer">
-     
-       <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">OK</button>
-    </div>
-  </ng-template>
+<!-- MODAL ACTIVÉE ...................................... -->
+<ng-template #activeModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Offre activée</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Vous avez activée l'offre
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">OK</button>
+  </div>
+</ng-template>

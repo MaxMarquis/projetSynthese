@@ -3,10 +3,13 @@
   color: #fff;
   line-height: 2rem;
 }
+
 .btnSave:hover {
   background-color: #033A3C;
 }
 
 .title {
   border-color: #CD9635;
-}/*# sourceMappingURL=demandes-stages-add.component.css.map */
+}
+
+/*# sourceMappingURL=demandes-stages-add.component.css.map */

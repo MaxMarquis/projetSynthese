@@ -35,7 +35,7 @@ export class DemandesStagesComponent implements OnInit {
     this.router.navigateByUrl('/demandes-de-stages/add')
   }
 
-  /// Modal suppression
+  // Ouvre un modal pour valider la suppression
   open(content: any, offresStage: Requetes_stages) {
     this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then((result) => {
       if (result === 'Delete') {

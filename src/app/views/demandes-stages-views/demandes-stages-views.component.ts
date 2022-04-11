@@ -66,24 +66,23 @@ export class DemandesStagesViewsComponent implements OnInit {
       });
   }
 
+  // Supprime une demande de stage et renvoie vers la liste des demandes
   onDelete(Requetestages: Requetes_stages): void {
     this.requetesStagesService.deleteRequeteStage(Requetestages._id)
       .subscribe(_result => {
         this.router.navigateByUrl('/demandes-de-stages')
       });
   }
-  
-  /// Modal suppression
+
+  // Ouvre un modal pour valider la suppression
   open(content: any, requeteStage: Requetes_stages) {
     this.modalService.open(content, { ariaLabelledBy: 'titremodal' }).result.then((result) => {
       if (result === 'Delete') {
         this.onDelete(requeteStage)
       }
-    }, (reason) => {
+    }, (_) => {
     });
   }
-
-  
 }
 
 

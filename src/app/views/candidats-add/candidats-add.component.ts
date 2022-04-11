@@ -23,17 +23,8 @@ export class CandidatsAddComponent implements OnInit {
     published: false,
   };
 
-  constructor(
-    private location: Location
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  annuler(): void {
-    this.location.back()
-  }
-  sauvegarder() {
-    alert("it works ! ")
   }
 }

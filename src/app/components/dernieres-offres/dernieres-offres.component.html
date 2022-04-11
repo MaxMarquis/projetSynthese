@@ -1,0 +1,94 @@
+<main class="main">
+  <div class="fiche mt-5">
+    <div class="container g-0">
+      <div class="row mt-3 mb-5">
+        <div class="col-xl-8">
+          <h2>Dernières <span class="offres">offres</span> de stage</h2>
+          <p class="attente">En attente de validation</p>
+        </div>
+        <div class="col-xl-4">
+          <button type="button" class="bouton" (click)="acceptAll()"
+            onclick="alert('Toutes les offres sont maintenant activées')">
+            Valider toutes les offres
+          </button>
+        </div>
+      </div> <!-- /row -->
+    </div> <!-- /contfluid -->
+
+    <!--- valider les demandes -->
+    <!--- <div class="d-flex justify-content-end">-->
+
+
+    <!--- table borderless pour enlever le HR sous les entêtes -->
+    <table class="table table-borderless">
+      <thead>
+
+        <tr class="title">
+          <th scope="col" class="d-none">ID</th>
+          <th scope="col">Poste</th>
+          <th scope="col">Établissement</th>
+          <th scope="col">Date</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let offreStage of offresStages">
+
+
+        <tr *ngIf="offreStage.active">
+          <td class="d-none">{{ offreStage._id }}</td>
+
+
+          <td><i class="fa-solid fa-suitcase "></i>{{ offreStage.title }} {{ offreStage.enterprise }}</td>
+          <td>{{ offreStage.program }}</td>
+          <td>{{ offreStage.startDate | date:'longDate':'undefined':'fr'}}</td>
+          <td>
+            <button type="button" class="btn btn-danger m-2" (click)="offerStatus(offreStage,false)">Refuser</button>
+            <button type="button" class="btn btn-success m-1" (click)="offerStatus(offreStage,true)"
+              (click)="open(AccepterModal,offreStage)">Accepter</button>
+
+            <button class="crudbut"><i class="fa-solid fa-eye"
+                routerLink='/offres-de-stages/view/{{ offreStage._id }}'></i></button>
+
+            <button class="crudbut" (click)="editOffresstages()">
+              <i class="fa-solid fa-pen-to-square" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i>
+            </button>
+
+            <button class="crudbut" (click)="open(deleteModal,offreStage)">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<ng-template #deleteModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Suppression</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Voulez vous supprimer l'offre de stage ?
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" (click)="modal.close('Delete')">Oui</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Non</button>
+  </div>
+</ng-template>
+
+<ng-template #AccepterModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="titremodal">Acceptation</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+  <div class="modal-body text-center">
+    Vous avez accepté l'offre
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Revenir</button>
+  </div>
+</ng-template>

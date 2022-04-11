@@ -1,7 +1,10 @@
-h3, h4 {
+h3,
+h4 {
   color: #7F2987;
 }
 
 .title {
   border-color: #7F2987;
-}/*# sourceMappingURL=candidats-view.component.css.map */
+}
+
+/*# sourceMappingURL=candidats-view.component.css.map */

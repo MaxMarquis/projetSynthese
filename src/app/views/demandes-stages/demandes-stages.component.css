@@ -13,6 +13,7 @@
 .fa-pen-to-square {
   color: #CD9635;
 }
+
 .fa-pen-to-square:hover {
   color: #5C4214;
 }
@@ -20,6 +21,7 @@
 .fa-eye {
   color: #089DA4;
 }
+
 .fa-eye:hover {
   color: #033A3C;
 }
@@ -27,6 +29,7 @@
 .fa-trash-can {
   color: #BB2026;
 }
+
 .fa-trash-can:hover {
   color: #6F1316;
 }
@@ -121,6 +124,7 @@ li {
     line-height: 1rem;
   }
 }
+
 .bouton {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -128,6 +132,9 @@ li {
   background-color: #CD9635;
   color: #fff;
 }
+
 .bouton:hover {
   background-color: #5C4214;
-}/*# sourceMappingURL=demandes-stages.component.css.map */
+}
+
+/*# sourceMappingURL=demandes-stages.component.css.map */

@@ -1,1 +1,1 @@
-{"version":3,"sources":["candidats-view.component.sass","../../../sass/utils/_variables.sass","candidats-view.component.css"],"names":[],"mappings":"AACA;EACI,cCwCc;ACxClB;;AFEA;EACI,qBCqCc;ACpClB","file":"candidats-view.component.css"}
+{"version":3,"sourceRoot":"","sources":["candidats-view.component.sass","../../../sass/utils/_variables.sass"],"names":[],"mappings":"AACA;EACI,OC0Cc;;;ADxClB;EACI,cCuCc","file":"candidats-view.component.css"}

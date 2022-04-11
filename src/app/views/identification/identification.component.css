@@ -35,8 +35,7 @@ p {
   color: #333;
 }
 
-.left,
-.right {
+.left, .right {
   height: 100vh;
 }
 
@@ -60,7 +59,6 @@ button {
   background-color: #089DA4;
   color: #fff;
 }
-
 button:hover {
   background-color: #033A3C;
 }
@@ -90,7 +88,6 @@ input {
     background-color: transparent;
   }
 }
-
 @media screen and (min-width: 992px) {
   h1 {
     font-size: 4.5rem;
@@ -104,6 +101,4 @@ input {
   button.login {
     max-width: 200px;
   }
-}
-
-/*# sourceMappingURL=identification.component.css.map */
+}/*# sourceMappingURL=identification.component.css.map */

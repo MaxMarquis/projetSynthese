@@ -36,8 +36,7 @@ h4 {
   font-weight: 700;
 }
 
-h5,
-label {
+h5, label {
   color: #707070;
   font-size: 1.125rem;
   line-height: 1.688rem;
@@ -50,10 +49,7 @@ p {
   line-height: 1.688rem;
 }
 
-input[type=text],
-textarea,
-select,
-input[type=date] {
+input[type=text], textarea, select, input[type=date] {
   margin-top: 0.5rem;
   padding: 1rem;
   color: #8A8A8A !important;
@@ -104,6 +100,4 @@ label.enumeration {
 
 h4 {
   color: #089DA4;
-}
-
-/*# sourceMappingURL=demandes-stages-edit.component.css.map */
+}/*# sourceMappingURL=demandes-stages-edit.component.css.map */

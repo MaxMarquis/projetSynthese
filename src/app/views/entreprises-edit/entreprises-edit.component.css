@@ -3,8 +3,7 @@ img.entreprise {
   background-color: transparent;
 }
 
-h3,
-h4 {
+h3, h4 {
   color: #86A9E6;
 }
 
@@ -18,6 +17,4 @@ h4 {
 
 .btnparcourir {
   width: 10%;
-}
-
-/*# sourceMappingURL=entreprises-edit.component.css.map */
+}/*# sourceMappingURL=entreprises-edit.component.css.map */

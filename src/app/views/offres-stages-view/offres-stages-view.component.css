@@ -45,11 +45,49 @@ p {
   line-height: 1.688rem;
 }
 
-input[type=text], textarea {
+input[type=text], textarea, select, input[type=date] {
   margin-top: 0.5rem;
-  margin-bottom: 2rem;
   padding: 1rem;
   color: #8A8A8A !important;
+}
+
+.padding {
+  padding: 1rem 0.75rem;
+}
+
+label.enumeration {
+  font-weight: 400;
+  color: #8A8A8A;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.form-check {
+  padding-left: 0.5rem;
+}
+
+.entreprise {
+  padding: 0.25rem 1rem;
+  background-color: #fff;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.center {
+  padding: 1.25rem 0;
+}
+
+.parcourir {
+  width: 65%;
+  height: 2.5rem;
+  border: 1px solid #d2d0d0;
+}
+
+.btnparcourir {
+  border: none;
+  height: 2.5rem;
+  background-color: #d2d0d0;
+  color: #8A8A8A;
 }
 
 .border-form {
@@ -75,17 +113,10 @@ input[type=text], textarea {
   margin-top: 2rem;
 }
 
-.entreprise {
-  padding: 0.25rem 1rem;
-  background-color: #fff;
-  margin-top: 2rem;
-  font-weight: 700;
-}
-
 .title {
   border-color: #821519;
 }
 
 h3, h4 {
   color: #821519;
-}/*# sourceMappingURL=offres-stages-view.component.css.map */
+}

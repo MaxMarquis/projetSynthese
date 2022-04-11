@@ -33,17 +33,20 @@ export class OffresStagesEditComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // stageId va récupérer l'id dans l'url
     const stageId = String(this.activeRoute.snapshot.paramMap.get('id'));
     console.log('Id Recu: ' + stageId);
     this.getOffreStage(stageId);
   }
 
+  // Fonction qui va récupérer l'offre de stage dans la base de données en fonction de l'id
   getOffreStage(id: string): void {
     this.offreStagesService
       .getOffreStage(id)
       .subscribe((res) => (this.offreStage = res));
   }
 
+  // Event qui est appelé quand on clique sur une checkbox
   checkPaid(data: string) {
     let ref = this.offreStage.paid.find(x => x == data);
     if (ref == data) {
@@ -53,6 +56,7 @@ export class OffresStagesEditComponent implements OnInit {
     }
   }
 
+  // Lors qu'on coche une checkbox soit on push la value dans l'array paid soit on le splice(supprime)
   onCheckboxChange(event?: any): void {
     if (event) {
       const value = (event.currentTarget as HTMLElement)?.getAttribute("name");

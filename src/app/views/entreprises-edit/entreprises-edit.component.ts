@@ -27,6 +27,7 @@ export class EntreprisesEditComponent implements OnInit {
   constructor(private activeRoute: ActivatedRoute, private entrepriseService: EntrepriseService) { }
 
   ngOnInit(): void {
+    // entrepriseId va récupérer l'id dans l'url
     const entrepriseID = this.activeRoute.snapshot.paramMap.get("id") as string;
     console.log(entrepriseID)
     this.getEntreprise(entrepriseID)

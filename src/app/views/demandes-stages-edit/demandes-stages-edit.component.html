@@ -17,13 +17,12 @@
       <!--- Nom-->
       <label>Candidat</label>
       <input class="form-control mb-4" type="text" [(ngModel)]="requeteStage.studentName" name="John Doe" required>
-
       <!--- Présentation-->
       <div class="form-group">
         <label>Présentation</label>
         <!--- Textbox info supp-->
         <textarea class="form-control mb-5" id="formtext" rows="2" [(ngModel)]="requeteStage.studentPresentation"
-          name="Présentation"></textarea>
+          name="Présentation" required></textarea>
       </div>
       <!-- .................................1ERE ROW -->
       <div class="row">
@@ -51,7 +50,8 @@
           <!--- Secteur d'activité -->
           <div class="border-form">
             <label>Secteur d'activité</label>
-            <select class="form-control padding" [(ngModel)]="requeteStage.activitySector" name="activitySector">
+            <select class="form-control padding" [(ngModel)]="requeteStage.activitySector" name="activitySector"
+              required>
               <option *ngFor="let activitySector of activitySectors" value={{activitySector.title}}>
                 {{activitySector.title}}</option>
             </select>
@@ -72,7 +72,7 @@
           <!--- Région -->
           <div class="border-form">
             <label>Région</label>
-            <select class="form-control padding" [(ngModel)]="requeteStage.region" name="Région">
+            <select class="form-control padding" [(ngModel)]="requeteStage.region" name="Région" required>
               <option value="a-voir">Veuillez effectuer un choix</option>
               <option value="Kansas">Kansas</option>
               <option value="Connecticut">Connecticut</option>
@@ -91,11 +91,12 @@
           <!--- Compétences -->
           <div class="border-form">
             <label>Compétences</label>
-            <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="requeteStage.skills"
-              name="Compétences"></textarea>
+            <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="requeteStage.skills" name="Compétences"
+              required></textarea>
           </div>
         </div>
       </div>
+
       <!-- ............................................... -->
       <!--- BLOC 2 -->
       <!-- ............................................... -->
@@ -107,7 +108,7 @@
           <!--- Type de stage -->
           <div class="border-form">
             <label>Type de stage</label>
-            <select class="form-control" [(ngModel)]="requeteStage.stageType" name="stageType">
+            <select class="form-control" [(ngModel)]="requeteStage.stageType" name="stageType" required>
               <option value="fulltime">Temps Plein</option>
               <option value="parttime">Temps Partiel</option>
             </select>
@@ -115,7 +116,7 @@
           <!--- Nombre d'heures semaine-->
           <div class="border-form">
             <label>Nombres d'heures par semaine</label>
-            <select class="form-control" [(ngModel)]="requeteStage.hoursPerWeek" name="Nombre D'heures">
+            <select class="form-control" [(ngModel)]="requeteStage.hoursPerWeek" name="Nombre D'heures" required>
               <option value="10">10</option>
               <option value="15">15</option>
               <option value="20">20</option>
@@ -133,15 +134,14 @@
             <label>Date de début</label>
             <input class="form-control" type="date" id="start" value="{{requeteStage.startDate}}" min="2022-01-01"
               max="2025-12-31" [ngModel]="requeteStage.startDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="requeteStage.startDate = $event" name="Start Date">
+              (ngModelChange)="requeteStage.startDate = $event" name="Start Date" required>
           </div>
-
           <!--- date de fin-->
           <div class="border-form">
             <label>Date de fin</label>
             <input class="form-control" type="date" id="end" value="{{requeteStage.endDate}}" min="2022-01-01"
               max="2025-12-31" [ngModel]="requeteStage.endDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="requeteStage.endDate = $event" name="End Date">
+              (ngModelChange)="requeteStage.endDate = $event" name="End Date" required>
           </div>
         </div>
       </div>
@@ -176,8 +176,8 @@
       <div class="form-group">
         <h4>Information supplémentaire</h4>
         <!--- Textbox info supp-->
-        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="requeteStage.additionalInfo"
-          name="More Info"></textarea>
+        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="requeteStage.additionalInfo" name="More Info"
+          required></textarea>
       </div>
       <!-- ..................................................4E ROW -->
       <div class="row mt-5">
@@ -186,7 +186,6 @@
           <input type="text" class="parcourir">
           <button class="btnparcourir"> Parcourir </button>
         </div>
-
         <div class="col-md-4 d-flex justify-content-end mt-2">
           <!-- BUTTON CV -->
           <button type="submit" class="btn btn-primary color"
@@ -197,10 +196,8 @@
       </div>
     </form>
   </div>
-
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-demande nomBtn="Mettre à jour" [requeteStage]="requeteStage"></app-maj-demande>
   </div>
-
 </main>

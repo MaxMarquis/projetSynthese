@@ -65,6 +65,7 @@ export class EntreprisesViewComponent implements OnInit {
     );
   }
 
+  // Ouvre un modal pour valider la suppression
   open(content: any, entreprise: Entreprise) {
     this.modalService
       .open(content, { ariaLabelledBy: 'titremodal' })

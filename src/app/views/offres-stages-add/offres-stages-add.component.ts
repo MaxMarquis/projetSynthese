@@ -30,6 +30,7 @@ export class OffresStagesAddComponent implements OnInit {
 
   ngOnInit(): void { }
 
+  // Event qui est appelé quand on clique sur une checkbox
   checkPaid(data: string) {
     let ref = this.offreStage.paid.find(x => x == data);
     if (ref == data) {
@@ -39,6 +40,7 @@ export class OffresStagesAddComponent implements OnInit {
     }
   }
 
+  // Lors qu'on coche une checkbox soit on push la value dans l'array paid soit on le splice(supprime)
   onCheckboxChange(event?: any): void {
     if (event) {
       const value = (event.currentTarget as HTMLElement)?.getAttribute("name");

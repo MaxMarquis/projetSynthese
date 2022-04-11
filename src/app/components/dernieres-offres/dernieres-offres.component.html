@@ -16,11 +16,114 @@
     </div> <!-- /contfluid -->
 
     <!--- valider les demandes -->
-    <!--- <div class="d-flex justify-content-end">-->
+
+    <!-- *************************************
+    TABLEAU EN LISTE
+    ****************************************** -->
+    <div class="container-fluid">
+      <ul>
+        <!-- 2 <li> avec enfants <ul> -->
+        <!-- <LI> TITRE POUR XL et + -->
+        <li id="titreMD">
+          <ul class="row">
+            <li class="col-12 d-none">ID</li>
+            <li class="col-xl-4 mx-auto">
+              <p class="me-3 pb-2 borderTitle">Profil</p>
+              <!-- <hr> -->
+            </li>
+            <li class="col-xl-2 mx-auto">
+              <p class="me-3 mb-4 pb-2 borderTitle">Établissement</p>
+            </li>
+            <li class="col-xl-2">
+              <p class="me-3 mb-4 pb-2 borderTitle">Date&nbsp;d'inscription</p>
+            </li>
+            <li class="col-xl-4">
+              <p class="mb-4 pb-2 borderTitle">Actions</p>
+            </li>
+          </ul>
+        </li>
+        <!-- <LI> TITRE POUR MOBILE & données-->
+        <!-- ID -->
+        <li>
+          <ul class="row my-4 border-bottom" *ngFor="let offreStage of offresStages">
+            <li class="col-12 d-none mx-auto" *ngIf="offreStage.active">
+              <p class="me-xl-3 mb-xl-4 pb-xl-2 ">
+                <span class="titreXS">ID<br></span>
+                {{ offreStage._id }}
+              </p>
+            </li>
+            <!-- POSTE -->
+            <li class="col-12 col-xl-4 mb-3 mb-xl-4"
+              [ngClass]="offreStage.active ? 'bordure' : 'bordure bordure-inactive'">
+              <p class="me-xl-3">
+                <span class="titreXS">Poste<br>
+                </span>
+                <i
+                  [ngClass]="offreStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
+                <span class="bold" [ngClass]="offreStage.active ? 'poste ' : 'poste poste-inactive'">{{ offreStage.title }} <br></span>
+                {{ offreStage.enterprise }}
+              </p>
+            </li>
+            <!-- ÉTABLISSEMENT -->
+            <li class="col-12 col-xl-2 mb-3 mb-xl-4">
+              <p class="me-lg-3 mb-lg-4">
+                <span class="titreXS">Établissement<br></span>
+                {{ offreStage.program }}
+              </p>
+            </li>
+            <!-- DATE INSCRIPTION -->
+            <li class="col-6 col-xl-2">
+              <p class="me-3 mb-4 pb-2">
+                <span class="titreXS">Date d'inscription<br></span>
+                {{ offreStage.startDate | date:'longDate':'undefined':'fr'}}
+              </p>
+            </li>
+            <!-- BOUTONS ACTIONS -->
+            <li class="col-12 col-xl-4 mx-auto mb-5 mb-xl-0">
+              <button type="button" class="boutonrefus" (click)="offerStatus(offreStage,false)">Refuser</button>
+              <button type="button" class="boutonaccept" (click)="offerStatus(offreStage,true)"
+                (click)="open(AccepterModal,offreStage)">Accepter</button>
+              <button class="crudbut"><i class="fa-solid fa-eye"
+                  routerLink='/offres-de-stages/view/{{ offreStage._id }}'></i></button>
+              <button class="crudbut" (click)="editOffresstages()">
+                <i class="fa-solid fa-pen-to-square" routerLink='/offres-de-stages/edit/{{ offreStage._id }}'></i>
+              </button>
+              <button class="crudbut" (click)="open(deleteModal,offreStage)">
+                <i class="fa-solid fa-trash-can"></i>
+              </button>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!--- table borderless pour enlever le HR sous les entêtes -->
-    <table class="table table-borderless">
+    <!-- <table class="table table-borderless">
       <thead>
 
         <tr class="title">
@@ -59,9 +162,15 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table> -->
   </div>
 </main>
+
+
+
+
+
+
 <ng-template #deleteModal let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="titremodal">Suppression</h4>

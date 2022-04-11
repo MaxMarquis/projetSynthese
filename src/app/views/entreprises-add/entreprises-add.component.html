@@ -1,72 +1,103 @@
-<div class="container">
+<main class="main">
+  <div class="title">
     <h1>Ajouter une entreprise</h1>
+  </div>
+  <!-- ACTIONS BTN -->
+  <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <!--- Bouton Sauvegarder -->
     <app-maj-entreprise nomBtn="Sauvegarder" [entreprise]="entreprise"></app-maj-entreprise>
-    <form>
-        <!--- Nom-->
-        <label>Entreprise:</label>
+  </div>
+  <!-- CHAMPS TITRE -->
+  <form>
+    <!--- Nom-->
+    <div class="row mb-5">
+      <div class="col-md-2">
+        <label class="center">Entreprise :</label>
+      </div>
+      <div class="col-md-10">
         <input class="form-control" type="text" required [(ngModel)]="entreprise.name" name="nom">
-        <div class="row">
-            <div class="col">
-                <!--- poste -->
-                <label>Logo</label>
-                <input class="form-control" type="text" required [(ngModel)]="entreprise.imageUrl" name="logo">
-                <button class="alert alert-light ">parcourir</button>
-            </div>
-            <h2>Courte présentation</h2>
-            <div class="col">
-                <textarea class="form-control" id="formtext" rows="2" required [(ngModel)]="entreprise.description"
-                    name="description"></textarea>
-                <div class="row">
-                    <div class="col">
-                        <!--- Personne Contact -->
-                        <label>Personne Contact</label>
-                        <input type="text" class="form-control" id="contact" required
-                            [(ngModel)]="entreprise.contactName" name="nomContact">
-                    </div>
-                </div>
-                <h3>Information de contact</h3>
-                <div class="row">
-                    <div class="col">
-                        <label>Adresse</label>
-                        <input type="text" class="form-control" id="adresse" required [(ngModel)]="entreprise.address"
-                            name="address">
-                    </div>
-                    <div class="col">
-                        <label>téléphone</label>
-                        <input type="text" class="form-control" id="telephone" required
-                            [(ngModel)]="entreprise.contactPhone" name="contactPhone">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label>Ville</label>
-                        <input type="text" class="form-control" id="ville" required [(ngModel)]="entreprise.city"
-                            name="city">
-                    </div>
-                    <div class="col">
-                        <label>Courriel</label>
-                        <input type="email" class="form-control" id="courriel" required
-                            [(ngModel)]="entreprise.contactEmail" name="contactEmail">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <label>Province</label>
-                        <input type="text" class="form-control" id="province" required [(ngModel)]="entreprise.province"
-                            name="province">
-                    </div>
-                    <label>Code postal</label>
-                    <input type="text" class="form-control" id="codepostal" required [(ngModel)]="entreprise.postalCode"
-                        name="postalCode">
-                </div>
-                <div class="btn-group">
-                    <!--- Annuler / sauvegarder -->
-                    <app-btn-annuler></app-btn-annuler>
-                    <app-maj-entreprise nomBtn="Sauvegarder" [entreprise]="entreprise"></app-maj-entreprise>
-                </div>
-            </div>
+      </div>
+    </div>
+
+    <!--- poste -->
+    <div class="row mb-5">
+      <div class="col-md-2">
+        <label class="center">Logo :</label>
+      </div>
+
+      <div class="col-md-10">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control py-0" required [(ngModel)]="entreprise.imageUrl" name="logo">
+          <div class="input-group-append pt-2">
+            <span class="input-group-text parcourirLogo">Parcourir</span>
+          </div>
         </div>
-    </form>
-</div>
+
+      </div>
+
+    </div>
+    <!-- </div> -->
+    <!-- INFO ENTREPRISE...................................... -->
+    <div class="fiche">
+      <h3>Courte présentation</h3>
+      <textarea class="form-control" id="formtext" rows="4" required [(ngModel)]="entreprise.description"
+        name="description"></textarea>
+      <div class="row">
+        <div class="col">
+          <!--- Personne Contact -->
+          <label>Personne Contact</label>
+          <input type="text" class="form-control" id="contact" required [(ngModel)]="entreprise.contactName"
+            name="nomContact">
+        </div>
+      </div>
+      <h4>Information de contact</h4>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="border-form">
+            <label>Adresse</label>
+            <input type="text" class="form-control" id="adresse" required [(ngModel)]="entreprise.address"
+              name="address">
+          </div>
+
+          <div class="border-form">
+            <label>Ville</label>
+            <input type="text" class="form-control" id="ville" required [(ngModel)]="entreprise.city" name="city">
+          </div>
+
+          <div class="border-form">
+            <label>Province</label>
+            <input type="text" class="form-control" id="province" required [(ngModel)]="entreprise.province"
+              name="province">
+          </div>
+
+          <div class="border-form">
+            <label>Code postal</label>
+            <input type="text" class="form-control" id="codepostal" required [(ngModel)]="entreprise.postalCode"
+              name="postalCode">
+          </div>
+        </div><!-- fin de col md 6-->
+
+        <div class="col-md-6">
+          <div class="border-form">
+            <label>Téléphone</label>
+            <input type="text" class="form-control" id="telephone" required [(ngModel)]="entreprise.contactPhone"
+              name="contactPhone">
+          </div>
+          <div class="border-form">
+            <label>Courriel</label>
+            <input type="email" class="form-control" id="courriel" required [(ngModel)]="entreprise.contactEmail"
+              name="contactEmail">
+          </div>
+        </div><!-- fin de col md 6-->
+      </div>
+      <!--fin row-->
+
+    </div>
+    <div class="d-flex justify-content-end my-5">
+      <!--- Annuler / sauvegarder -->
+      <app-btn-annuler></app-btn-annuler>
+      <app-maj-entreprise nomBtn="Sauvegarder" [entreprise]="entreprise"></app-maj-entreprise>
+    </div>
+  </form>
+</main>

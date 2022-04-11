@@ -8,6 +8,15 @@
 	@include bouton($color-tableaubord, $color-tableaubord-hover)
 	padding: 1rem
 
+.fiche .boutonrefus
+	@include bouton($accept50, $accept-hover)
+	margin-right: .25rem
+	color: $accept
+
+.fiche .boutonaccept, .close
+	@include bouton($refus50, $refus-hover)
+	margin-right: .25rem
+	color: $refus
 // //colors
 // $color_add: #f89747
 // $color_edit: #22a6ac
@@ -16,7 +25,7 @@
 $color_suitcase: #FF9FA3
 $color_suitcase_bg: #BB2026
 $color_attente : #BB2026
-// $color_offres_titre : #BB2026
+$color_offres_titre : #BB2026
 
 // .crudbut 
 // 	border: none
@@ -45,8 +54,8 @@ $color_attente : #BB2026
 // .btn-info
 // 	float: right
 
-// .attente 
-// 	color: $color_attente
+.attente 
+	color: $color_attente
 
-// .offres 
-// 	color: $color_offres_titre
+.offres 
+	color: $color_offres_titre

@@ -57,14 +57,12 @@
               </p>
             </li>
             <!-- POSTE -->
-            <li class="col-12 col-xl-4 mb-3 mb-xl-4"
-              [ngClass]="offreStage.active ? 'bordure' : 'bordure bordure-inactive'">
+            <li class="col-12 col-xl-4 mb-3 mb-xl-4 bordure">
               <p class="me-xl-3">
                 <span class="titreXS">Poste<br>
                 </span>
-                <i
-                  [ngClass]="offreStage.active ? 'fa-solid fa-graduation-cap' : 'fa-solid fa-graduation-cap fa-graduation-cap-inactive'"></i>
-                <span class="bold" [ngClass]="offreStage.active ? 'poste ' : 'poste poste-inactive'">{{ offreStage.title }} <br></span>
+                <i class = "fa-solid fa-graduation-cap"></i>
+                <span class="bold">{{ offreStage.title }} <br></span>
                 {{ offreStage.enterprise }}
               </p>
             </li>

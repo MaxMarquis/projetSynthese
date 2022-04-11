@@ -1,1 +1,103 @@
-/*# sourceMappingURL=demandes-stages-edit.component.css.map */
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #F6F6F6;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+h1 {
+  color: #707070;
+  font-weight: 700;
+  font-size: 2.875rem;
+  line-height: 3.75rem;
+}
+
+h2 {
+  color: #707070;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+}
+
+h3 {
+  color: #089DA4;
+  font-size: 2.875rem;
+  margin-bottom: 5rem;
+  font-weight: 700;
+}
+
+h4 {
+  color: #089DA4;
+  font-size: 1.5rem;
+  line-height: 2.063rem;
+  margin: 4rem 0 2rem 0;
+  font-weight: 700;
+}
+
+h5, label {
+  color: #707070;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  font-weight: 700;
+}
+
+p {
+  color: #707070;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+}
+
+input[type=text], textarea, select, input[type=date] {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  color: #8A8A8A !important;
+}
+
+.padding {
+  padding: 1rem 0.75rem;
+}
+
+label.enumeration {
+  font-weight: 400;
+  color: #8A8A8A;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.form-check {
+  padding-left: 0.5rem;
+}
+
+.entreprise {
+  padding: 0.25rem 1rem;
+  background-color: #fff;
+  margin-top: 2rem;
+  font-weight: 700;
+}
+
+.center {
+  padding: 1.25rem 0;
+}
+
+.parcourir {
+  width: 65%;
+  height: 2.5rem;
+  border: 1px solid #d2d0d0;
+}
+
+.btnparcourir {
+  border: none;
+  height: 2.5rem;
+  background-color: #d2d0d0;
+  color: #8A8A8A;
+}
+
+.title {
+  border-color: #CD9635;
+}
+
+h4 {
+  color: #089DA4;
+}/*# sourceMappingURL=demandes-stages-edit.component.css.map */

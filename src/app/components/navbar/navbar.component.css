@@ -1,3 +1,8 @@
+nav {
+  margin-bottom: 100px;
+  box-shadow: 1px 1px 5px #8A8A8A;
+}
+
 .admin, #add, .logo {
   display: none;
 }
@@ -82,26 +87,31 @@ div.offcanvas-body {
   background-color: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   .logoMobile {
     display: none;
   }
+
   .logo {
     display: block;
     width: 165px;
     margin: 0 0 0rem 1.25rem;
     cursor: pointer;
   }
+
   .admin {
     display: block;
     text-align: right;
     margin-right: 2rem;
+    min-width: 100px;
   }
+
   .avatar {
     width: 40px;
-    margin: .5rem 0 0 1rem;
+    margin: 0.5rem 0 0 1rem;
     float: right;
   }
+
   .user {
     font-size: 0.875rem;
     line-height: 0.875rem;
@@ -109,63 +119,80 @@ div.offcanvas-body {
     float: left;
     padding-top: 1rem;
   }
+
   .user a {
     font-size: 0.75rem;
     color: #A6ACBE;
     text-decoration: none;
   }
+
   .user a:hover {
     color: #767A86;
   }
+
   ul#add {
     display: block;
     list-style-type: none;
+    min-width: 950px;
+    padding-left: 0;
+    margin-bottom: 0;
   }
+
   #add li {
     display: inline-block;
-    margin: 1rem;
+    margin: 1rem 1rem 1rem 0rem;
   }
+
   #add a {
     text-decoration: none;
     font-size: 0.75rem;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border: 1px solid;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
+
   #add i {
     font-size: 0.875rem;
-    padding-right: .5rem;
+    padding-right: 0.5rem;
   }
+
   #add a.btn--offres {
     color: #BB2026;
     border-color: #BB2026;
   }
+
   #add a.btn--offres:hover {
     color: #6F1316;
     border-color: #6F1316;
   }
+
   #add a.btn--demandes {
     color: #CD9635;
     border-color: #CD9635;
   }
+
   #add a.btn--demandes:hover {
     color: #5C4214;
     border-color: #5C4214;
   }
+
   #add a.btn--entreprises {
     color: #86A9E6;
     border-color: #86A9E6;
   }
+
   #add a.btn--entreprises:hover {
     color: #4B5F81;
     border-color: #4B5F81;
   }
+
   #add a.btn--candidats {
     color: #7F2987;
     border-color: #7F2987;
   }
+
   #add a.btn--candidats:hover {
     color: #501A55;
     border-color: #501A55;
   }
-}
+}/*# sourceMappingURL=navbar.component.css.map */

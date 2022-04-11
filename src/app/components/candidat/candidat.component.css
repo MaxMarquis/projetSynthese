@@ -1,8 +1,44 @@
 .card {
   flex-direction: row;
   cursor: pointer;
+  max-height: 125px;
+  width: 375px;
+  border: none;
+  margin: 20px;
+}
+.card img {
+  width: 80px;
+  height: 100%;
+  align-self: center;
+  margin-left: 20px;
 }
 
-.card img {
-  width: 100px;
+p {
+  position: relative;
+  margin: 0;
+  font-family: Poppins, sans-serif;
+}
+
+.card-text {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.name {
+  color: black;
+  font-size: 1.325rem;
+  font-weight: 700;
+  font-family: Roboto, sans-serif;
+}
+
+.job-title {
+  top: -12px;
+}
+
+.email {
+  top: -10px;
+}
+
+.phone {
+  top: -20px;
 }/*# sourceMappingURL=candidat.component.css.map */

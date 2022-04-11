@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"offres-stages-edit.component.css"}
+{"version":3,"sources":["offres-stages-edit.component.sass","../../../sass/utils/_variables.sass","offres-stages-edit.component.css"],"names":[],"mappings":"AACA;EACI,cCgCgB;ED/BhB,mBAAA;EACA,mBAAA;EACA,gBAAA;EACA,cC8BW;AC9Bf;;AFCA;EACI,cC4BW;AC1Bf;;AFDA;EACI,qBC0BW;ACtBf","file":"offres-stages-edit.component.css"}

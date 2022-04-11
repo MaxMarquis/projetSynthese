@@ -1,1 +1,11 @@
-/*# sourceMappingURL=entreprises.component.css.map */
+.btn-entreprises {
+  background-color: #86A9E6;
+  border: none;
+  padding: 10px 10px 12px 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  margin: 40px 0px;
+  color: #2E466E;
+}/*# sourceMappingURL=entreprises.component.css.map */

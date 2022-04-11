@@ -2,7 +2,7 @@
 @import '../../../sass/utils/_mixins'
 @import '../../../sass/utils/_mixin-btn'
 
-@import '../../../sass/modules/_demandes-liste'
+@import '../../../sass/modules/_demandes-offres-liste'
 
 .fiche .bouton
 	@include bouton($color-tableaubord, $color-tableaubord-hover)
@@ -13,9 +13,9 @@
 // $color_edit: #22a6ac
 // $color_delete: #F26689ed
 // $color_title: #707070
-// $color_suitcase: #FF9FA3
-// $color_suitcase_bg: #BB2026
-// $color_attente : #BB2026
+$color_suitcase: #FF9FA3
+$color_suitcase_bg: #BB2026
+$color_attente : #BB2026
 // $color_offres_titre : #BB2026
 
 // .crudbut 
@@ -34,13 +34,13 @@
 // .fa-trash-can 
 // 	color: $color_delete
 
-// .fa-suitcase 
-// 	color: $color_suitcase
-// 	border : 2px black
-// 	margin-right: 25px
-// 	padding: 15px
-// 	background-color: $color_suitcase_bg
-// 	border-radius: 10px
+.fa-suitcase 
+	color: $color_suitcase
+	border : 2px black
+	margin-right: 25px
+	padding: 15px
+	background-color: $color_suitcase_bg
+	border-radius: 10px
 
 // .btn-info
 // 	float: right

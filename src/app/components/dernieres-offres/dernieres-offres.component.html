@@ -20,6 +20,8 @@
     <!-- *************************************
     TABLEAU EN LISTE
     ****************************************** -->
+
+    
     <div class="container-fluid">
       <ul>
         <!-- 2 <li> avec enfants <ul> -->
@@ -44,9 +46,11 @@
         </li>
         <!-- <LI> TITRE POUR MOBILE & données-->
         <!-- ID -->
+
+      <ng-container *ngFor="let offreStage of offresStages"> 
         <li>
-          <ul class="row my-4 border-bottom" *ngFor="let offreStage of offresStages">
-            <li class="col-12 d-none mx-auto" *ngIf="offreStage.active">
+          <ul class="row my-4 border-bottom" *ngIf="offreStage.active">
+            <li class="col-12 d-none mx-auto">
               <p class="me-xl-3 mb-xl-4 pb-xl-2 ">
                 <span class="titreXS">ID<br></span>
                 {{ offreStage._id }}
@@ -94,6 +98,7 @@
             </li>
           </ul>
         </li>
+       </ng-container>
       </ul>
     </div>
 

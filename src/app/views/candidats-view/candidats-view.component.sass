@@ -1,6 +1,16 @@
 @import '../../../sass/utils/_variables'
+@import '../../../sass/utils/_mixin-btn'
+
+.close
+    @include bouton($refus50, $refus-hover)
+    margin-right: .25rem
+    color: $refus
+    
+    
+    
 h3, h4
     color: $color-candidats
 
 .title
     border-color: $color-candidats
+

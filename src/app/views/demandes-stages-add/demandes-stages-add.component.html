@@ -9,7 +9,7 @@
     <app-maj-demande nomBtn="Sauvegarder" [requeteStage]="requeteStage"></app-maj-demande>
   </div>
   <!-- CHAMPS TITRE -->
-  <form>
+  <form class="needs-validation" >
     <div class="row mb-5">
       <div class="col-md-1">
         <label class="center">Titre : </label>
@@ -17,6 +17,7 @@
       <div class="col-md-11">
         <input class="form-control" type="text" [(ngModel)]="requeteStage.title" name="Dynamic Accounts Officer" value = "titre" required>
       </div>
+      
     </div>
     <!-- INFO DEMANDE...................................... -->
     <div class="fiche">

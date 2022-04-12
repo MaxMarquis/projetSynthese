@@ -3,12 +3,13 @@
     <h1>Offre de stage</h1>
   </div>
   <!-- ACTIONS BTN -->
+  <form ngNativeValidate #f="ngForm">
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-maj-offre nomBtn="Sauvegarder" [offreStage]="offreStage"></app-maj-offre>
+    <app-maj-offre [formIsvalid]="f.valid" nomBtn="Sauvegarder" [offreStage]="offreStage"></app-maj-offre>
   </div>
   <!-- CHAMPS TITRE -->
-  <form ngNativeValidate >
+
     <div class="row mb-5">
       <div class="col-md-2">
         <!--- Titre -->
@@ -16,8 +17,8 @@
       </div>
       <div class="col-md-10">
         <input type="text" class="form-control" [(ngModel)]="offreStage.title" name="Titre" required #Titre="ngModel">
-        
-        
+
+
       </div>
     </div>
     <div class="row mb-5">
@@ -143,9 +144,10 @@
           required></textarea>
       </div>
     </div>
-  </form>
+
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-maj-offre nomBtn="Sauvegarder" [offreStage]="offreStage"></app-maj-offre>
+    <app-maj-offre [formIsvalid]="f.valid" nomBtn="Sauvegarder" [offreStage]="offreStage"></app-maj-offre>
   </div>
+</form>
 </main>

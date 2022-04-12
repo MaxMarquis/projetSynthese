@@ -1,51 +1,69 @@
-<div class="container">
-    <div>
-        <h3>Candidat</h3>
+<main class="main">
+    <div class="title">
+        <h2>Candidat</h2>
         <h1>{{candidat.name}}</h1>
-        <h2>{{candidat.jobTitle}}</h2>
+        <p><span class="entreprise">{{candidat.jobTitle}}</span></p>
     </div>
     <!--- Bouton Annuler/Sauvegarder -->
-    <app-btn-annuler></app-btn-annuler>
-    <app-maj-candidat nomBtn="Mettre à jour" [candidat]="candidat"></app-maj-candidat>
+    <div class="d-flex justify-content-end my-5">
+        <app-btn-annuler></app-btn-annuler>
+        <app-maj-candidat nomBtn="Mettre à jour" [candidat]="candidat"></app-maj-candidat>
+    </div>
+
+
     <form>
-        <h2>Courte présentation</h2>
+        <div class="fiche">
+        <h3 class="mb-5">Courte présentation</h3>
         <div class="col">
-            <textarea class="form-control" id="formtext" rows="2" [(ngModel)]="candidat.description" name="description"
+            <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="candidat.description" name="description"
                 required></textarea>
-            <h3>Information personnelles</h3>
+            <h4>Information personnelles</h4>
+
             <div class="row">
-                <div class="col">
+                <div class="col-md-6">
+                  <!-- adresse -->
+                  <div class="border-form">
                     <label>Adresse</label>
                     <input type="text" class="form-control" [(ngModel)]="candidat.address" name="adress" required>
-                </div>
-                <div class="col">
-                    <label>téléphone</label>
-                    <input type="text" class="form-control" [(ngModel)]="candidat.phone" name="phone" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
+                  </div>
+                   <!-- ville -->
+                   <div class="border-form">
                     <label>Ville</label>
                     <input type="text" class="form-control" [(ngModel)]="candidat.city" name="city" required>
                 </div>
-                <div class="col">
-                    <label>Courriel</label>
-                    <input type="email" class="form-control" [(ngModel)]="candidat.email" name="email" required>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
+                 <!-- province -->
+                 <div class="border-form">
                     <label>Province</label>
                     <input type="text" class="form-control" [(ngModel)]="candidat.province" name="province" required>
                 </div>
-                <label>Code postal</label>
-                <input type="text" class="form-control" [(ngModel)]="candidat.postalCode" name="postalCode" required>
-            </div>
-            <!--- Annuler / sauvegarder -->
-            <div class="btn-group">
-                <app-btn-annuler></app-btn-annuler>
-                <app-maj-candidat nomBtn="Mettre à jour" [candidat]="candidat"></app-maj-candidat>
-            </div>
+                 <!-- code postal -->
+                 <div class="border-form">
+                    <label>Code postal</label>
+                    <input type="text" class="form-control" [(ngModel)]="candidat.postalCode" name="postalCode" required>    
+                </div>
+                </div> <!-- fin col-->
+
+                <div class="col-md-6">
+                    <!-- téléphone -->
+                    <div class="border-form">
+                        <label>Téléphone</label>
+                        <input type="text" class="form-control" [(ngModel)]="candidat.phone" name="phone" required>    
+                    </div>
+                    <!-- courriel -->
+                    <div class="border-form">
+                        <label>Courriel</label>
+                        <input type="email" class="form-control" [(ngModel)]="candidat.email" name="email" required>    
+                    </div>
+                </div>
+            </div> <!-- fin row-->
+
+
         </div>
+    </div>
+    <div class="d-flex justify-content-end my-5">
+        <app-btn-annuler></app-btn-annuler>
+        <app-maj-candidat nomBtn="Mettre à jour" [candidat]="candidat"></app-maj-candidat>
+    </div>
     </form>
-</div>
+
+</main>

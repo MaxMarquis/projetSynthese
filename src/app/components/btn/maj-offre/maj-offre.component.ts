@@ -10,6 +10,7 @@ import { OffresStagesService } from 'src/app/services/offres-stages.service';
 })
 export class MajOffreComponent implements OnInit {
   @Input() nomBtn: String = "";
+  @Input() formIsvalid: Boolean | null = false ;
   @Input() offreStage: Offres_stages = {
     _id: '',
     title: '',
@@ -34,19 +35,21 @@ export class MajOffreComponent implements OnInit {
   }
   maj() {
     // Si l'id est vide / donc nouvelle entreprise => ADD
-    if (this.offreStage._id == '') {
-      this.offresStagesService.addOffreStage(this.offreStage).subscribe((_) => {
-        this.router.navigateByUrl("/offres-de-stages")
-      });
-    }
-    // Sinon l'entreprise existe => EDIT
-    else {
-      console.log(this.offreStage)
-      this.offresStagesService
-        .editOffreStage(this.offreStage)
-        .subscribe((_result) => {
-          this.router.navigateByUrl('/offres-de-stages');
+    if(this.formIsvalid) {
+      if (this.offreStage._id == '') {
+        this.offresStagesService.addOffreStage(this.offreStage).subscribe((_) => {
+          this.router.navigateByUrl("/offres-de-stages")
         });
+      }
+      // Sinon l'entreprise existe => EDIT
+      else {
+        console.log(this.offreStage)
+        this.offresStagesService
+          .editOffreStage(this.offreStage)
+          .subscribe((_result) => {
+            this.router.navigateByUrl('/offres-de-stages');
+          });
+      }
     }
   }
 }

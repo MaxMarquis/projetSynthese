@@ -5,7 +5,7 @@
   </div>
 
   <div class="id">
-    <div (keyup.enter)="login()" class="login-container container-fluid g-0">
+    <div (keyup.enter)="login(f)" class="login-container container-fluid g-0">
       <div class="row g-0">
         <!-- IMG -->
         <div class="col-md-6 left">
@@ -20,11 +20,11 @@
               consequat.
             </p>
 
-            
-            <form class="login">
+
+            <form class="login" #f="ngForm" (ngSubmit)="login(f)">
               <input type="text" placeholder="Votre nom et prénom" [(ngModel)]="profil.name" name="name" required><br>
               <input type="email" placeholder="Votre courriel" [(ngModel)]="profil.email" name="email" required><br>
-              <button type="submit" (click)="login()">Accéder maintenant</button>
+              <button type="submit">Accéder maintenant</button>
             </form>
           </div>
         </div>

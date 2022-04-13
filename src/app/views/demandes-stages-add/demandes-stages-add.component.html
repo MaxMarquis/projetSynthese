@@ -3,13 +3,18 @@
   <div class="title">
     <h1>Ajouter une demande</h1>
   </div>
+    
   <!-- ACTIONS BTN -->
+  
+  <form ngNativeValidate #f="ngForm" >
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-demande nomBtn="Sauvegarder" [requeteStage]="requeteStage"></app-maj-demande>
   </div>
+
+
   <!-- CHAMPS TITRE -->
-  <form class="needs-validation" >
+
     <div class="row mb-5">
       <div class="col-md-1">
         <label class="center">Titre : </label>
@@ -177,10 +182,11 @@
         </div>
       </div>
     </div>
-  </form>
+
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-demande nomBtn="Sauvegarder" [requeteStage]="requeteStage"></app-maj-demande>
   </div>
+</form>
 </main>

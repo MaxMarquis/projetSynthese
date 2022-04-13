@@ -10,6 +10,7 @@ import { CandidatsService } from 'src/app/services/candidats.service';
 })
 export class MajCandidatComponent implements OnInit {
   @Input() nomBtn: String = '';
+  @Input() formIsvalid: Boolean | null = false ;
   @Input() candidat: Candidats = {
     _id: '',
     name: '',

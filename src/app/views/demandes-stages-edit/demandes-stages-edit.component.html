@@ -6,6 +6,7 @@
     <p><span class="entreprise">{{requeteStage.entreprise}}</span></p>
   </div>
   <!-- ACTIONS BTN -->
+  <form ngNativeValidate #f="ngForm" >
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-demande nomBtn="Mettre à jour" [requeteStage]="requeteStage"></app-maj-demande>
@@ -13,7 +14,6 @@
 
   <div class="fiche">
     <!-- INFO CANDIDAT...................................... -->
-    <form>
       <!--- Nom-->
       <label>Candidat</label>
       <input class="form-control mb-4" type="text" [(ngModel)]="requeteStage.studentName" name="John Doe" required>
@@ -194,10 +194,10 @@
           </button>
         </div>
       </div>
-    </form>
   </div>
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-demande nomBtn="Mettre à jour" [requeteStage]="requeteStage"></app-maj-demande>
   </div>
+</form>
 </main>

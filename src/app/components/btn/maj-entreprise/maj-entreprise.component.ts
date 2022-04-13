@@ -10,6 +10,7 @@ import { EntrepriseService } from 'src/app/services/entreprise.service';
 })
 export class MajEntrepriseComponent implements OnInit {
   @Input() nomBtn: String = '';
+  @Input() formIsvalid: Boolean | null = false ;
   @Input() entreprise: Entreprise = {
     _id: '',
     name: '',

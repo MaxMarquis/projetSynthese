@@ -2,14 +2,16 @@
     <div class="title">
         <h1>Ajouter une entreprise</h1>
     </div>
+    
+    <form ngNativeValidate #f="ngForm" >
     <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <!--- Bouton Sauvegarder -->
     <app-maj-entreprise nomBtn="Sauvegarder" [entreprise]="entreprise"></app-maj-entreprise>
     </div>
 
+    
 
-    <form>
 
         <!--- Nom-->
         <div class="row">

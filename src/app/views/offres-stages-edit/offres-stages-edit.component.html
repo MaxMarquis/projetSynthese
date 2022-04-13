@@ -7,7 +7,7 @@
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-maj-offre nomBtn="Mettre à jour" [offreStage]="offreStage"></app-maj-offre>
+    <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
   </div>
   <div class="fiche">
     <!-- INFO OFFRES STAGES EDIT...................................... -->
@@ -17,7 +17,7 @@
         <label class="h3">Description de la tâche</label>
         <!--- Textbox info supp-->
         <textarea class="form-control mb-5" id="formtext" rows="2" [(ngModel)]="offreStage.description"
-          name="Description" required></textarea>
+          name="Description"></textarea>
       </div>
 
       <div class="row">
@@ -35,7 +35,7 @@
           <div class="border-form">
             <label>Exigences</label>
             <textarea class="form-control" id="requirements" rows="2" [(ngModel)]="offreStage.requirements"
-              name="Exigences" required></textarea>
+              name="Exigences"></textarea>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
           <!--- Type de stage -->
           <div class="border-form">
             <label>Type de stage</label>
-            <select class="form-control padding mb-5" [(ngModel)]="offreStage.stageType" name="stageType" required>
+            <select class="form-control padding mb-5" [(ngModel)]="offreStage.stageType" name="stageType">
               <option value="fulltime">Temps Plein</option>
               <option value="parttime">Temps Partiel</option>
             </select>
@@ -57,7 +57,7 @@
           <div class="border-form">
             <label>Nombres d'heures par semaine</label>
             <!-- J'ai pas réussi à afficher la valeur par défaut si elle a une décimal. Le pipe number:'1.0-0' converti mon number en string et l'interface n'aime pas ça xD  -->
-            <select class="form-control padding" [(ngModel)]="offreStage.hoursPerWeek" name="Nombre D'heures" required>
+            <select class="form-control padding" [(ngModel)]="offreStage.hoursPerWeek" name="Nombre D'heures">
               <option value="10">10</option>
               <option value="15">15</option>
               <option value="20">20</option>
@@ -75,17 +75,17 @@
           <!--- Date de début-->
           <div class="border-form">
             <label>Date de début</label>
-            <input class="form-control" type="date" id="start" value="{{offreStage.startDate}}" min="2022-01-01"
-              max="2025-12-31" [ngModel]="offreStage.startDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="offreStage.startDate = $event" name="Start Date" required>
+            <input class="form-control" type="date" id="start" value="{{offreStage.startDate}}" min="2022-01-01" max="2025-12-31"
+              [ngModel]="offreStage.startDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.startDate = $event"
+              name="Start Date">
           </div>
           <!--- date de fin-->
           <div class="border-form">
             <label>Date de fin</label>
             <!--- à voir date picker Angular-->
-            <input class="form-control" type="date" id="end" value="{{offreStage.endDate}}" min="2022-01-01"
-              max="2025-12-31" [ngModel]="offreStage.endDate | date:'yyyy-MM-dd'"
-              (ngModelChange)="offreStage.endDate = $event" name="End Date" required>
+            <input class="form-control" type="date" id="end" value="{{offreStage.endDate}}" min="2022-01-01" max="2025-12-31"
+              [ngModel]="offreStage.endDate | date:'yyyy-MM-dd'" (ngModelChange)="offreStage.endDate = $event"
+              name="End Date">
           </div>
         </div>
       </div>
@@ -96,21 +96,18 @@
           <div class="row">
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="not-specified" [checked]="checkPaid('not-specified')"
-                  (change)="onCheckboxChange($event)" name="not-specified">&nbsp;&nbsp;À la discrétion de
-                l'entreprise
+                <input type="checkbox" value="not-specified" [ngModel]="offreStage.paid" name="not-specified">&nbsp;&nbsp;À la
+                discrétion de
+                l'entreprise </label>
+            </div>
+            <div class="checkbox">
+              <label class="enumeration">
+                <input type="checkbox" value="paid" [ngModel]="offreStage.paid" name="paid">&nbsp;&nbsp;Stage rémunéré
               </label>
             </div>
             <div class="checkbox">
               <label class="enumeration">
-                <input type="checkbox" value="paid" [checked]="checkPaid('paid')" (change)="onCheckboxChange($event)"
-                  name="paid">&nbsp;&nbsp;Stage rémunéré
-              </label>
-            </div>
-            <div class="checkbox">
-              <label class="enumeration">
-                <input type="checkbox" value="unpaid" [checked]="checkPaid('unpaid')"
-                  (change)="onCheckboxChange($event)" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
+                <input type="checkbox" value="unpaid" [ngModel]="offreStage.paid" name="unpaid">&nbsp;&nbsp;Stage non rémunéré
               </label>
             </div>
           </div>
@@ -119,28 +116,17 @@
       <div class="form-group">
         <h4>Information supplémentaire</h4>
         <!--- Textbox info supp-->
-        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo" name="More Info"
-          required></textarea>
+        <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo"
+          name="More Info"></textarea>
       </div>
+
+      
     </form>
   </div>
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
-    <app-maj-offre nomBtn="Mettre à jour" [offreStage]="offreStage"></app-maj-offre>
+    <app-btn-maj [offreStage]="offreStage"></app-btn-maj>
   </div>
 </main>
 
-<ng-template #AccepterModal let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="titremodal">Acceptation</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('close')">
-      <span aria-hidden="true">×</span>
-    </button>
-  </div>
-  <div class="modal-body text-center">
-    Vous avez accepté l'offre
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('No')">Revenir</button>
-  </div>
-</ng-template>
+

@@ -10,6 +10,7 @@ import { RequetesStagesService } from 'src/app/services/requetes-stages.service'
 })
 export class MajDemandeComponent implements OnInit {
   @Input() nomBtn: string = '';
+  @Input() formIsvalid: Boolean | null = false ;
   @Input() requeteStage: Requetes_stages = {
     _id: '',
     description: '',

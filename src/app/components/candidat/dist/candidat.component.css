@@ -1,0 +1,56 @@
+.fa-user {
+  color: #FFFFFF91;
+  font-size: 50px;
+}
+
+.card {
+  flex-direction: row;
+  cursor: pointer;
+  max-height: 155px;
+  width: auto;
+  border: none;
+  margin: 20px;
+}
+.card i {
+  height: 101px;
+  padding: 2rem;
+  background-color: #7F2987;
+  align-self: center;
+  margin-left: 20px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.card-text {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.name {
+  color: black;
+  font-size: 1.325rem;
+  font-weight: 700;
+}
+
+.job-title {
+  top: -90px;
+  line-height: 14px;
+}
+
+.email {
+  top: -10px;
+  line-height: 12px;
+}
+
+.phone {
+  top: -20px;
+}
+
+h5 {
+  font-size: 1.5rem;
+  margin: 0px;
+  padding: 0px;
+}

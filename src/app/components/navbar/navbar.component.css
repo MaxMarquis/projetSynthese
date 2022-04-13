@@ -1,3 +1,7 @@
+.offcanvas-start {
+  max-width: 275px;
+}
+
 nav {
   margin-bottom: 100px;
   box-shadow: 1px 1px 5px #8A8A8A;
@@ -79,12 +83,33 @@ i {
   border-color: #501A55;
 }
 
-div.offcanvas-body {
-  padding-right: 0;
+.activeTableaubord {
+  color: #033A3C !important;
+  border-color: #033A3C !important;
 }
 
-.offcanvas-backdrop {
-  background-color: none;
+.activeOffres {
+  color: #6F1316 !important;
+  border-color: #6F1316 !important;
+}
+
+.activeDemandes {
+  color: #5C4214 !important;
+  border-color: #5C4214 !important;
+}
+
+.activeCandidats {
+  color: #501A55 !important;
+  border-color: #501A55 !important;
+}
+
+.activeEntreprises {
+  color: #4B5F81 !important;
+  border-color: #4B5F81 !important;
+}
+
+div.offcanvas-body {
+  padding-right: 0;
 }
 
 @media screen and (min-width: 992px) {

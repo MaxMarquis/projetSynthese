@@ -1,6 +1,9 @@
 // IMPORT UTILS
 @import '../../../sass/utils/variables'
 @import '../../../sass/utils//mixins'
+.offcanvas-start
+    max-width: 275px
+    
 nav
     margin-bottom: 100px
     box-shadow: 1px 1px 5px $placeholder
@@ -66,15 +69,25 @@ i
 #side a.snb--candidats:hover
     color: $color-candidats-hover
     border-color: $color-candidats-hover
-
+// ...................................
+// ACTIVE
+// ...................................
+.activeTableaubord
+    border-color: $color-tableaubord-hover
+.activeOffres
+    border-color: $color-offres-hover
+.activeDemandes
+    border-color: $color-demandes-hover
+.activeCandidats
+    border-color: $color-candidats-hover
+.activeEntreprises
+    border-color: $color-entreprises-hover
 // .................................... 
 // CLEAN-UP BOOTSTRAP..................
 // ....................................
 div.offcanvas-body
     padding-right: 0
-
-.offcanvas-backdrop
-    background-color: none
+     position: fixed
 
 // ****************************************************************************************
 // ***************************************** RESPONSIVE LG AND UP *************************

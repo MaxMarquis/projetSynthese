@@ -17,9 +17,11 @@ var IdentificationComponent = /** @class */ (function () {
     IdentificationComponent.prototype.ngOnInit = function () {
         this.logout();
     };
-    IdentificationComponent.prototype.login = function () {
-        this.userService.logIn(JSON.stringify(this.profil));
-        this.router.navigateByUrl('/tableau-de-bord');
+    IdentificationComponent.prototype.login = function (f) {
+        if (f.valid) {
+            this.userService.logIn(JSON.stringify(this.profil));
+            this.router.navigateByUrl('/tableau-de-bord');
+        }
     };
     IdentificationComponent.prototype.logout = function () {
         this.userService.logOut();

@@ -3,15 +3,12 @@
     <h1>Ajouter un candidat</h1>
   </div>
   <!--- Bouton Annuler/Sauvegarder -->
-  
-
-  
+  <div class="d-flex justify-content-end my-5">
+    <app-btn-annuler></app-btn-annuler>
+    <app-maj-candidat nomBtn="Sauvegarder" [candidat]="candidat"></app-maj-candidat>
+  </div>
+  <form ngNativeValidate #f="ngForm" >
     <!--- Nom-->
-    <form ngNativeValidate #f="ngForm">
-      <div class="d-flex justify-content-end my-5">
-        <app-btn-annuler></app-btn-annuler>
-        <app-maj-candidat [formIsvalid]="f.valid" nomBtn="Sauvegarder" [candidat]="candidat"></app-maj-candidat>
-      </div>
     <div class="row">
       <div class="col-md-2">
         <label class="center">Nom et prénom :</label>
@@ -75,8 +72,5 @@
           <app-btn-annuler></app-btn-annuler>
           <app-maj-candidat nomBtn="Sauvegarder" [candidat]="candidat"></app-maj-candidat>
         </div>
-      
-
-
   </form>
 </main>

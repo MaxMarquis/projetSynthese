@@ -5,13 +5,15 @@
     <p><span class="entreprise">{{offreStage.enterprise}}</span></p>
   </div>
   <!-- ACTIONS BTN -->
+  <form ngNativeValidate #f="ngForm" >
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-offre nomBtn="Mettre à jour" [offreStage]="offreStage"></app-maj-offre>
   </div>
+
+
   <div class="fiche">
     <!-- INFO OFFRES STAGES EDIT...................................... -->
-    <form>
       <!--- Description-->
       <div class="form-group">
         <label class="h3">Description de la tâche</label>
@@ -122,8 +124,8 @@
         <textarea class="form-control" id="formtext" rows="4" [(ngModel)]="offreStage.additionalInfo" name="More Info"
           required></textarea>
       </div>
-    </form>
-  </div>
+   </div>
+ </form>
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-offre nomBtn="Mettre à jour" [offreStage]="offreStage"></app-maj-offre>

@@ -4,6 +4,7 @@
         <h1>{{candidat.name}}</h1>
         <p><span class="entreprise">{{candidat.jobTitle}}</span></p>
     </div>
+    <form ngNativeValidate #f="ngForm" >
     <!--- Bouton Annuler/Sauvegarder -->
     <div class="d-flex justify-content-end my-5">
         <app-btn-annuler></app-btn-annuler>
@@ -11,7 +12,6 @@
     </div>
 
 
-    <form>
         <div class="fiche">
         <h3 class="mb-5">Courte présentation</h3>
         <div class="col">

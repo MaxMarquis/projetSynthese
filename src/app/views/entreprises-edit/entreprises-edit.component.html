@@ -11,14 +11,14 @@
       </div>
     </div>
   </div>
-
+  
+  <form ngNativeValidate #f="ngForm" >
   <!-- ACTIONS BTN -->
   <div class="d-flex justify-content-end my-5">
     <app-btn-annuler></app-btn-annuler>
     <app-maj-entreprise nomBtn="Mettre à jour" [entreprise]="entreprise"></app-maj-entreprise>
   </div>
   <!-- CHAMPS TITRE -->
-  <form>
     <div class="row mb-5">
       <div class="col-md-1">
         <label class="center">Titre : </label>

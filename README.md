@@ -1,27 +1,57 @@
 # ProjetSynthese
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+Réaliser une interface d’administration de gestion d’offres et de demandes de stage, où les administrateurs peuvent ajouter, modifier, supprimer des entreprises, des candidats, des demandes ou des offres de stages. Les maquettes, une API et une base de données sont fournies.
 
-## Development server
+## Choix Technologiques
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular
+- Bootstrap
+- SASS
 
-## Code scaffolding
+## Tableau de bord
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Affiche un compteur des différentes données
+- Affiche la liste des dernières demandes de stage
+- Affiche la liste des dernière offres de stage
 
-## Build
+## Demandes de stage
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Affiche la liste des demandes de stage
+- Fonctionnalités
+  * Read (GET)
+  * Edit (PUT)
+  * Add (POST)
+  * Delete (DELETE)
 
-## Running unit tests
+## Offres de stage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Affiche la liste des offres de stage
+- Fonctionnalités
+  * Read (GET)
+  * Edit (PUT)
+  * Add (POST)
+  * Delete (DELETE)
 
-## Running end-to-end tests
+## Candidats
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- Affiche la liste des candidats
+- Fonctionnalités
+  * Read (GET)
+  * Edit (PUT)
+  * Add (POST)
+  * Delete (DELETE)
 
-## Further help
+## Entreprises
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Affiche la liste des demandes de stage
+- Fonctionnalités
+  * Read (GET)
+  * Edit (PUT)
+  * Add (POST)
+  * Delete (DELETE)
+
+## Érquipe
+ - [Maxim Marquis](https://github.com/MaxMarquis)
+ - [Danny Beaunoyer](https://github.com/dbeaunoyer)
+ - [Christine Gauthier](https://github.com/Chris-GitWorld)
+ - [Julien Hébert](https://github.com/JulienHebert855)

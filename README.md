@@ -50,7 +50,7 @@ Réaliser une interface d’administration de gestion d’offres et de demandes 
   * Add (POST)
   * Delete (DELETE)
 
-## Érquipe
+## Équipe
  - [Maxim Marquis](https://github.com/MaxMarquis)
  - [Danny Beaunoyer](https://github.com/dbeaunoyer)
  - [Christine Gauthier](https://github.com/Chris-GitWorld)

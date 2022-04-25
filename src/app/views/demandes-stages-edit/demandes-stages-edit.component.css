@@ -49,8 +49,8 @@ p {
   line-height: 1.688rem;
 }
 
-input[type=text], textarea, select, input[type=date] {
-  margin-top: 0.5rem;
+input[type=text], input[type=email], textarea, select, input[type=date] {
+  margin-top: .5rem;
   padding: 1rem;
   color: #8A8A8A !important;
 }
@@ -67,11 +67,11 @@ label.enumeration {
 }
 
 .form-check {
-  padding-left: 0.5rem;
+  padding-left: .5rem;
 }
 
 .entreprise {
-  padding: 0.25rem 1rem;
+  padding: .25rem 1rem;
   background-color: #fff;
   margin-top: 2rem;
   font-weight: 700;
@@ -94,10 +94,20 @@ label.enumeration {
   color: #8A8A8A;
 }
 
+.modal-title {
+  color: #BB2026;
+}
+
 .title {
   border-color: #CD9635;
 }
 
-h4 {
-  color: #089DA4;
-}/*# sourceMappingURL=demandes-stages-edit.component.css.map */
+h3, h4 {
+  color: #CD9635;
+}
+
+.btnparcourir:hover {
+  color: #ffffff;
+  background-color: #707070;
+}
+/*# sourceMappingURL=demandes-stages-edit.component.css.map */

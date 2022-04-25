@@ -1,1 +1,27 @@
+.parcourirLogo {
+  margin: .5rem 0 0 0;
+  padding: 1rem 1rem;
+  border-radius: 0 5px 5px 0px;
+}
+
+.parcourirLogo:hover {
+  background-color: #707070;
+  border-color: #707070;
+  color: #ffffff;
+}
+
+.title {
+  border-color: #86A9E6;
+}
+
+h3, h4 {
+  color: #86A9E6;
+}
+
+.h3 {
+  font-size: 2.875rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+  color: #86A9E6;
+}
 /*# sourceMappingURL=entreprises-add.component.css.map */

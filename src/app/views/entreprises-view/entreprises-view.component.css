@@ -1,3 +1,17 @@
+.close {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 0;
+  background-color: #ECCDCD;
+  color: #fff;
+  margin-right: .25rem;
+  color: #A00707;
+}
+
+.close:hover {
+  background-color: #670404;
+}
+
 img.entreprise {
   max-width: 150px;
   background-color: transparent;
@@ -9,4 +23,5 @@ h3, h4 {
 
 .title {
   border-color: #86A9E6;
-}/*# sourceMappingURL=entreprises-view.component.css.map */
+}
+/*# sourceMappingURL=entreprises-view.component.css.map */

@@ -2,4 +2,9 @@
   color: #8A8A8A;
   font-size: 1.125rem;
   line-height: 1.5rem;
-}/*# sourceMappingURL=demandes-stages-views.component.css.map */
+}
+
+h3, h4 {
+  color: #CD9635;
+}
+/*# sourceMappingURL=demandes-stages-views.component.css.map */

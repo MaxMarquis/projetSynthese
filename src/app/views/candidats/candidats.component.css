@@ -5,7 +5,7 @@
 .fiche button {
   border: none;
   background: none;
-  padding: 0 0.5rem;
+  padding: 0 .5rem;
   font-size: 1rem;
   line-height: 1rem;
 }
@@ -13,6 +13,7 @@
 .fa-pen-to-square {
   color: #CD9635;
 }
+
 .fa-pen-to-square:hover {
   color: #5C4214;
 }
@@ -20,6 +21,7 @@
 .fa-eye {
   color: #089DA4;
 }
+
 .fa-eye:hover {
   color: #033A3C;
 }
@@ -27,6 +29,7 @@
 .fa-trash-can {
   color: #BB2026;
 }
+
 .fa-trash-can:hover {
   color: #6F1316;
 }
@@ -85,7 +88,7 @@ i {
 li p {
   margin-bottom: 0;
   color: #161616;
-  font-size: 0.75rem;
+  font-size: .75rem;
   line-height: 1rem;
 }
 
@@ -103,31 +106,32 @@ li {
   #titreMD {
     display: block;
   }
-
   #titreMD li {
     padding-right: 3rem;
   }
-
   .borderTitle {
     border-bottom: 0.313rem solid #707070;
   }
-
   .titreXS {
     display: none;
   }
-
   li p {
     font-size: 0.875rem;
     line-height: 1rem;
+    font-weight: bold;
+    color: #808080;
   }
 }
+
 .bouton {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
   border: 0;
   background-color: #7F2987;
   color: #fff;
 }
+
 .bouton:hover {
   background-color: #501A55;
-}/*# sourceMappingURL=candidats.component.css.map */
+}
+/*# sourceMappingURL=candidats.component.css.map */

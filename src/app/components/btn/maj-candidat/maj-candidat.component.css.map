@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["maj-candidat.component.sass","../../../../sass/utils/_variables.sass"],"names":[],"mappings":"AAGA;EACI,kBCwCc;EDvCd;EACA;;AACA;EACI,kBCqCgB","file":"maj-candidat.component.css"}
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,OAAO,CAAC;EACJ,gBAAgB,ECmCF,OAAO;EDlCrB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,IAAI;CAEgC;;AALrD,AAII,OAJG,AAIF,MAAM,CAAC;EACJ,gBAAgB,ECgCA,OAAO;CDhCoB",
+    "sources": [
+        "maj-candidat.component.sass",
+        "../../../../sass/utils/_variables.sass"
+    ],
+    "names": [],
+    "file": "maj-candidat.component.css"
+}

@@ -11,6 +11,7 @@ a {
 
 a.check {
   color: #07a04a;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -20,6 +21,7 @@ a.check:hover {
 
 a.pen {
   color: #2e466e;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -29,9 +31,11 @@ a.pen:hover {
 
 a.trash {
   color: #a00707;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 a.trash:hover {
   color: #460000;
-}/*# sourceMappingURL=crud.component.css.map */
+}
+/*# sourceMappingURL=crud.component.css.map */

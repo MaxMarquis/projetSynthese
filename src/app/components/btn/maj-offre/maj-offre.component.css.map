@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["maj-offre.component.sass","../../../../sass/utils/_variables.sass"],"names":[],"mappings":"AAGA;EACI,kBCkCW;EDjCX;EACA;;AACA;EACI,kBC+Ba","file":"maj-offre.component.css"}
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,OAAO,CAAC;EACJ,gBAAgB,EC6BL,OAAO;ED5BlB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,IAAI;CAE6B;;AALlD,AAII,OAJG,AAIF,MAAM,CAAC;EACJ,gBAAgB,EC0BH,OAAO;CD1BoB",
+    "sources": [
+        "maj-offre.component.sass",
+        "../../../../sass/utils/_variables.sass"
+    ],
+    "names": [],
+    "file": "maj-offre.component.css"
+}

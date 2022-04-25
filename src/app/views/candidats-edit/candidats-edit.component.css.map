@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"candidats-edit.component.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,EAAE,EAAE,EAAE,CAAC;EACH,KAAK,ECoCS,OAAO;CDpCK;;AAE9B,AAAA,MAAM,CAAC;EACH,YAAY,ECiCE,OAAO;CDjCY",
+    "sources": [
+        "candidats-edit.component.sass",
+        "../../../sass/utils/_variables.sass"
+    ],
+    "names": [],
+    "file": "candidats-edit.component.css"
+}

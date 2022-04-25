@@ -5,7 +5,7 @@
 .fiche button {
   border: none;
   background: none;
-  padding: 0 0.5rem;
+  padding: 0 .5rem;
   font-size: 1rem;
   line-height: 1rem;
 }
@@ -13,6 +13,7 @@
 .fa-pen-to-square {
   color: #CD9635;
 }
+
 .fa-pen-to-square:hover {
   color: #5C4214;
 }
@@ -20,6 +21,7 @@
 .fa-eye {
   color: #089DA4;
 }
+
 .fa-eye:hover {
   color: #033A3C;
 }
@@ -27,6 +29,7 @@
 .fa-trash-can {
   color: #BB2026;
 }
+
 .fa-trash-can:hover {
   color: #6F1316;
 }
@@ -85,7 +88,7 @@ i {
 li p {
   margin-bottom: 0;
   color: #161616;
-  font-size: 0.75rem;
+  font-size: .75rem;
   line-height: 1rem;
 }
 
@@ -103,32 +106,97 @@ li {
   #titreMD {
     display: block;
   }
-
   #titreMD li {
     padding-right: 3rem;
   }
-
   .borderTitle {
     border-bottom: 0.313rem solid #707070;
   }
-
   .titreXS {
     display: none;
   }
-
   li p {
     font-size: 0.875rem;
     line-height: 1rem;
+    font-weight: bold;
+    color: #808080;
   }
 }
+
 .fiche .bouton {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
   border: 0;
   background-color: #089DA4;
   color: #fff;
   padding: 1rem;
 }
+
 .fiche .bouton:hover {
   background-color: #033A3C;
-}/*# sourceMappingURL=dernieres-offres.component.css.map */
+}
+
+.fiche .boutonrefus {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 0;
+  background-color: #CDECDB;
+  color: #fff;
+  margin-right: .25rem;
+  color: #07A04A;
+}
+
+.fiche .boutonrefus:hover {
+  background-color: #035828;
+}
+
+.fiche .boutonaccept, .close {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 0;
+  background-color: #ECCDCD;
+  color: #fff;
+  margin-right: .25rem;
+  color: #A00707;
+}
+
+.fiche .boutonaccept:hover, .close:hover {
+  background-color: #670404;
+}
+
+.fa-suitcase {
+  color: #FF9FA3;
+  border: 2px black;
+  margin-right: 25px;
+  padding: 15px;
+  background-color: #BB2026;
+  border-radius: 10px;
+}
+
+.attente {
+  color: #BB2026;
+}
+
+.offres {
+  color: #BB2026;
+}
+
+.borderTitle {
+  color: #707070 !important;
+  font-weight: 700;
+}
+
+.close {
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  border: 0;
+  background-color: #ECCDCD;
+  color: #fff;
+  margin-right: .25rem;
+  color: #A00707;
+}
+
+.close:hover {
+  background-color: #670404;
+}
+/*# sourceMappingURL=dernieres-offres.component.css.map */

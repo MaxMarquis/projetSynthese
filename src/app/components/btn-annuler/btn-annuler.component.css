@@ -1,9 +1,15 @@
 .btnAnnuler {
-  background-color: #A00707;
-  color: #fff;
-  margin: 0 1rem 0 0;
-  line-height: 2rem;
+  padding: .65rem 1rem;
+  border-radius: .5rem;
+  border: 1px solid #8A8A8A;
+  background-color: #F6F6F6;
+  color: #8A8A8A;
+  margin-right: 1rem;
 }
+
 .btnAnnuler:hover {
-  background-color: #670404;
-}/*# sourceMappingURL=btn-annuler.component.css.map */
+  background-color: #BB2026;
+  border-color: #BB2026;
+  color: #6F1316;
+}
+/*# sourceMappingURL=btn-annuler.component.css.map */

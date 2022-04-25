@@ -1,1 +1,11 @@
-{"version":3,"sourceRoot":"","sources":["demandes-stages-views.component.sass","../../../sass/utils/_variables.sass"],"names":[],"mappings":"AAOA;EACI,OCGU;EDFV;EACA","file":"demandes-stages-views.component.css"}
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,WAAW,CAAC,CAAC,CAAC;EACV,KAAK,ECFK,OAAO;EDGjB,SAAS,EAAE,QAAQ;EACnB,WAAW,EAAE,MAAM;CAAG;;AAC1B,AAAA,EAAE,EAAE,EAAE,CAAC;EACH,KAAK,ECuBQ,OAAO;CDvBK",
+    "sources": [
+        "demandes-stages-views.component.sass",
+        "../../../sass/utils/_variables.sass",
+        "../../../sass/utils/_mixins.sass"
+    ],
+    "names": [],
+    "file": "demandes-stages-views.component.css"
+}

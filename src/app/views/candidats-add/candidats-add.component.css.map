@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"candidats-add.component.css"}
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,MAAM,CAAC;EACH,YAAY,ECoCE,OAAO;CDpCY;;AAErC,AAAA,EAAE,EAAE,EAAE,CAAC;EACH,KAAK,ECiCS,OAAO;CDjCK;;AAE9B,AAAA,GAAG,CAAC;EACA,SAAS,EAAE,QAAQ;EACnB,aAAa,EAAE,IAAI;EACnB,WAAW,EAAE,GAAG;EAChB,KAAK,EC2BS,OAAO;CD3BK",
+    "sources": [
+        "candidats-add.component.sass",
+        "../../../sass/utils/_variables.sass"
+    ],
+    "names": [],
+    "file": "candidats-add.component.css"
+}

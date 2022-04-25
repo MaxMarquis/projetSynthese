@@ -53,12 +53,13 @@ h1 {
 }
 
 button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
   border: 0;
   background-color: #089DA4;
   color: #fff;
 }
+
 button:hover {
   background-color: #033A3C;
 }
@@ -79,26 +80,24 @@ input {
     background-repeat: no-repeat;
     background-position: center bottom;
   }
-
   .right {
     background-image: none;
   }
-
   .bgid {
     background-color: transparent;
   }
 }
+
 @media screen and (min-width: 992px) {
   h1 {
     font-size: 4.5rem;
     margin-bottom: 2rem;
   }
-
   .right {
     padding: 10rem 10rem 0 4rem;
   }
-
   button.login {
     max-width: 200px;
   }
-}/*# sourceMappingURL=identification.component.css.map */
+}
+/*# sourceMappingURL=identification.component.css.map */

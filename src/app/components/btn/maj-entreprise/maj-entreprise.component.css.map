@@ -1,1 +1,10 @@
-{"version":3,"sourceRoot":"","sources":["maj-entreprise.component.sass","../../../../sass/utils/_variables.sass"],"names":[],"mappings":"AAGA;EACI,kBCsCgB;EDrChB;EACA;;AACA;EACI,kBCmCkB","file":"maj-entreprise.component.css"}
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,OAAO,CAAC;EACJ,gBAAgB,ECiCA,OAAO;EDhCvB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,IAAI;CAEkC;;AALvD,AAII,OAJG,AAIF,MAAM,CAAC;EACJ,gBAAgB,EC8BE,OAAO;CD9BoB",
+    "sources": [
+        "maj-entreprise.component.sass",
+        "../../../../sass/utils/_variables.sass"
+    ],
+    "names": [],
+    "file": "maj-entreprise.component.css"
+}

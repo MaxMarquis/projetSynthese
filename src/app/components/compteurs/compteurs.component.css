@@ -3,15 +3,19 @@
   background-color: #cd9635;
   border-radius: 10px;
   color: white;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 2rem;
 }
+
 .stages p, .offres p, .candidats p, .entreprises p {
   font-size: 1rem;
   line-height: 2.125rem;
   color: white;
   margin-bottom: 0;
 }
+
 .stages i, .offres i, .candidats i, .entreprises i {
   font-size: 4rem;
   padding: 0 1rem;
@@ -20,6 +24,7 @@
   display: block;
   float: left;
 }
+
 .stages i.min, .offres i.min, .candidats i.min, .entreprises i.min {
   font-size: 1.675rem;
   padding-top: 1.5rem;
@@ -57,4 +62,5 @@
 
 .entreprises p, .entreprises i {
   color: #2E466E;
-}/*# sourceMappingURL=compteurs.component.css.map */
+}
+/*# sourceMappingURL=compteurs.component.css.map */

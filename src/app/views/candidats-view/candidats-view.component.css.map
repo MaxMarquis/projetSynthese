@@ -1,1 +1,11 @@
-{"version":3,"sourceRoot":"","sources":["candidats-view.component.sass","../../../sass/utils/_variables.sass"],"names":[],"mappings":"AACA;EACI,OC0Cc;;;ADxClB;EACI,cCuCc","file":"candidats-view.component.css"}
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,MAAM,CAAC;EEFN,OAAO,EAAE,UAAU;EACnB,aAAa,EAAE,KAAK;EACpB,MAAM,EAAE,CAAC;EACT,gBAAgB,EDeP,OAAO;ECdhB,KAAK,EAAE,IAAI;EFAR,YAAY,EAAE,MAAM;EACpB,KAAK,ECYD,OAAO;CDZK;;AAHpB,AEGC,MFHK,AEGJ,MAAM,CAAC;EACP,gBAAgB,EDaJ,OAAO;CCbQ;;AFG7B,AAAA,EAAE,EAAE,EAAE,CAAC;EACH,KAAK,EC4BS,OAAO;CD5BK;;AAE9B,AAAA,MAAM,CAAC;EACH,YAAY,ECyBE,OAAO;CDzBY",
+    "sources": [
+        "candidats-view.component.sass",
+        "../../../sass/utils/_variables.sass",
+        "../../../sass/utils/_mixin-btn.sass"
+    ],
+    "names": [],
+    "file": "candidats-view.component.css"
+}
